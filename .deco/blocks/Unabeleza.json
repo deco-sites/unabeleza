@@ -1,0 +1,41 @@
+{
+  "__resolveType": "site/sections/Theme/Theme.tsx",
+  "buttonStyle": {
+    "--border-btn": "1px",
+    "--rounded-btn": "0.2rem",
+    "--btn-focus-scale": "1",
+    "--animation-btn": "0.25s"
+  },
+  "font": {
+    "family": "Montserrat",
+    "styleSheet": "@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/Montserrat-Regular.ttf) format('truetype'); } @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/Montserrat-Bold.ttf) format('truetype'); } @font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/Montserrat-SemiBold.ttf) format('truetype'); } @font-face { font-family: 'PP-Hatton'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/PP-Hatton-Bold.otf) format('truetype');}"
+  },
+  "colorScheme": "any",
+  "otherStyles": {
+    "--rounded-box": "5px",
+    "--rounded-badge": "5px",
+    "--animation-input": "0.2s",
+    "--tab-border": "1px",
+    "--tab-radius": "0.5rem"
+  },
+  "mode": "dark",
+  "mainColors": {
+    "primary": "#BD87ED",
+    "base-100": "#ffffff",
+    "secondary": "#8F2AED",
+    "success": "#0A8041",
+    "warning": "#FFB800",
+    "error": "#E12525",
+    "info": "#8F2AED",
+    "neutral": "#000000",
+    "tertiary": "#8F2AED"
+  },
+  "complementaryColors": {
+    "primary-content": "#ffffff",
+    "base-200": "#FAFAFA",
+    "base-300": "#5C5C5C",
+    "base-400": "#C9CFCF",
+    "base-500": "#616B6B",
+    "base-content": "#000000"
+  }
+}

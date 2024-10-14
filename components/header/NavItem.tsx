@@ -16,7 +16,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
     >
       <a
         href={url}
-        class="group-hover:underline text-sm font-medium"
+        class="group-hover:bg-primary group-hover:font-bold text-sm font-normal leading-[21px] py-1 px-3 rounded-[5px]"
       >
         {name}
       </a>
