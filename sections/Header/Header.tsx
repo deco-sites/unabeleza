@@ -137,7 +137,7 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
             ? (
               <div
                 id={SIDEMENU_CONTAINER_ID}
-                class="h-full flex items-center justify-center w-[79.73vw]"
+                class="h-full flex items-center justify-center"
               >
                 <span class="loading loading-spinner" />
               </div>

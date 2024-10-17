@@ -19,7 +19,6 @@ export interface MenuItemProps {
 
 function MenuItem({ item, loading }: MenuItemProps) {
     if (item.children.length > 0) {
-
         return (
             <>
                 <Drawer
@@ -27,16 +26,28 @@ function MenuItem({ item, loading }: MenuItemProps) {
                     aside={
                         <Drawer.Aside title="Menu" drawer={item.name}>
                             <div
-                                class="flex flex-col h-full overflow-y-auto"
-                                style={{ minWidth: "100vw" }}
+                                class="flex flex-col h-full overflow-y-auto" code
+                                style={{ minWidth: "299px" }}
                             >
-                                <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
-                                    {item.children.map((leaf) => (
-                                    <div class="collapse collapse-plus">
-                                         <div class="collapse-title">{leaf.name}</div>
-                                     </div>
-        
-                                    ))}
+                                <ul class="flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
+                                    {item.children.map((leaf) => {
+
+                                        if (leaf.children.length > 0) {
+                                            return (
+                                                <MenuItem item={leaf} />
+                                            )
+                                        }
+
+
+                                        return (
+                                            <div class="collapse border-b border-neutral-100">
+                                                <div class="collapse-title">
+                                                    {leaf.name}
+                                                </div>
+                                            </div>
+                                        )
+                                    }
+                                    )}
                                 </ul>
                             </div>
                         </Drawer.Aside>
@@ -47,8 +58,11 @@ function MenuItem({ item, loading }: MenuItemProps) {
                     for={item.name}
                     aria-label="open menu"
                 >
-                    <div class="collapse collapse-plus">
-                        <div class="collapse-title">{item.name}</div>
+                    <div class="collapse border-b border-neutral-100">
+                        <div class="collapse-title flex justify-between p-5 items-center">
+                            {item.name}
+                            <Icon id="drawerArrowRight" width={8} height={14}/>
+                        </div>
                     </div>
                 </label>
             </>
@@ -57,23 +71,22 @@ function MenuItem({ item, loading }: MenuItemProps) {
     }
 
     return (
-        <div class="collapse collapse-plus">
-            <div class="collapse-title">{item.name}</div>
+        <div class="collapse border-b border-neutral-100">
+            <div class="collapse-title">
+                {item.name}
+            </div>
         </div>
     )
 
 }
 
 function MenuMobile({ navItems = [] }: Props) {
-
-    console.log(navItems)
-
     return (
         <div
             class="flex flex-col h-full overflow-y-auto"
-            style={{ minWidth: "100vw" }}
+            style={{ minWidth: "300px" }}
         >
-            <ul class="px-4 flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
+            <ul class="flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
                 {navItems.map((item) => (
                     <li>
                         <MenuItem item={item} />
