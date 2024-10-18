@@ -132,22 +132,22 @@ function Carousel({ images = [], preload, interval }: Props) {
       class={clx(
         "grid",
         "grid-rows-[1fr_32px_1fr_64px]",
-        "grid-cols-[32px_1fr_32px] min-h-[660px]",
+        "grid-cols-[32px_1fr_32px] h-[496px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
         "w-screen",
       )}
     >
       <div class="col-span-full row-span-full">
-        <Slider class="carousel carousel-center w-full gap-6">
+        <Slider class="carousel carousel-center w-full gap-6 h-full">
           {images.map((image, index) => (
-            <Slider.Item index={index} class="carousel-item w-full">
+            <Slider.Item index={index} class="carousel-item w-full h-full">
               <BannerItem image={image} lcp={index === 0 && preload} />
             </Slider.Item>
           ))}
         </Slider>
       </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
+      <div class="items-center justify-center z-10 col-start-1 row-start-2 desktop:hidden">
         <Slider.PrevButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}
@@ -156,7 +156,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider.PrevButton>
       </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-3 row-start-2">
+      <div class="items-center justify-center z-10 col-start-3 row-start-2 desktop:hidden">
         <Slider.NextButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}

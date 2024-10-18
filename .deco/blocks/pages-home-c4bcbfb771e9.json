@@ -11,8 +11,8 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/5b022a01-ba88-46fe-86ae-93ae644605b7",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88b2ad41-be6d-4640-b9fe-c58942362f0f",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "alt": "Shoes",
           "action": {
             "title": "Skate into Adventure",

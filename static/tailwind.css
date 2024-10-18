@@ -3864,6 +3864,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[3px\] {
   height: 3px;
 }
+.h-\[496px\] {
+  height: 496px;
+}
 .h-\[52px\] {
   height: 52px;
 }
@@ -3909,9 +3912,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .min-h-\[42px\] {
   min-height: 42px;
-}
-.min-h-\[660px\] {
-  min-height: 660px;
 }
 .min-h-screen {
   min-height: 100vh;
