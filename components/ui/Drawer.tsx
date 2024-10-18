@@ -60,8 +60,8 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children, hasLogged = false }: {
-  title: string;
+function Aside({ title, drawer, children, hasLogged = true }: {
+  title?: string;
   drawer: string;
   children: ComponentChildren;
   hasLogged: boolean
@@ -74,14 +74,16 @@ function Aside({ title, drawer, children, hasLogged = false }: {
     >
       <div class="flex justify-between items-center p-5 w-[79.73vw]">
 
-        {hasLogged ? (
+        {hasLogged && title ? (
           <>
-            <Icon id="drawerArrowLeft" width={30} height={30}/>
+            <label for={drawer} aria-label="X" class="btn btn-ghost p-0">
+              <Icon id="drawerArrowLeft" width={30} height={30} />
+            </label>
             <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
           </>
         ) : (
           <div class="flex gap-4 items-center">
-            <Icon id="drawerUser" width={40} height={40}/>
+            <Icon id="drawerUser" width={40} height={40} />
             <div>
               <p class="text-sm">Olá, Visitante</p>
               <p class="text-sm font-bold whitespace-nowrap"><a href="/#" class="text-primary">Entre</a> ou <a href="/#" class="text-primary">Cadastre-se</a></p>
@@ -93,7 +95,7 @@ function Aside({ title, drawer, children, hasLogged = false }: {
         </label>
       </div>
       {children}
-    </div>
+    </div >
   );
 }
 Drawer.Aside = Aside;

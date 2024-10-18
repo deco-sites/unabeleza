@@ -3,7 +3,6 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
-import Menu from "../../components/header/Menu.tsx";
 import NavItem from "../../components/header/NavItem.tsx";
 import Searchbar, {
   type SearchbarProps,
@@ -132,7 +131,7 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside title="Menu" drawer={SIDEMENU_DRAWER_ID}>
+        <Drawer.Aside drawer={SIDEMENU_DRAWER_ID}>
           {loading === "lazy"
             ? (
               <div

@@ -24,7 +24,7 @@ function MenuItem({ item, loading }: MenuItemProps) {
                 <Drawer
                     id={item.name}
                     aside={
-                        <Drawer.Aside title="Menu" drawer={item.name}>
+                        <Drawer.Aside title={item.name} drawer={item.name}>
                             <div
                                 class="flex flex-col h-full overflow-y-auto" code
                                 style={{ minWidth: "299px" }}
