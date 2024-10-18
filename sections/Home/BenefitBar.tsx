@@ -9,8 +9,9 @@ export default function BenefitBar({ items }: BenefitBarProps) {
        <div>
             {items && 
                 items.map(item => (
-                    <div>
-                        <Icon id={item.icon} width={30} height={30}/>
+                    <div class="flex gap-[10px]">
+                        <Icon id={item.icon} width={30} height={30} class="object-contain"/>
+                        <p></p>
                     </div>
                 ))
             }
