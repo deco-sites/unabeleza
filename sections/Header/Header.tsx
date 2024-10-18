@@ -3,7 +3,6 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import Alert from "../../components/header/Alert.tsx";
 import Bag from "../../components/header/Bag.tsx";
-import Menu from "../../components/header/Menu.tsx";
 import NavItem from "../../components/header/NavItem.tsx";
 import Searchbar, {
   type SearchbarProps,
@@ -22,6 +21,7 @@ import {
 } from "../../constants.ts";
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
+import MenuMobile from "../../components/header/MenuMobile.tsx";
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -65,37 +65,41 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
     </Modal>
 
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300">
-      <div class="grid grid-cols-3 place-items-center">
+    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-15">
+      <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
           <a href="/" aria-label="Store logo">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={logo.width || 100}
-              height={logo.height || 23}
+              width={74}
+              height={66}
             />
           </a>
         </div>
 
-        <label
-          for={SEARCHBAR_POPUP_ID}
-          class="input input-bordered flex items-center gap-2 w-full"
-          aria-label="search icon button"
-        >
-          <Icon id="search" />
-          <span class="text-base-400 truncate">
-            Search products, brands...
-          </span>
-        </label>
+        <div class="flex items-center gap-10 w-full">
+          <label
+            for={SEARCHBAR_POPUP_ID}
+            class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
+            aria-label="search icon button"
+          >
+            <span class="text-base-400 truncate">
+              Faça sua busca aqui
+            </span>
+            <Icon id="search" width="20" height="20" />
+          </label>
 
-        <div class="flex gap-4 place-self-end">
-          <Bag />
+          <div class="flex gap-5 items-center">
+            <Icon id="heart" class="cursor-pointer" />
+            <Icon id="user" class="cursor-pointer" />
+            <Bag />
+          </div>
         </div>
       </div>
 
-      <div class="flex justify-between items-center">
-        <ul class="flex">
+      <div class="flex items-center">
+        <ul class="flex w-full justify-between py-2 border-y border-neutral-100">
           {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
         </ul>
         <div>
@@ -126,24 +130,23 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside title="Menu" drawer={SIDEMENU_DRAWER_ID}>
+        <Drawer.Aside drawer={SIDEMENU_DRAWER_ID}>
           {loading === "lazy"
             ? (
               <div
                 id={SIDEMENU_CONTAINER_ID}
                 class="h-full flex items-center justify-center"
-                style={{ minWidth: "100vw" }}
               >
                 <span class="loading loading-spinner" />
               </div>
             )
-            : <Menu navItems={navItems ?? []} />}
+            : <MenuMobile navItems={navItems ?? []} />}
         </Drawer.Aside>
       }
     />
 
     <div
-      class="grid place-items-center w-screen px-5 gap-4"
+      class="flex place-items-center justify-between w-screen px-5 my-4 gap-4 relative"
       style={{
         height: NAVBAR_HEIGHT_MOBILE,
         gridTemplateColumns:
@@ -161,27 +164,35 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
       {logo && (
         <a
           href="/"
-          class="flex-grow inline-flex items-center justify-center"
+          class="flex-grow absolute right-2/4 translate-x-1/2"
           style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
           aria-label="Store logo"
         >
           <Image
             src={logo.src}
             alt={logo.alt}
-            width={logo.width || 100}
-            height={logo.height || 13}
+            width={57}
+            height={50.26}
           />
         </a>
       )}
-
+      <div class="flex gap-[10px] items-center">
+        <Icon id="heart" />
+        <Icon id="user" />
+        <Bag />
+      </div>
+    </div>
+    <div class="flex place-items-center w-screen px-5 my-4 gap-4">
       <label
         for={SEARCHBAR_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
+        class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
         aria-label="search icon button"
       >
-        <Icon id="search" />
+        <span class="text-base-400 truncate">
+          Faça sua busca aqui
+        </span>
+        <Icon id="search" width="20" height="20" />
       </label>
-      <Bag />
     </div>
   </>
 );

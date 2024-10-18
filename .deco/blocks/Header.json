@@ -22,17 +22,211 @@
         {
           "image": [],
           "children": [],
-          "name": "Hello"
+          "name": "BARROMINAS",
+          "identifier": "group1"
+        },
+        {
+          "image": [],
+          "children": [
+            {
+              "image": [],
+              "children": [],
+              "name": "Bond Angel"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Divine"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Essential"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Fiber"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "For Her Deo"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Go Curly"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Georgeous"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "High Protect"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Puring"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Revival"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Soul Color"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Wanne be blond"
+            }
+          ],
+          "name": "BRAÉ",
+          "identifier": "group1"
         },
         {
           "image": [],
           "children": [],
-          "name": "World"
+          "name": "BRUNA TAVARES",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [],
+          "name": "FOREVER LISS",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [],
+          "name": "KNUT HAIR CARE",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [],
+          "name": "SKELT",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [],
+          "name": "VAKENO",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [
+            {
+              "image": [],
+              "children": [],
+              "name": "Finalizadores"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Recovery"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Ressurection"
+            }
+          ],
+          "name": "TIGI BED HEAD",
+          "identifier": "group2"
+        },
+        {
+          "image": [],
+          "children": [
+            {
+              "image": [],
+              "children": [],
+              "name": "Balance"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "CPR"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Detangler"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Inner Restore"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Moisture Lock"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Purify"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Renewal"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Silk Moisture"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Skin Care"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Smooth"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "Specialty"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "True Hue"
+            },
+            {
+              "image": [],
+              "children": [],
+              "name": "True Hue Violet"
+            }
+          ],
+          "name": "SENSCIENCE",
+          "identifier": "group3"
         }
       ],
       "@type": "SiteNavigationElement",
       "url": "/cabelos",
-      "name": "Cabelos"
+      "name": "Cabelos",
+      "image": [
+        {
+          "image": [],
+          "video": [],
+          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/81acf10f-968f-40e1-8b36-b3de3c76931a/banner-menu.png"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",

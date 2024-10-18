@@ -1,22 +1,32 @@
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
-import {
-  HEADER_HEIGHT_DESKTOP,
-  NAVBAR_HEIGHT_DESKTOP,
-} from "../../constants.ts";
+import { HEADER_HEIGHT_DESKTOP } from "../../constants.ts";
 
 function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
   const image = item?.image?.[0];
+  const uniqueIdentifiers = [
+    ...new Set(children.map((node) => node.identifier)),
+  ];
+  children.forEach((node) => {
+    if (node.children.length > 0) {
+      const seeAll = {
+        name: "ver todos",
+        url: node.url,
+      };
+
+      const exists = node.children.some((leaf) => leaf.name === seeAll.name);
+      if (!exists) {
+        node.children.push(seeAll);
+      }
+    }
+  });
 
   return (
-    <li
-      class="group flex items-center pr-5 "
-      style={{ height: NAVBAR_HEIGHT_DESKTOP }}
-    >
+    <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-primary h-[29px] last:rounded-[5px] last:py-1 last:px-3">
       <a
         href={url}
-        class="group-hover:bg-primary group-hover:font-bold text-sm font-normal leading-[21px] py-1 px-3 rounded-[5px]"
+        class="group-last:font-bold group-hover:font-bold text-sm font-normal leading-[21px]"
       >
         {name}
       </a>
@@ -24,42 +34,50 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-center gap-6 border-t-2 border-b-2 border-base-200 w-screen"
+            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-between gap-6 border-t-2 border-b-2 border-base-200 w-screen px-[60px] py-6 h-fit"
             style={{
               top: "0px",
               left: "0px",
               marginTop: HEADER_HEIGHT_DESKTOP,
             }}
           >
+            {uniqueIdentifiers.map((uniIdentifier) => (
+              <ul class="flex flex-col items-start justify-start gap-6 container w-fit m-0">
+                {children.filter((node) => node.identifier === uniIdentifier)
+                  .map((node) => (
+                    <li class="flex flex-col gap-3">
+                      <a class="cursor-pointer" href={node.url}>
+                        <span class="font-bold">{node.name}</span>
+                      </a>
+                      <ul class="flex flex-col gap-2">
+                        {node.children?.map((leaf) => (
+                          <li class="group">
+                            <a
+                              class="hover:underline cursor-pointer"
+                              href={leaf.url}
+                            >
+                              <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                                {leaf.name}
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+              </ul>
+            ))}
+
             {image?.url && (
               <Image
-                class="p-6"
+                class="h-auto max-h-[420px] w-auto max-w-[32.65%] object-contain"
                 src={image.url}
                 alt={image.alternateName}
-                width={300}
-                height={332}
+                width={231}
+                height={220}
                 loading="lazy"
               />
             )}
-            <ul class="flex items-start justify-start gap-6 container">
-              {children.map((node) => (
-                <li class="p-6 pl-0">
-                  <a class="hover:underline" href={node.url}>
-                    <span>{node.name}</span>
-                  </a>
-
-                  <ul class="flex flex-col gap-1 mt-4">
-                    {node.children?.map((leaf) => (
-                      <li>
-                        <a class="hover:underline" href={leaf.url}>
-                          <span class="text-xs">{leaf.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
           </div>
         )}
     </li>

@@ -60,10 +60,11 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children }: {
-  title: string;
+function Aside({ title, drawer, children, hasLogged = true }: {
+  title?: string;
   drawer: string;
   children: ComponentChildren;
+  hasLogged: boolean;
 }) {
   return (
     <div
@@ -71,11 +72,29 @@ function Aside({ title, drawer, children }: {
       class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
       style={{ maxWidth: "100vw" }}
     >
-      <div class="flex justify-between items-center">
-        <h1 class="px-4 py-3">
-          <span class="font-medium text-2xl">{title}</span>
-        </h1>
-        <label for={drawer} aria-label="X" class="btn btn-ghost">
+      <div class="flex justify-between items-center p-5 w-[79.73vw]">
+        {hasLogged && title
+          ? (
+            <>
+              <label for={drawer} aria-label="X" class="btn btn-ghost p-0">
+                <Icon id="drawerArrowLeft" width={30} height={30} />
+              </label>
+              <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
+            </>
+          )
+          : (
+            <div class="flex gap-4 items-center">
+              <Icon id="drawerUser" width={40} height={40} />
+              <div>
+                <p class="text-sm">Olá, Visitante</p>
+                <p class="text-sm font-bold whitespace-nowrap">
+                  <a href="/#" class="text-primary">Entre</a> ou{" "}
+                  <a href="/#" class="text-primary">Cadastre-se</a>
+                </p>
+              </div>
+            </div>
+          )}
+        <label for={drawer} aria-label="X" class="btn btn-ghost p-0">
           <Icon id="close" />
         </label>
       </div>
