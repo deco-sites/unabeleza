@@ -84,7 +84,6 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
             class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
             aria-label="search icon button"
           >
-
             <span class="text-base-400 truncate">
               Faça sua busca aqui
             </span>
@@ -92,8 +91,8 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
           </label>
 
           <div class="flex gap-5 items-center">
-            <Icon id="heart" class="cursor-pointer"/>
-            <Icon id="user" class="cursor-pointer"/>
+            <Icon id="heart" class="cursor-pointer" />
+            <Icon id="user" class="cursor-pointer" />
             <Bag />
           </div>
         </div>
@@ -189,7 +188,6 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
         class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
         aria-label="search icon button"
       >
-
         <span class="text-base-400 truncate">
           Faça sua busca aqui
         </span>

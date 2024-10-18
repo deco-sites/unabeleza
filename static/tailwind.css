@@ -5360,6 +5360,10 @@ details.collapse summary::-webkit-details-marker {
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
 }
 
+.group:last-child .group-last\:underline {
+  text-decoration-line: underline;
+}
+
 .group[open] .group-open\:border-b-\[4px\] {
   border-bottom-width: 4px;
 }

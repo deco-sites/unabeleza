@@ -19,7 +19,7 @@ export default {
         sliding: "sliding 30s linear infinite",
       },
       spacing: {
-        15: '60px',
+        15: "60px",
       },
       keyframes: {
         sliding: {
@@ -29,9 +29,9 @@ export default {
       },
     },
     screens: {
-      phone: { max: '768px' },
-      mobile: { max: '1025px' },
-      desktop: { min: '1026px' },
+      phone: { max: "768px" },
+      mobile: { max: "1025px" },
+      desktop: { min: "1026px" },
     },
   },
 };

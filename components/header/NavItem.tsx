@@ -1,22 +1,21 @@
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
-import {
-  HEADER_HEIGHT_DESKTOP,
-  NAVBAR_HEIGHT_DESKTOP,
-} from "../../constants.ts";
+import { HEADER_HEIGHT_DESKTOP } from "../../constants.ts";
 
 function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
   const image = item?.image?.[0];
-  const uniqueIdentifiers = [...new Set(children.map(node => node.identifier))];
-  children.forEach(node => {
+  const uniqueIdentifiers = [
+    ...new Set(children.map((node) => node.identifier)),
+  ];
+  children.forEach((node) => {
     if (node.children.length > 0) {
       const seeAll = {
-        name: "ver todos >>",
-        url: node.url
+        name: "ver todos",
+        url: node.url,
       };
 
-      const exists = node.children.some(leaf => leaf.name === seeAll.name);
+      const exists = node.children.some((leaf) => leaf.name === seeAll.name);
       if (!exists) {
         node.children.push(seeAll);
       }
@@ -24,12 +23,11 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   });
 
   return (
-    <li
-      class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-primary h-[29px] last:rounded-[5px] last:py-1 last:px-3"
-    >
+    <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-primary h-[29px] last:rounded-[5px] last:py-1 last:px-3">
       <a
         href={url}
-        class="group-last:font-bold group-hover:font-bold text-sm font-normal leading-[21px]" >
+        class="group-last:font-bold group-hover:font-bold text-sm font-normal leading-[21px]"
+      >
         {name}
       </a>
 
@@ -43,25 +41,30 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
               marginTop: HEADER_HEIGHT_DESKTOP,
             }}
           >
-
-            {uniqueIdentifiers.map(uniIdentifier => (
+            {uniqueIdentifiers.map((uniIdentifier) => (
               <ul class="flex flex-col items-start justify-start gap-6 container w-fit m-0">
-                {children.filter(node => node.identifier === uniIdentifier).map((node) => (
-                  <li class="flex flex-col gap-3">
-                    <a class="cursor-pointer" href={node.url}>
-                      <span class="font-bold">{node.name}</span>
-                    </a>
-                    <ul class="flex flex-col gap-2">
-                      {node.children?.map((leaf) => (
-                        <li class="group">
-                          <a class="hover:underline cursor-pointer" href={leaf.url}>
-                            <span class="text-xs group-last:text-primary group-last:font-bold">{leaf.name}</span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
+                {children.filter((node) => node.identifier === uniIdentifier)
+                  .map((node) => (
+                    <li class="flex flex-col gap-3">
+                      <a class="cursor-pointer" href={node.url}>
+                        <span class="font-bold">{node.name}</span>
+                      </a>
+                      <ul class="flex flex-col gap-2">
+                        {node.children?.map((leaf) => (
+                          <li class="group">
+                            <a
+                              class="hover:underline cursor-pointer"
+                              href={leaf.url}
+                            >
+                              <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                                {leaf.name}
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
               </ul>
             ))}
 
