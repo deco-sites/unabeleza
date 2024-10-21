@@ -1,20 +1,35 @@
-import Icon from "../../components/ui/Icon";
+import { RichText } from "apps/admin/widgets.ts";
+import Icon from "../../components/ui/Icon.tsx";
+
+/** @title {{title}} */
+interface item {
+  title?: string;
+  icon?: string;
+  text: RichText;
+}
 
 interface BenefitBarProps {
-    items: [{icon: string; text: string}]
+  items: item[];
 }
 
 export default function BenefitBar({ items }: BenefitBarProps) {
-   return ( 
-       <div>
-            {items && 
-                items.map(item => (
-                    <div class="flex gap-[10px]">
-                        <Icon id={item.icon} width={30} height={30} class="object-contain"/>
-                        <p></p>
-                    </div>
-                ))
-            }
-       </div>
-   );
+  return (
+    <div class="w-full flex px-[60px] py-[10px] justify-between bg-primary">
+      {items &&
+        items.map((item) => (
+          <div class="flex gap-[10px] items-center">
+            <Icon
+              id={item?.icon}
+              width={30}
+              height={30}
+              class="object-contain"
+            />
+            <p
+              class="text-sm whitespace-nowrap"
+              dangerouslySetInnerHTML={{ __html: item.text }}
+            />
+          </div>
+        ))}
+    </div>
+  );
 }

@@ -168,7 +168,7 @@ function Carousel({ images = [], preload, interval }: Props) {
       <ul
         class={clx(
           "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-3",
+          "carousel justify-center gap-[10px] items-end mb-8",
         )}
       >
         {images.map((_, index) => (
@@ -176,8 +176,8 @@ function Carousel({ images = [], preload, interval }: Props) {
             <Slider.Dot
               index={index}
               class={clx(
-                "bg-black opacity-20 h-3 w-3 no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
+                "bg-white h-1 w-8 no-animation rounded-[1px]",
+                "disabled:bg-primary disabled:opacity-100 transition-[width]",
               )}
             >
             </Slider.Dot>
