@@ -1,0 +1,10 @@
+{
+  "__resolveType": "site/apps/deco/wake.ts",
+  "storefrontToken": {
+    "__resolveType": "website/loaders/secret.ts",
+    "encrypted": "464201f2c7f017bce95c269bc99c6ecc98dfcffafa637cbec171e1663776bd34e34f4698420e5d6665541733eb32f5ef"
+  },
+  "platform": "wake",
+  "account": "unikapro",
+  "checkoutUrl": "https://unikapro.checkout.fbits.store/"
+}
