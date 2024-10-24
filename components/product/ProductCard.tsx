@@ -26,8 +26,8 @@ interface Props {
   class?: string;
 }
 
-const WIDTH = 287;
-const HEIGHT = 287;
+const WIDTH = 318;
+const HEIGHT = 478;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 function ProductCard({
@@ -45,6 +45,9 @@ function ProductCard({
   const [front, back] = images ?? [];
 
   const { listPrice, price, seller = "1", availability } = useOffer(offers);
+
+  console.log(useOffer(offers))
+
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
   const firstSkuVariations = Object.entries(possibilities)?.[0];
@@ -71,6 +74,8 @@ function ProductCard({
   //Added it to check the variant name in the SKU Selector later, so it doesn't render the SKU to "shoes size" in the Product Card
   const firstVariantName = firstSkuVariations?.[0]?.toLowerCase();
   const shoeSizeVariant = "shoe size";
+
+  if (!price || price <= 0) return null
 
   return (
     <div
@@ -176,7 +181,7 @@ function ProductCard({
       </a>
 
       {/* SKU Selector */}
-      {variants.length > 1 && firstVariantName !== shoeSizeVariant && (
+      {/* {variants.length > 1 && firstVariantName !== shoeSizeVariant && (
         <ul class="flex items-center justify-start gap-2 pt-4 pb-1 pl-1 overflow-x-auto">
           {variants.map(([value, link]) => [value, relative(link)] as const)
             .map(([value, link]) => (
@@ -193,7 +198,7 @@ function ProductCard({
               </li>
             ))}
         </ul>
-      )}
+      )} */}
 
       <div class="flex-grow" />
 

@@ -33,10 +33,10 @@ function SliderItem(props: ItemProps) {
       aria-label={props?.alt}
     >
       <div class="absolute bottom-10 right-1/2 translate-x-1/2 z-20 w-[70.12%]">
-        <h2 class="font-[PP-Hatton] font-bold text-xl text-white mb-2">
+        <h2 class="font-[PP-Hatton] font-bold text-xl text-white mb-2 mobile:text-lg">
           {props.title}
         </h2>
-        <p class="text-sm text-white">{props.text}</p>
+        <p class="text-sm text-white font-normal">{props.text}</p>
       </div>
       <div class="absolute bottom-0 z-10 w-full h-full bg-gradient-to-t from-[#1F1F1F80] to-transparent" />
       <Image
@@ -56,7 +56,7 @@ export default function FavoritesSlider(
 ) {
   return (
     <div class="px-[60px] py-16 w-full mobile:px-5 mobile:py-6">
-      <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center">
+      <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
         {title}
       </h2>
       <Slider class="carousel carousel-center w-full gap-4 h-full mx-auto desktop:justify-center mobile mobile:gap-0">

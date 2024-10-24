@@ -47,15 +47,26 @@ function Banner({ images }: Props) {
 
               <div
                 class={clx(
-                  "absolute top-[44.07%] -translate-y-1/2 flex flex-col gap-8 h-fit max-w-[250px]",
-                  image.contentPosition === "end" ? "right-[60px]" : "left-[60px]"
+                  "absolute top-[44.07%] -translate-y-1/2 flex flex-col gap-8 h-fit max-w-[250px]", 
+                  "mobile:gap-5 mobile:-translate-y-0",
+                  image.contentPosition === "end" 
+                  ? "right-[60px] mobile:top-auto mobile:bottom-10 mobile:left-10 mobile:max-w-[298px]" 
+                  : "left-[60px] mobile:top-10 mobile:left-10 mobile:max-w-[235px]"
               )}
               >
-                {image.title && <h2 class="font-bold font-[PP-Hatton] text-[28px] leading-[34px] text-black w-full">{image.title}
+                {image.title && <h2 class={clx(
+                  "font-bold font-[PP-Hatton] text-[28px] leading-[34px] text-black w-full",
+                  "mobile:text-xl mobile:leading-6"
+                  )}>
+                  {image.title}
                 </h2>}
                 {image.description && (
                   <span
-                    class="font-normal text-[18px] leading-[27px] text-black w-full"
+                    class={clx(
+                      "font-normal text-lg leading-7 text-black w-full",
+                      "mobile:text-base mobile:leading-6",
+                      image.contentPosition === "end" && "mobile:whitespace-nowrap"
+                    )}
                     dangerouslySetInnerHTML={{ __html: image.description }}
                   />
                 )}
@@ -63,7 +74,10 @@ function Banner({ images }: Props) {
                   {image.cta && (
                     <a
                       href={image.cta.href}
-                      class="btn bg-black text-[#A3E3FF] no-animatio w-fit border-0 rounded-[5px] min-h-[45px] min-w-[165px]"
+                      class={clx(
+                        "btn bg-black text-[#A3E3FF] no-animatio w-fit border-0 rounded-[5px] min-h-[45px] min-w-[165px]",
+                        "mobile:max-w-[165px] mobile:h-[45px] mobile:py-3 mobile:px-10 mobile:text-sm"
+                      )}
                     >
                       {image.cta.label}
                     </a>
