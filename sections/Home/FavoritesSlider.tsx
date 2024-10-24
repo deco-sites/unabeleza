@@ -29,7 +29,7 @@ function SliderItem(props: ItemProps) {
     <a
       {...selectPromotionEvent}
       href={props.href}
-      class="relative max-w-[318px] max-h-[500px] mobile:w-full mobile:max-w-full"
+      class="relative max-w-[318px] max-h-[500px] w-full h-hull mobile:w-full mobile:max-w-full group overflow-hidden"
       aria-label={props?.alt}
     >
       <div class="absolute bottom-10 right-1/2 translate-x-1/2 z-20 w-[70.12%]">
@@ -45,7 +45,7 @@ function SliderItem(props: ItemProps) {
         width={318}
         height={500}
         loading="lazy"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover group-hover:scale-125 transition-all duration-500"
       />
     </a>
   );

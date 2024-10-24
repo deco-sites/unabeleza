@@ -9,6 +9,8 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   product: Product;
   seller: string;
   item: AnalyticsItem;
+  text?: string;
+  quantityButton?: boolean
 }
 const onClick = () => {
   event?.stopPropagation();
@@ -104,7 +106,7 @@ const useAddToCart = ({ product, seller }: Props) => {
   return null;
 };
 function AddToCartButton(props: Props) {
-  const { product, item, class: _class } = props;
+  const { product, item, class: _class, text, quantityButton } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
   return (
@@ -116,25 +118,23 @@ function AddToCartButton(props: Props) {
         JSON.stringify({ item, platformProps }),
       )}
     >
-      <input type="checkbox" class="hidden peer" />
 
-      <button
-        disabled
-        class={clx("flex-grow peer-checked:hidden", _class?.toString())}
-        hx-on:click={useScript(onClick)}
-      >
-        Add to Cart
-      </button>
-
-      {/* Quantity Input */}
-      <div class="flex-grow hidden peer-checked:flex">
+      {quantityButton ? (
+        <div class={clx("flex-grow", _class?.toString())}>
         <QuantitySelector
-          disabled
           min={0}
           max={100}
           hx-on:change={useScript(onChange)}
         />
       </div>
+      ) : (
+        <button
+        class={clx("flex-grow", _class?.toString())}
+        hx-on:click={useScript(onClick)}
+      >
+        {text ? text : 'Add to Cart'}
+      </button>
+      )}
 
       <script
         type="module"

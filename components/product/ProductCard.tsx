@@ -26,8 +26,8 @@ interface Props {
   class?: string;
 }
 
-const WIDTH = 318;
-const HEIGHT = 478;
+const WIDTH = 290.66;
+const HEIGHT = 293.13;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 function ProductCard({
@@ -44,9 +44,7 @@ function ProductCard({
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability } = useOffer(offers);
-
-  console.log(useOffer(offers))
+  const { listPrice, price, seller = "1", availability, installments } = useOffer(offers);
 
   const inStock = availability === "https://schema.org/InStock";
   const possibilities = useVariantPossibilities(hasVariant, product);
@@ -72,21 +70,20 @@ function ProductCard({
   });
 
   //Added it to check the variant name in the SKU Selector later, so it doesn't render the SKU to "shoes size" in the Product Card
-  const firstVariantName = firstSkuVariations?.[0]?.toLowerCase();
-  const shoeSizeVariant = "shoe size";
+  // const firstVariantName = firstSkuVariations?.[0]?.toLowerCase();
+  // const shoeSizeVariant = "shoe size";
 
   if (!price || price <= 0) return null
 
   return (
     <div
       {...event}
-      class={clx("card card-compact group text-sm", _class)}
+      class={clx("card card-compact group text-sm px-[15px] py-4", _class)}
     >
       <figure
         class={clx(
           "relative bg-base-200",
           "rounded border border-transparent",
-          "group-hover:border-primary",
         )}
         style={{ aspectRatio: ASPECT_RATIO }}
       >
@@ -111,6 +108,7 @@ function ProductCard({
               "object-cover",
               "rounded w-full",
               "col-span-full row-span-full",
+              "group-hover:scale-125 transition-all duration-500"
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
@@ -158,13 +156,13 @@ function ProductCard({
           </span>
         </div>
 
-        <div class="absolute bottom-0 right-0">
+        <div class="absolute top-5 right-4">
           <WishlistButton item={item} variant="icon" />
         </div>
       </figure>
 
-      <a href={relativeUrl} class="pt-5">
-        <span class="font-medium">
+      <a href={relativeUrl} class="pt-5 gap-4">
+        <span class="text-sm texy-black">
           {title}
         </span>
 
@@ -174,9 +172,14 @@ function ProductCard({
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
           )}
-          <span class="font-medium text-base-400">
+          <span class="font-bold text-black">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
+          {installments && (
+            <span class="line-through font-normal text-gray-400">
+              {installments}
+            </span>
+          )}
         </div>
       </a>
 
@@ -202,19 +205,18 @@ function ProductCard({
 
       <div class="flex-grow" />
 
-      <div>
+      <div class="mt-4">
         {inStock
           ? (
             <AddToCartButton
               product={product}
               seller={seller}
               item={item}
+              text="COMPRAR"
               class={clx(
-                "btn",
-                "btn-outline justify-start border-none !text-sm !font-medium px-0 no-animation w-full",
-                "hover:!bg-transparent",
-                "disabled:!bg-transparent disabled:!opacity-50",
-                "btn-primary hover:!text-primary disabled:!text-primary",
+                "btn btn-primary !bg-primary btn-outline justify-center border-none px-0 w-full !text-black uppercase",
+                "hover:!bg-[#C493EF]",
+                "disabled:!bg-transparent disabled:!opacity-50 disabled:!text-primary",
               )}
             />
           )
