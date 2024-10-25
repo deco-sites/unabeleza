@@ -16,7 +16,7 @@ const onLoad = (id: string, productID: string) =>
     button.classList.remove("htmx-request");
     button.querySelector("svg")?.setAttribute(
       "fill",
-      inWishlist ? "black" : "none",
+      inWishlist ? "#8F2AED" : "none",
     );
     const span = button.querySelector("span");
     if (span) {
@@ -55,13 +55,13 @@ function WishlistButton({ item, variant = "full" }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
         class={clx(
-          "btn no-animation",
+          "btn btn-circle border border-[#E3EBED] no-animation w-[49px] h-[49px]",
           variant === "icon"
-            ? "btn-circle btn-ghost btn-sm"
-            : "btn-primary btn-outline gap-2 w-full",
+            ? "btn-ghost btn-sm text-transparent hover:bg-info"
+            : "btn-primary btn-outline gap-2",
         )}
       >
-        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" />
+        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" width={26} height={23}/>
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}

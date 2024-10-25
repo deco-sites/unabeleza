@@ -18,13 +18,13 @@ function Header({ title, cta }: Props) {
     <div
       class={clx(
         "flex justify-between items-center gap-2",
-        "px-5 sm:px-0",
+        "px-[60px] sm:px-5",
       )}
     >
-      <span class="text-2xl sm:text-3xl font-semibold">{title}</span>
+      <span class="text-4xl text-center sm:text-lg font-bold font-[PP-Hatton]">{title}</span>
       {cta && (
-        <a class="text-sm font-medium text-primary" href={cta}>
-          See all
+        <a class="text-sm font-medium text-primary mobile:hidden" href={cta}>
+          VER TODOS
         </a>
       )}
     </div>

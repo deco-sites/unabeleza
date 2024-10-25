@@ -75,7 +75,7 @@ function Banner({ images }: Props) {
                     <a
                       href={image.cta.href}
                       class={clx(
-                        "btn bg-black text-[#A3E3FF] no-animatio w-fit border-0 rounded-[5px] min-h-[45px] min-w-[165px]",
+                        "btn bg-black text-[#A3E3FF] no-animatio w-fit border-0 rounded-[5px] min-h-[45px] min-w-[165px] hover:bg-[#1A1A1A]",
                         "mobile:max-w-[165px] mobile:h-[45px] mobile:py-3 mobile:px-10 mobile:text-sm"
                       )}
                     >

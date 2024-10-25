@@ -3606,6 +3606,9 @@ details.collapse summary::-webkit-details-marker {
 .left-\[60px\] {
   left: 60px;
 }
+.left-\[8\.81px\] {
+  left: 8.81px;
+}
 .right-0 {
   right: 0px;
 }
@@ -3627,6 +3630,9 @@ details.collapse summary::-webkit-details-marker {
 .right-6 {
   right: 1.5rem;
 }
+.right-\[2\.85px\] {
+  right: 2.85px;
+}
 .right-\[60px\] {
   right: 60px;
 }
@@ -3642,8 +3648,8 @@ details.collapse summary::-webkit-details-marker {
 .top-4 {
   top: 1rem;
 }
-.top-5 {
-  top: 1.25rem;
+.top-\[10\.29px\] {
+  top: 10.29px;
 }
 .top-\[41px\] {
   top: 41px;
@@ -3653,6 +3659,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .top-\[70px\] {
   top: 70px;
+}
+.top-\[9\.79px\] {
+  top: 9.79px;
 }
 .z-10 {
   z-index: 10;
@@ -3883,8 +3892,14 @@ details.collapse summary::-webkit-details-marker {
 .h-\[3px\] {
   height: 3px;
 }
+.h-\[478px\] {
+  height: 478px;
+}
 .h-\[496px\] {
   height: 496px;
+}
+.h-\[49px\] {
+  height: 49px;
 }
 .h-\[52px\] {
   height: 52px;
@@ -3917,6 +3932,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[300px\] {
   max-height: 300px;
+}
+.max-h-\[30px\] {
+  max-height: 30px;
 }
 .max-h-\[420px\] {
   max-height: 420px;
@@ -3978,11 +3996,11 @@ details.collapse summary::-webkit-details-marker {
 .w-\[10px\] {
   width: 10px;
 }
-.w-\[287px\] {
-  width: 287px;
-}
 .w-\[316px\] {
   width: 316px;
+}
+.w-\[318px\] {
+  width: 318px;
 }
 .w-\[330px\] {
   width: 330px;
@@ -3995,6 +4013,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[400px\] {
   width: 400px;
+}
+.w-\[49px\] {
+  width: 49px;
 }
 .w-\[4px\] {
   width: 4px;
@@ -4117,6 +4138,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[80px\] {
   max-width: 80px;
+}
+.max-w-\[98px\] {
+  max-width: 98px;
 }
 .max-w-full {
   max-width: 100%;
@@ -4462,6 +4486,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-border-opacity: 1;
   border-color: rgb(201 207 207 / var(--tw-border-opacity));
 }
+.border-\[\#E3EBED\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(227 235 237 / var(--tw-border-opacity));
+}
 .border-\[\#E7E7E7\] {
   --tw-border-opacity: 1;
   border-color: rgb(231 231 231 / var(--tw-border-opacity));
@@ -4531,6 +4559,10 @@ details.collapse summary::-webkit-details-marker {
 .bg-error {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-er,oklch(var(--er)/var(--tw-bg-opacity)));
+}
+.bg-info {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-in,oklch(var(--in)/var(--tw-bg-opacity)));
 }
 .bg-neutral-content {
   --tw-bg-opacity: 1;
@@ -4662,6 +4694,10 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 12px;
   padding-right: 12px;
 }
+.px-\[14px\] {
+  padding-left: 14px;
+  padding-right: 14px;
+}
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
@@ -4721,6 +4757,10 @@ details.collapse summary::-webkit-details-marker {
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -4799,6 +4839,10 @@ details.collapse summary::-webkit-details-marker {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .text-5xl {
   font-size: 3rem;
@@ -5023,6 +5067,9 @@ details.collapse summary::-webkit-details-marker {
 .text-success {
   --tw-text-opacity: 1;
   color: var(--fallback-su,oklch(var(--su)/var(--tw-text-opacity)));
+}
+.text-transparent {
+  color: transparent;
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -5364,9 +5411,19 @@ details.collapse summary::-webkit-details-marker {
   background-color: transparent !important;
 }
 
+.hover\:bg-\[\#1A1A1A\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 26 26 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-base-200:hover {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+
+.hover\:bg-info:hover {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-in,oklch(var(--in)/var(--tw-bg-opacity)));
 }
 
 .hover\:bg-gradient-to-r:hover {
@@ -5511,8 +5568,16 @@ details.collapse summary::-webkit-details-marker {
     display: none;
   }
 
+  .mobile\:h-\[308px\] {
+    height: 308px;
+  }
+
   .mobile\:h-\[45px\] {
     height: 45px;
+  }
+
+  .mobile\:w-\[160px\] {
+    width: 160px;
   }
 
   .mobile\:w-full {

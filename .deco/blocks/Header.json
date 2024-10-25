@@ -20,7 +20,12 @@
     {
       "children": [
         {
-          "image": [],
+          "image": [
+            {
+              "image": [],
+              "video": []
+            }
+          ],
           "children": [],
           "name": "BARROMINAS",
           "identifier": "group1"
