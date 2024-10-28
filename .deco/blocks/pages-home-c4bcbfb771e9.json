@@ -662,6 +662,29 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Home/BannerSlider.tsx",
+        "items": [
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d1f80616-24bc-4a80-9677-016c397bb661/banner-slider-1.png",
+            "title": "Equipamentos",
+            "btn": true
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/c3ad7c9f-d901-450c-9507-872013c6a3bf/banner-slider-2.png",
+            "title": "Marcas para salão",
+            "btn": true
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/df5d8946-0586-4d76-bdc6-c7b8511b98a4/banner-sldier-3.png",
+            "title": "Marcas para loja",
+            "btn": true
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Category/CategoryGrid.tsx",
         "title": "Departments",
         "cta": "/all",

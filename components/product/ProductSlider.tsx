@@ -17,20 +17,19 @@ function ProductSlider({ products, itemListName }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1"
+        class="grid grid-rows-1 w-full mobile:max-w-[336px]"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
       >
-        <div class="col-start-1 col-span-3 row-start-1 row-span-1">
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 sm:gap-10 w-full">
-            {products?.map((product, index) => (
+        <div class="col-start-1 col-span-3 row-start-1 row-span-1 w-full">
+          <Slider class="carousel carousel-center sm:carousel-end justify-between mobile:gap-4 flex sm:gap-10 w-full">
+            {products?.filter(product => product.offers!.highPrice > 0 || product.offers!.lowPrice > 0)
+            .map((product, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
                   "carousel-item",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
                 )}
               >
                 <ProductCard

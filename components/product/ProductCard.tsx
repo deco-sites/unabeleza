@@ -78,7 +78,7 @@ function ProductCard({
   return (
     <div
       {...event}
-      class={clx("card card-compact group text-sm px-[15px] py-4", _class)}
+      class={clx("card card-compact group text-sm px-[15px] py-4 mobile:px-2 mobile:py-[8.94px]", _class)}
     >
       <figure
         class={clx(
@@ -156,13 +156,14 @@ function ProductCard({
           </span>
         </div>
 
-        <div class="absolute top-[9.79px] right-[2.85px]">
+        <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px]">
           <WishlistButton item={item} variant="icon" />
         </div>
-        <div class="absolute top-[10.29px] left-[8.81px]">
+        <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
           <span class={clx(
-            "font-bold text-xs text-black",
-            "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full"
+            "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
+            "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
+            "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]"
             )}>
             NOVIDADE
           </span>
@@ -222,8 +223,8 @@ function ProductCard({
               item={item}
               text="COMPRAR"
               class={clx(
-                "btn btn-primary !bg-primary btn-outline justify-center border-none px-0 w-full !text-black uppercase",
-                "hover:!bg-[#C493EF]",
+                "btn btn-primary !bg-primary btn-outline justify-center items-center border-none px-10 py-3 w-full !text-black uppercase",
+                "hover:!bg-[#C493EF] !min-h-0 mobile:h-8 font-bold rounded-[5px] text-sm mobile:text-xs mobile:py-0",
                 "disabled:!bg-transparent disabled:!opacity-50 disabled:!text-primary",
               )}
             />
