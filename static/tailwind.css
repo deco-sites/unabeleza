@@ -4806,6 +4806,9 @@ details.collapse summary::-webkit-details-marker {
 .text-\[13px\] {
   font-size: 13px;
 }
+.text-\[14px\] {
+  font-size: 14px;
+}
 .text-\[15px\] {
   font-size: 15px;
 }
@@ -4949,10 +4952,6 @@ details.collapse summary::-webkit-details-marker {
 .text-\[\#667781\] {
   --tw-text-opacity: 1;
   color: rgb(102 119 129 / var(--tw-text-opacity));
-}
-.text-\[\#8F2AED\] {
-  --tw-text-opacity: 1;
-  color: rgb(143 42 237 / var(--tw-text-opacity));
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -5481,6 +5480,33 @@ details.collapse summary::-webkit-details-marker {
 
 .peer:checked ~ .peer-checked\:hidden {
   display: none;
+}
+
+@media (max-width: 1025px) {
+
+  .mobile\:left-\[20px\] {
+    left: 20px;
+  }
+
+  .mobile\:mt-\[250px\] {
+    margin-top: 250px;
+  }
+
+  .mobile\:px-\[20px\] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mobile\:text-\[24px\] {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1026px) {
+
+  .desktop\:block {
+    display: block;
+  }
 }
 
 .\[\&_section\]\:contents section {
