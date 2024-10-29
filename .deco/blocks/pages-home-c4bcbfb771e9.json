@@ -683,39 +683,52 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-        "title": "Departments",
-        "cta": "/all",
-        "items": [
-          {
-            "label": "Men",
-            "href": "/men",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa"
-          },
-          {
-            "href": "/women",
-            "label": "Women",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f6bea2b8-b248-4b42-9246-6e924a0acc8b"
-          },
-          {
-            "href": "/kids",
-            "label": "Kids",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/1b0ecaa2-9a13-4de2-bf17-5196948ed128"
-          },
-          {
-            "href": "/accessories",
-            "label": "Accessories",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/92129655-fe40-4b29-8fdb-e7f71e67a5d1"
-          },
-          {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d0433c00-cd26-4638-b519-0cb64b9f82e8"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+      "title": "Navegue por categorias",
+      "items": [
+        {
+          "label": "COMPRE & GANHE",
+          "href": "/compre-e-ganhe",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryPayToWin"
+        },
+        {
+          "label": "MARCAS PARA LOJA",
+          "href": "/marcas-para-loja",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryBrandForStore"
+        },
+        {
+          "label": "MARCAS PARA SALÃO",
+          "href": "/marcas-para-salao",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categorySalonBrands"
+        },
+        {
+          "label": "CABELO",
+          "href": "/cabelo",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryHair"
+        },
+        {
+          "label": "MAQUIAGEM",
+          "href": "/maquiagem",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryMakeup"
+        },
+        {
+          "label": "CORPO E BANHO",
+          "href": "/corpo-e-banho",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryBodyAndBath"
+        },
+        {
+          "label": "EQUIPAMENTO",
+          "href": "/equipamento",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryEquipment"
+        }
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
