@@ -12,10 +12,10 @@ export default function TituloSubtitulo({
   return (
     <>
       <div className="line">
-        <h1 className="text-[32px] font-bold mt-4 font-[PP-Hatton] text-[#162116]">{titulo}</h1>
+        <h1 className="text-[32px] font-bold mt-4 font-[PP-Hatton] text-[#162116] mobile:text-[24px]">{titulo}</h1>
       </div>
-      {subtitulo && <p className="font-[Montserrat] font-medium text-[14px] mt-[20px] text-[#162116]">{subtitulo}</p>}
-      {subtituloDown && <p className="font-[Montserrat] font-medium text-[14px] text-[#162116]">{subtituloDown}</p>}
+      {subtitulo && <p className="font-[Montserrat] font-normal text-[14px] mt-[20px] text-[#162116]">{subtitulo}</p>}
+      {subtituloDown && <p className="font-[Montserrat] font-normal text-[14px] text-[#162116]">{subtituloDown}</p>}
     </>
   );
 }

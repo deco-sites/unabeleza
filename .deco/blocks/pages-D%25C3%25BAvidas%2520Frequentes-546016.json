@@ -81,6 +81,18 @@
           "rota": "/troca-e-devolucao"
         }
       ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Footer/Footer.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/LGPD/PopupLGPD.tsx"
+      }
     }
   ],
   "seo": {
