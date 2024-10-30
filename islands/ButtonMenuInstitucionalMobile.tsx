@@ -14,7 +14,7 @@ export default function ButtonMenuInstitucionalMobile(
   { links }: Menu,
 ) {
   const [navigation, setNavigation] = useState(false);
-  const [label, setLabel] = useState<string>(null);
+  const [_, setLabel] = useState<string>(null);
 
   return (
     <div className="absolute top-[280px] left-[80px]">

@@ -1,0 +1,90 @@
+{
+  "name": "Dúvidas Frequentes",
+  "path": "/duvidas-frequentes",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Duvidas/duvidas.tsx",
+      "title": "Duvidas Frequentes",
+      "item": [
+        {
+          "question": "Como eu acompanho meu pedido?",
+          "anwser": "<p>Resposta da primeira pergunta</p>",
+          "questionNumber": 1
+        },
+        {
+          "question": "Meu pedido foi cancelado e eu paguei o boleto ou realizei o depósito. E agora?",
+          "anwser": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eros eget enim vulputate egestas. Mauris lobortis ullamcorper nunc a ultricies. Quisque sit amet quam ac arcu mattis suscipit non sit amet velit. Nam ac massa ullamcorper, congue tellus nec, volutpat erat. Vivamus id malesuada est. Nam sed lacus a purus venenatis laoreet non a lectus.</span></p>",
+          "questionNumber": 2
+        },
+        {
+          "question": "Não Recebi o e-mail de confirmação de meu pedido. E agora?",
+          "anwser": "<p>Resposta da terceira pergunta.</p>",
+          "questionNumber": 3
+        },
+        {
+          "question": "Comprei um produto, mas recebi outro. E agora?",
+          "anwser": "<p>Resposta da quarta pergunta.</p>",
+          "questionNumber": 4
+        },
+        {
+          "question": "Quais os métodos de pagamento aceitos pelo site?",
+          "anwser": "<p>Resposta da quinta pergunta.</p>",
+          "questionNumber": 5
+        }
+      ],
+      "titulo": "Dúvidas Frequentes",
+      "subtitulo": "Está com alguma dúvida? ",
+      "subtituloDown": "Confira nossa seção de perguntas frequentes para obter respostas."
+    },
+    {
+      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+      "titulo": "Institucional",
+      "links": [
+        {
+          "rota": "https://www.google.com",
+          "etiqueta": "Google"
+        }
+      ],
+      "titulo_institucional": "Institucionais",
+      "titulo_suporte": "Ajuda e Suporte",
+      "links_institucionais": [
+        {
+          "etiqueta": "Quem somos",
+          "rota": "/quem-somos"
+        },
+        {
+          "etiqueta": "Políticas de privacidade",
+          "rota": "/politicas-de-privacidade"
+        },
+        {
+          "etiqueta": "Política de Frete",
+          "rota": "/politicas-de-frete"
+        }
+      ],
+      "links_ajudas": [
+        {
+          "etiqueta": "Dúvidas",
+          "rota": "/duvidas"
+        },
+        {
+          "etiqueta": "Fale Conosco",
+          "rota": "/fale-conosco"
+        },
+        {
+          "etiqueta": "Troca e devolução",
+          "rota": "/troca-e-devolucao"
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
