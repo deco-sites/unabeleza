@@ -81,6 +81,40 @@
           "rota": "/troca-e-devolucao"
         }
       ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+        "links": [
+          {
+            "rota": "/quem-somos",
+            "etiqueta": "Quem Somos"
+          },
+          {
+            "rota": "/politicas-de-privacidade",
+            "etiqueta": "Políticas de Privacidade"
+          },
+          {
+            "rota": "/política-de-frete",
+            "etiqueta": "Política de Frete"
+          },
+          {
+            "rota": "/duvidas-frequentes",
+            "etiqueta": "Dúvidas"
+          },
+          {
+            "etiqueta": "Fale Conosco"
+          },
+          {}
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Footer/Footer.tsx"
+      }
     }
   ],
   "seo": {

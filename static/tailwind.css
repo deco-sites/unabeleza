@@ -3884,9 +3884,6 @@ details.collapse summary::-webkit-details-marker {
 .h-\[29px\] {
   height: 29px;
 }
-.h-\[30px\] {
-  height: 30px;
-}
 .h-\[3px\] {
   height: 3px;
 }
@@ -3940,6 +3937,9 @@ details.collapse summary::-webkit-details-marker {
 .min-h-\[157px\] {
   min-height: 157px;
 }
+.min-h-\[30px\] {
+  min-height: 30px;
+}
 .min-h-\[40px\] {
   min-height: 40px;
 }
@@ -3984,9 +3984,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[287px\] {
   width: 287px;
-}
-.w-\[30px\] {
-  width: 30px;
 }
 .w-\[316px\] {
   width: 316px;
@@ -4046,6 +4043,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .min-w-\[200px\] {
   min-width: 200px;
+}
+.min-w-\[30px\] {
+  min-width: 30px;
 }
 .min-w-\[400px\] {
   min-width: 400px;
@@ -4957,6 +4957,9 @@ details.collapse summary::-webkit-details-marker {
 .leading-\[22px\] {
   line-height: 22px;
 }
+.leading-none {
+  line-height: 1;
+}
 .tracking-\[-2\.4px\] {
   letter-spacing: -2.4px;
 }
@@ -5517,6 +5520,10 @@ details.collapse summary::-webkit-details-marker {
     left: 20px;
   }
 
+  .mobile\:ml-\[35px\] {
+    margin-left: 35px;
+  }
+
   .mobile\:mt-\[250px\] {
     margin-top: 250px;
   }
@@ -5526,8 +5533,16 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 20px;
   }
 
+  .mobile\:text-left {
+    text-align: left;
+  }
+
   .mobile\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .mobile\:font-medium {
+    font-weight: 500;
   }
 }
 
