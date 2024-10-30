@@ -3600,6 +3600,9 @@ details.collapse summary::-webkit-details-marker {
 .left-4 {
   left: 1rem;
 }
+.left-\[20px\] {
+  left: 20px;
+}
 .left-\[80px\] {
   left: 80px;
 }
@@ -3884,6 +3887,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[29px\] {
   height: 29px;
 }
+.h-\[38px\] {
+  height: 38px;
+}
 .h-\[3px\] {
   height: 3px;
 }
@@ -3979,6 +3985,9 @@ details.collapse summary::-webkit-details-marker {
 .w-8 {
   width: 2rem;
 }
+.w-\[100\%\] {
+  width: 100%;
+}
 .w-\[10px\] {
   width: 10px;
 }
@@ -4008,6 +4017,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[79\.73vw\] {
   width: 79.73vw;
+}
+.w-\[90\%\] {
+  width: 90%;
 }
 .w-auto {
   width: auto;
@@ -4167,6 +4179,10 @@ details.collapse summary::-webkit-details-marker {
 }
 .rotate-180 {
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[-90\] {
+  --tw-rotate: -90;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
@@ -4508,6 +4524,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(201 207 207 / var(--tw-bg-opacity));
 }
+.bg-\[\#F5F5F5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
 .bg-\[\#FAFAFA\] {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
@@ -4650,6 +4670,10 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .px-\[12px\] {
   padding-left: 12px;
   padding-right: 12px;
@@ -4772,6 +4796,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-\[5px\] {
+  padding-top: 5px;
 }
 .text-left {
   text-align: left;
@@ -5126,6 +5153,11 @@ details.collapse summary::-webkit-details-marker {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 .duration-1000 {
   transition-duration: 1000ms;
 }
@@ -5303,6 +5335,10 @@ details.collapse summary::-webkit-details-marker {
 
 .first\:ml-4:first-child {
   margin-left: 1rem;
+}
+
+.first\:mt-\[10px\]:first-child {
+  margin-top: 10px;
 }
 
 .first\:pl-5:first-child {

@@ -104,9 +104,9 @@
             "etiqueta": "Dúvidas"
           },
           {
-            "etiqueta": "Fale Conosco"
-          },
-          {}
+            "etiqueta": "Fale Conosco",
+            "rota": "/fale-conosco"
+          }
         ]
       }
     },
