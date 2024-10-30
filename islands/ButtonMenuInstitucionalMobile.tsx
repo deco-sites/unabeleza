@@ -16,9 +16,9 @@ export default function ButtonMenuInstitucionalMobile({ links }: Menu) {
   const [label, setLabel] = useState<string>(null);
 
   return (
-    <div className="block lg:hidden absolute top-[280px] left-[20px] bg-[#F5F5F5] w-[90%] rounded-[5px]">
+    <div className="hidden mobile:block absolute top-[280px] left-[20px] bg-[#F5F5F5] w-[90%] rounded-[5px]">
       <button
-        className="w-full text-left flex justify-between items-center h-[38px] py-0 px-[10px]"
+        className="hidden w-full text-left mobile:flex justify-between items-center h-[38px] py-0 px-[10px]"
         onClick={() => setNavigation(!navigation)}
       >
         {label ? label : "Menu"}{" "}
