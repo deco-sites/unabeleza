@@ -19,20 +19,20 @@ export default function AccordionItem({
   };
 
   return (
-    <div className="faq-item border-b border-gray-300 py-4">
+    <div className="border-b border-gray-300 py-4">
       <button
-        className="faq-question font-bold text-lg flex items-center w-full"
+        className="font-bold text-lg flex items-center w-full"
         onClick={toggleAccordion}
       >
         <div className="flex items-center gap-2">
-          <span className="text-primary font-bold">{questionNumber}.</span>
-          <span className="ml-3">{question}</span>
+          <span className="font-[Montserrat] flex items-center justify-center bg-[#A3E3FF] text-[#162116] text-[14px] leading-[18px] font-bold rounded-full w-[30px] h-[30px]">{questionNumber}</span>
+          <span className="font-[Montserrat] font-bold text-[14px] leading-[21px] text-[#162116]">{question}</span>
         </div>
-        <span className="ml-auto text-gray-500">{isOpen ? "-" : "+"}</span>
+        <span className="ml-auto font-[Montserrat] bg-[#A3E3FF] text-[#162116] text-[20px] leading-[18px] font-bold rounded-full w-[30px] h-[30px] flex items-center justify-center">{isOpen ? "-" : "+"}</span>
       </button>
       {isOpen && (
-        <div className="faq-answer mt-4">
-          <p className="text-gray-700" dangerouslySetInnerHTML={{ __html: anwser }} />
+        <div className="mt-[23px]">
+          <p className="font-[Montserrat] font-medium text-[14px] leading-[21px] text-[#162116]" dangerouslySetInnerHTML={{ __html: anwser }} />
         </div>
       )}
     </div>

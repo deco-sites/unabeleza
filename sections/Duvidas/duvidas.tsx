@@ -1,6 +1,6 @@
 import { type RichText } from "apps/admin/widgets.ts";
 import TituloSubtitulo from "../../components/duvidas/TituloSubtitulo.tsx";
-import AccordionItem from '../../islands/AccordionItem.tsx'
+import AccordionItem from '../../islands/AccordionItem.tsx';
 
 /** @title {{titulo}} */
 
@@ -24,24 +24,22 @@ export default function Duvidas({
   subtituloDown,
 }: ItemsDuvidasProps) {
   return (
-    <div className="container mx-auto px-4 py-10 flex justify-center mt-[40px]">
-      <div className="max-w-4xl w-full">
-        <TituloSubtitulo
-          titulo={titulo}
-          subtitulo={subtitulo}
-          subtituloDown={subtituloDown}
-        />
-        <div className="faq-accordion mt-8">
-          {item &&
-            item.map((faqItem, index) => (
-              <AccordionItem
-                key={index}
-                questionNumber={faqItem.questionNumber || 0}
-                question={faqItem.question || ""}
-                anwser={faqItem.anwser || ""}
-              />
-            ))}
-        </div>
+    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] pl-[333px] pr-[118px]">
+      <TituloSubtitulo
+        titulo={titulo}
+        subtitulo={subtitulo}
+        subtituloDown={subtituloDown}
+      />
+      <div className="mt-8">
+        {item &&
+          item.map((faqItem, index) => (
+            <AccordionItem
+              key={index}
+              questionNumber={faqItem.questionNumber || 0}
+              question={faqItem.question || ""}
+              anwser={faqItem.anwser || ""}
+            />
+          ))}
       </div>
     </div>
   );
