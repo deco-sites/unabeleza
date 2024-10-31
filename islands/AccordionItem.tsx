@@ -28,7 +28,7 @@ export default function AccordionItem({
           <span className="font-[Montserrat] flex items-center justify-center bg-[#A3E3FF] text-[#162116] text-[14px] font-bold rounded-full leading-none min-w-[30px] min-h-[30px]">
             {questionNumber}
           </span>
-          <span className="font-[Montserrat] font-bold text-[14px] leading-[21px] text-[#162116] mobile:text-left mobile:font-medium">
+          <span className="font-[Montserrat] font-bold text-[14px] leading-[21px] text-[#162116] mobile:font-medium mobile:text-left">
             {question}
           </span>
         </div>

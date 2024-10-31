@@ -26,7 +26,7 @@ export default function Politicas({
               <h2>{item.subtitulo}</h2>
             </div>
             <div className="font-[Montserrat] text-[14px]">
-              <p dangerouslySetInnerHTML={{ __html: item.paragrafos }} />
+              <p dangerouslySetInnerHTML={{ __html: item.paragrafos ?? ""}} />
             </div>
           </section>
         ))}

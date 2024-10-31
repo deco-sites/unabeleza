@@ -9,7 +9,12 @@
       }
     },
     {
+      "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+      "nome_da_pagina": "Dúvidas Frequentes"
+    },
+    {
       "__resolveType": "site/sections/Duvidas/duvidas.tsx",
+      "titulo": "Dúvidas Frequentes",
       "title": "Duvidas Frequentes",
       "item": [
         {
@@ -38,7 +43,6 @@
           "questionNumber": 5
         }
       ],
-      "titulo": "Dúvidas Frequentes",
       "subtitulo": "Está com alguma dúvida? ",
       "subtituloDown": "Confira nossa seção de perguntas frequentes para obter respostas."
     },
@@ -70,7 +74,7 @@
       "links_ajudas": [
         {
           "etiqueta": "Dúvidas",
-          "rota": "/duvidas"
+          "rota": "/duvidas-frequentes"
         },
         {
           "etiqueta": "Fale Conosco",
@@ -81,6 +85,34 @@
           "rota": "/troca-e-devolucao"
         }
       ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+        "links": [
+          {
+            "rota": "/quem-somos",
+            "etiqueta": "Quem Somos"
+          },
+          {
+            "rota": "/politicas-de-privacidade",
+            "etiqueta": "Políticas de Privacidade"
+          },
+          {
+            "rota": "/política-de-frete",
+            "etiqueta": "Política de Frete"
+          },
+          {
+            "rota": "/duvidas-frequentes",
+            "etiqueta": "Dúvidas"
+          },
+          {
+            "etiqueta": "Fale Conosco",
+            "rota": "/fale-conosco"
+          }
+        ]
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
