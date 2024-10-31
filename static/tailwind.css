@@ -4951,6 +4951,9 @@ details.collapse summary::-webkit-details-marker {
 .leading-5 {
   line-height: 1.25rem;
 }
+.leading-6 {
+  line-height: 1.5rem;
+}
 .leading-\[1\.125rem\] {
   line-height: 1.125rem;
 }
@@ -5585,6 +5588,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:text-left {
     text-align: left;
+  }
+
+  .mobile\:text-\[14px\] {
+    font-size: 14px;
   }
 
   .mobile\:text-\[24px\] {
