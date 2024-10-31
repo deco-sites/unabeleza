@@ -149,8 +149,29 @@
                 "tags": [],
                 "productTypes": [],
                 "productVendors": [],
-                "variantOptions": []
-              }
+                "variantOptions": [],
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              },
+              "first": 12,
+              "sortDirection": "ASC",
+              "sortKey": "DISCOUNT"
             },
             "title": "Accessories"
           },
@@ -166,8 +187,29 @@
                 "tags": [],
                 "productTypes": [],
                 "productVendors": [],
-                "variantOptions": []
-              }
+                "variantOptions": [],
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              },
+              "first": 12,
+              "sortDirection": "ASC",
+              "sortKey": "DISCOUNT"
             },
             "title": "Fashion"
           },
@@ -183,8 +225,29 @@
                 "tags": [],
                 "productTypes": [],
                 "productVendors": [],
-                "variantOptions": []
-              }
+                "variantOptions": [],
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              },
+              "first": 12,
+              "sortDirection": "ASC",
+              "sortKey": "DISCOUNT"
             },
             "title": "Stickers"
           }
