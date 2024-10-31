@@ -9,7 +9,12 @@
       }
     },
     {
+      "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+      "nome_da_pagina": "Dúvidas Frequentes"
+    },
+    {
       "__resolveType": "site/sections/Duvidas/duvidas.tsx",
+      "titulo": "Dúvidas Frequentes",
       "title": "Duvidas Frequentes",
       "item": [
         {
@@ -38,7 +43,6 @@
           "questionNumber": 5
         }
       ],
-      "titulo": "Dúvidas Frequentes",
       "subtitulo": "Está com alguma dúvida? ",
       "subtituloDown": "Confira nossa seção de perguntas frequentes para obter respostas."
     },
