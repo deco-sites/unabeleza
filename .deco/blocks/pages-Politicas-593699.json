@@ -36,7 +36,7 @@
       "links_ajudas": [
         {
           "etiqueta": "Dúvidas",
-          "rota": "/duvidas"
+          "rota": "/duvidas-frequentes"
         },
         {
           "etiqueta": "Fale Conosco",
@@ -63,7 +63,8 @@
           "rota": "https://www.google.com"
         },
         {
-          "etiqueta": "Dúvidas"
+          "etiqueta": "Dúvidas",
+          "rota": "/duvidas-frequentes"
         },
         {
           "etiqueta": "Fale conosco"

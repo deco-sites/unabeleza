@@ -20,7 +20,7 @@ export default function ButtonMenuInstitucionalMobile({ links }: Menu) {
     const currentPath = window.location.pathname;
     const matchingLink = links?.find(link => link.rota === currentPath)
 
-    if (matchingLink) setLabel(matchingLink.etiqueta)
+    if (matchingLink) setLabel(matchingLink.etiqueta ?? "")
   }, [links])
 
   return (
@@ -46,7 +46,7 @@ export default function ButtonMenuInstitucionalMobile({ links }: Menu) {
               <a
                 className={`text-left font-[Montserrat] text-[12px] w-full h-[38px] ${index === 0 ? 'first:mt-[10px]' : ''}`}
                 key={index}
-                onClick={() => setLabel(link.etiqueta)}
+                onClick={() => setLabel(link.etiqueta ?? "")}
                 href={link.rota}
               >
                 {link.etiqueta}
