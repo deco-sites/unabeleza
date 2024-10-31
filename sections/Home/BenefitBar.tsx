@@ -14,22 +14,24 @@ interface BenefitBarProps {
 
 export default function BenefitBar({ items }: BenefitBarProps) {
   return (
-    <div class="w-full flex px-[60px] py-[10px] justify-between items-center bg-primary mobile:p-0 mobile:overflow-auto no-scrollbar">
-      {items &&
-        items.map((item) => (
-          <div class="flex gap-[10px] items-center mobile:px-[57px] mobile:py-[10px]">
-            <Icon
-              id={item?.icon}
-              width={30}
-              height={30}
-              class="object-contain"
-            />
-            <span
-              class="text-sm whitespace-nowrap "
-              dangerouslySetInnerHTML={{ __html: item.text }}
-            />
-          </div>
-        ))}
+    <div class="w-full bg-primary">
+      <div class="w-full max-w-[96rem] flex justify-between desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar mx-auto px-[60px] py-[10px] mobile:p-0 ">
+        {items &&
+          items.map((item) => (
+            <div class="flex gap-[10px] items-center justify-center mobile:py-[10px] mobile:min-w-[100vw]">
+              <Icon
+                id={item?.icon}
+                width={30}
+                height={30}
+                class="object-contain"
+              />
+              <span
+                class="text-sm whitespace-nowrap "
+                dangerouslySetInnerHTML={{ __html: item.text }}
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 }

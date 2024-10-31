@@ -18,19 +18,40 @@ export interface Props extends SectionHeaderProps {
   items: Item[];
 }
 function Card({ icon, href, label }: Item) {
+  const device = useDevice();
   return (
-    <a href={href} class="flex flex-col items-center justify-center gap-4 max-w-[134px] mobile:w-[100px]">
-      <div class={clx(
-        "w-[120px] h-[120px] rounded-full bg-neutral-100 flex justify-center items-center",
-        "mobile:w-[90px] mobile:h-[90px]",
-        "hover:bg-info"
-        )}>
-        <Icon
-              id={icon}
-              width={57}
-              height={57}
-              class="object-contain w-full h-auto max-w-[57px] max-h-[57px]"
-            />
+    <a
+      href={href}
+      class="flex flex-col items-center justify-center gap-4 w-[var(--categoryCard-width)] mobile:w-[26.93vw]"
+      style={{
+        "--categoryCard-width": `min(9.30vw, calc(96rem * 0.0930))`,
+      }}
+    >
+      <div
+        class={clx(
+          "w-[var(--categoryCardCircle-size)] h-[var(--categoryCardCircle-size)] rounded-full bg-neutral-100 flex justify-center items-center",
+          "mobile:w-[23.96vw] mobile:h-[23.96vw]",
+          "hover:bg-info"
+        )}
+        style={{
+          "--categoryCardCircle-size": `min(8.33vw, calc(96rem * 0.0833))`
+        }}
+      >
+        {device === "desktop"
+          ? (<Icon
+            id={icon}
+            width="3.95vw"
+            height="3.95vw"
+            class="object-contain w-full h-auto max-w-[60.79px] max-h-[60.79px]"
+          />)
+          : (<Icon
+            id={`${icon}Mobile`}
+            width="11.25vw"
+            height="11.25vw"
+            class="object-contain w-full h-auto max-w-[11.25vw] max-h-[11.25vw]"
+          />)
+        }
+
       </div>
       <span class="font-bold text-black text-center text-sm w-full">{label}</span>
     </a>
@@ -44,19 +65,17 @@ function CategoryGrid({ title, items }: Props) {
 
       {device === "desktop"
         ? (
-          <div class="flex flex-nowrap justify-between w-full">
+          <div class="flex flex-nowrap justify-between w-full max-w-[96rem] mx-auto items-start">
             {items.map((i) => <Card {...i} />)}
           </div>
         )
         : (
-          <Slider class="carousel carousel-center sm:carousel-end gap-5 w-full">
+          <Slider class="carousel carousel-center mobile:carousel-end gap-[4.26vw] w-full items-start">
             {items.map((i, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item",
-                  "first:pl-5 first:mobile:pl-0",
-                  "last:pr-5 last:mobile:pr-0",
+                  "carousel-item last:pr-3",
                 )}
               >
                 <Card {...i} />

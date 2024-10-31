@@ -147,7 +147,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider>
       </div>
 
-      <div class="items-center justify-center z-10 col-start-1 row-start-2 desktop:hidden">
+      <div class="items-center justify-center z-10 col-start-1 row-start-2 hidden">
         <Slider.PrevButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}
@@ -156,7 +156,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider.PrevButton>
       </div>
 
-      <div class="items-center justify-center z-10 col-start-3 row-start-2 desktop:hidden">
+      <div class="items-center justify-center z-10 col-start-3 row-start-2 hidden">
         <Slider.NextButton
           class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
           disabled={false}

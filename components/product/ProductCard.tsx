@@ -78,7 +78,14 @@ function ProductCard({
   return (
     <div
       {...event}
-      class={clx("card card-compact group text-sm px-[15px] py-4 mobile:px-2 mobile:py-[8.94px]", _class)}
+      class={clx(
+        "card card-compact group text-sm px-[15px] py-4 w-[var(--productCard-width)] h-fit",
+        "mobile:px-2 mobile:py-[8.94px] mobile:w-[42.66vw]", 
+        _class
+      )}
+      style={{
+        "--productCard-width": `min(22.08vw, calc(96rem * 0.2208))`,
+      }}
     >
       <figure
         class={clx(
@@ -171,7 +178,7 @@ function ProductCard({
       </figure>
 
       <a href={relativeUrl} class="pt-5 gap-4">
-        <span class="text-sm texy-black">
+        <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}
         </span>
 

@@ -32,11 +32,11 @@ function SliderItem({ btn = false, ...props }: ItemProps) {
     return (
         <div
             {...selectPromotionEvent}
-            class="relative w-full h-hull max-w-[var(--custom-width)] mobile:w-full mobile:max-w-[var(--mobile-max-width)] group overflow-hidden"
+            class="relative dekstop:max-w-[var(--bannerSlider-width)] desktop:max-h-[var(--bannerSlider-heigh)] w-full h-full max-w-[calc(100vw_-_40px)] group overflow-hidden"
             style={{
-                "--custom-width": `min(429px, calc((100vw - 120px - 32px) / 3))`,
-                "--mobile-max-width": "calc(100vw - 40px)"
-            }}
+                "--bannerSlider-width": `min(29.79vw, calc(96rem * 0.2979))`,
+                "--bannerSlider-heigh": `min(39.23vw, calc(96rem * 0.3923))`,
+              }}
         >
             <div class="absolute bottom-10 left-10 z-20 w-4/5 mobile:bottom-[60px] mobile:left-[60px]">
                 <h2 class="font-[PP-Hatton] font-bold text-[28px] text-white mb-3 mobile:text-xl">
@@ -75,11 +75,11 @@ export default function BannerSlider(
     { items, title }: FavoritesSliderProps,
 ) {
     return (
-        <div class="px-[60px] py-16 w-full mobile:px-5 mobile:py-6">
+        <div class="px-[60px] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
             <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
                 {title}
             </h2>
-            <Slider class="carousel carousel-center w-full !justify-between h-full mx-auto mobile mobile:gap-4">
+            <Slider class="carousel carousel-center w-full !justify-between gap-[1.11vw] h-full mx-auto mobile mobile:gap-4">
                 {items.map((item, index) => (
                     <Slider.Item index={index} class="carousel-item">
                         <SliderItem {...item} />
