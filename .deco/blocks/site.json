@@ -31,6 +31,9 @@
       "wishlist": null,
       "mode": "lazy",
       "user": null
+    },
+    {
+      "__resolveType": "site/sections/LGPD/PopupLGPD.tsx"
     }
   ],
   "routes": [
