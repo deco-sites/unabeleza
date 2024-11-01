@@ -1,0 +1,70 @@
+{
+  "name": "Fale Consco",
+  "path": "/fale-conosco",
+  "sections": [
+    {
+      "__resolveType": "Header"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+        "links_institucionais": [
+          {
+            "rota": "/quem-somos",
+            "etiqueta": "Quem Somos"
+          },
+          {
+            "etiqueta": "Políticas de Privacidade",
+            "rota": "/politicas-de-privacidade"
+          },
+          {
+            "rota": "/politica-de-frete",
+            "etiqueta": "Política de Frete"
+          }
+        ],
+        "titulo_institucional": "Institucionais",
+        "titulo_suporte": "Ajuda e Suporte",
+        "links_ajudas": [
+          {
+            "rota": "/duvidas-frequentes",
+            "etiqueta": "Dúvidas"
+          },
+          {
+            "rota": "/fale-conosco",
+            "etiqueta": "Fale Conosco"
+          },
+          {
+            "rota": "/troca-e-devolucao",
+            "etiqueta": "Troca e Devolução"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+        "links": [
+          {}
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/FaleConosco/FaleConosco.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Footer/Footer.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

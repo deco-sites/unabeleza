@@ -3770,11 +3770,20 @@ details.collapse summary::-webkit-details-marker {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
 .mb-\[1px\] {
   margin-bottom: 1px;
 }
 .mb-\[20px\] {
   margin-bottom: 20px;
+}
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+.mb-\[40px\] {
+  margin-bottom: 40px;
 }
 .mb-\[80px\] {
   margin-bottom: 80px;
@@ -3905,6 +3914,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[3px\] {
   height: 3px;
 }
+.h-\[41px\] {
+  height: 41px;
+}
 .h-\[45px\] {
   height: 45px;
 }
@@ -3972,6 +3984,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.w-1\/2 {
+  width: 50%;
 }
 .w-10 {
   width: 2.5rem;
@@ -4324,6 +4339,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .gap-\[16px\] {
   gap: 16px;
+}
+.gap-\[20px\] {
+  gap: 20px;
 }
 .gap-\[2px\] {
   gap: 2px;
@@ -4904,6 +4922,9 @@ details.collapse summary::-webkit-details-marker {
 .text-\[24px\] {
   font-size: 24px;
 }
+.text-\[30px\] {
+  font-size: 30px;
+}
 .text-\[32px\] {
   font-size: 32px;
 }
@@ -5376,6 +5397,48 @@ details.collapse summary::-webkit-details-marker {
 .has-\[\:invalid\]\:tooltip-error:has(:invalid) {
   --tooltip-color: var(--fallback-er,oklch(var(--er)/1));
   --tooltip-text-color: var(--fallback-erc,oklch(var(--erc)/1));
+}
+
+.placeholder\:ml-\[20px\]::-moz-placeholder {
+  margin-left: 20px;
+}
+
+.placeholder\:ml-\[20px\]::placeholder {
+  margin-left: 20px;
+}
+
+.placeholder\:font-\[Montserrat\]::-moz-placeholder {
+  font-family: Montserrat;
+}
+
+.placeholder\:font-\[Montserrat\]::placeholder {
+  font-family: Montserrat;
+}
+
+.placeholder\:text-\[14px\]::-moz-placeholder {
+  font-size: 14px;
+}
+
+.placeholder\:text-\[14px\]::placeholder {
+  font-size: 14px;
+}
+
+.placeholder\:font-normal::-moz-placeholder {
+  font-weight: 400;
+}
+
+.placeholder\:font-normal::placeholder {
+  font-weight: 400;
+}
+
+.placeholder\:text-\[\#999999\]::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\#999999\]::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 .first\:ml-4:first-child {
