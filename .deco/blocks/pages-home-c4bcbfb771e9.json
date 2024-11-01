@@ -844,13 +844,10 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Home/AboutUs.tsx",
-        "title": "Sobre Nós",
-        "subtitle": "Nós somos a Unabeleza",
-        "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
-      }
+      "__resolveType": "site/sections/Home/AboutUs.tsx",
+      "title": "Sobre Nós",
+      "subtitle": "Nós somos a Unabeleza",
+      "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

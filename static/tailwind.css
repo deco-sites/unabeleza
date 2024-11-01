@@ -4840,9 +4840,6 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
 .pb-12 {
   padding-bottom: 3rem;
 }
