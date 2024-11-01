@@ -3817,9 +3817,6 @@ details.collapse summary::-webkit-details-marker {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-5 {
-  margin-top: 1.25rem;
-}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -4205,6 +4202,12 @@ details.collapse summary::-webkit-details-marker {
 .flex-1 {
   flex: 1 1 0%;
 }
+.flex-\[1\] {
+  flex: 1;
+}
+.flex-\[3\] {
+  flex: 3;
+}
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -4276,11 +4279,17 @@ details.collapse summary::-webkit-details-marker {
 .grid-flow-col {
   grid-auto-flow: column;
 }
+.auto-rows-auto {
+  grid-auto-rows: auto;
+}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 .grid-cols-\[32px_1fr_32px\] {
   grid-template-columns: 32px 1fr 32px;
@@ -4335,6 +4344,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
 }
 .gap-1 {
   gap: 0.25rem;
@@ -4392,6 +4404,13 @@ details.collapse summary::-webkit-details-marker {
 }
 .gap-\[6px\] {
   gap: 6px;
+}
+.gap-x-\[6px\] {
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.gap-y-\[10px\] {
+  row-gap: 10px;
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -4852,6 +4871,9 @@ details.collapse summary::-webkit-details-marker {
 .pb-\[15px\] {
   padding-bottom: 15px;
 }
+.pb-\[39\.2px\] {
+  padding-bottom: 39.2px;
+}
 .pl-1 {
   padding-left: 0.25rem;
 }
@@ -4884,6 +4906,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-\[57\.63px\] {
+  padding-top: 57.63px;
 }
 .text-left {
   text-align: left;

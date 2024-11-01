@@ -1,7 +1,8 @@
 import { type ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+// import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
 import Section from "../../components/ui/Section.tsx";
+import { clx } from "../../sdk/clx.ts";
 
 /** @titleBy title */
 interface Item {
@@ -33,93 +34,83 @@ interface Props {
 function Footer({
   links = [],
   social = [],
-  policies = [],
   paymentMethods = [],
   logo,
-  trademark,
 }: Props) {
+
   return (
-    <footer
-      class="px-5 sm:px-0 mt-5 sm:mt-10"
-      style={{ backgroundColor: "#EFF0F0" }}
-    >
-      <div class="container flex flex-col gap-5 sm:gap-10 py-10">
-        <ul class="grid grid-flow-row sm:grid-flow-col gap-6 ">
-          {links.map(({ title, href, children }) => (
-            <li class="flex flex-col gap-4">
-              <a class="text-base font-semibold" href={href}>{title}</a>
-              <ul class="flex flex-col gap-2">
-                {children.map(({ title, href }) => (
+    <footer class="bg-primary pt-[57.63px] pb-[39.2px]">
+      <div class={clx(
+        "px-[60px] flex flex-col",
+        "mobile:px-5"
+      )}>
+        <div class="flex justify-between">
+
+          <div class="flex flex-col flex-[1]">
+            <img loading="lazy" src={logo} />
+            <div>
+              <span class="">Redes sociais</span>
+              <ul class="flex gap-4">
+                {social.map(({ image, href, alt }) => (
                   <li>
-                    <a class="text-sm font-medium text-base-400" href={href}>
-                      {title}
+                    <a href={href}>
+                      <Image
+                        src={image}
+                        alt={alt}
+                        loading="lazy"
+                        width={25}
+                        height={25}
+                      />
                     </a>
                   </li>
                 ))}
               </ul>
-            </li>
-          ))}
-        </ul>
+            </div>
+          </div>
 
-        <div class="flex flex-col sm:flex-row gap-12 justify-between items-start sm:items-center">
-          <ul class="flex gap-4">
-            {social.map(({ image, href, alt }) => (
-              <li>
-                <a href={href}>
+          <div class="flex flex-[3]">
+            <ul class="flex justify-evenly w-full">
+              {links.map(({ title, children }) => (
+                <li class="flex flex-col gap-4">
+                  <h3 class="text-base font-semibold" >{title}</h3>
+                  <ul class="flex flex-col gap-2">
+                    {children.map(({ title, href }) => (
+                      <li>
+                        <a class="text-sm font-medium text-base-400" href={href}>
+                          {title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="flex flex-col flex-[1]">
+            <h3 class="text-base font-semibold">Formas de pagamento</h3>
+            <ul class="grid grid-cols-5 auto-rows-auto gap-x-[6px] gap-y-[10px] w-fit">
+              {paymentMethods.map(({ image, alt }) => (
+                <li class="h-8 w-10 border border-base-100 rounded flex justify-center items-center">
                   <Image
                     src={image}
                     alt={alt}
+                    width={20}
+                    height={20}
                     loading="lazy"
-                    width={24}
-                    height={24}
                   />
-                </a>
-              </li>
-            ))}
-          </ul>
-          <ul class="flex flex-wrap gap-2">
-            {paymentMethods.map(({ image, alt }) => (
-              <li class="h-8 w-10 border border-base-100 rounded flex justify-center items-center">
-                <Image
-                  src={image}
-                  alt={alt}
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <hr class="w-full text-base-400" />
-
-        <div class="grid grid-flow-row sm:grid-flow-col gap-8">
-          <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
-            {policies.map(({ title, href }) => (
-              <li>
-                <a class="text-xs font-medium" href={href}>
-                  {title}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
-            <div>
-              <img loading="lazy" src={logo} />
-            </div>
-            <span class="text-xs font-normal text-base-400">{trademark}</span>
-          </div>
-
-          <div class="flex flex-nowrap items-center justify-center gap-4">
-            <span class="text-sm font-normal text-base-400">Powered by</span>
-            <PoweredByDeco />
-          </div>
+        <div class="flex justify-center">
+          logo econverse
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 export const LoadingFallback = () => <Section.Placeholder height="1145px" />;
