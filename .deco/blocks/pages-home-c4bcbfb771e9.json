@@ -118,6 +118,84 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
+        "tabs": [
+          {
+            "products": {
+              "__resolveType": "wake/loaders/productList.ts",
+              "first": 12,
+              "sortDirection": "ASC",
+              "sortKey": "DISCOUNT",
+              "filters": {
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              }
+            },
+            "title": "accessories"
+          },
+          {
+            "title": "Stickers",
+            "products": {
+              "__resolveType": "wake/loaders/recommendations.ts",
+              "algorithm": "DEFAULT",
+              "getVariations": false,
+              "quantity": 12,
+              "slug": "mono"
+            }
+          },
+          {
+            "products": {
+              "__resolveType": "wake/loaders/productList.ts",
+              "first": 12,
+              "sortDirection": "DESC",
+              "sortKey": "PRICE",
+              "filters": {
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              }
+            },
+            "title": "fashion"
+          }
+        ],
+        "title": "teste",
+        "cta": "teste todos"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "title": "Register and Save Big!",
         "cta": {
@@ -129,129 +207,6 @@
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/cf96d47f-564f-40da-ad94-7acac5f39327",
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4d5c3212-3f75-4d50-89f3-970815748b43"
         }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-        "title": "Hottest Deals",
-        "tabs": [
-          {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "hat and bag",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": [],
-                "attributes": {
-                  "id": [],
-                  "name": [],
-                  "type": [],
-                  "value": []
-                },
-                "brandId": [],
-                "categoryId": [],
-                "ean": [],
-                "productId": [],
-                "productVariantId": [],
-                "sameParentAs": [],
-                "sku": [],
-                "stocks": {
-                  "dcId": [],
-                  "dcName": []
-                },
-                "prices": {}
-              },
-              "first": 12,
-              "sortDirection": "ASC",
-              "sortKey": "DISCOUNT"
-            },
-            "title": "Accessories"
-          },
-          {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "Shirts",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": [],
-                "attributes": {
-                  "id": [],
-                  "name": [],
-                  "type": [],
-                  "value": []
-                },
-                "brandId": [],
-                "categoryId": [],
-                "ean": [],
-                "productId": [],
-                "productVariantId": [],
-                "sameParentAs": [],
-                "sku": [],
-                "stocks": {
-                  "dcId": [],
-                  "dcName": []
-                },
-                "prices": {}
-              },
-              "first": 12,
-              "sortDirection": "ASC",
-              "sortKey": "DISCOUNT"
-            },
-            "title": "Fashion"
-          },
-          {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "stickers",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": [],
-                "attributes": {
-                  "id": [],
-                  "name": [],
-                  "type": [],
-                  "value": []
-                },
-                "brandId": [],
-                "categoryId": [],
-                "ean": [],
-                "productId": [],
-                "productVariantId": [],
-                "sameParentAs": [],
-                "sku": [],
-                "stocks": {
-                  "dcId": [],
-                  "dcName": []
-                },
-                "prices": {}
-              },
-              "first": 12,
-              "sortDirection": "ASC",
-              "sortKey": "DISCOUNT"
-            },
-            "title": "Stickers"
-          }
-        ]
       }
     },
     {
