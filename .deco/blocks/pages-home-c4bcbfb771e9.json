@@ -108,6 +108,84 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
+        "tabs": [
+          {
+            "products": {
+              "__resolveType": "wake/loaders/productList.ts",
+              "first": 12,
+              "sortDirection": "ASC",
+              "sortKey": "DISCOUNT",
+              "filters": {
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              }
+            },
+            "title": "accessories"
+          },
+          {
+            "title": "Stickers",
+            "products": {
+              "__resolveType": "wake/loaders/recommendations.ts",
+              "algorithm": "DEFAULT",
+              "getVariations": false,
+              "quantity": 12,
+              "slug": "mono"
+            }
+          },
+          {
+            "products": {
+              "__resolveType": "wake/loaders/productList.ts",
+              "first": 12,
+              "sortDirection": "DESC",
+              "sortKey": "PRICE",
+              "filters": {
+                "attributes": {
+                  "id": [],
+                  "name": [],
+                  "type": [],
+                  "value": []
+                },
+                "brandId": [],
+                "categoryId": [],
+                "ean": [],
+                "productId": [],
+                "productVariantId": [],
+                "sameParentAs": [],
+                "sku": [],
+                "stocks": {
+                  "dcId": [],
+                  "dcName": []
+                },
+                "prices": {}
+              }
+            },
+            "title": "fashion"
+          }
+        ],
+        "title": "teste",
+        "cta": "teste todos"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "title": "Register and Save Big!",
         "cta": {
@@ -690,7 +768,7 @@
         "tabs": [
           {
             "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
+              "__resolveType": "wake/loaders/productList.ts",
               "props": {
                 "sort": "",
                 "query": "hat and bag",
@@ -707,7 +785,7 @@
           },
           {
             "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
+              "__resolveType": "wake/loaders/productList.ts",
               "props": {
                 "sort": "",
                 "query": "Shirts",
@@ -724,7 +802,7 @@
           },
           {
             "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
+              "__resolveType": "wake/loaders/productList.ts",
               "props": {
                 "sort": "",
                 "query": "stickers",
