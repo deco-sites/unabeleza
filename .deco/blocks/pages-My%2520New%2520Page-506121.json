@@ -8,6 +8,13 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+        "nome_da_pagina": "Fale Conosco"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
         "links_institucionais": [
           {
@@ -53,7 +60,9 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/FaleConosco/FaleConosco.tsx"
+        "__resolveType": "site/sections/FaleConosco/FaleConosco.tsx",
+        "titulo": "Fale Conosco",
+        "subTitulo": "Ainda em dúvida sobre algo? Mande uma mensagem! Responderemos o quanto antes."
       }
     },
     {
