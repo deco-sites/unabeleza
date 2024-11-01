@@ -16,7 +16,7 @@ export default {
     },
     extend: {
       boxShadow: {
-        'custom': '1.28px 1.28px 5.12px 0px rgba(0, 0, 0, 0.25)', // 0.25 equivale a #00000040
+        'custom': '1.28px 1.28px 5.12px 0px rgba(0, 0, 0, 0.25)',
       },
       animation: {
         sliding: "sliding 30s linear infinite",

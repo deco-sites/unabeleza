@@ -108,84 +108,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-        "tabs": [
-          {
-            "products": {
-              "__resolveType": "wake/loaders/productList.ts",
-              "first": 12,
-              "sortDirection": "ASC",
-              "sortKey": "DISCOUNT",
-              "filters": {
-                "attributes": {
-                  "id": [],
-                  "name": [],
-                  "type": [],
-                  "value": []
-                },
-                "brandId": [],
-                "categoryId": [],
-                "ean": [],
-                "productId": [],
-                "productVariantId": [],
-                "sameParentAs": [],
-                "sku": [],
-                "stocks": {
-                  "dcId": [],
-                  "dcName": []
-                },
-                "prices": {}
-              }
-            },
-            "title": "accessories"
-          },
-          {
-            "title": "Stickers",
-            "products": {
-              "__resolveType": "wake/loaders/recommendations.ts",
-              "algorithm": "DEFAULT",
-              "getVariations": false,
-              "quantity": 12,
-              "slug": "mono"
-            }
-          },
-          {
-            "products": {
-              "__resolveType": "wake/loaders/productList.ts",
-              "first": 12,
-              "sortDirection": "DESC",
-              "sortKey": "PRICE",
-              "filters": {
-                "attributes": {
-                  "id": [],
-                  "name": [],
-                  "type": [],
-                  "value": []
-                },
-                "brandId": [],
-                "categoryId": [],
-                "ean": [],
-                "productId": [],
-                "productVariantId": [],
-                "sameParentAs": [],
-                "sku": [],
-                "stocks": {
-                  "dcId": [],
-                  "dcName": []
-                },
-                "prices": {}
-              }
-            },
-            "title": "fashion"
-          }
-        ],
-        "title": "teste",
-        "cta": "teste todos"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "title": "Register and Save Big!",
         "cta": {
@@ -733,7 +655,30 @@
         "title": "Veja por lançamentos",
         "cta": "/mono",
         "products": {
-          "__resolveType": "Product List Loader"
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "DISCOUNT",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          }
         }
       }
     },
@@ -763,61 +708,36 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-        "title": "Hottest Deals",
-        "tabs": [
-          {
-            "products": {
-              "__resolveType": "wake/loaders/productList.ts",
-              "props": {
-                "sort": "",
-                "query": "hat and bag",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "DISCOUNT",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
             },
-            "title": "Accessories"
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
           },
-          {
-            "products": {
-              "__resolveType": "wake/loaders/productList.ts",
-              "props": {
-                "sort": "",
-                "query": "Shirts",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
-            },
-            "title": "Fashion"
-          },
-          {
-            "products": {
-              "__resolveType": "wake/loaders/productList.ts",
-              "props": {
-                "sort": "",
-                "query": "stickers",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
-            },
-            "title": "Stickers"
-          }
-        ]
+          "getVariations": true
+        },
+        "cta": "VER TODOS",
+        "title": "Veja nossas ofertas"
       }
     },
     {
@@ -870,18 +790,42 @@
     },
     {
       "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
-      "products": {
-        "__resolveType": "Product List Loader"
-      },
       "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/20f15360-a5fe-4c93-9684-65e1a5834923/banner-destaque.png",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. ",
       "title": "Destaques",
-      "subtitle": "Ultra hidratantes"
+      "subtitle": "Ultra hidratantes",
+      "products": {
+        "__resolveType": "wake/loaders/productList.ts",
+        "first": 12,
+        "sortDirection": "ASC",
+        "sortKey": "DISCOUNT",
+        "filters": {
+          "attributes": {
+            "id": [],
+            "name": [],
+            "type": [],
+            "value": []
+          },
+          "brandId": [],
+          "categoryId": [],
+          "ean": [],
+          "productId": [],
+          "productVariantId": [],
+          "sameParentAs": [],
+          "sku": [],
+          "stocks": {
+            "dcId": [],
+            "dcName": []
+          },
+          "prices": {}
+        }
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
+        "title": "Kit Senscience",
         "images": [
           {
             "mobile": {
@@ -896,8 +840,7 @@
             },
             "contentPosition": "start"
           }
-        ],
-        "title": "Kit Senscience"
+        ]
       }
     },
     {
@@ -907,26 +850,6 @@
         "title": "Sobre Nós",
         "subtitle": "Nós somos a Unabeleza",
         "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-        "label": "Sign up",
-        "placeholder": "Email address",
-        "empty": {
-          "title": "Get top deals, latest trends, and more.",
-          "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
-        },
-        "success": {
-          "title": "Thank you for subscribing!",
-          "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
-        },
-        "failed": {
-          "title": "Oops!. Something went wrong!",
-          "description": "Something went wrong. Please try again. If the problem persists, please contact us."
-        }
       }
     },
     {

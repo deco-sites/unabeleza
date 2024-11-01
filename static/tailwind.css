@@ -5256,6 +5256,13 @@ details.collapse summary::-webkit-details-marker {
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 .\[appearance\:textfield\] {
   -webkit-appearance: textfield;
      -moz-appearance: textfield;
@@ -5915,6 +5922,10 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:max-h-\[var\(--favoriteSlider-heigh\)\] {
     max-height: var(--favoriteSlider-heigh);
+  }
+
+  .desktop\:max-w-\[var\(--bannerSlider-width\)\] {
+    max-width: var(--bannerSlider-width);
   }
 
   .desktop\:max-w-\[var\(--favoriteSlider-width\)\] {

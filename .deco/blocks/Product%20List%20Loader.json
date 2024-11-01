@@ -1,5 +1,5 @@
 {
-  "__resolveType": "shopify/loaders/ProductList.ts",
+  "__resolveType": "wake/loaders/productList.ts",
   "props": {
     "sort": "",
     "query": "a",

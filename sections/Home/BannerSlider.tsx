@@ -32,7 +32,7 @@ function SliderItem({ btn = false, ...props }: ItemProps) {
     return (
         <div
             {...selectPromotionEvent}
-            class="relative dekstop:max-w-[var(--bannerSlider-width)] desktop:max-h-[var(--bannerSlider-heigh)] w-full h-full max-w-[calc(100vw_-_40px)] group overflow-hidden"
+            class="relative desktop:max-w-[var(--bannerSlider-width)] desktop:max-h-[var(--bannerSlider-heigh)] w-full h-full max-w-[calc(100vw_-_40px)] group overflow-hidden"
             style={{
                 "--bannerSlider-width": `min(29.79vw, calc(96rem * 0.2979))`,
                 "--bannerSlider-heigh": `min(39.23vw, calc(96rem * 0.3923))`,

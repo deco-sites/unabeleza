@@ -182,18 +182,18 @@ function ProductCard({
           {title}
         </span>
 
-        <div class="flex gap-2 pt-2">
-          {listPrice && (
+        <div class="flex flex-col gap-2 pt-2">
+          {/* {listPrice && (
             <span class="line-through font-normal text-gray-400">
               {formatPrice(listPrice, offers?.priceCurrency)}
             </span>
-          )}
-          <span class="font-bold text-black">
+          )} */}
+          <span class="font-bold text-base text-black">
             {formatPrice(price, offers?.priceCurrency)}
           </span>
           {installments && (
-            <span class="line-through font-normal text-gray-400">
-              {installments}
+            <span class="text-sm texy-black">
+              Ou {installments}
             </span>
           )}
         </div>
