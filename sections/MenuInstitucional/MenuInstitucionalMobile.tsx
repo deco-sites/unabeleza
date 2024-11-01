@@ -20,9 +20,7 @@ export const loader = ({ links }: Menu, req: Request) => {
     label: matchingLink ? matchingLink.label : "Menu",
     links,
   };
-
 };
-
 
 /** @title Menu Institucional Mobile */
 export default function MenuInstitucionalMobile(
