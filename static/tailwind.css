@@ -4428,9 +4428,6 @@ details.collapse summary::-webkit-details-marker {
 .rounded-md {
   border-radius: 0.375rem;
 }
-.rounded-none {
-  border-radius: 0px;
-}
 .rounded-b-\[5px\] {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -5606,21 +5603,8 @@ details.collapse summary::-webkit-details-marker {
     left: 20px;
   }
 
-  .mobile\:mx-5 {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-
-  .mobile\:ml-0 {
-    margin-left: 0px;
-  }
-
   .mobile\:ml-\[35px\] {
     margin-left: 35px;
-  }
-
-  .mobile\:mt-\[24px\] {
-    margin-top: 24px;
   }
 
   .mobile\:mt-\[250px\] {
@@ -5635,10 +5619,6 @@ details.collapse summary::-webkit-details-marker {
     display: flex;
   }
 
-  .mobile\:flex-col {
-    flex-direction: column;
-  }
-
   .mobile\:px-\[20px\] {
     padding-left: 20px;
     padding-right: 20px;
@@ -5646,10 +5626,6 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:text-left {
     text-align: left;
-  }
-
-  .mobile\:text-center {
-    text-align: center;
   }
 
   .mobile\:text-\[14px\] {

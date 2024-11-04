@@ -12,23 +12,23 @@ interface QuestionsProps {
 
 interface ItemsDuvidasProps {
   item: QuestionsProps[];
-  titulo?: string;
-  subtitulo?: string;
-  subtituloDown?: string;
+  title?: string;
+  subTitle?: string;
+  subTitleDown?: string;
 }
 
 export default function Duvidas({
   item,
-  titulo,
-  subtitulo,
-  subtituloDown,
+  title,
+  subTitle,
+  subTitleDown,
 }: ItemsDuvidasProps) {
   return (
     <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] mb-[80px] pl-[333px] pr-[118px]">
       <TituloSubtitulo
-        titulo={titulo}
-        subtitulo={subtitulo}
-        subtituloDown={subtituloDown}
+        title={title}
+        subTitle={subTitle}
+        subTitleDown={subTitleDown}
       />
       <div className="mt-8">
         {item &&

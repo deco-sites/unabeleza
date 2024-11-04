@@ -1,21 +1,21 @@
 interface TituloSubtituloProps {
-  titulo?: string;
-  subtitulo?: string;
-  subtituloDown?: string;
+  title?: string;
+  subTitle?: string;
+  subTitleDown?: string;
 }
 
 export default function TituloSubtitulo({
-  titulo,
-  subtitulo,
-  subtituloDown,
+  title,
+  subTitle,
+  subTitleDown,
 }: TituloSubtituloProps) {
   return (
     <>
       <div className="line">
-        <h1 className="text-[32px] mobile:text-[24px] font-bold mt-4 font-[PP-Hatton] text-[#162116]">{titulo}</h1>
+        <h1 className="text-[32px] mobile:text-[24px] font-bold mt-4 font-[PP-Hatton] text-[#162116]">{title}</h1>
       </div>
-      {subtitulo && <p className="font-[Montserrat] font-normal text-[14px] mt-[20px] text-[#162116]">{subtitulo}</p>}
-      {subtituloDown && <p className="font-[Montserrat] font-normal text-[14px] text-[#162116]">{subtituloDown}</p>}
+      {subTitle && <p className="font-[Montserrat] font-medium text-[14px] mt-[20px] text-[#162116]">{subTitle}</p>}
+      {subTitleDown && <p className="font-[Montserrat] font-medium text-[14px] text-[#162116]">{subTitleDown}</p>}
     </>
   );
 }

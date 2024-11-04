@@ -76,7 +76,7 @@
     },
     {
       "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
-      "nome_da_pagina": "Política de Privacidade"
+      "pageTitle": "Política de Privacidade"
     },
     {
       "__resolveType": "site/sections/Politicas/Politicas.tsx",
