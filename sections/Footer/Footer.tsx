@@ -7,7 +7,7 @@ import { clx } from "../../sdk/clx.ts";
 /** @titleBy title */
 interface Item {
   title: string;
-  href: string;
+  href?: string;
 }
 
 /** @titleBy title */
@@ -47,7 +47,7 @@ function Footer({
         <div class="flex justify-between">
 
           <div class="flex flex-col flex-[1]">
-            <img loading="lazy" src={logo} />
+            {logo && (<Image loading="lazy" src={logo} width={130} height={38} />) }
             <div>
               <span class="">Redes sociais</span>
               <ul class="flex gap-4">
@@ -73,7 +73,7 @@ function Footer({
               {links.map(({ title, children }) => (
                 <li class="flex flex-col gap-4">
                   <h3 class="text-base font-semibold" >{title}</h3>
-                  <ul class="flex flex-col gap-2">
+                  <ul class="flex flex-col gap-2 max-w-[174px]">
                     {children.map(({ title, href }) => (
                       <li>
                         <a class="text-sm font-medium text-base-400" href={href}>

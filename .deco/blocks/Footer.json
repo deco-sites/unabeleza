@@ -2,84 +2,66 @@
   "__resolveType": "site/sections/Footer/Footer.tsx",
   "links": [
     {
-      "title": "Our Company",
+      "title": "Institucional",
       "children": [
         {
-          "title": "About us",
+          "title": "Sobre a Unabeleza",
           "href": "#"
         },
         {
-          "title": "Our blog",
+          "title": "Políticas de Privacidade",
           "href": "#"
         },
         {
-          "title": "Stores",
+          "title": "Site",
           "href": "#"
         },
         {
-          "title": "Work with us",
+          "title": "Redes sociais",
           "href": "#"
         }
       ],
       "href": "#"
     },
     {
-      "title": "Orders & Purchases",
+      "title": "Ajuda",
       "href": "#",
       "children": [
         {
-          "title": "Check order status",
+          "title": "Como Comprar",
           "href": "#"
         },
         {
-          "title": "Return and exchanges",
+          "title": "Meus pedidos",
           "href": "#"
         },
         {
-          "title": "Product retail",
-          "href": "#"
-        },
-        {
-          "title": "Gift cards",
+          "title": "Segurança e Privacidade",
           "href": "#"
         }
       ]
     },
     {
-      "title": "Support & Services",
+      "title": "Contato",
       "href": "#",
       "children": [
         {
-          "title": "Support Center",
+          "title": "(11) 5511-1107",
           "href": "#"
         },
         {
-          "title": "Schedule a service",
+          "title": "(11) 5511-0677",
           "href": "#"
         },
         {
-          "title": "Contact us",
+          "title": "SAC/Site: 11 94319-1685",
+          "href": "#"
+        },
+        {
+          "title": "Atendimento: de 2ª a 6ª feira das 9h00 as 17h:00",
           "href": "#"
         }
       ]
-    },
-    {
-      "title": "Support & Services",
-      "children": [
-        {
-          "title": "Support Center",
-          "href": "#"
-        },
-        {
-          "title": "Schedule a service",
-          "href": "#"
-        },
-        {
-          "title": "Contact us",
-          "href": "#"
-        }
-      ],
-      "href": "#"
     }
   ],
   "social": [
@@ -162,6 +144,6 @@
       "href": "#"
     }
   ],
-  "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f1faab73-e4ff-4037-b7c4-5d02bd0b1209",
+  "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d769d477-2cfa-4db3-9d80-2c601514213c/logo-unabeleza.png",
   "trademark": "TM & © 2023 Deco Storefront, Inc."
 }
