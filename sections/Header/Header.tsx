@@ -65,7 +65,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
     </Modal>
 
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-15">
+    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-15 max-w-[96rem]">
       <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
           <a href="/" aria-label="Store logo">

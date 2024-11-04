@@ -26,11 +26,7 @@
       "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx"
     },
     {
-      "__resolveType": "site/sections/Session.tsx",
-      "minicart": null,
-      "wishlist": null,
-      "mode": "lazy",
-      "user": null
+      "__resolveType": "site/sections/Session.tsx"
     },
     {
       "__resolveType": "site/sections/LGPD/PopupLGPD.tsx"
@@ -38,7 +34,7 @@
   ],
   "routes": [
     {
-      "__resolveType": "shopify/loaders/proxy.ts",
+      "__resolveType": "wake/loaders/proxy.ts",
       "extraPathsToProxy": [],
       "includeSiteMap": [],
       "excludePathsFromDecoSiteMap": []
@@ -56,14 +52,15 @@
   "commerce": {
     "platform": "other"
   },
-  "platform": "shopify",
+  "platform": "wake",
   "__resolveType": "site/apps/site.ts",
   "firstByteThresholdMS": false,
   "abTesting": {
     "replaces": [],
     "includeScriptsToHead": {
       "includes": []
-    }
+    },
+    "enabled": true
   },
   "flavor": {
     "framework": "htmx"

@@ -1,27 +1,25 @@
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 import Icon from "../components/ui/Icon.tsx";
 
 interface Menu {
-  titulo?: string;
+  /** @title Título */
+  title?: string;
   links?: Link[];
+  label?: string;
 }
 
 interface Link {
-  rota?: string;
-  etiqueta?: string;
+  /** @title Rota */
+  route?: string;
+  /** @title Etiqueta */
+  label?: string;
 }
 
-export default function ButtonMenuInstitucionalMobile({ links }: Menu) {
+export default function ButtonMenuInstitucionalMobile({
+  links,
+  label,
+}: Menu) {
   const [navigation, setNavigation] = useState(false);
-  const [label, setLabel] = useState<string>("Menu");
-
-
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-    const matchingLink = links?.find(link => link.rota === currentPath)
-
-    if (matchingLink) setLabel(matchingLink.etiqueta ?? "")
-  }, [links])
 
   return (
     <div className="hidden mobile:block absolute top-[280px] left-[20px] bg-[#F5F5F5] w-[90%] rounded-[5px]">
@@ -44,12 +42,13 @@ export default function ButtonMenuInstitucionalMobile({ links }: Menu) {
           {links &&
             links.map((link, index) => (
               <a
-                className={`text-left font-[Montserrat] text-[12px] w-full h-[38px] ${index === 0 ? 'first:mt-[10px]' : ''}`}
+                className={`text-left font-[Montserrat] text-[12px] w-full h-[38px] ${
+                  index === 0 ? "first:mt-[10px]" : ""
+                }`}
                 key={index}
-                onClick={() => setLabel(link.etiqueta ?? "")}
-                href={link.rota}
+                href={link.route}
               >
-                {link.etiqueta}
+                {link.label}
               </a>
             ))}
         </div>

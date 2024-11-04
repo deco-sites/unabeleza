@@ -1,37 +1,51 @@
 interface Menu {
-  titulo_institucional?: string;
-  titulo_suporte?: string;
-  links_institucionais?: Link[];
-  links_ajudas?: Link[];
+  institutionalTitle?: string;
+  supportTitle?: string;
+  institutionalLinks?: Link[];
+  helpLinks?: Link[];
 }
 
 interface Link {
-  rota?: string;
-  etiqueta?: string;
+  route?: string;
+  label?: string;
 }
 
+export const loader = (menu: Menu, req: Request) => {
+  const currentPath = new URL(req.url).pathname;
+  return {
+    ...menu,
+    currentPath,
+  };
+};
+
 export default function MenuInstitucional(
-  { titulo_institucional, titulo_suporte, links_institucionais, links_ajudas }:
-    Menu,
+  {
+    institutionalTitle,
+    supportTitle,
+    institutionalLinks,
+    helpLinks,
+    currentPath,
+  }: ReturnType<typeof loader>,
 ) {
-  const pathname = window.location.pathname;
 
   return (
     <div className="hidden desktop:block absolute top-[280px] left-[80px] list-none bg-[#FAFAFA] py-[40px] pl-[40px] pr-[49px]">
       <h3 className="text-black text-[16px] font-bold mb-[20px]">
-        {titulo_institucional}
+        {institutionalTitle}
       </h3>
       <div>
-        {links_institucionais &&
-          links_institucionais.map(({ rota, etiqueta }, index) => (
+        {institutionalLinks &&
+          institutionalLinks.map(({ route, label }, index) => (
             <li className="text-[12px] font-regular cursor-pointer" key={index}>
               <a
-                href={rota}
+                href={route}
                 className={`${
-                  pathname === rota ? "text-[#8F2AED]" : "text-black"
+                  currentPath === route
+                    ? "text-[#8F2AED] font-bold"
+                    : "text-black"
                 } hover:text-[#8F2AED]`}
               >
-                {etiqueta}
+                {label}
               </a>
             </li>
           ))}
@@ -40,19 +54,21 @@ export default function MenuInstitucional(
       <hr className="border-t-1 border-[#F1F1F1] my-5" />
 
       <h3 className="text-black text-[16px] font-bold mb-[20px]">
-        {titulo_suporte}
+        {supportTitle}
       </h3>
       <div>
-        {links_ajudas &&
-          links_ajudas.map(({ rota, etiqueta }, index) => (
+        {helpLinks &&
+          helpLinks.map(({ route, label }, index) => (
             <li className="text-[12px] font-regular cursor-pointer" key={index}>
               <a
-                href={rota}
+                href={route}
                 className={`${
-                  pathname === rota ? "text-[#8F2AED]" : "text-black"
+                  currentPath === route
+                    ? "text-[#8F2AED] font-bold"
+                    : "text-black"
                 } hover:text-[#8F2AED]`}
               >
-                {etiqueta}
+                {label}
               </a>
             </li>
           ))}
