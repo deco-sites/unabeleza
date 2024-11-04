@@ -7,7 +7,8 @@
     },
     {
       "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
-      "nome_da_pagina": "Fale Conosco"
+      "nome_da_pagina": "Fale Conosco",
+      "pageTitle": "Fale Conosco"
     },
     {
       "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
@@ -40,6 +41,36 @@
           "rota": "/troca-e-devolucao",
           "etiqueta": "Troca e Devolução"
         }
+      ],
+      "institutionalTitle": "Institucionais",
+      "supportTitle": "Ajuda e Suporte",
+      "institutionalLinks": [
+        {
+          "route": "/quem-somos",
+          "label": "Quem Somos"
+        },
+        {
+          "route": "/politicas-de-privacidade",
+          "label": "Políticas de Privacidade"
+        },
+        {
+          "route": "/politica-de-frete",
+          "label": "Política de Frete"
+        }
+      ],
+      "helpLinks": [
+        {
+          "route": "/duvidas-frequentes",
+          "label": "Dúvidas"
+        },
+        {
+          "route": "/fale-conosco",
+          "label": "Fale Conosco"
+        },
+        {
+          "route": "/troca-e-devolucao",
+          "label": "Troca e Devolução"
+        }
       ]
     },
     {
@@ -47,27 +78,39 @@
       "links": [
         {
           "rota": "/quem-somos",
-          "etiqueta": "Quem Somos"
+          "etiqueta": "Quem Somos",
+          "route": "/quem-somos",
+          "label": "Quem Somos"
         },
         {
           "rota": "/politicas-de-privacidade",
-          "etiqueta": "Políticas de Privacidade"
+          "etiqueta": "Políticas de Privacidade",
+          "route": "/politicas-de-privacidade",
+          "label": "Políticas de Privacidade"
         },
         {
           "rota": "/política-de-frete",
-          "etiqueta": "Política de Frete"
+          "etiqueta": "Política de Frete",
+          "route": "/politica-de-frete",
+          "label": "Política de Frete"
         },
         {
           "rota": "/duvidas-frequentes",
-          "etiqueta": "Dúvidas"
+          "etiqueta": "Dúvidas",
+          "route": "/duvidas-frequentes",
+          "label": "Dúvidas"
         },
         {
           "rota": "/fale-conosco",
-          "etiqueta": "Fale Conosco"
+          "etiqueta": "Fale Conosco",
+          "route": "/fale-conosco",
+          "label": "Fale Conosco"
         },
         {
           "rota": "/troca-e-devolucao",
-          "etiqueta": "Troca e Devolução"
+          "etiqueta": "Troca e Devolução",
+          "route": "/troca-e-devolucao",
+          "label": "Troca e Devolução"
         }
       ]
     },

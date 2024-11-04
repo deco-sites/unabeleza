@@ -30,7 +30,10 @@ export default function ButtonMenuInstitucionalMobile({
         {label}{" "}
         <Icon
           id="chevron-right"
-          className="text-[#8F2AED]"
+          className="text-[#8F2AED] mr-[10px]"
+          width={6}
+          height={13}
+          stroke="#8F2AED"
           style={{
             transform: navigation ? "rotate(270deg)" : "rotate(90deg)",
             transition: "transform 0.3s",
