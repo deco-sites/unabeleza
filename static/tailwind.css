@@ -6197,6 +6197,10 @@ details.collapse summary::-webkit-details-marker {
     padding-bottom: 8.94px;
   }
 
+  .mobile\:pt-\[44px\] {
+    padding-top: 44px;
+  }
+
   .mobile\:text-left {
     text-align: left;
   }

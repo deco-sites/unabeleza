@@ -6,7 +6,7 @@ interface FaleConoscoProps {
 
 export default function FaleConosco({titulo, subTitulo}: FaleConoscoProps) {
   return (
-    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] pl-[333px] pr-[118px]">
+    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] pl-[333px] pr-[118px] mobile:pt-[44px]">
       <div className="mb-[40px]">
         <h1 className="font-[PP-Hatton] text-black font-bold text-[30px] mb-[30px] mobile:text-[24px]">
           {titulo}
