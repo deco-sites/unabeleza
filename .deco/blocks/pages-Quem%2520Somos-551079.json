@@ -1,0 +1,42 @@
+{
+  "name": "Quem Somos",
+  "path": "/quem-somos",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+        "pageTitle": "Quem Somos"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+        "institutionalTitle": "Institucionais",
+        "supportTitle": "Ajuda e Suporte",
+        "institutionalLinks": [
+          {
+            "route": "/quem-somos",
+            "label": "Quem Somos"
+          },
+          {
+            "route": "/politicas-de-privacidade",
+            "label": "Políticas de Privacidade"
+          },
+          {}
+        ]
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
