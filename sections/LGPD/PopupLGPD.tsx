@@ -1,9 +1,12 @@
-import Popup from '../../islands/Popup.tsx';
+import { RichText } from "apps/admin/widgets.ts";
+import Popup from "../../islands/Popup.tsx";
 
-export default function PopupLGPD() {
- return (
-  <section className="relative">
-    <Popup />
-  </section>
- )
+interface PopupProps {
+  text: RichText;
+  btnText: string;
+}
+
+
+export default function PopupLGPD({text, btnText}: PopupProps) {
+  return <Popup text={text} btnText={btnText} />;
 }

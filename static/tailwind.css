@@ -5878,12 +5878,25 @@ details.collapse summary::-webkit-details-marker {
     top: auto;
   }
 
+  .mobile\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .mobile\:ml-0 {
+    margin-left: 0px;
+  }
+
   .mobile\:ml-\[35px\] {
     margin-left: 35px;
   }
 
   .mobile\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .mobile\:mt-\[24px\] {
+    margin-top: 24px;
   }
 
   .mobile\:mt-\[250px\] {
@@ -6078,6 +6091,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:text-left {
     text-align: left;
+  }
+
+  .mobile\:text-center {
+    text-align: center;
   }
 
   .mobile\:text-\[10px\] {
