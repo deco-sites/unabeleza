@@ -3827,6 +3827,9 @@ details.collapse summary::-webkit-details-marker {
 .mr-3 {
   margin-right: 0.75rem;
 }
+.mr-\[10px\] {
+  margin-right: 10px;
+}
 .mt-10 {
   margin-top: 2.5rem;
 }
