@@ -62,11 +62,25 @@ function WishlistButton({ item, variant = "full" }: Props) {
             : "btn-primary btn-outline gap-2",
         )}
       >
-        {
-          device === "desktop" 
-          ? (<Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" width={26} height={23}/>)
-          : (<Icon id="favoriteMobile" class="[.htmx-request_&]:hidden" fill="none" width={17} height={15}/>)
-        }
+        {device === "desktop"
+          ? (
+            <Icon
+              id="favorite"
+              class="[.htmx-request_&]:hidden"
+              fill="none"
+              width={26}
+              height={23}
+            />
+          )
+          : (
+            <Icon
+              id="favoriteMobile"
+              class="[.htmx-request_&]:hidden"
+              fill="none"
+              width={17}
+              height={15}
+            />
+          )}
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}

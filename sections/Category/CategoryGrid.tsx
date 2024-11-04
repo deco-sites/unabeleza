@@ -31,29 +31,33 @@ function Card({ icon, href, label }: Item) {
         class={clx(
           "w-[var(--categoryCardCircle-size)] h-[var(--categoryCardCircle-size)] rounded-full bg-neutral-100 flex justify-center items-center",
           "mobile:w-[23.96vw] mobile:h-[23.96vw]",
-          "hover:bg-info"
+          "hover:bg-info",
         )}
         style={{
-          "--categoryCardCircle-size": `min(8.33vw, calc(96rem * 0.0833))`
+          "--categoryCardCircle-size": `min(8.33vw, calc(96rem * 0.0833))`,
         }}
       >
         {device === "desktop"
-          ? (<Icon
-            id={icon}
-            width="3.95vw"
-            height="3.95vw"
-            class="object-contain w-full h-auto max-w-[60.79px] max-h-[60.79px]"
-          />)
-          : (<Icon
-            id={`${icon}Mobile`}
-            width="11.25vw"
-            height="11.25vw"
-            class="object-contain w-full h-auto max-w-[11.25vw] max-h-[11.25vw]"
-          />)
-        }
-
+          ? (
+            <Icon
+              id={icon}
+              width="3.95vw"
+              height="3.95vw"
+              class="object-contain w-full h-auto max-w-[60.79px] max-h-[60.79px]"
+            />
+          )
+          : (
+            <Icon
+              id={`${icon}Mobile`}
+              width="11.25vw"
+              height="11.25vw"
+              class="object-contain w-full h-auto max-w-[11.25vw] max-h-[11.25vw]"
+            />
+          )}
       </div>
-      <span class="font-bold text-black text-center text-sm w-full">{label}</span>
+      <span class="font-bold text-black text-center text-sm w-full">
+        {label}
+      </span>
     </a>
   );
 }

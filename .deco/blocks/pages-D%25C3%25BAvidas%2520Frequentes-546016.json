@@ -1,0 +1,129 @@
+{
+  "name": "Dúvidas Frequentes",
+  "path": "/duvidas-frequentes",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+      "pageTitle": "Dúvidas Frequentes"
+    },
+    {
+      "__resolveType": "site/sections/Duvidas/duvidas.tsx",
+      "titulo": "Dúvidas Frequentes",
+      "title": "Duvidas Frequentes",
+      "item": [
+        {
+          "question": "Como eu acompanho meu pedido?",
+          "anwser": "<p>Resposta da primeira pergunta</p>",
+          "questionNumber": 1
+        },
+        {
+          "question": "Meu pedido foi cancelado e eu paguei o boleto ou realizei o depósito. E agora?",
+          "anwser": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eros eget enim vulputate egestas. Mauris lobortis ullamcorper nunc a ultricies. Quisque sit amet quam ac arcu mattis suscipit non sit amet velit. Nam ac massa ullamcorper, congue tellus nec, volutpat erat. Vivamus id malesuada est. Nam sed lacus a purus venenatis laoreet non a lectus.</p><p></p><p></p>",
+          "questionNumber": 2,
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/66879a6d-19a0-430d-a804-0db2add539c9/lorem_duvidas.png"
+        },
+        {
+          "question": "Não Recebi o e-mail de confirmação de meu pedido. E agora?",
+          "anwser": "<p>Resposta da terceira pergunta.</p>",
+          "questionNumber": 3
+        },
+        {
+          "question": "Comprei um produto, mas recebi outro. E agora?",
+          "anwser": "<p>Resposta da quarta pergunta.</p>",
+          "questionNumber": 4
+        },
+        {
+          "question": "Quais os métodos de pagamento aceitos pelo site?",
+          "anwser": "<p>Resposta da quinta pergunta.</p>",
+          "questionNumber": 5
+        }
+      ],
+      "subtitulo": "Está com alguma dúvida? ",
+      "subtituloDown": "Confira nossa seção de perguntas frequentes para obter respostas."
+    },
+    {
+      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+      "titulo": "Institucional",
+      "links": [
+        {
+          "route": "https://www.google.com",
+          "label": "Google"
+        }
+      ],
+      "institutionalTitle": "Institucionais",
+      "supportTitle": "Ajuda e Suporte",
+      "institutionalLinks": [
+        {
+          "label": "Quem somos",
+          "route": "/quem-somos"
+        },
+        {
+          "label": "Políticas de privacidade",
+          "route": "/politicas-de-privacidade"
+        },
+        {
+          "label": "Política de Frete",
+          "route": "/politicas-de-frete"
+        }
+      ],
+      "helpLinks": [
+        {
+          "route": "/duvidas-frequentes",
+          "label": "Dúvidas"
+        },
+        {
+          "route": "/fale-conosco",
+          "label": "Fale Conosco"
+        },
+        {
+          "route": "/troca-e-devolucao",
+          "label": "Troca e devolução"
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+        "links": [
+          {
+            "label": "Quem Somos",
+            "route": "/quem-somos"
+          },
+          {
+            "route": "/politicas-de-privacidade",
+            "label": "Políticas de Privacidade"
+          },
+          {
+            "route": "/política-de-frete",
+            "label": "Política de Frete"
+          },
+          {
+            "route": "/duvidas-frequentes",
+            "label": "Dúvidas"
+          },
+          {
+            "route": "/fale-conosco",
+            "label": "Fale Conosco"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Footer/Footer.tsx"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

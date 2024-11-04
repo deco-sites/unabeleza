@@ -17,16 +17,21 @@ function Header({ title, cta }: Props) {
   return (
     <div
       class={clx(
-        "flex justify-center items-center relative w-full"
+        "flex justify-center items-center relative w-full",
       )}
     >
-      <span class="text-3xl text-center whitespace-nowrap mobile:text-lg font-bold font-[PP-Hatton]">{title}</span>
+      <span class="text-3xl text-center whitespace-nowrap mobile:text-lg font-bold font-[PP-Hatton]">
+        {title}
+      </span>
       {cta && (
-        <a class={clx(
-          "btn border-2 rounded-[5px] border-secondary max-w-[167px] h-[45px] px-10 py-3",
-          "text-sm font-bold text-secondary whitespace-nowrap mobile:hidden absolute right-0 top-1/2 -translate-y-1/2",
-          "hover:bg-secondary hover:text-white hover:border-secondary"
-        )} href={cta}>
+        <a
+          class={clx(
+            "btn border-2 rounded-[5px] border-secondary max-w-[167px] h-[45px] px-10 py-3",
+            "text-sm font-bold text-secondary whitespace-nowrap mobile:hidden absolute right-0 top-1/2 -translate-y-1/2",
+            "hover:bg-secondary hover:text-white hover:border-secondary",
+          )}
+          href={cta}
+        >
           VER TODOS
         </a>
       )}
