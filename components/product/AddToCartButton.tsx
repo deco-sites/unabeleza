@@ -10,7 +10,7 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   seller: string;
   item: AnalyticsItem;
   text?: string;
-  quantityButton?: boolean
+  quantityButton?: boolean;
 }
 const onClick = () => {
   event?.stopPropagation();
@@ -118,23 +118,24 @@ function AddToCartButton(props: Props) {
         JSON.stringify({ item, platformProps }),
       )}
     >
-
-      {quantityButton ? (
-        <div class={clx("flex-grow", _class?.toString())}>
-        <QuantitySelector
-          min={0}
-          max={100}
-          hx-on:change={useScript(onChange)}
-        />
-      </div>
-      ) : (
-        <button
-        class={clx("flex-grow", _class?.toString())}
-        hx-on:click={useScript(onClick)}
-      >
-        {text ? text : 'Add to Cart'}
-      </button>
-      )}
+      {quantityButton
+        ? (
+          <div class={clx("flex-grow", _class?.toString())}>
+            <QuantitySelector
+              min={0}
+              max={100}
+              hx-on:change={useScript(onChange)}
+            />
+          </div>
+        )
+        : (
+          <button
+            class={clx("flex-grow", _class?.toString())}
+            hx-on:click={useScript(onClick)}
+          >
+            {text ? text : "Add to Cart"}
+          </button>
+        )}
 
       <script
         type="module"

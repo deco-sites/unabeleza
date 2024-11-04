@@ -3606,14 +3606,14 @@ details.collapse summary::-webkit-details-marker {
 .left-4 {
   left: 1rem;
 }
+.left-\[20px\] {
+  left: 20px;
+}
 .left-\[60px\] {
   left: 60px;
 }
 .left-\[8\.81px\] {
   left: 8.81px;
-}
-.left-\[20px\] {
-  left: 20px;
 }
 .left-\[80px\] {
   left: 80px;
@@ -3806,11 +3806,11 @@ details.collapse summary::-webkit-details-marker {
 .mb-\[1px\] {
   margin-bottom: 1px;
 }
-.mb-\[34px\] {
-  margin-bottom: 34px;
-}
 .mb-\[20px\] {
   margin-bottom: 20px;
+}
+.mb-\[34px\] {
+  margin-bottom: 34px;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -4099,6 +4099,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[79\.73vw\] {
   width: 79.73vw;
 }
+.w-\[90\%\] {
+  width: 90%;
+}
 .w-\[var\(--categoryCard-width\)\] {
   width: var(--categoryCard-width);
 }
@@ -4107,9 +4110,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[var\(--productCard-width\)\] {
   width: var(--productCard-width);
-}
-.w-\[90\%\] {
-  width: 90%;
 }
 .w-auto {
   width: auto;
@@ -4911,13 +4911,13 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 10.5px;
   padding-bottom: 10.5px;
 }
-.py-\[40px\] {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.py-\[40px\] {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .py-\[6px\] {
   padding-top: 6px;
@@ -5137,11 +5137,11 @@ details.collapse summary::-webkit-details-marker {
 .leading-5 {
   line-height: 1.25rem;
 }
-.leading-7 {
-  line-height: 1.75rem;
-}
 .leading-6 {
   line-height: 1.5rem;
+}
+.leading-7 {
+  line-height: 1.75rem;
 }
 .leading-\[1\.125rem\] {
   line-height: 1.125rem;
@@ -5218,13 +5218,13 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(102 119 129 / var(--tw-text-opacity));
 }
-.text-\[\#A3E3FF\] {
-  --tw-text-opacity: 1;
-  color: rgb(163 227 255 / var(--tw-text-opacity));
-}
 .text-\[\#8F2AED\] {
   --tw-text-opacity: 1;
   color: rgb(143 42 237 / var(--tw-text-opacity));
+}
+.text-\[\#A3E3FF\] {
+  --tw-text-opacity: 1;
+  color: rgb(163 227 255 / var(--tw-text-opacity));
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -5812,6 +5812,10 @@ details.collapse summary::-webkit-details-marker {
     left: 2.5rem;
   }
 
+  .mobile\:left-\[20px\] {
+    left: 20px;
+  }
+
   .mobile\:left-\[60px\] {
     left: 60px;
   }
@@ -5836,8 +5840,24 @@ details.collapse summary::-webkit-details-marker {
     top: auto;
   }
 
+  .mobile\:ml-\[35px\] {
+    margin-left: 35px;
+  }
+
   .mobile\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .mobile\:mt-\[250px\] {
+    margin-top: 250px;
+  }
+
+  .mobile\:block {
+    display: block;
+  }
+
+  .mobile\:flex {
+    display: flex;
   }
 
   .mobile\:hidden {
@@ -5973,6 +5993,11 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 14px;
   }
 
+  .mobile\:px-\[20px\] {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .mobile\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -6013,8 +6038,20 @@ details.collapse summary::-webkit-details-marker {
     padding-bottom: 8.94px;
   }
 
+  .mobile\:text-left {
+    text-align: left;
+  }
+
   .mobile\:text-\[10px\] {
     font-size: 10px;
+  }
+
+  .mobile\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .mobile\:text-\[24px\] {
+    font-size: 24px;
   }
 
   .mobile\:text-base {
@@ -6042,6 +6079,10 @@ details.collapse summary::-webkit-details-marker {
     line-height: 1rem;
   }
 
+  .mobile\:font-medium {
+    font-weight: 500;
+  }
+
   .mobile\:leading-6 {
     line-height: 1.5rem;
   }
@@ -6052,6 +6093,10 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 1026px) {
+
+  .desktop\:block {
+    display: block;
+  }
 
   .desktop\:hidden {
     display: none;
@@ -6087,57 +6132,6 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:pb-4 {
     padding-bottom: 1rem;
-  }
-}
-
-@media (max-width: 1025px) {
-
-  .mobile\:left-\[20px\] {
-    left: 20px;
-  }
-
-  .mobile\:ml-\[35px\] {
-    margin-left: 35px;
-  }
-
-  .mobile\:mt-\[250px\] {
-    margin-top: 250px;
-  }
-
-  .mobile\:block {
-    display: block;
-  }
-
-  .mobile\:flex {
-    display: flex;
-  }
-
-  .mobile\:px-\[20px\] {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .mobile\:text-left {
-    text-align: left;
-  }
-
-  .mobile\:text-\[14px\] {
-    font-size: 14px;
-  }
-
-  .mobile\:text-\[24px\] {
-    font-size: 24px;
-  }
-
-  .mobile\:font-medium {
-    font-weight: 500;
-  }
-}
-
-@media (min-width: 1026px) {
-
-  .desktop\:block {
-    display: block;
   }
 }
 

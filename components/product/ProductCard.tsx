@@ -34,12 +34,12 @@ function ProductCard({
   index,
   class: _class,
 }: Props) {
-
   const { url, image: images, offers, isVariantOf } = product;
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
-  const { listPrice, price, seller = "1", availability, installments } = useOffer(offers);
+  const { listPrice, price, seller = "1", availability, installments } =
+    useOffer(offers);
 
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
@@ -61,15 +61,15 @@ function ProductCard({
     },
   });
 
-  if (!price || price <= 0) return null
+  if (!price || price <= 0) return null;
 
   return (
     <div
       {...event}
       class={clx(
         "card card-compact group text-sm px-[15px] py-4 w-[var(--productCard-width)] h-fit",
-        "mobile:px-2 mobile:py-[8.94px] mobile:w-[42.66vw]", 
-        _class
+        "mobile:px-2 mobile:py-[8.94px] mobile:w-[42.66vw]",
+        _class,
       )}
       style={{
         "--productCard-width": `min(22.08vw, calc(96rem * 0.2208))`,
@@ -103,7 +103,7 @@ function ProductCard({
               "object-cover",
               "rounded w-full",
               "col-span-full row-span-full",
-              "group-hover:scale-125 transition-all duration-500"
+              "group-hover:scale-125 transition-all duration-500",
             )}
             sizes="(max-width: 640px) 50vw, 20vw"
             preload={preload}
@@ -155,11 +155,13 @@ function ProductCard({
           <WishlistButton item={item} variant="icon" />
         </div>
         <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
-          <span class={clx(
-            "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
-            "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
-            "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]"
-            )}>
+          <span
+            class={clx(
+              "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
+              "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
+              "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]",
+            )}
+          >
             NOVIDADE
           </span>
         </div>

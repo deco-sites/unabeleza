@@ -13,16 +13,20 @@ interface Link {
 export const loader = (menu: Menu, req: Request) => {
   const currentPath = new URL(req.url).pathname;
   return {
-    ...menu, 
-    currentPath
-  }
-}
+    ...menu,
+    currentPath,
+  };
+};
 
 export default function MenuInstitucional(
-  { institutionalTitle, supportTitle, institutionalLinks, helpLinks, currentPath }:
-    ReturnType<typeof loader>,
+  {
+    institutionalTitle,
+    supportTitle,
+    institutionalLinks,
+    helpLinks,
+    currentPath,
+  }: ReturnType<typeof loader>,
 ) {
-  
   return (
     <div className="hidden desktop:block absolute top-[280px] left-[80px] list-none bg-[#FAFAFA] py-[40px] pl-[40px] pr-[49px]">
       <h3 className="text-black text-[16px] font-bold mb-[20px]">
@@ -35,7 +39,9 @@ export default function MenuInstitucional(
               <a
                 href={route}
                 className={`${
-                  currentPath === route ? "text-[#8F2AED] font-bold" : "text-black"
+                  currentPath === route
+                    ? "text-[#8F2AED] font-bold"
+                    : "text-black"
                 } hover:text-[#8F2AED]`}
               >
                 {label}
@@ -56,7 +62,9 @@ export default function MenuInstitucional(
               <a
                 href={route}
                 className={`${
-                  currentPath === route ? "text-[#8F2AED] font-bold" : "text-black"
+                  currentPath === route
+                    ? "text-[#8F2AED] font-bold"
+                    : "text-black"
                 } hover:text-[#8F2AED]`}
               >
                 {label}

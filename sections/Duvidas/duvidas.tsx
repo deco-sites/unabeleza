@@ -1,6 +1,6 @@
-import { type RichText } from "apps/admin/widgets.ts";
+import { ImageWidget, type RichText } from "apps/admin/widgets.ts";
 import TituloSubtitulo from "../../components/duvidas/TituloSubtitulo.tsx";
-import AccordionItem from '../../islands/AccordionItem.tsx';
+import AccordionItem from "../../islands/AccordionItem.tsx";
 
 /** @title {{titulo}} */
 
@@ -8,6 +8,9 @@ interface QuestionsProps {
   questionNumber?: number;
   question?: string;
   anwser?: RichText;
+  image?: ImageWidget;
+  w?: number;
+  h?: number;
 }
 
 interface ItemsDuvidasProps {
@@ -38,6 +41,7 @@ export default function Duvidas({
               questionNumber={faqItem.questionNumber || 0}
               question={faqItem.question || ""}
               anwser={faqItem.anwser || ""}
+              image={faqItem.image || ""}
             />
           ))}
       </div>
