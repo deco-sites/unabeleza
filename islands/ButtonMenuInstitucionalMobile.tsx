@@ -17,7 +17,7 @@ interface Link {
 
 export default function ButtonMenuInstitucionalMobile({
   links,
-  label
+  label,
 }: Menu) {
   const [navigation, setNavigation] = useState(false);
 

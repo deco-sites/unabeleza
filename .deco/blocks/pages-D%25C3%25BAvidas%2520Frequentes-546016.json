@@ -24,8 +24,9 @@
         },
         {
           "question": "Meu pedido foi cancelado e eu paguei o boleto ou realizei o depósito. E agora?",
-          "anwser": "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eros eget enim vulputate egestas. Mauris lobortis ullamcorper nunc a ultricies. Quisque sit amet quam ac arcu mattis suscipit non sit amet velit. Nam ac massa ullamcorper, congue tellus nec, volutpat erat. Vivamus id malesuada est. Nam sed lacus a purus venenatis laoreet non a lectus.</span></p>",
-          "questionNumber": 2
+          "anwser": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eros eget enim vulputate egestas. Mauris lobortis ullamcorper nunc a ultricies. Quisque sit amet quam ac arcu mattis suscipit non sit amet velit. Nam ac massa ullamcorper, congue tellus nec, volutpat erat. Vivamus id malesuada est. Nam sed lacus a purus venenatis laoreet non a lectus.</p><p></p><p></p>",
+          "questionNumber": 2,
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/66879a6d-19a0-430d-a804-0db2add539c9/lorem_duvidas.png"
         },
         {
           "question": "Não Recebi o e-mail de confirmação de meu pedido. E agora?",

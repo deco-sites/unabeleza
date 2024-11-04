@@ -26,6 +26,5 @@ export const loader = ({ links }: Menu, req: Request) => {
 export default function MenuInstitucionalMobile(
   { links, label }: ReturnType<typeof loader>,
 ) {
-
-  return <ButtonMenuInstitucionalMobile links={links} label={label}/>;
+  return <ButtonMenuInstitucionalMobile links={links} label={label} />;
 }

@@ -3,7 +3,7 @@ import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import Icon from "../ui/Icon.tsx";
-import { useScript } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 interface Props {
   variant?: "full" | "icon";
   item: AnalyticsItem;
@@ -16,7 +16,7 @@ const onLoad = (id: string, productID: string) =>
     button.classList.remove("htmx-request");
     button.querySelector("svg")?.setAttribute(
       "fill",
-      inWishlist ? "black" : "none",
+      inWishlist ? "#8F2AED" : "none",
     );
     const span = button.querySelector("span");
     if (span) {
@@ -38,6 +38,7 @@ function WishlistButton({ item, variant = "full" }: Props) {
   const productID = (item as any).item_id;
   const productGroupID = item.item_group_id ?? "";
   const id = useId();
+  const device = useDevice();
   const addToWishlistEvent = useSendEvent({
     on: "click",
     event: {
@@ -55,13 +56,31 @@ function WishlistButton({ item, variant = "full" }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
         class={clx(
-          "btn no-animation",
+          "btn btn-circle border border-[#E3EBED] no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
           variant === "icon"
-            ? "btn-circle btn-ghost btn-sm"
-            : "btn-primary btn-outline gap-2 w-full",
+            ? "btn-ghost btn-sm text-transparent hover:bg-info"
+            : "btn-primary btn-outline gap-2",
         )}
       >
-        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" />
+        {device === "desktop"
+          ? (
+            <Icon
+              id="favorite"
+              class="[.htmx-request_&]:hidden"
+              fill="none"
+              width={26}
+              height={23}
+            />
+          )
+          : (
+            <Icon
+              id="favoriteMobile"
+              class="[.htmx-request_&]:hidden"
+              fill="none"
+              width={17}
+              height={15}
+            />
+          )}
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}
