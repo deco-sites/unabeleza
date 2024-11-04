@@ -11,8 +11,8 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/5b022a01-ba88-46fe-86ae-93ae644605b7",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88b2ad41-be6d-4640-b9fe-c58942362f0f",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
+          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "alt": "Shoes",
           "action": {
             "title": "Skate into Adventure",
@@ -47,50 +47,63 @@
       "preload": true
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Featured Products",
-        "cta": "/mono",
-        "products": {
-          "__resolveType": "Product List Loader"
+      "__resolveType": "site/sections/Home/BenefitBar.tsx",
+      "items": [
+        {
+          "text": "<p>Parcele em até <strong>10x sem juros</strong></p>",
+          "icon": "benefitBarCard",
+          "title": "card"
+        },
+        {
+          "text": "<p><strong>Compre </strong>no site e <strong>troque </strong>na loja</p>",
+          "icon": "benefitBarMap",
+          "title": "map"
+        },
+        {
+          "text": "<p><strong>Frete Grátis </strong>- acima de R$ 500</p>",
+          "icon": "benefitBarTruck",
+          "title": "truck"
+        },
+        {
+          "text": "<p>Pague com Pix e ganhe <strong>3%OFF</strong></p>",
+          "icon": "benefitBarQrCode",
+          "title": "qrCode"
         }
-      }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-        "title": "Departments",
-        "cta": "/all",
-        "items": [
-          {
-            "label": "Men",
-            "href": "/men",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa"
-          },
-          {
-            "href": "/women",
-            "label": "Women",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f6bea2b8-b248-4b42-9246-6e924a0acc8b"
-          },
-          {
-            "href": "/kids",
-            "label": "Kids",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/1b0ecaa2-9a13-4de2-bf17-5196948ed128"
-          },
-          {
-            "href": "/accessories",
-            "label": "Accessories",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/92129655-fe40-4b29-8fdb-e7f71e67a5d1"
-          },
-          {
-            "href": "/home-and-living",
-            "label": "Home & Living",
-            "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d0433c00-cd26-4638-b519-0cb64b9f82e8"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/Home/FavoritesSlider.tsx",
+      "items": [
+        {
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/37c48bef-096c-4b5e-be93-0e23a1dec9da/favorites-banner1.png",
+          "title": "Compre e ganhe",
+          "alt": "Compre e ganhe",
+          "href": "#",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        {
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/5af052de-1eaf-4bac-8240-e8d6c161eb96/favorites-banner2.png",
+          "title": "Cabelo",
+          "alt": "Cabelo",
+          "href": "#",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        },
+        {
+          "title": "Maquiagem",
+          "alt": "Maquiagem",
+          "href": "#",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d8492902-2b4f-4a51-83af-180232c000f2/favorites-banner3.png"
+        },
+        {
+          "title": "Corpo & banho",
+          "alt": "Corpo & banho",
+          "href": "#",
+          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/54b8b3e9-bdb5-482e-b064-26dd48a8eb53/favorites-banner4.png",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+        }
+      ],
+      "title": "Veja os favoritos"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -101,69 +114,536 @@
           "label": "Sign Up",
           "href": "#"
         },
-        "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
-        "images": {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/cf96d47f-564f-40da-ad94-7acac5f39327",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4d5c3212-3f75-4d50-89f3-970815748b43"
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-        "title": "Hottest Deals",
-        "tabs": [
+        "description": "<p><span style=\"color: rgb(0, 0, 0);\" data-mce-style=\"color: rgb(0, 0, 0);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
+        "images": [
           {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "hat and bag",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
+            "mobile": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "d",
+              "9": "e",
+              "10": "c",
+              "11": "o",
+              "12": "-",
+              "13": "s",
+              "14": "i",
+              "15": "t",
+              "16": "e",
+              "17": "s",
+              "18": "-",
+              "19": "a",
+              "20": "s",
+              "21": "s",
+              "22": "e",
+              "23": "t",
+              "24": "s",
+              "25": ".",
+              "26": "s",
+              "27": "3",
+              "28": ".",
+              "29": "s",
+              "30": "a",
+              "31": "-",
+              "32": "e",
+              "33": "a",
+              "34": "s",
+              "35": "t",
+              "36": "-",
+              "37": "1",
+              "38": ".",
+              "39": "a",
+              "40": "m",
+              "41": "a",
+              "42": "z",
+              "43": "o",
+              "44": "n",
+              "45": "a",
+              "46": "w",
+              "47": "s",
+              "48": ".",
+              "49": "c",
+              "50": "o",
+              "51": "m",
+              "52": "/",
+              "53": "u",
+              "54": "n",
+              "55": "a",
+              "56": "b",
+              "57": "e",
+              "58": "l",
+              "59": "e",
+              "60": "z",
+              "61": "a",
+              "62": "/",
+              "63": "2",
+              "64": "8",
+              "65": "0",
+              "66": "c",
+              "67": "a",
+              "68": "b",
+              "69": "b",
+              "70": "a",
+              "71": "-",
+              "72": "d",
+              "73": "c",
+              "74": "a",
+              "75": "c",
+              "76": "-",
+              "77": "4",
+              "78": "f",
+              "79": "0",
+              "80": "7",
+              "81": "-",
+              "82": "b",
+              "83": "b",
+              "84": "4",
+              "85": "e",
+              "86": "-",
+              "87": "0",
+              "88": "f",
+              "89": "d",
+              "90": "d",
+              "91": "a",
+              "92": "4",
+              "93": "3",
+              "94": "e",
+              "95": "1",
+              "96": "3",
+              "97": "c",
+              "98": "b",
+              "99": "/",
+              "100": "m",
+              "101": "i",
+              "102": "n",
+              "103": "i",
+              "104": "b",
+              "105": "a",
+              "106": "n",
+              "107": "n",
+              "108": "e",
+              "109": "r",
+              "110": "-",
+              "111": "l",
+              "112": "e",
+              "113": "f",
+              "114": "t",
+              "115": "-",
+              "116": "m",
+              "117": "o",
+              "118": "b",
+              "119": "i",
+              "120": "l",
+              "121": "e",
+              "122": ".",
+              "123": "p",
+              "124": "n",
+              "125": "g",
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/15b95c70-d50f-46e4-8e72-87851210e9f6/minibanner-left-mobile.png",
+              "w": 375,
+              "h": 469
             },
-            "title": "Accessories"
+            "desktop": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "d",
+              "9": "e",
+              "10": "c",
+              "11": "o",
+              "12": "-",
+              "13": "s",
+              "14": "i",
+              "15": "t",
+              "16": "e",
+              "17": "s",
+              "18": "-",
+              "19": "a",
+              "20": "s",
+              "21": "s",
+              "22": "e",
+              "23": "t",
+              "24": "s",
+              "25": ".",
+              "26": "s",
+              "27": "3",
+              "28": ".",
+              "29": "s",
+              "30": "a",
+              "31": "-",
+              "32": "e",
+              "33": "a",
+              "34": "s",
+              "35": "t",
+              "36": "-",
+              "37": "1",
+              "38": ".",
+              "39": "a",
+              "40": "m",
+              "41": "a",
+              "42": "z",
+              "43": "o",
+              "44": "n",
+              "45": "a",
+              "46": "w",
+              "47": "s",
+              "48": ".",
+              "49": "c",
+              "50": "o",
+              "51": "m",
+              "52": "/",
+              "53": "u",
+              "54": "n",
+              "55": "a",
+              "56": "b",
+              "57": "e",
+              "58": "l",
+              "59": "e",
+              "60": "z",
+              "61": "a",
+              "62": "/",
+              "63": "1",
+              "64": "0",
+              "65": "1",
+              "66": "5",
+              "67": "a",
+              "68": "b",
+              "69": "5",
+              "70": "1",
+              "71": "-",
+              "72": "4",
+              "73": "3",
+              "74": "0",
+              "75": "4",
+              "76": "-",
+              "77": "4",
+              "78": "5",
+              "79": "8",
+              "80": "1",
+              "81": "-",
+              "82": "8",
+              "83": "b",
+              "84": "2",
+              "85": "5",
+              "86": "-",
+              "87": "f",
+              "88": "b",
+              "89": "9",
+              "90": "0",
+              "91": "f",
+              "92": "1",
+              "93": "f",
+              "94": "5",
+              "95": "e",
+              "96": "3",
+              "97": "5",
+              "98": "5",
+              "99": "/",
+              "100": "m",
+              "101": "i",
+              "102": "n",
+              "103": "i",
+              "104": "b",
+              "105": "a",
+              "106": "n",
+              "107": "n",
+              "108": "e",
+              "109": "r",
+              "110": "-",
+              "111": "l",
+              "112": "e",
+              "113": "f",
+              "114": "t",
+              "115": ".",
+              "116": "p",
+              "117": "n",
+              "118": "g",
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/14f44695-0f65-46c4-8909-39cfc35ee8f3/minibanner-left.png",
+              "w": 712,
+              "h": 405
+            },
+            "title": "Crystal Oil LOF",
+            "description": "<p>Sérum multi óleos LOF professional</p>",
+            "cta": {
+              "href": "#",
+              "label": "APROVEITE"
+            }
           },
           {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "Shirts",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
+            "desktop": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "d",
+              "9": "e",
+              "10": "c",
+              "11": "o",
+              "12": "-",
+              "13": "s",
+              "14": "i",
+              "15": "t",
+              "16": "e",
+              "17": "s",
+              "18": "-",
+              "19": "a",
+              "20": "s",
+              "21": "s",
+              "22": "e",
+              "23": "t",
+              "24": "s",
+              "25": ".",
+              "26": "s",
+              "27": "3",
+              "28": ".",
+              "29": "s",
+              "30": "a",
+              "31": "-",
+              "32": "e",
+              "33": "a",
+              "34": "s",
+              "35": "t",
+              "36": "-",
+              "37": "1",
+              "38": ".",
+              "39": "a",
+              "40": "m",
+              "41": "a",
+              "42": "z",
+              "43": "o",
+              "44": "n",
+              "45": "a",
+              "46": "w",
+              "47": "s",
+              "48": ".",
+              "49": "c",
+              "50": "o",
+              "51": "m",
+              "52": "/",
+              "53": "u",
+              "54": "n",
+              "55": "a",
+              "56": "b",
+              "57": "e",
+              "58": "l",
+              "59": "e",
+              "60": "z",
+              "61": "a",
+              "62": "/",
+              "63": "0",
+              "64": "b",
+              "65": "e",
+              "66": "5",
+              "67": "5",
+              "68": "0",
+              "69": "9",
+              "70": "0",
+              "71": "-",
+              "72": "2",
+              "73": "d",
+              "74": "b",
+              "75": "b",
+              "76": "-",
+              "77": "4",
+              "78": "9",
+              "79": "f",
+              "80": "f",
+              "81": "-",
+              "82": "9",
+              "83": "7",
+              "84": "e",
+              "85": "f",
+              "86": "-",
+              "87": "3",
+              "88": "d",
+              "89": "3",
+              "90": "c",
+              "91": "8",
+              "92": "f",
+              "93": "1",
+              "94": "7",
+              "95": "3",
+              "96": "c",
+              "97": "9",
+              "98": "0",
+              "99": "/",
+              "100": "m",
+              "101": "i",
+              "102": "n",
+              "103": "i",
+              "104": "b",
+              "105": "a",
+              "106": "n",
+              "107": "n",
+              "108": "e",
+              "109": "r",
+              "110": "-",
+              "111": "r",
+              "112": "i",
+              "113": "g",
+              "114": "h",
+              "115": "t",
+              "116": ".",
+              "117": "p",
+              "118": "n",
+              "119": "g",
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d10c1a8c-3f61-42eb-984f-485be2c069f0/minibanner-right.png",
+              "w": 712,
+              "h": 405
             },
-            "title": "Fashion"
-          },
-          {
-            "products": {
-              "__resolveType": "shopify/loaders/ProductList.ts",
-              "props": {
-                "sort": "",
-                "query": "stickers",
-                "count": 10
-              },
-              "filters": {
-                "tags": [],
-                "productTypes": [],
-                "productVendors": [],
-                "variantOptions": []
-              }
+            "mobile": {
+              "0": "h",
+              "1": "t",
+              "2": "t",
+              "3": "p",
+              "4": "s",
+              "5": ":",
+              "6": "/",
+              "7": "/",
+              "8": "d",
+              "9": "e",
+              "10": "c",
+              "11": "o",
+              "12": "-",
+              "13": "s",
+              "14": "i",
+              "15": "t",
+              "16": "e",
+              "17": "s",
+              "18": "-",
+              "19": "a",
+              "20": "s",
+              "21": "s",
+              "22": "e",
+              "23": "t",
+              "24": "s",
+              "25": ".",
+              "26": "s",
+              "27": "3",
+              "28": ".",
+              "29": "s",
+              "30": "a",
+              "31": "-",
+              "32": "e",
+              "33": "a",
+              "34": "s",
+              "35": "t",
+              "36": "-",
+              "37": "1",
+              "38": ".",
+              "39": "a",
+              "40": "m",
+              "41": "a",
+              "42": "z",
+              "43": "o",
+              "44": "n",
+              "45": "a",
+              "46": "w",
+              "47": "s",
+              "48": ".",
+              "49": "c",
+              "50": "o",
+              "51": "m",
+              "52": "/",
+              "53": "u",
+              "54": "n",
+              "55": "a",
+              "56": "b",
+              "57": "e",
+              "58": "l",
+              "59": "e",
+              "60": "z",
+              "61": "a",
+              "62": "/",
+              "63": "b",
+              "64": "6",
+              "65": "9",
+              "66": "0",
+              "67": "7",
+              "68": "8",
+              "69": "7",
+              "70": "1",
+              "71": "-",
+              "72": "1",
+              "73": "e",
+              "74": "3",
+              "75": "4",
+              "76": "-",
+              "77": "4",
+              "78": "8",
+              "79": "2",
+              "80": "8",
+              "81": "-",
+              "82": "a",
+              "83": "2",
+              "84": "8",
+              "85": "c",
+              "86": "-",
+              "87": "9",
+              "88": "b",
+              "89": "3",
+              "90": "8",
+              "91": "7",
+              "92": "a",
+              "93": "7",
+              "94": "5",
+              "95": "4",
+              "96": "6",
+              "97": "3",
+              "98": "5",
+              "99": "/",
+              "100": "m",
+              "101": "i",
+              "102": "n",
+              "103": "i",
+              "104": "b",
+              "105": "a",
+              "106": "n",
+              "107": "n",
+              "108": "e",
+              "109": "r",
+              "110": "-",
+              "111": "r",
+              "112": "i",
+              "113": "g",
+              "114": "h",
+              "115": "t",
+              "116": "-",
+              "117": "m",
+              "118": "o",
+              "119": "b",
+              "120": "i",
+              "121": "l",
+              "122": "e",
+              "123": ".",
+              "124": "p",
+              "125": "n",
+              "126": "g",
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/6e3e1fcd-470c-4795-b1bc-ae4e90eadb7f/minibanner-right-mobile.png",
+              "w": 375,
+              "h": 469
             },
-            "title": "Stickers"
+            "title": "Shampoo + máscara matizadores",
+            "cta": {
+              "href": "#",
+              "label": "APROVEITE"
+            },
+            "description": "<p>Com óleo de monoi (ultrahidratante)!</p>",
+            "contentPosition": "end"
           }
         ]
       }
@@ -171,22 +651,203 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
-        "label": "Sign up",
-        "placeholder": "Email address",
-        "empty": {
-          "title": "Get top deals, latest trends, and more.",
-          "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
-        },
-        "success": {
-          "title": "Thank you for subscribing!",
-          "description": "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!"
-        },
-        "failed": {
-          "title": "Oops!. Something went wrong!",
-          "description": "Something went wrong. Please try again. If the problem persists, please contact us."
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Veja por lançamentos",
+        "cta": "/mono",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "DISCOUNT",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          }
         }
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Home/BannerSlider.tsx",
+        "items": [
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d1f80616-24bc-4a80-9677-016c397bb661/banner-slider-1.png",
+            "title": "Equipamentos",
+            "btn": true
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/c3ad7c9f-d901-450c-9507-872013c6a3bf/banner-slider-2.png",
+            "title": "Marcas para salão",
+            "btn": true
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/df5d8946-0586-4d76-bdc6-c7b8511b98a4/banner-sldier-3.png",
+            "title": "Marcas para loja",
+            "btn": true
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "DISCOUNT",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "getVariations": true
+        },
+        "cta": "VER TODOS",
+        "title": "Veja nossas ofertas"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+      "title": "Navegue por categorias",
+      "items": [
+        {
+          "label": "COMPRE & GANHE",
+          "href": "/compre-e-ganhe",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryPayToWin"
+        },
+        {
+          "label": "MARCAS PARA LOJA",
+          "href": "/marcas-para-loja",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryBrandForStore"
+        },
+        {
+          "label": "MARCAS PARA SALÃO",
+          "href": "/marcas-para-salao",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categorySalonBrands"
+        },
+        {
+          "label": "CABELO",
+          "href": "/cabelo",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryHair"
+        },
+        {
+          "label": "MAQUIAGEM",
+          "href": "/maquiagem",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryMakeup"
+        },
+        {
+          "label": "CORPO E BANHO",
+          "href": "/corpo-e-banho",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryBodyAndBath"
+        },
+        {
+          "label": "EQUIPAMENTO",
+          "href": "/equipamento",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+          "icon": "categoryEquipment"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
+      "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/20f15360-a5fe-4c93-9684-65e1a5834923/banner-destaque.png",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. ",
+      "title": "Destaques",
+      "subtitle": "Ultra hidratantes",
+      "products": {
+        "__resolveType": "wake/loaders/productList.ts",
+        "first": 12,
+        "sortDirection": "ASC",
+        "sortKey": "DISCOUNT",
+        "filters": {
+          "attributes": {
+            "id": [],
+            "name": [],
+            "type": [],
+            "value": []
+          },
+          "brandId": [],
+          "categoryId": [],
+          "ean": [],
+          "productId": [],
+          "productVariantId": [],
+          "sameParentAs": [],
+          "sku": [],
+          "stocks": {
+            "dcId": [],
+            "dcName": []
+          },
+          "prices": {}
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Images/Banner.tsx",
+        "title": "Kit Senscience",
+        "images": [
+          {
+            "mobile": {
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/7e83fa80-5216-4231-a8c6-f2f917b29dce/banner-kits-mobile.png",
+              "w": 375,
+              "h": 520
+            },
+            "desktop": {
+              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/27767041-3afa-47c4-8bcd-18c8067b0de4/banner-kits.png",
+              "w": 1440,
+              "h": 489
+            },
+            "contentPosition": "start"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "site/sections/Home/AboutUs.tsx",
+      "title": "Sobre Nós",
+      "subtitle": "Nós somos a Unabeleza",
+      "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
