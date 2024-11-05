@@ -27,6 +27,7 @@ export default function MenuInstitucional(
     currentPath,
   }: ReturnType<typeof loader>,
 ) {
+
   return (
     <div className="hidden desktop:block absolute top-[280px] left-[80px] list-none bg-[#FAFAFA] py-[40px] pl-[40px] pr-[49px]">
       <h3 className="text-black text-[16px] font-bold mb-[20px]">
