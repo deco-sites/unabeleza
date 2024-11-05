@@ -5857,6 +5857,10 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 2rem;
   }
 
+  .mobile\:mt-\[200px\] {
+    margin-top: 200px;
+  }
+
   .mobile\:mt-\[250px\] {
     margin-top: 250px;
   }
@@ -6051,8 +6055,8 @@ details.collapse summary::-webkit-details-marker {
     padding-bottom: 89px;
   }
 
-  .mobile\:pt-\[44px\] {
-    padding-top: 44px;
+  .mobile\:pt-\[5px\] {
+    padding-top: 5px;
   }
 
   .mobile\:text-left {

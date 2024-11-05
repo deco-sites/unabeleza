@@ -12,7 +12,7 @@ interface SomosProps {
 
 export default function QuemSomos({ item }: SomosProps) {
   return (
-    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] mb-[91px] pl-[333px] pr-[118px] mobile:pt-[44px] mobile:pb-[89px]">
+    <div className="mobile:mt-[200px] mobile:px-[20px] mt-[100px] mb-[91px] pl-[333px] pr-[118px] mobile:pt-[5px] mobile:pb-[89px]">
       {item &&
         item.map((item, index) => (
           <section key={index}>
