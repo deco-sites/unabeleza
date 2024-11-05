@@ -22,6 +22,9 @@ import {
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import MenuMobile from "../../components/header/MenuMobile.tsx";
+import ComponentPopupDeEntrada from "../../islands/PopupDeEntrada.tsx"
+import { PopupDeEntradaProps } from "../../islands/PopupDeEntrada.tsx"
+
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -46,7 +49,11 @@ export interface SectionProps {
    * @description Usefull for lazy loading hidden elements, like hamburguer menus etc
    * @hide true */
   loading?: "eager" | "lazy";
+
+  popUp?: PopupDeEntradaProps
 }
+
+
 type Props = Omit<SectionProps, "alert">;
 const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
   <>
@@ -205,6 +212,7 @@ function Header({
     height: 16,
     alt: "Logo",
   },
+  popUp,
   ...props
 }: Props) {
   const device = useDevice();
@@ -217,7 +225,9 @@ function Header({
       }}
     >
       <div class="bg-base-100 fixed w-full z-40">
-        {alerts.length > 0 && <Alert alerts={alerts} />}
+        <ComponentPopupDeEntrada {...popUp}/>
+        {alerts &&         
+        alerts.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
