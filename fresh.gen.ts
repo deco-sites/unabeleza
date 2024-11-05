@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $AccordionItem from "./islands/AccordionItem.tsx";
 import * as $ButtonMenuInstitucionalMobile from "./islands/ButtonMenuInstitucionalMobile.tsx";
+import * as $Popup from "./islands/Popup.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -15,6 +16,7 @@ const manifest = {
     "./islands/AccordionItem.tsx": $AccordionItem,
     "./islands/ButtonMenuInstitucionalMobile.tsx":
       $ButtonMenuInstitucionalMobile,
+    "./islands/Popup.tsx": $Popup,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
