@@ -3818,17 +3818,8 @@ details.collapse summary::-webkit-details-marker {
 .mb-\[20px\] {
   margin-bottom: 20px;
 }
-.mb-\[24px\] {
-  margin-bottom: 24px;
-}
-.mb-\[30px\] {
-  margin-bottom: 30px;
-}
 .mb-\[34px\] {
   margin-bottom: 34px;
-}
-.mb-\[40px\] {
-  margin-bottom: 40px;
 }
 .mb-\[80px\] {
   margin-bottom: 80px;
@@ -4211,9 +4202,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[11\.25vw\] {
   max-width: 11.25vw;
-}
-.max-w-\[137px\] {
-  max-width: 137px;
 }
 .max-w-\[139px\] {
   max-width: 139px;
@@ -5771,11 +5759,6 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(26 26 26 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-\[\#BD87ED\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(189 135 237 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-\[\#C493EF\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(196 147 239 / var(--tw-bg-opacity));
@@ -6088,10 +6071,6 @@ details.collapse summary::-webkit-details-marker {
     flex-direction: column;
   }
 
-  .mobile\:justify-center {
-    justify-content: center;
-  }
-
   .mobile\:gap-0 {
     gap: 0px;
   }
@@ -6195,10 +6174,6 @@ details.collapse summary::-webkit-details-marker {
   .mobile\:py-\[8\.94px\] {
     padding-top: 8.94px;
     padding-bottom: 8.94px;
-  }
-
-  .mobile\:pt-\[44px\] {
-    padding-top: 44px;
   }
 
   .mobile\:text-left {
