@@ -1,6 +1,6 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Icon from "../components/ui/Icon.tsx";
-import { useEffect, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 /**@title PopupDeEntrada*/
 export interface PopupDeEntradaProps {
@@ -14,7 +14,7 @@ export interface PopupDeEntradaProps {
 export default function ComponentPopupDeEntrada(
     { titlePopUp, textPopUp, imagePopupEntradaPopUp }: PopupDeEntradaProps,
 ) {
-    const [IsOpen, setIsOpen] = useState<boolean>(null)
+    const [IsOpen, setIsOpen] = useState<boolean>(true)
 
     const closePopup = () => {
         localStorage.setItem('popup_closed', JSON.stringify(IsOpen))
@@ -30,7 +30,7 @@ export default function ComponentPopupDeEntrada(
         }
     }
 
-    useEffect(() => {
+/*    useEffect(() => {
         const popup = Boolean(localStorage.getItem('popup_closed')) 
         if(popup == true){
             closePopup()
@@ -38,32 +38,32 @@ export default function ComponentPopupDeEntrada(
             setIsOpen(true)
         }
     }, [])
-
+*/
     return (
         <div>
             {IsOpen == true &&
             <><div className="fixed z-20 top-0 left-0 bg-[#060D21] opacity-[33%] w-[100%] h-[100vh]"></div>
-            <div id="popupDeEntrada" className="z-30 fixed top-[190px] mobile:top-[70px] mobile:left-[8%] left-[20%] bg-[#FFFFFF] flex justify-between w-[861px] rounded-[5px]">
-              <Icon onClick={closePopup} id="close" className="absolute top-8 right-10 cursor-pointer" />
-              <section>
+            <div id="popupDeEntrada" 
+            className="z-30 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  
+                    bg-[#FFFFFF] flex justify-between mobile:justify-center 
+                    w-[861px] mobile:w-[93%]
+                    mobile:mr-[10px]
+                    rounded-[5px]">
+              <Icon onClick={closePopup} id="close" className="absolute top-8 right-10 cursor-pointer mobile:top-4 mobile:right-5" />
+              <section className="mobile:hidden">
                 <div>
-                  <img className="rounded-l-[5px]" src={imagePopupEntradaPopUp} alt="" />
+                  <img className="rounded-l-[5px]" src={imagePopupEntradaPopUp} alt="imagem do popup" />
                 </div>
               </section>
-              <section className="flex flex-col justify-center items-center pr-[75px]">
+              <section className="flex flex-col justify-center phone:justify-start items-center phone:items-start pr-[75px] mobile:p-[20px]">
                 <div>
-                  <p className="font-[PP-Hatton] text-[28px] text-center mb-[12px]">
+                  <p className="font-[PP-Hatton] text-[28px] text-center phone:text-left mb-[12px]">
                     {titlePopUp}
                   </p>
-                  <p className="font-[Montserrat] text-[16px]">
-                    {textPopUp}
-                  </p>
+                  <p className="font-[Montserrat] text-[16px]">{textPopUp}</p>
                 </div>
                 <div>
-                  <form 
-                    action=""
-                    className="flex flex-col font-[Montserrat]"
-                  >
+                  <form action="" className="flex flex-col font-[Montserrat]">
                     <input 
                       className="w-[332px] h-[45px] mt-[23.99px] mb-[10px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
                       type="text"
@@ -80,7 +80,7 @@ export default function ComponentPopupDeEntrada(
                       htmlFor=""
                       className="flex items-center justify-between w-[332px] pr-[25px] cursor-pointer"
                     >
-                      <input type="checkbox" className="cursor-pointer" />
+                      <input type="checkbox" className="cursor-pointer hidden peer" />
                       <p className="font-[Montserrat] text-[12px] cursor-pointer">
                         Quero receber as ofertas por e-mail e
                         Whatsapp

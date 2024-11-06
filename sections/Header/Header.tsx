@@ -226,8 +226,8 @@ function Header({
     >
       <div class="bg-base-100 fixed w-full z-40">
         <ComponentPopupDeEntrada {...popUp}/>
-        {alerts &&         
-        alerts.length > 0 && <Alert alerts={alerts} />}
+        {alerts !== undefined &&         
+        alerts?.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}
