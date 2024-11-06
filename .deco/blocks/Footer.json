@@ -58,7 +58,7 @@
           "href": "#"
         },
         {
-          "title": "Atendimento: de 2ª a 6ª feira das 9h00 as 17h:00",
+          "title": "Atendimento: de 2ª a 6ª feira das 9h00 as 17h:00",
           "href": "#"
         }
       ]
@@ -183,6 +183,12 @@
     }
   ],
   "newsletter": {
-    "status": "success"
+    "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
+    "empty": {
+      "title": "titulo",
+      "description": "texto"
+    },
+    "success": {},
+    "failed": {}
   }
 }

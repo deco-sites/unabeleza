@@ -17,10 +17,12 @@ export interface BenefitBarProps {
 
 export default function BenefitBar({ items, class: _class }: BenefitBarProps) {
   return (
-    <div class={clx(
-      "w-full bg-primary",
-      _class
-    )}>
+    <div
+      class={clx(
+        "w-full bg-primary",
+        _class,
+      )}
+    >
       <div class="w-full max-w-[96rem] flex justify-between desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar mx-auto px-[60px] py-[10px] mobile:p-0 ">
         {items &&
           items.map((item) => (
