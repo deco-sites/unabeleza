@@ -22,8 +22,7 @@ import {
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import MenuMobile from "../../components/header/MenuMobile.tsx";
-import ComponentPopupDeEntrada from "../../islands/PopupDeEntrada.tsx"
-import { PopupDeEntradaProps } from "../../islands/PopupDeEntrada.tsx"
+import {default as PopUp, PopUpProps}  from "../../islands/PopUp.tsx"
 
 export interface Logo {
   src: ImageWidget;
@@ -50,7 +49,7 @@ export interface SectionProps {
    * @hide true */
   loading?: "eager" | "lazy";
 
-  popUp?: PopupDeEntradaProps
+  popUp?: PopUpProps
 }
 
 
@@ -225,7 +224,7 @@ function Header({
       }}
     >
       <div class="bg-base-100 fixed w-full z-40">
-        <ComponentPopupDeEntrada {...popUp}/>
+        <PopUp {...popUp}/>
         {alerts !== undefined &&         
         alerts?.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
