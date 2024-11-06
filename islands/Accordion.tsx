@@ -19,7 +19,7 @@ export default function Accordion({title, children}: AccordionProps) {
             : "border-b border-black"
        )}>
         <button onClick={() => setIsOpen(!isOpen)} class="flex justify-between w-full">
-            <span class="text-sm text-bold">{title}</span>
+            <span class="text-sm font-bold">{title}</span>
             <Icon 
                 id={isOpen ? "chevron-bottom" : "chevron-right"}
                 stroke="#000"

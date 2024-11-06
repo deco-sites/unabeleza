@@ -4,5 +4,12 @@
   "social": [],
   "paymentMethods": [],
   "policies": [],
-  "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d769d477-2cfa-4db3-9d80-2c601514213c/logo-unabeleza.png"
+  "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d769d477-2cfa-4db3-9d80-2c601514213c/logo-unabeleza.png",
+  "benefits": [],
+  "newsletter": {},
+  "menus": [],
+  "developerLogo": {
+    "econverse": {},
+    "wake": {}
+  }
 }

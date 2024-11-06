@@ -1,20 +1,26 @@
 import { type RichText } from "apps/admin/widgets.ts";
 import Icon from "../../components/ui/Icon.tsx";
+import { clx } from "../../sdk/clx.ts";
 
 /** @title {{title}} */
-interface item {
+export interface ItemBenefitBar {
   title?: string;
   icon?: string;
   text: RichText;
 }
 
-interface BenefitBarProps {
-  items: item[];
+export interface BenefitBarProps {
+  items: ItemBenefitBar[];
+  /** @hide true */
+  class?: string;
 }
 
-export default function BenefitBar({ items }: BenefitBarProps) {
+export default function BenefitBar({ items, class: _class }: BenefitBarProps) {
   return (
-    <div class="w-full bg-primary">
+    <div class={clx(
+      "w-full bg-primary",
+      _class
+    )}>
       <div class="w-full max-w-[96rem] flex justify-between desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar mx-auto px-[60px] py-[10px] mobile:p-0 ">
         {items &&
           items.map((item) => (

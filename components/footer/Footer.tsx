@@ -5,15 +5,21 @@ import MenuMobileFooter from "./MenuMobileFooter.tsx";
 import Section from "../ui/Section.tsx";
 import { RichText } from "apps/admin/widgets.ts";
 import { clx } from "../../sdk/clx.ts";
+import { default as BenefitBar, ItemBenefitBar } from "../../sections/Home/BenefitBar.tsx";
+import {default as Newsletter, NewsletterProps} from "../../sections/Newsletter/Newsletter.tsx";
 
 interface FooterProps extends Props {
   copyright: RichText
+  benefits: ItemBenefitBar[]
+  newsletter: NewsletterProps
 }
 
-export default function Footer({ copyright, ...props }: FooterProps) {
+export default function Footer({ benefits, copyright, newsletter, ...props }: FooterProps) {
   const device = useDevice();
   return (
     <footer>
+      <Newsletter {...newsletter} status={undefined}/>
+      <BenefitBar items={benefits} class="!bg-[#DBB9F9]"/>
       {
         device === "desktop"
         ? ( <MenuDesktopFooter {...props} /> )

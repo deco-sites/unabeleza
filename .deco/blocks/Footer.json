@@ -159,5 +159,30 @@
       "url": "#"
     }
   },
-  "copyright": "UNIKAPRO Cosmetics 2024. Todos os direitos reservados - Rua das Castanheiras, 200 - Jardim São Bento - Hortolândia - SP - CEP: 13187065 AK DISTRIBUICAO E COMERCIO DE PRODUTOS COSMETICOS LTDA - CNPJ: 39.154.668/0001-29 / Hortolândia - SP."
+  "copyright": "UNIKAPRO Cosmetics 2024. Todos os direitos reservados - Rua das Castanheiras, 200 - Jardim São Bento - Hortolândia - SP - CEP: 13187065 AK DISTRIBUICAO E COMERCIO DE PRODUTOS COSMETICOS LTDA - CNPJ: 39.154.668/0001-29 / Hortolândia - SP.",
+  "benefits": [
+    {
+      "text": "<p>Parcele em até <strong>10x sem juros</strong></p>",
+      "icon": "benefitBarCard",
+      "title": "card"
+    },
+    {
+      "text": "<p><strong>Compre </strong>no site e <strong>troque </strong>na loja</p>",
+      "icon": "benefitBarMap",
+      "title": "map"
+    },
+    {
+      "text": "<p><strong>Frete Grátis </strong>- acima de R$ 500</p>",
+      "icon": "benefitBarTruck",
+      "title": "truck"
+    },
+    {
+      "text": "<p>Pague com Pix e ganhe <strong>3%OFF</strong></p>",
+      "icon": "benefitBarQrCode",
+      "title": "qrCode"
+    }
+  ],
+  "newsletter": {
+    "status": "success"
+  }
 }
