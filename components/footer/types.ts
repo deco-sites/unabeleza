@@ -1,8 +1,8 @@
-import { ImageWidget } from "apps/admin/widgets.ts";
+import { ImageWidget, RichText } from "apps/admin/widgets.ts";
 
 /** @titleBy title */
 export interface Item {
-  title: string;
+  title: RichText;
   href?: string;
 }
 

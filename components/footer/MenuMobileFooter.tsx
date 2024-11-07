@@ -14,16 +14,18 @@ export default function MenuMobileFooter(
         {menus?.map(({ title, items }) => (
           <Accordion title={title}>
             <ul class="flex flex-col gap-2 max-w-[174px]">
-              {items.map(({ title, href }) => (
-                <li>
-                  <a
-                    class="text-sm font-medium text-base-400"
-                    href={href ?? "#"}
-                  >
-                    {title}
-                  </a>
-                </li>
-              ))}
+              {items.map(({ title, href }) => {
+                const newTitle = title.includes("strong") ? title : title.replace(/<\/?p>/g, "") ;
+                return (
+                  <li>
+                    <a
+                      class="text-sm font-medium text-base-400 flex gap-[5px]"
+                      href={href}
+                      dangerouslySetInnerHTML={{ __html: newTitle }}
+                    />
+                  </li>
+                )
+              })}
             </ul>
           </Accordion>
         ))}

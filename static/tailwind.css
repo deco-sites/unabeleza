@@ -4477,6 +4477,9 @@ details.collapse summary::-webkit-details-marker {
 .gap-\[4px\] {
   gap: 4px;
 }
+.gap-\[5px\] {
+  gap: 5px;
+}
 .gap-\[6px\] {
   gap: 6px;
 }
@@ -5353,10 +5356,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity));
 }
-.text-success {
-  --tw-text-opacity: 1;
-  color: var(--fallback-su,oklch(var(--su)/var(--tw-text-opacity)));
-}
 .text-transparent {
   color: transparent;
 }
@@ -5946,6 +5945,10 @@ details.collapse summary::-webkit-details-marker {
     display: none;
   }
 
+  .mobile\:h-5 {
+    height: 1.25rem;
+  }
+
   .mobile\:h-8 {
     height: 2rem;
   }
@@ -5960,6 +5963,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:max-h-\[27px\] {
     max-height: 27px;
+  }
+
+  .mobile\:w-5 {
+    width: 1.25rem;
   }
 
   .mobile\:w-8 {
@@ -6015,10 +6022,6 @@ details.collapse summary::-webkit-details-marker {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .mobile\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .mobile\:flex-col {
     flex-direction: column;
   }
@@ -6031,10 +6034,6 @@ details.collapse summary::-webkit-details-marker {
     gap: 0px;
   }
 
-  .mobile\:gap-20 {
-    gap: 5rem;
-  }
-
   .mobile\:gap-4 {
     gap: 1rem;
   }
@@ -6045,6 +6044,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .mobile\:gap-8 {
+    gap: 2rem;
   }
 
   .mobile\:gap-\[13px\] {
@@ -6149,10 +6152,6 @@ details.collapse summary::-webkit-details-marker {
     text-align: center;
   }
 
-  .mobile\:text-start {
-    text-align: start;
-  }
-
   .mobile\:text-\[10px\] {
     font-size: 10px;
   }
@@ -6243,6 +6242,10 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:gap-\[6\.59vw\] {
     gap: 6.59vw;
+  }
+
+  .desktop\:p-14 {
+    padding: 3.5rem;
   }
 
   .desktop\:pb-4 {

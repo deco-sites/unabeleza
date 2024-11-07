@@ -46,19 +46,19 @@
       "href": "#",
       "items": [
         {
-          "title": "(11) 5511-1107",
+          "title": "<p><img src=\"https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/9ed02d11-e6a7-4646-bd3d-d03619778993/phone-(2).png\">(11) 5511-1107</p>",
           "href": "#"
         },
         {
-          "title": "(11) 5511-0677",
+          "title": "<p><img src=\"https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/9ed02d11-e6a7-4646-bd3d-d03619778993/phone-(2).png\"> (11) 5511-0677</p>",
           "href": "#"
         },
         {
-          "title": "SAC/Site: 11 94319-1685",
+          "title": "<p><strong>SAC/Site:</strong> 11 94319-1685</p>",
           "href": "#"
         },
         {
-          "title": "Atendimento: de 2ª a 6ª feira das 9h00 as 17h:00",
+          "title": "<p><strong>Atendimento: </strong>de 2ª a 6ª feira das 9h00 as 17h:00</p>",
           "href": "#"
         }
       ]
@@ -66,70 +66,88 @@
   ],
   "social": [
     {
-      "alt": "facebook",
-      "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/66137259-6bdb-4322-bed1-a2593560934c"
-    },
-    {
       "alt": "Instagram",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e71ae7f3-0f51-4185-af0a-fca08ebe4451"
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/0ae48999-8067-45df-ae97-693b2f3905db/instagram.svg"
     },
     {
-      "alt": "Pinterest",
+      "alt": "Facebook",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4becba39-fc08-4df2-bb5d-5e843f375deb"
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/642b1809-abc6-4035-a549-d743e5040f9e/facebook.svg"
     },
     {
-      "alt": "X",
+      "alt": "Linkedin",
       "href": "#",
-      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/179a9ee9-3813-47b8-96eb-11e0c5558ede"
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/c3f14a02-d883-484f-a619-9b6f196d49af/linkedin.svg"
+    },
+    {
+      "alt": "Youtube",
+      "href": "#",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/aac8cecd-bd6a-4a5d-b132-3334be54d4e0/youtube.svg"
     }
   ],
   "paymentMethods": {
     "title": "Formas de pagamento",
     "items": [
       {
-        "alt": "Paypal",
+        "alt": "Diners",
         "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/7d858621-469e-4528-91b5-8c79fc413162"
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d6e0acfd-05bc-49d6-9565-55e32de45fc1/Diners.svg"
       },
       {
-        "alt": "Mastercard",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/88ab870c-4256-44b4-8da3-3cefe0436e87"
-      },
-      {
-        "alt": "Maestro",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/73e26df8-4162-4c2e-ae5a-0f100ae8b458/American-express-(1).svg",
         "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e94aaf80-25f5-4e23-8708-14d78ffdebbb"
+        "alt": "American Express"
       },
       {
-        "alt": "Google Pay",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ccddc66e-baa8-4b44-a52c-ea48d8e111b5"
+        "alt": "Boleto",
+        "href": "#",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/cfc7133b-2c81-4768-ad87-b1d6f40b9aad/boleto.svg"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/5087a900-c430-46d7-9d78-f5c1dccd73d7/Hipercard.svg",
+        "alt": "Hipercard",
+        "href": "#"
       },
       {
         "alt": "Elo",
         "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/11f90dd4-91b5-4b60-9304-f8a7a9be84eb"
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/b6d53109-4e50-47b9-96d8-6bd99660146f/Elo.svg"
       },
       {
-        "alt": "Diners",
+        "alt": "Mastercard",
         "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/20bb8e66-5495-4f92-a6d0-4967a66f3a44"
-      },
-      {
-        "alt": "Apple Pay",
-        "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d4227ed7-333d-49b8-b3e2-35719f606640"
-      },
-      {
-        "alt": "Amex",
-        "href": "#",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/023472cf-782d-4a22-82d9-ecdf18466d96"
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/7850a5dc-91c4-4ffe-aec2-3b5468bfe3c4/Master-card.svg"
       },
       {
         "alt": "Visa",
-        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/2d213fd6-2754-4e92-a6f1-03825f71c7af"
+        "href": "#",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/72e312ee-9133-4f15-9af4-d8f0de1522fa/Visa.svg"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/80965587-a90e-41f0-83a5-5cc4ee3959d8/Paymee.svg",
+        "alt": "PayMee",
+        "href": "#"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d64e1889-2232-43ed-96bd-63cba41cb2a1/mercadolivre.svg",
+        "alt": "Mercado Livre",
+        "href": "#"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/20478692-9853-44b4-b7ba-744959ce6bb4/americanas.svg",
+        "alt": "AME",
+        "href": "#"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/407c55a4-f0e9-4045-8cc8-57db1e46b855/Pic-Pay.svg",
+        "alt": "PicPay",
+        "href": "#"
+      },
+      {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/cc52aa81-11f2-4dd8-9a15-0f6fcf8a5b00/paypal.svg",
+        "alt": "PayPal",
+        "href": "#"
       }
     ]
   },
@@ -155,7 +173,7 @@
       "url": "#"
     },
     "wake": {
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/2e274651-c2ed-443d-aafa-eb30fb95a247/vtex-logo.svg",
+      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/277501ec-ce55-405f-9358-eeef3a4367dd/Wake.svg",
       "url": "#"
     }
   },
@@ -185,8 +203,8 @@
   "newsletter": {
     "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
     "empty": {
-      "title": "titulo",
-      "description": "texto"
+      "title": "Assine nossa newsletter",
+      "description": "Fique por dentro de todas as novidades, lançamentos e promoções."
     },
     "success": {},
     "failed": {}

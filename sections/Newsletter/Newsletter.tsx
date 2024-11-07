@@ -60,7 +60,7 @@ function Notice({ title, description }: {
       <span class="text-3xl font-bold font-[PP-Hatton] text-center mobile:text-lg">
         {title}
       </span>
-      <span class="text-sm text-[#363B4B] font-normal text-center mobile:text-start">
+      <span class="text-sm text-[#363B4B] font-normal text-center mobile:text-center">
         {description}
       </span>
     </div>
@@ -73,14 +73,14 @@ function Newsletter({
       "Fique por dentro de todas as novidades, lançamentos e promoções.",
   },
   success = {
-    title: "Thank you for subscribing!",
+    title: "Obrigado por se inscrever!",
     description:
-      "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!",
+      "Agora você está inscrito para receber as últimas notícias, tendências e promoções exclusivas diretamente em sua caixa de entrada. Fique atento!",
   },
   failed = {
-    title: "Oops. Something went wrong!",
+    title: "Ops. Algo deu errado!",
     description:
-      "Something went wrong. Please try again. If the problem persists, please contact us.",
+      "Algo deu errado. Por favor, tente novamente. Se o problema persistir, entre em contato conosco.",
   },
   label = "CADASTRAR",
   emailPlaceholder = "Seu e-mail",
@@ -89,11 +89,11 @@ function Newsletter({
 }: SectionProps<typeof loader, typeof action>): NewsletterComponent {
   if (status === "success" || status === "failed") {
     return (
-      <Section.Container class="bg-base-200">
+      <Section.Container>
         <div class="p-14 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10">
           <Icon
             size={80}
-            class={clx(status === "success" ? "text-success" : "text-error")}
+            class={clx(status === "success" ? "text-secondary" : "text-error")}
             id={status === "success" ? "check-circle" : "error"}
           />
           <Notice {...status === "success" ? success : failed} />
@@ -105,8 +105,8 @@ function Newsletter({
     <Section.Container id="newsletter-form" class="bg-base-200">
       <div
         class={clx(
-          "desktop:w-[56.11vw] p-14 grid grid-flow-row gap-10 justify-center place-items-center",
-          "mobile:grid-cols-2 mobile:gap-20",
+          "desktop:w-[56.11vw] desktop:p-14 flex flex-col gap-10 justify-center place-items-center",
+          "mobile:gap-8",
         )}
       >
         <Notice {...empty} />
@@ -114,12 +114,12 @@ function Newsletter({
           hx-target="#newsletter-form"
           hx-swap="outerHTML"
           hx-post={useComponent(import.meta.url)}
-          class="w-full flex flex-col gap-[37px]"
+          class="w-full flex flex-col gap-[37px] h-fit"
         >
-          <div class="flex gap-4 w-full h-[45px] mobile:flex-col">
+          <div class="flex gap-4 w-full mobile:flex-col">
             <input
               name="email"
-              class="input input-bordered flex-grow"
+              class="input input-bordered flex-grow h-[45px]"
               type="text"
               placeholder={emailPlaceholder}
               required
@@ -127,13 +127,13 @@ function Newsletter({
 
             <input
               name="name"
-              class="input input-bordered flex-grow"
+              class="input input-bordered flex-grow h-[45px]"
               type="text"
               placeholder={namePlaceholder}
               required
             />
 
-            <button class="btn btn-primary rounded-[5px]" type="submit">
+            <button class="btn btn-primary rounded-[5px] h-[45px]" type="submit">
               <span class="[.htmx-request_&]:hidden inline text-black text-sm font-bold">
                 {label}
               </span>
@@ -151,9 +151,9 @@ function Newsletter({
               id="acceptInfo"
               class={clx(
                 "accent-primary hover:border-secondary w-[17px] h-[17px] p-[2px]",
+                "mobile:w-5 mobile:h-5"
               )}
               required
-              title="Aceite os termos para prosseguir."
             />
             Aceito receber informes publicitários e promoções através da
             Newsletter.
