@@ -71,9 +71,9 @@ function ProductInfo({ page }: Props) {
   ) ?? false;
 
   return (
-    <div {...viewItemEvent} class="flex flex-col" id={id}>
+    <div {...viewItemEvent} class="space-y-6" id={id}>
       {/* Price tag */}
-      <span
+      {/* <span
         class={clx(
           "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
           percent < 1 && "opacity-0",
@@ -81,16 +81,16 @@ function ProductInfo({ page }: Props) {
         )}
       >
         {percent} % off
-      </span>
+      </span> */}
 
       {/* Product Name */}
-      <span class={clx("text-3xl font-semibold", "pt-4")}>
+      <span class={clx("text-2xl font-bold ")}>
         {title}
       </span>
 
       {/* Prices */}
       <div class="flex gap-3 pt-1">
-        <span class="text-3xl font-semibold text-base-400">
+        <span class="text-xl font-bold text-secondary">
           {formatPrice(price, offers?.priceCurrency)}
         </span>
         <span class="line-through text-sm font-medium text-gray-400">

@@ -21,9 +21,9 @@ import { useScript } from "@deco/deco/hooks";
 import { asResolved } from "@deco/deco";
 import { type Resolved } from "@deco/deco";
 // When user clicks on the search button, navigate it to
-export const ACTION = "/s";
+export const ACTION = "/busca";
 // Querystring param used when navigating the user
-export const NAME = "q";
+export const NAME = "busca";
 export interface SearchbarProps {
   /**
    * @title Placeholder
