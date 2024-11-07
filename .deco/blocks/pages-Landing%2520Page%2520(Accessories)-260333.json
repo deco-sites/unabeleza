@@ -22,9 +22,31 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "shopify/loaders/ProductListingPage.ts",
-          "count": 12,
-          "query": "accessories"
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "NAME:ASC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0
         },
         "layout": {
           "columns": {

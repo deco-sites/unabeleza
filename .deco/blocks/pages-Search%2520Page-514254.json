@@ -7,7 +7,31 @@
       "section": {
         "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
         "jsonLD": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "NAME:ASC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0
         }
       }
     },
@@ -22,7 +46,31 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "NAME:ASC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0
         },
         "layout": {
           "columns": {
@@ -33,12 +81,6 @@
           "pagination": "show-more"
         },
         "startingPage": 1
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
       }
     },
     {
