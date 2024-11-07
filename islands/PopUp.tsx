@@ -1,6 +1,6 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Icon from "../components/ui/Icon.tsx";
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { clx } from "../sdk/clx.ts";
 
 export interface PopUpProps {
@@ -19,7 +19,7 @@ export default function PopUp(
     notifications: false,
     terms: false
   })
-  const [isOpen, setIsOpen] = useState<boolean>(Boolean(!localStorage.getItem('popup_closed')))
+  const [isOpen, setIsOpen] = useState<boolean>(null)
   if (!isOpen) return null
 
   const closePopup = () => {
@@ -40,6 +40,24 @@ export default function PopUp(
   const handleSubmit = (e: any) => {
     e.preventDefault();
   }
+
+  const _blockPopup = () => {
+    const targetDiv = document.getElementById('#popupDeEntrada')
+    if(isOpen == true && targetDiv){
+        document.body.style.overflow = 'hidden'
+        document.body.style.pointerEvents = 'none'
+        targetDiv.style.pointerEvents = 'auto'
+    }
+}
+
+  useEffect(() => {
+    const popup = Boolean(localStorage.getItem('popup_closed')) 
+    if(popup == true){
+        closePopup()
+    } else {
+        setIsOpen(true)
+    }
+}, [])
 
   return isOpen && (
     <div>
