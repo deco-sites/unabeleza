@@ -12,12 +12,33 @@ export interface PopUpProps {
 export default function PopUp(
   { title, text, image }: PopUpProps,
 ) {
-  const [isOpen, setIsOpen] = useState<boolean>(!localStorage.getItem('popup_closed'))
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    notifications: false,
+    terms: false
+  })
+  const [isOpen, setIsOpen] = useState<boolean>(Boolean(!localStorage.getItem('popup_closed')))
   if (!isOpen) return null
 
   const closePopup = () => {
     localStorage.setItem('popup_closed', JSON.stringify(true))
     setIsOpen(false)
+  }
+
+  // deno-lint-ignore no-explicit-any
+  const handleChange = (e:any) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  // deno-lint-ignore no-explicit-any
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
   }
 
   return isOpen && (
@@ -31,7 +52,7 @@ export default function PopUp(
         <section class="mobile:hidden">
           <div>
             <img class="rounded-l-[5px]" src={image} alt="imagem do popup" />
-          </div>
+          </div> 
         </section>
         <section class="flex flex-col justify-center phone:justify-start items-center phone:items-start pr-[75px] mobile:p-[20px]">
           <div>
@@ -41,29 +62,51 @@ export default function PopUp(
             <p class="font-[Montserrat] text-[16px]">{text}</p>
           </div>
           <div>
-            <form action="" class="flex flex-col font-[Montserrat]">
+            <form onSubmit={handleSubmit} class="flex flex-col font-[Montserrat]">
               <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 class="w-[332px] h-[45px] mt-[23.99px] mb-[10px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
                 placeholder="Digite seu nome:" />
               <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 class="w-[332px] h-[45px] mb-[10px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
                 placeholder="Digite seu e-mail:" />
               <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 class="w-[332px] h-[45px] mb-[16px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
                 placeholder="Celular com DDD:" />
               <label class="flex items-center justify-between w-[332px] pr-[25px] cursor-pointer">
-                <input type="checkbox" class="cursor-pointer hidden peer" />
+                <input 
+                type="checkbox" 
+                name="notifications"
+                checked={formData.notifications}
+                onChange={handleChange}
+                class="cursor-pointer" />
                 <p class="font-[Montserrat] text-[12px] cursor-pointer">
                   Quero receber as ofertas por e-mail e Whatsapp
                 </p>
               </label>
               <label class="flex items-center justify-between w-[332px] pr-[50px] cursor-pointer">
-                <input type="checkbox" class="cursor-pointer" />
+                <input 
+                type="checkbox" 
+                name="terms"
+                checked={formData.terms}
+                onChange={handleChange}
+                class="cursor-pointer" />
                 <p class="font-[Montserrat] text-[12px] cursor-pointer">
                   Li e concordo com os termos de privacidade
                 </p>
               </label>
-              <button class="mt-[18px] w-[100%] h-[45px] bg-[#BD87ED]">CADASTRAR</button>
+              <button type="submit" class="mt-[18px] w-[100%] h-[45px] bg-[#BD87ED]">CADASTRAR</button>
             </form>
           </div>
         </section>
