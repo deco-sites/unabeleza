@@ -43,7 +43,7 @@ function Page404() {
     <div class="flex flex-col justify-start phone:ml-[20px] gap-6">
       <div class="flex flex-col ">
         <span class="font-[PP-Hatton] font-bold text-[30px] phone:text-[20px] mb-[20px]">Página não encontrada</span>
-        <span class="font-[Montserrat] text-[16px] phone:text-[14px] phone:w-[335px]">A página que você procura não existe ou não está disponível</span>
+        <span class="font-[Montserrat] text-[16px] phone:text-[14px] phone:w-[335px] ">A página que você procura não existe ou não está disponível</span>
       </div>
       <div class="flex justify-start flex-col font-[Montserrat] text-[14px]">
         <span class="font-bold text-[16px] mb-[20px]">Causas possíveis</span>
