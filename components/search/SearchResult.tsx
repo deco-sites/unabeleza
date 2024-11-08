@@ -36,7 +36,29 @@ function NotFound() {
   );
 }
 
-
+function Page404() {
+  return(
+    <div class="w-full flex justify-around items-center py-[120px] phone:flex-col">
+      <div><h1 class="font-[PP-Hatton] text-[200px] phone:text-[127px] text-[#A3E3FF]">404</h1></div>
+    <div class="flex flex-col justify-start phone:ml-[20px] gap-6">
+      <div class="flex flex-col ">
+        <span class="font-[PP-Hatton] font-bold text-[30px] phone:text-[20px] mb-[20px]">Página não encontrada</span>
+        <span class="font-[Montserrat] text-[16px] phone:text-[14px] phone:w-[335px]">A página que você procura não existe ou não está disponível</span>
+      </div>
+      <div class="flex justify-start flex-col font-[Montserrat] text-[14px]">
+        <span class="font-bold text-[16px] mb-[20px]">Causas possíveis</span>
+          <li class="marker:text-[#BD87ED] mb-[16px]">O conteúdo não está mais no ar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">A página mudou de lugar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">O servidor está fora do ar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">Você digitou o endereço errado</li>
+      </div>
+      <a href="/" class="btn no-animation w-[335px] h-[45px] uppercase text-[#8F2AED] border-[1px] border-[#8F2AED] bg-none hover:bg-[#8F2AED] hover:text-[#FFF]">
+        Voltar para o início
+      </a>
+    </div>
+  </div>
+  )
+}
 
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
@@ -302,17 +324,20 @@ function Result(props: SectionProps<typeof loader>) {
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
-
+    if(!props.searchParams){
+      return <Page404 />
+    }
     return <NotFound />;
   }
   return <Result {...props} page={page} />;
 }
 export const loader = (props: Props, req: Request) => {
-
+  const url = new URL(req.url)
+  const searchParams = url.search
   return {
     ...props,
-    url: req.url,
-
+    url: url.href,
+    searchParams
   };
 };
 export default SearchResult;
