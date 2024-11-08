@@ -3,6 +3,10 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import ProductCard from "../../components/product/ProductCard.tsx";
 import Filters from "../../components/search/Filters.tsx";
 import Icon from "../../components/ui/Icon.tsx";
+import Searchbar, {
+  type SearchbarProps,
+} from "../../components/search/Searchbar/Form.tsx";
+import ProductShelf from '../../sections/Product/ProductShelf.tsx'
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
@@ -27,20 +31,26 @@ export interface Props {
   startingPage?: 0 | 1;
   /** @hidden */
   partial?: "hideMore" | "hideLess";
+
+  searchbar: SearchbarProps;
 }
-function NotFound() {
+function NotFound({props, searchbar}: Props) {
   return (
     <div class="w-full flex flex-col justify-center items-center">
       <div class="w-full flex flex-col justify-center items-center py-10">
         <Icon id="faceIcon" width="70" height="69" class="mt-[87px] mb-[40px]"/>
-        <span class="font-[PP-Hatton] mb-[30px] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">OPS... Não encontramos nenhum resultado para:</span>
+        <span class="font-[PP-Hatton] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">OPS... Não encontramos nenhum resultado para: {props.searchParams}</span>
       </div>
-      <div class="flex justify-start flex-col font-[Montserrat] mt-[30px] text-[14px]">
+      <div>
+        <Searchbar {...searchbar} class="w-[526px]" placeholder="Faça sua busca aqui" />
+      </div>
+      <div class="flex justify-start ml-[-120px] flex-col font-[Montserrat] text-[14px]">
           <li class="marker:text-[#BD87ED]">Verifique se a palavra foi digitada corretamente;</li>
           <li class="marker:text-[#BD87ED]">Tente palavras menos específicas;</li>
           <li class="marker:text-[#BD87ED]">Tente palavras-chave diferentes;</li>
           <li class="marker:text-[#BD87ED]">Faça buscas relacionadas.</li>
       </div>
+      <ProductShelf />
     </div>
   );
 }
@@ -308,7 +318,7 @@ function Result(props: SectionProps<typeof loader>) {
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
-    return <NotFound />;
+    return <NotFound props={props}/>;
   }
   return <Result {...props} page={page} />;
 }
