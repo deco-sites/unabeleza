@@ -4429,6 +4429,9 @@ details.collapse summary::-webkit-details-marker {
 .gap-2 {
   gap: 0.5rem;
 }
+.gap-2\.5 {
+  gap: 0.625rem;
+}
 .gap-3 {
   gap: 0.75rem;
 }
@@ -4495,6 +4498,11 @@ details.collapse summary::-webkit-details-marker {
 }
 .gap-y-\[10px\] {
   row-gap: 10px;
+}
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -5045,9 +5053,6 @@ details.collapse summary::-webkit-details-marker {
 .pr-\[49px\] {
   padding-right: 49px;
 }
-.pt-1 {
-  padding-top: 0.25rem;
-}
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -5336,10 +5341,6 @@ details.collapse summary::-webkit-details-marker {
 .text-error {
   --tw-text-opacity: 1;
   color: var(--fallback-er,oklch(var(--er)/var(--tw-text-opacity)));
-}
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-info {
   --tw-text-opacity: 1;

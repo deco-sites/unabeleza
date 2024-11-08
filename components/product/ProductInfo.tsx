@@ -7,9 +7,9 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
-import AddToCartButton from "./AddToCartButton.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
+import AddQuantityToCart from "./AddQuantityToCart.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -30,13 +30,14 @@ function ProductInfo({ page }: Props) {
   const {
     price = 0,
     listPrice,
+    installments,
     seller = "1",
     availability,
   } = useOffer(offers);
 
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
+  // const percent = listPrice && price
+  //   ? Math.round(((listPrice - price) / listPrice) * 100)
+  //   : 0;
 
   const breadcrumb = {
     ...breadcrumbList,
@@ -72,16 +73,6 @@ function ProductInfo({ page }: Props) {
 
   return (
     <div {...viewItemEvent} class="space-y-6" id={id}>
-      {/* Price tag */}
-      {/* <span
-        class={clx(
-          "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-          percent < 1 && "opacity-0",
-          "w-fit",
-        )}
-      >
-        {percent} % off
-      </span> */}
 
       {/* Product Name */}
       <span class={clx("text-2xl font-bold ")}>
@@ -89,13 +80,23 @@ function ProductInfo({ page }: Props) {
       </span>
 
       {/* Prices */}
-      <div class="flex gap-3 pt-1">
-        <span class="text-xl font-bold text-secondary">
-          {formatPrice(price, offers?.priceCurrency)}
-        </span>
-        <span class="line-through text-sm font-medium text-gray-400">
-          {formatPrice(listPrice, offers?.priceCurrency)}
-        </span>
+      <div class="space-y-1">
+        <div class="flex gap-2.5 items-center">
+          {listPrice && (
+            <span class="line-through text-base text-black">
+              {formatPrice(listPrice, offers?.priceCurrency)}
+            </span>
+          )}
+          <span class="text-xl font-bold text-secondary">
+            {formatPrice(price, offers?.priceCurrency)}
+          </span>
+        </div>
+
+        {installments && (
+          <span class="text-xs font-semibold texy-black">
+            Até {installments}
+          </span>
+        )}
       </div>
 
       {/* Sku Selector */}
@@ -110,13 +111,7 @@ function ProductInfo({ page }: Props) {
         {availability === "https://schema.org/InStock"
           ? (
             <>
-              <AddToCartButton
-                item={item}
-                seller={seller}
-                product={product}
-                class="btn btn-primary no-animation"
-                disabled={false}
-              />
+              <AddQuantityToCart  item={item} seller={seller} product={product} disabled={false}/>
               <WishlistButton item={item} />
             </>
           )

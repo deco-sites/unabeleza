@@ -42,6 +42,7 @@ function QuantitySelector(
           )}
           disabled={disabled}
           inputMode="numeric"
+          value={1}
           type="number"
           {...props}
         />

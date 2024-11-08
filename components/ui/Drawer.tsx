@@ -64,7 +64,7 @@ function Aside({ title, drawer, children, hasLogged = true }: {
   title?: string;
   drawer: string;
   children: ComponentChildren;
-  hasLogged: boolean;
+  hasLogged?: boolean;
 }) {
   return (
     <div
