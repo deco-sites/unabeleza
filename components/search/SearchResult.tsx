@@ -301,9 +301,7 @@ function Result(props: SectionProps<typeof loader>) {
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
-    if(!props.searchParams){
-      return <Page404 />
-    }
+
     return <NotFound />;
   }
   return <Result {...props} page={page} />;
