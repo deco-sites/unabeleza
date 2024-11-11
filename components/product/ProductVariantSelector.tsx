@@ -21,6 +21,7 @@ const colors: Record<string, string | undefined> = {
   "DarkYellow": "#c6b343",
   "LightYellow": "#F1E8B0",
 };
+
 const useStyles = (value: string, checked: boolean) => {
   if (colors[value]) {
     return clx(
@@ -42,6 +43,9 @@ export const Ring = ({ value, checked = false, class: _class }: {
   checked?: boolean;
   class?: string;
 }) => {
+  
+  console.log(value)
+
   const color = colors[value];
   const styles = clx(useStyles(value, checked), _class);
   return (
@@ -56,12 +60,28 @@ function VariantSelector({ product }: Props) {
   const possibilities = useVariantPossibilities(hasVariant, product);
   const relativeUrl = relative(url);
   const id = useId();
-  const filteredNames = Object.keys(possibilities).filter((name) =>
-    name.toLowerCase() !== "title" && name.toLowerCase() !== "default title"
+  const colorsVariants = []
+
+  const filteredNames = Object.keys(possibilities).filter((name) => {
+    if (name.toLowerCase() !== "title" && name.toLowerCase() !== "default title") return null
+    if(name === "Cor" || name === "Cor Hexadecimal") {
+      colorsVariants.push(Object.entries(possibilities.name))
+      return null
+    }
+    return possibilities.name
+  }
+    
   );
+
   if (filteredNames.length === 0) {
     return null;
   }
+
+  console.log(product)
+  console.log(possibilities)
+  console.log(filteredNames)
+  console.log(colorsVariants)
+
   return (
     <ul
       class="flex flex-col gap-4"
