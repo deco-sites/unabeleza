@@ -40,7 +40,6 @@ export interface Props {
   searchParams?: string | null
 }
 function NotFound({searchbar, productShelf, searchParams}: Props) {
-  console.log('adad', searchParams)
   return (
     <>
     {
@@ -81,7 +80,7 @@ function NotFound({searchbar, productShelf, searchParams}: Props) {
     </div>
     </div>
     )}
-    <productShelf.Component {...productShelf.props} />
+    { productShelf && <productShelf.Component {...productShelf.props} />}
     </>
 )
 }
