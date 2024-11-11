@@ -26,7 +26,7 @@ export interface Layout {
 }
 export interface Props {
   /** @title Integration */
-  page: ProductListingPage | null;
+  page?: ProductListingPage | null;
   layout?: Layout;
   /** @description 0 for ?page=0 as your first page */
   startingPage?: 0 | 1;
@@ -36,28 +36,56 @@ export interface Props {
   searchbar: SearchbarProps;
 
   productShelf: SectionType<ShelfComponent>;
-}
-function NotFound({searchbar, productShelf}: Props) {
 
-  return (
-    <div class="w-full flex flex-col justify-center items-center">
-      <div class="w-full flex flex-col justify-center items-center py-10">
-        <Icon id="faceIcon" width="70" height="69" class="mt-[87px] mb-[40px]"/>
-        <span class="font-[PP-Hatton] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">OPS... Não encontramos nenhum resultado para:</span>
-      </div>
-      <div class="w-[526px] mobile:w-[89.4%]">
-        <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />
-      </div>
-      <div class="flex justify-start ml-[-120px] mobile:ml-[0px] flex-col font-[Montserrat] text-[14px]">
-          <li class="marker:text-[#BD87ED]">Verifique se a palavra foi digitada corretamente;</li>
-          <li class="marker:text-[#BD87ED]">Tente palavras menos específicas;</li>
-          <li class="marker:text-[#BD87ED]">Tente palavras-chave diferentes;</li>
-          <li class="marker:text-[#BD87ED]">Faça buscas relacionadas.</li>
-      </div>
-      <productShelf.Component {...productShelf.props} />
-    </div>
-  );
+  searchParams?: string | null
 }
+function NotFound({searchbar, productShelf, searchParams}: Props) {
+  console.log('adad', searchParams)
+  return (
+    <>
+    {
+      searchParams ? (
+        <div class="w-full flex flex-col justify-center items-center">
+        <div class="w-full flex flex-col justify-center items-center py-10">
+          <Icon id="faceIcon" width="70" height="69" class="mt-[87px] mb-[40px]"/>
+          <span class="font-[PP-Hatton] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">OPS... Não encontramos nenhum resultado para:</span>
+        </div>
+        <div class="w-[526px] mobile:w-[89.4%]">
+          <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />
+        </div>
+        <div class="flex justify-start ml-[-120px] mobile:ml-[0px] flex-col font-[Montserrat] text-[14px]">
+            <li class="marker:text-[#BD87ED]">Verifique se a palavra foi digitada corretamente;</li>
+            <li class="marker:text-[#BD87ED]">Tente palavras menos específicas;</li>
+            <li class="marker:text-[#BD87ED]">Tente palavras-chave diferentes;</li>
+            <li class="marker:text-[#BD87ED]">Faça buscas relacionadas.</li>
+        </div>
+      </div>
+      ) : (
+      <div class="w-full flex justify-around items-center py-[120px] phone:flex-col">
+        <div><h1 class="font-[PP-Hatton] text-[200px] phone:text-[127px] text-[#A3E3FF]">404</h1></div>
+      <div class="flex flex-col justify-start phone:ml-[20px] gap-6">
+      <div class="flex flex-col ">
+        <span class="font-[PP-Hatton] font-bold text-[30px] phone:text-[20px] mb-[20px]">Página não encontrada</span>
+        <span class="font-[Montserrat] text-[16px] phone:text-[14px] phone:w-[335px]">A página que você procura não existe ou não está disponível</span>
+      </div>
+      <div class="flex justify-start flex-col font-[Montserrat] text-[14px]">
+        <span class="font-bold text-[16px] mb-[20px]">Causas possíveis</span>
+          <li class="marker:text-[#BD87ED] mb-[16px]">O conteúdo não está mais no ar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">A página mudou de lugar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">O servidor está fora do ar;</li>
+          <li class="marker:text-[#BD87ED] mb-[16px]">Você digitou o endereço errado</li>
+      </div>
+      <a href="/" class="btn no-animation w-[335px] h-[45px] uppercase text-[#8F2AED] border-[1px] border-[#8F2AED] bg-none hover:bg-[#8F2AED] hover:text-[#FFF]">
+        Voltar para o início
+      </a>
+    </div>
+    </div>
+    )}
+    <productShelf.Component {...productShelf.props} />
+    </>
+)
+}
+
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
   if (overrides) {
@@ -321,15 +349,19 @@ function Result(props: SectionProps<typeof loader>) {
   );
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
+  console.log('texto:', props.searchParams)
   if (!page) {
     return <NotFound {...props}/>;
   }
   return <Result {...props} page={page} />;
 }
 export const loader = (props: Props, req: Request) => {
+  const url = new URL(req.url)
+  const searchParams = url.search ?? null
   return {
     ...props,
-    url: req.url,
+    url: url.href,
+    searchParams
   };
 };
 export default SearchResult;
