@@ -5938,6 +5938,10 @@ details.collapse summary::-webkit-details-marker {
     top: auto;
   }
 
+  .mobile\:ml-\[0px\] {
+    margin-left: 0px;
+  }
+
   .mobile\:ml-\[35px\] {
     margin-left: 35px;
   }
@@ -6004,6 +6008,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:w-\[42\.66vw\] {
     width: 42.66vw;
+  }
+
+  .mobile\:w-\[89\.4\%\] {
+    width: 89.4%;
   }
 
   .mobile\:w-full {
