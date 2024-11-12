@@ -14,7 +14,9 @@ export type ShelfComponent = JSX.Element;
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
-export default function ProductShelf({ products, title, cta }: Props): ShelfComponent | null {
+export default function ProductShelf(
+  { products, title, cta }: Props,
+): ShelfComponent | null {
   if (!products || products.length === 0) {
     return null;
   }

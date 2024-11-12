@@ -854,6 +854,14 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/LGPD/PopupLGPD.tsx",
+        "text": "<p><span>Para sua maior segurança, atualizamos as </span><strong><span>Políticas de Privacidade e Termos de Uso</span></strong><span> do site. <br>Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</span></p>",
+        "btnText": "CONCORDAR E FECHAR"
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

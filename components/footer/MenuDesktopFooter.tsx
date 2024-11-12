@@ -35,16 +35,18 @@ export default function MenuDesktopFooter(
                   <h3 class="font-[PP-Hatton] text-sm font-bold">{title}</h3>
                   <ul class="flex flex-col gap-2 max-w-[174px]">
                     {items.map(({ title, href }) => {
-                      const newTitle = title.includes("strong") ? title : title.replace(/<\/?p>/g, "") ;
+                      const newTitle = title.includes("strong")
+                        ? title
+                        : title.replace(/<\/?p>/g, "");
                       return (
                         <li>
-                        <a
-                          class="text-sm font-medium text-base-400 flex gap-[5px]"
-                          href={href}
-                          dangerouslySetInnerHTML={{ __html: newTitle }}
-                        />
-                      </li>
-                      )
+                          <a
+                            class="text-sm font-medium text-base-400 flex gap-[5px]"
+                            href={href}
+                            dangerouslySetInnerHTML={{ __html: newTitle }}
+                          />
+                        </li>
+                      );
                     })}
                   </ul>
                 </li>
