@@ -6,7 +6,6 @@ interface PopupProps {
   btnText: string;
 }
 
-
-export default function PopupLGPD({text, btnText}: PopupProps) {
+export default function PopupLGPD({ text, btnText }: PopupProps) {
   return <Popup text={text} btnText={btnText} />;
 }

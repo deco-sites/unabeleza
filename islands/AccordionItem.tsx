@@ -51,16 +51,16 @@ export default function AccordionItem({
           <p
             className="font-medium text-[14px] leading-[21px] text-[#162116] mobile:ml-[35px]"
             dangerouslySetInnerHTML={{ __html: anwser }}
+          />
+          {image && (
+            <Image
+              src={image}
+              alt={alt ?? question}
+              width={w ?? 766}
+              height={h ?? 299}
+              className="mt-[16px] mobile:hidden w-[90%]"
             />
-            {image && (
-              <Image
-                src={image}
-                alt={alt ?? question}
-                width={w ?? 766}
-                height={h ?? 299}
-                className="mt-[16px] mobile:hidden w-[90%]"
-              />
-            )}
+          )}
         </div>
       )}
     </div>
