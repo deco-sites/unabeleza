@@ -57,7 +57,10 @@
     "includeScriptsToHead": {
       "includes": []
     },
-    "enabled": true
+    "enabled": true,
+    "includeScriptsToBody": {
+      "includes": []
+    }
   },
   "flavor": {
     "framework": "htmx"

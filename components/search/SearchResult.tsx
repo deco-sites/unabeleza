@@ -80,7 +80,7 @@ function NotFound({searchbar, productShelf, searchParams}: Props) {
     </div>
     </div>
     )}
-    { productShelf && <productShelf.Component {...productShelf.props} />}
+    <productShelf.Component {...productShelf.props} />
     </>
 )
 }
@@ -348,7 +348,6 @@ function Result(props: SectionProps<typeof loader>) {
   );
 }
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  console.log('texto:', props.searchParams)
   if (!page) {
     return <NotFound {...props}/>;
   }
