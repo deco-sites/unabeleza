@@ -43,14 +43,18 @@ export const Ring = ({ value, checked = false, class: _class }: {
   checked?: boolean;
   class?: string;
 }) => {
-  
+
   console.log(value)
 
-  const color = colors[value];
+  const [colorName, color] = value.split(" ");
+
+  console.log(colorName)
+  console.log(color)
+
   const styles = clx(useStyles(value, checked), _class);
   return (
     <span style={{ backgroundColor: color }} class={styles}>
-      {color ? null : value}
+      {colorName ? colorName : null}
     </span>
   );
 };
@@ -64,23 +68,18 @@ function VariantSelector({ product }: Props) {
 
   const filteredNames = Object.keys(possibilities).filter((name) => {
     if (name.toLowerCase() !== "title" && name.toLowerCase() !== "default title") return null
-    if(name === "Cor" || name === "Cor Hexadecimal") {
+    if (name === "Cor" || name === "Cor Hexadecimal") {
       colorsVariants.push(Object.entries(possibilities.name))
       return null
     }
     return possibilities.name
   }
-    
+
   );
 
   if (filteredNames.length === 0) {
     return null;
   }
-
-  console.log(product)
-  console.log(possibilities)
-  console.log(filteredNames)
-  console.log(colorsVariants)
 
   return (
     <ul
