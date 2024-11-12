@@ -854,6 +854,12 @@
       "section": {
         "__resolveType": "Footer"
       }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/LGPD/PopupLGPD.tsx"
+      }
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
