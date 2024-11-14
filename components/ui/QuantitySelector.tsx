@@ -17,10 +17,10 @@ function QuantitySelector(
   { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
 ) {
   return (
-    <div class="join border rounded w-full">
+    <div class="join border rounded w-[133px]">
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="btn p-0 btn-ghost no-animation join-item flex-1"
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
@@ -29,16 +29,16 @@ function QuantitySelector(
       <div
         data-tip={`Quantity must be between ${props.min} and ${props.max}`}
         class={clx(
-          "flex-grow join-item",
-          "flex justify-center items-center",
+          "join-item",
+          "flex justify-center items-center flex-1",
           "has-[:invalid]:tooltip has-[:invalid]:tooltip-error has-[:invalid]:tooltip-open has-[:invalid]:tooltip-bottom",
         )}
       >
         <input
           id={id}
           class={clx(
-            "input text-center flex-grow [appearance:textfield]",
-            "invalid:input-error",
+            "input text-center [appearance:textfield]",
+            "invalid:input-error p-0",
           )}
           disabled={disabled}
           inputMode="numeric"
@@ -49,7 +49,7 @@ function QuantitySelector(
       </div>
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="btn p-0 btn-ghost no-animation join-item flex-1"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >

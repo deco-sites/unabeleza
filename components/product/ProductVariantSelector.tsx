@@ -44,18 +44,24 @@ export const Ring = ({ value, checked = false, class: _class }: {
   class?: string;
 }) => {
 
-  console.log(value)
-
   const [colorName, color] = value.split(" ");
-
-  console.log(colorName)
-  console.log(color)
 
   const styles = clx(useStyles(value, checked), _class);
   return (
-    <span style={{ backgroundColor: color }} class={styles}>
-      {colorName ? colorName : null}
-    </span>
+
+    <div style={{ backgroundColor: color }} class={clx(
+      "w-16 flex flex-col justify-end items-center rounded-[5px] overflow-hidden p-0",
+      color && "h-[87px]",
+      styles
+    )}>
+
+      <span class={clx(
+        "bg-white h-[42px] w-full flex justify-center items-center p-[6.5px]",
+        "font-normal text-[10px]"
+      )}>
+        {colorName ? colorName : null}
+      </span>
+    </div>
   );
 };
 function VariantSelector({ product }: Props) {
@@ -64,19 +70,9 @@ function VariantSelector({ product }: Props) {
   const possibilities = useVariantPossibilities(hasVariant, product);
   const relativeUrl = relative(url);
   const id = useId();
-  const colorsVariants = []
-
-  const filteredNames = Object.keys(possibilities).filter((name) => {
-    if (name.toLowerCase() !== "title" && name.toLowerCase() !== "default title") return null
-    if (name === "Cor" || name === "Cor Hexadecimal") {
-      colorsVariants.push(Object.entries(possibilities.name))
-      return null
-    }
-    return possibilities.name
-  }
-
+  const filteredNames = Object.keys(possibilities).filter((name) =>
+    name.toLowerCase() !== "title" && name.toLowerCase() !== "default title"
   );
-
   if (filteredNames.length === 0) {
     return null;
   }
@@ -91,7 +87,7 @@ function VariantSelector({ product }: Props) {
       {filteredNames.map((name) => (
         <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
-          <ul class="flex flex-row gap-4">
+          <ul class="grid grid-cols-7 gap-4">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {

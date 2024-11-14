@@ -60,21 +60,21 @@ const useAddToCart = ({ product }: Props) => {
   }
   return null;
 };
-function AddToCartButton(props: Props) {
+function AddQuantityToCart(props: Props) {
   const { product, item, text } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
   return (
     <div
       id={id}
-      class="flex"
+      class="flex gap-2"
       data-item-id={product.productID}
       data-cart-item={encodeURIComponent(
         JSON.stringify({ item, platformProps }),
       )}
     >
 
-          <div class={clx("flex-grow")}>
+          <div class={clx("")}>
             <QuantitySelector
               min={1}
               max={100}
@@ -82,10 +82,10 @@ function AddToCartButton(props: Props) {
             />
           </div>
           <button
-            class={clx("flex-grow")}
+            class={clx("flex-1 bg-primary text-black rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
             hx-on:click={useScript(onClick)}
           >
-            {text ? text : "Add to Cart"}
+            {text ? text : "COMPRAR"}
           </button>
 
       <script
@@ -95,4 +95,4 @@ function AddToCartButton(props: Props) {
     </div>
   );
 }
-export default AddToCartButton;
+export default AddQuantityToCart;

@@ -37,6 +37,20 @@
             "__resolveType": "website/functions/requestToParam.ts",
             "param": "slug"
           }
+        },
+        "itemsShare": {
+          "items": [
+            {
+              "url": "https://www.facebook.com/sharer.php?u={{url}}",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/642b1809-abc6-4035-a549-d743e5040f9e/facebook.svg",
+              "name": "Facebook"
+            },
+            {
+              "name": "WhatsApp",
+              "url": "https://api.whatsapp.com/send?text=Venha conhecer esse lindo produto que encontrei! É simplesmente encantador! {{url}}",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/67e4a615-28aa-43c0-b013-a96c56c82805/whatsapp-Unabeleza.svg"
+            }
+          ]
         }
       }
     },
