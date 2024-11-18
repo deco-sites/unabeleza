@@ -1,21 +1,23 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import ImageGallerySlider from "../../components/product/Gallery.tsx";
 import ProductInfo from "../../components/product/ProductInfo.tsx";
-// import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
+import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { ShareProps } from "../../components/ui/Share.tsx";
+import Tabs from "../../components/product/Tabs/index.tsx";
+import { ProductShelfComponent } from "../../sections/Product/ProductShelf.tsx";
+import { type Section as SectionType } from "@deco/deco/blocks";
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
   itemsShare: ShareProps
+  productShelf: SectionType<ProductShelfComponent>;
 }
 
 export default function ProductDetails(props: Props) {
-  /**
-   * Rendered when a not found is returned by any of the loaders run on this page
-   */
+
   if (!props.page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
@@ -30,22 +32,28 @@ export default function ProductDetails(props: Props) {
   }
 
   return (
-    <Section.Container class="">
-      {/* <Breadcrumb itemListElement={props.page.breadcrumbList.itemListElement} /> */}
+    <>
+      <Section.Container class="">
+        <Breadcrumb itemListElement={props.page.breadcrumbList.itemListElement} />
 
-      <div
-        class={clx(
-          "flex gap-5"
-        )}
-      >
-        <div class="desktop:w-[45.13vw]">
-          <ImageGallerySlider page={props.page} />
+        <div
+          class={clx(
+            "flex gap-5"
+          )}
+        >
+          <div class="desktop:w-[45.13vw]">
+            <ImageGallerySlider page={props.page} />
+          </div>
+          <div class="desktop:w-[45.13vw]">
+            <ProductInfo {...props} />
+          </div>
         </div>
-        <div class="desktop:w-[45.13vw]">
-          <ProductInfo {...props}/>
+        <div>
+          <Tabs page={props.page} />
         </div>
-      </div>
-    </Section.Container>
+      </Section.Container>
+      <props.productShelf.Component {...props.productShelf.props} />
+    </>
   );
 }
 

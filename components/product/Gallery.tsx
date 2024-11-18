@@ -43,10 +43,10 @@ export default function GallerySlider(props: Props) {
     <>
       <div
         id={id}
-        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[min-content_1fr] gap-5"
+        class="grid grid-flow-col grid-cols-[min-content_1fr] gap-5"
       >
         {/* Image Slider */}
-        <div class="col-start-1 col-span-1 sm:col-start-2">
+        <div class="col-span-1 col-start-2">
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
               {images.map((img, index) => (
@@ -97,11 +97,11 @@ export default function GallerySlider(props: Props) {
           <ul
             class={clx(
               "carousel carousel-center",
-              "sm:carousel-vertical",
+              "carousel-vertical",
               "gap-2",
               "max-w-full",
               "overflow-x-auto",
-              "sm:overflow-y-auto",
+              "overflow-y-auto",
             )}
             style={{ maxHeight: "600px" }}
           >

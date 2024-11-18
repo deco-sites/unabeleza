@@ -43,9 +43,6 @@ function ProductCard({
 
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 

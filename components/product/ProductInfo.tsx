@@ -27,7 +27,6 @@ function ProductInfo({ page, itemsShare }: Props) {
 
   const { breadcrumbList, product } = page;
   const { productID, offers, isVariantOf, aggregateRating } = product;
-  const description = product.description || isVariantOf?.description;
   const title = isVariantOf?.name ?? product.name;
 
   const {
@@ -130,20 +129,6 @@ function ProductInfo({ page, itemsShare }: Props) {
           />
         </div>
 
-        {/* Description card */}
-        <div class="mt-4 sm:mt-6">
-          <span class="text-sm">
-            {description && (
-              <details>
-                <summary class="cursor-pointer">Description</summary>
-                <div
-                  class="ml-2 mt-2"
-                  dangerouslySetInnerHTML={{ __html: description }}
-                />
-              </details>
-            )}
-          </span>
-        </div>
       </div>
       <div class="space-y-3">
         <WishlistButton item={item} stroke="#707070" typeTwo={true} />
