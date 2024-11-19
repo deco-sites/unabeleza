@@ -47,3 +47,9 @@
     scrollbar-width: none;
   }
 }
+
+.breadcrumb-item::before {
+  content: "/";
+  margin-right: 6px;
+  color: #000;
+}

@@ -1,5 +1,4 @@
 import { PropertyValue } from "apps/commerce/types.ts";
-import AccordionProps from "../../../islands/Accordion.tsx"
 
 interface TabsMobileProps {
     productInformations: PropertyValue[]
@@ -12,12 +11,11 @@ export default function TabsMobile({ productInformations }: TabsMobileProps) {
         <>
             {
                 productInformations?.map(item => (
-                    <AccordionProps title={item.name ?? ''}>
-                        <div
-                            class=""
-                            dangerouslySetInnerHTML={{ __html: item.value ?? '' }}
-                        />
-                    </AccordionProps>
+                    <div tabIndex={0} className="collapse collapse-arrow" key={item.name}>
+                        <input type="checkbox" className="peer" />
+                        <div className="collapse-title text-sm font-bold text-black uppercase peer-checked:text-primary">{item.name}</div>
+                        <div className="collapse-content text-sm mobile:text-xs" dangerouslySetInnerHTML={{ __html: item.value ?? '' }} />
+                    </div>
                 ))
             }
         </>

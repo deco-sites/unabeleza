@@ -67,14 +67,14 @@ function AddQuantityToCart(props: Props) {
   return (
     <div
       id={id}
-      class="flex gap-2"
+      class="flex desktop:gap-2 mobile:w-full"
       data-item-id={product.productID}
       data-cart-item={encodeURIComponent(
         JSON.stringify({ item, platformProps }),
       )}
     >
 
-          <div class={clx("")}>
+          <div class={clx("bg-white")}>
             <QuantitySelector
               min={1}
               max={100}
@@ -82,7 +82,7 @@ function AddQuantityToCart(props: Props) {
             />
           </div>
           <button
-            class={clx("flex-1 bg-primary text-black rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
+            class={clx("flex-1 bg-primary text-black desktop:rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
             hx-on:click={useScript(onClick)}
           >
             {text ? text : "COMPRAR"}

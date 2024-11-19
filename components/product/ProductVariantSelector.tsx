@@ -73,7 +73,7 @@ function VariantSelector({ product }: Props) {
             Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
           </button>
           <span class="text-sm">{name}</span>
-          <ul class="grid grid-cols-7 gap-4 h-[110px] overflow-hidden peer-checked:h-full">
+          <ul class="grid grid-cols-7 mobile:grid-cols-4 gap-4 h-[110px] overflow-hidden peer-checked:h-full">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {

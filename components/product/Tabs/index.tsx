@@ -17,7 +17,7 @@ const onLoad = () => {
     const numCols = rows[0].cells.length;
 
     const newTable = document.createElement('table');
-    newTable.classList.add('w-[44.44vw]', 'table-auto', 'mx-auto');
+    newTable.classList.add('w-[44.44vw]', 'table-auto', 'mx-auto', 'mobile:w-full');
 
     for (let col = 0; col < numCols; col++) {
         const newRow = document.createElement('tr');
@@ -25,7 +25,9 @@ const onLoad = () => {
 
         for (let row = 0; row < numRows; row++) {
             const cell = rows[row].cells[col].cloneNode(true) as HTMLTableCellElement;
-            cell.classList.add('px-5', 'py-4', 'text-black', 'text-sm', row === 0 ? 'w-[186px]' : 'flex-grow');
+            cell.classList.add(
+                'px-5', 'py-4', 'text-black', 'text-sm', 'mobile:text-xs', 'text-start', row === 0 ? 'w-[186px]' : 'flex-grow', 'mobile:w-1/2'
+            );
             newRow.appendChild(cell);
         }
 

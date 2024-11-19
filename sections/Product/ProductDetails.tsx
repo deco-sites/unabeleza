@@ -33,12 +33,13 @@ export default function ProductDetails(props: Props) {
 
   return (
     <>
-      <Section.Container class="">
+      <Section.Container class="mobile:mt-[60px]">
         <Breadcrumb itemListElement={props.page.breadcrumbList.itemListElement} />
 
         <div
           class={clx(
-            "flex gap-5"
+            "flex gap-5",
+            "mobile:flex-col"
           )}
         >
           <div class="desktop:w-[45.13vw]">

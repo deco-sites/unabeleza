@@ -12,7 +12,7 @@ export default function Form({ items }: Props) {
   return (
     <div class="flex flex-col gap-2">
       <div class="flex flex-col">
-        <span class="text-black font-bold text-sm pt-5">
+        <span class="text-black font-bold text-sm">
          CEP
         </span>
       </div>

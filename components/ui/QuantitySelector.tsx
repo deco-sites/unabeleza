@@ -17,7 +17,7 @@ function QuantitySelector(
   { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
 ) {
   return (
-    <div class="join border rounded w-[133px]">
+    <div class="join border desktop:rounded w-[133px]">
       <button
         type="button"
         class="btn p-0 btn-ghost no-animation join-item flex-1"

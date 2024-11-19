@@ -10,8 +10,8 @@ function Breadcrumb({ itemListElement = [] }: Props) {
   const items = [{ name: "Home", item: "/" }, ...itemListElement];
 
   return (
-    <div class="breadcrumbs py-0 text-xs font-normal text-base-400 w-full">
-      <ul>
+    <div class="py-0 text-xs font-normal text-base-400 w-full">
+      <ul class="flex gap-[6px] items-end">
         {items
           .filter(({ name, item }) => name && item)
           .map(({ name, item }) => {
@@ -26,7 +26,7 @@ function Breadcrumb({ itemListElement = [] }: Props) {
             }
             return (
               <li class="group">
-                <a  class="group-last:font-bold text-xs" href={relative(item)}>{name}</a>
+                <a  class="group-last:font-bold breadcrumb-item text-xs" href={relative(item)}>{name}</a>
               </li>
             )
           })}

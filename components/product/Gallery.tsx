@@ -5,6 +5,7 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
+import { useDevice } from "@deco/deco/hooks";
 
 export interface Props {
   /** @title Integration */
@@ -38,15 +39,18 @@ export default function GallerySlider(props: Props) {
     name?.includes(img.alternateName || "")
   );
   const images = filtered.length > 0 ? filtered : groupImages;
+  const device = useDevice();
 
   return (
     <>
       <div
         id={id}
-        class="grid grid-flow-col grid-cols-[min-content_1fr] gap-5"
+        class="grid grid-flow-col grid-cols-[min-content_1fr] gap-5 mobile:flex mobile:flex-col"
       >
         {/* Image Slider */}
-        <div class="col-span-1 col-start-2">
+        <div class={clx(
+          "col-span-1 col-start-2",
+        )}>
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
               {images.map((img, index) => (
@@ -93,11 +97,13 @@ export default function GallerySlider(props: Props) {
         </div>
 
         {/* Dots */}
-        <div class="col-start-1 col-span-1">
+        <div class={clx(
+          "col-start-1 col-span-1 mobile:flex mobile:justify-center",
+        )}>
           <ul
             class={clx(
               "carousel carousel-center",
-              "carousel-vertical",
+              "carousel-vertical mobile:carousel-horizontal",
               "gap-2",
               "max-w-full",
               "overflow-x-auto",
@@ -106,17 +112,31 @@ export default function GallerySlider(props: Props) {
             style={{ maxHeight: "600px" }}
           >
             {images.map((img, index) => (
-              <li class="carousel-item w-16 h-16">
-                <Slider.Dot index={index}>
-                  <Image
-                    style={{ aspectRatio: "1 / 1" }}
-                    class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
-                    width={64}
-                    height={64}
-                    src={img.url!}
-                    alt={img.alternateName}
-                  />
-                </Slider.Dot>
+              <li class="carousel-item desktop:w-16 desktop:h-16">
+                {
+                  device === "desktop"
+                    ? (
+                      <Slider.Dot index={index}>
+                        <Image
+                          style={{ aspectRatio: "1 / 1" }}
+                          class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
+                          width={64}
+                          height={64}
+                          src={img.url!}
+                          alt={img.alternateName}
+                        />
+                      </Slider.Dot>
+                    )
+                    : (
+                      <Slider.Dot
+                        index={index}
+                        class={clx(
+                          "bg-[#EBECF0] h-1 w-8 no-animation rounded-[1px]",
+                          "disabled:bg-primary disabled:opacity-100 transition-[width]"
+                        )}
+                      />
+                    )
+                }
               </li>
             ))}
           </ul>
