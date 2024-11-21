@@ -39,7 +39,7 @@ export default function ProductDetails(props: Props) {
         <div
           class={clx(
             "flex gap-5",
-            "mobile:flex-col"
+            "mobile:flex-col w-full"
           )}
         >
           <div class="desktop:w-[45.13vw]">
@@ -49,7 +49,7 @@ export default function ProductDetails(props: Props) {
             <ProductInfo {...props} />
           </div>
         </div>
-        <div>
+        <div class="max-w-full">
           <Tabs page={props.page} />
         </div>
       </Section.Container>

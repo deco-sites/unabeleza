@@ -28,8 +28,8 @@ export const Ring = ({ value, checked = false, class: _class }: {
   return (
 
     <div style={{ backgroundColor: color }} class={clx(
-      "w-16 flex flex-col justify-end items-center rounded-[5px] overflow-hidden p-0",
-      color && "h-[87px]",
+      "w-[4.44vw] mobile:w-16 max-w-16 flex flex-col justify-end items-center rounded-[5px] overflow-hidden p-0",
+      color && "h-[6.04vw] mobile:h-[87px] max-h-[87px]",
       styles
     )}>
 
@@ -73,7 +73,10 @@ function VariantSelector({ product }: Props) {
             Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
           </button>
           <span class="text-sm">{name}</span>
-          <ul class="grid grid-cols-7 mobile:grid-cols-4 gap-4 h-[110px] overflow-hidden peer-checked:h-full">
+          <ul class={clx(
+              "grid grid-cols-6 desktop-lg:grid-cols-7 desktop-sm:grid-cols-5 mobile:grid-cols-4 mobile-lg:grid-cols-6",
+               "gap-4 h-[110px] overflow-hidden peer-checked:h-full"
+            )}>
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {

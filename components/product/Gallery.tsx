@@ -59,8 +59,8 @@ export default function GallerySlider(props: Props) {
                   class="carousel-item w-full"
                 >
                   <Image
-                    class="w-full"
-                    sizes="(max-width: 640px) 100vw, 40vw"
+                    class="w-full object-contain"
+                    sizes="(max-width: 640px) 100vw, 40vw "
                     style={{ aspectRatio: ASPECT_RATIO }}
                     src={img.url!}
                     alt={img.alternateName}

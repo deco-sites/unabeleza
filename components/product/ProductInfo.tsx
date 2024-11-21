@@ -14,7 +14,7 @@ import ReviewRating from "./ReviewRating.tsx";
 import Share, { ShareProps } from "../ui/Share.tsx";
 import { useDevice } from "@deco/deco/hooks";
 import Modal from "../../islands/Modal.tsx";
-import PaymentMethods from "./PaymentMethods.tsx";
+import PaymentMethods, { Method } from "./PaymentMethods.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -32,7 +32,7 @@ function ProductInfo({ page, itemsShare }: Props) {
   const { productID, offers, isVariantOf, aggregateRating } = product;
   const title = isVariantOf?.name ?? product.name;
 
-  const priceSpecification = offers?.offers[0].priceSpecification
+  const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({...obj})) ?? [];
 
   const {
     price = 0,
@@ -77,7 +77,7 @@ function ProductInfo({ page, itemsShare }: Props) {
   const device = useDevice();
 
   return (
-    <div class={clx("flex desktop:gap-[52px]")}>
+    <div class={clx("flex desktop:gap-[3.61vw]")}>
       <div {...viewItemEvent} class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full" id={id}>
 
         {/* Product Name */}
@@ -112,9 +112,13 @@ function ProductInfo({ page, itemsShare }: Props) {
             </span>
           )}
 
-          <Modal title="Opções de pagamento" cta="Formas de pagamento">
-            <PaymentMethods methods={priceSpecification} />
-          </Modal>
+          {
+            priceSpecification && (
+              <Modal title="Opções de pagamento" cta="Formas de pagamento">
+                <PaymentMethods methods={priceSpecification} priceCurrency={offers?.priceCurrency} />
+              </Modal>
+            )
+          }
         </div>
 
         {/* Sku Selector */}
@@ -143,7 +147,7 @@ function ProductInfo({ page, itemsShare }: Props) {
       </div>
       {
         device === "desktop" && (
-          <div class="space-y-3">
+          <div class="space-y-3 max-w-10">
             <WishlistButton item={item} stroke="#707070" typeTwo={true} />
             <Share {...itemsShare} />
           </div>
