@@ -7,6 +7,9 @@ import { useDevice, useScript } from "@deco/deco/hooks";
 interface Props {
   variant?: "full" | "icon";
   item: AnalyticsItem;
+  stroke: string
+  fill?: string
+  typeTwo?: boolean
 }
 const onLoad = (id: string, productID: string) =>
   window.STOREFRONT.WISHLIST.subscribe((sdk) => {
@@ -33,7 +36,7 @@ const onClick = (productID: string, productGroupID: string) => {
     window.alert(`Please login to add the product to your wishlist`);
   }
 };
-function WishlistButton({ item, variant = "full" }: Props) {
+function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
   // deno-lint-ignore no-explicit-any
   const productID = (item as any).item_id;
   const productGroupID = item.item_group_id ?? "";
@@ -56,34 +59,20 @@ function WishlistButton({ item, variant = "full" }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
         class={clx(
-          "btn btn-circle border border-[#E3EBED] no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
-          variant === "icon"
-            ? "btn-ghost btn-sm text-transparent hover:bg-info"
-            : "btn-primary btn-outline gap-2",
+          "btn btn-circle no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
+           `btn-ghost btn-sm hover:bg-info`,
+           fill ? `text-[${fill}]` : "text-transparent",
+           typeTwo ? "shadow-custom-2" : "border border-[#E3EBED]"
         )}
       >
-        {device === "desktop"
-          ? (
             <Icon
               id="favorite"
               class="[.htmx-request_&]:hidden"
               fill="none"
-              width={26}
-              height={23}
+              width={device === "desktop" ? 26 : 17}
+              height={device === "desktop" ? 23 : 15}
+              stroke={stroke}
             />
-          )
-          : (
-            <Icon
-              id="favoriteMobile"
-              class="[.htmx-request_&]:hidden"
-              fill="none"
-              width={17}
-              height={15}
-            />
-          )}
-        {variant === "full" && (
-          <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
-        )}
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>
       <script

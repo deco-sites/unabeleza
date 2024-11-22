@@ -74,3 +74,9 @@
 .collapse-arrow2:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
   transform: translate(0, -50%) rotate(-45deg) skewX(var(--tw-skew-x)) skewY(0) scaleX(1) scaleY(1);
 }
+
+.breadcrumb-item::before {
+  content: "/";
+  margin-right: 6px;
+  color: #000;
+}

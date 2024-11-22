@@ -43,9 +43,6 @@ function ProductCard({
 
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
-  const percent = listPrice && price
-    ? Math.round(((listPrice - price) / listPrice) * 100)
-    : 0;
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
@@ -139,20 +136,10 @@ function ProductCard({
           >
             Notify me
           </span>
-
-          {/* Discounts */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
-              (percent < 1 || !inStock) && "opacity-0",
-            )}
-          >
-            {percent} % off
-          </span>
         </div>
 
         <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px]">
-          <WishlistButton item={item} variant="icon" />
+          <WishlistButton item={item} variant="icon" stroke="#BD87ED" />
         </div>
         <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
           <span

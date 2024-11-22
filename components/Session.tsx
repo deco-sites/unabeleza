@@ -14,6 +14,9 @@ declare global {
     STOREFRONT: SDK;
   }
 }
+
+export type PlatformProps = { quantity: number } & Record<string, unknown>
+
 export interface Cart {
   currency: string;
   coupon: string;
@@ -25,7 +28,7 @@ export interface SDK {
     getCart: () => Cart | null;
     getQuantity: (itemId: string) => number | undefined;
     setQuantity: (itemId: string, quantity: number) => boolean;
-    addToCart: (item: Item, platformProps: unknown) => boolean;
+    addToCart: (item: Item, platformProps: PlatformProps) => boolean;
     subscribe: (
       cb: (sdk: SDK["CART"]) => void,
       opts?: boolean | AddEventListenerOptions,
@@ -101,9 +104,10 @@ const sdk = () => {
         if (!input || !button) {
           return false;
         }
+        const quantity = platformProps.quantity;
         window.DECO.events.dispatch({
           name: "add_to_cart",
-          params: { items: { item } },
+          params: { items: [{ ...item, quantity }]},
         });
         input.value = encodeURIComponent(JSON.stringify(platformProps));
         button.click();
