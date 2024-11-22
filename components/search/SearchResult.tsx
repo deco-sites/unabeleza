@@ -7,7 +7,7 @@ import Searchbar, {
   type SearchbarProps,
 } from "../../components/search/Searchbar/Form.tsx";
 import { type Section as SectionType } from "@deco/deco/blocks";
-import { ShelfComponent } from "../../sections/Product/ProductShelf.tsx";
+import { ProductShelfComponent } from "../../sections/Product/ProductShelf.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
@@ -35,7 +35,7 @@ export interface Props {
 
   searchbar: SearchbarProps;
 
-  productShelf: SectionType<ShelfComponent>;
+  productShelf: SectionType<ProductShelfComponent>;
 
   searchParams?: string | null;
 }
