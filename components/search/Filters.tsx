@@ -67,13 +67,18 @@ function FilterValues({ key, values }: FilterToggle) {
 
 function Filters({ filters }: Props) {
   return (
-    <ul class="flex flex-col gap-6 p-4 sm:p-0">
+    <ul class="flex flex-col gap-6 pl-[60px] pr-8">
       {filters
         .filter(isToggle)
         .map((filter) => (
           <li class="flex flex-col gap-4">
-            <span>{filter.label}</span>
-            <FilterValues {...filter} />
+            <div tabIndex={0} className="collapse collapse-arrow2">
+              <input type="checkbox" className="peer" />
+              <div className="collapse-title text-sm font-bold uppercase">{filter.label}</div>
+              <div className="collapse-content">
+                <FilterValues {...filter} />
+              </div>
+            </div>
           </li>
         ))}
     </ul>

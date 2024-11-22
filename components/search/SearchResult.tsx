@@ -67,7 +67,7 @@ function PageResult(props: SectionProps<typeof loader>) {
   });
   const infinite = layout?.pagination !== "pagination";
   return (
-    <div class="grid grid-flow-row grid-cols-1 place-items-center">
+    <div class="grid grid-flow-row grid-cols-1 place-items-stretch ">
       <div
         class={clx(
           "pb-2 sm:pb-10",
@@ -90,9 +90,9 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         data-product-list
         class={clx(
-          "grid items-center",
-          "grid-cols-2 gap-2",
-          "sm:grid-cols-4 sm:gap-10",
+          "grid grid-cols-3",
+          "gap-5 justify-items-center",
+          "mobile:grid-cols-2 mobile:gap-4",
           "w-full",
         )}
       >
@@ -102,7 +102,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
+            class="h-full "
           />
         ))}
       </div>
@@ -218,12 +218,14 @@ function Result(props: SectionProps<typeof loader>) {
   );
   return (
     <>
-      <div id={container} {...viewItemListEvent} class="w-full">
+      <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto">
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+            <div class="container flex flex-col gap-4 w-full">
+              <div class="pl-[60px]">
+                <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+              </div>
 
               {device === "mobile" && (
                 <Drawer
@@ -251,30 +253,27 @@ function Result(props: SectionProps<typeof loader>) {
                     </div>
 
                     <label class="btn btn-ghost" for={controls}>
-                      Filters
+                      Filtros
                     </label>
                   </div>
                 </Drawer>
               )}
 
-              <div class="grid place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
+              <div class="flex gap-10 justify-between sm:grid-cols-[250px_1fr]">
                 {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col gap-9">
-                    <span class="text-base font-semibold h-12 flex items-center">
-                      Filters
+                  <aside class="sticky h-full place-self-start flex flex-col gap-9 desktop:w-[calc((100%_+_60px)_*_0.2402)]">
+                    <span class="text-2xl font-[PP-Hatton] font-bold h-12 flex items-center flex gap-4 pl-[60px]">
+                      Filtros <Icon id="filter" width={18} height={18} />
                     </span>
 
                     <Filters filters={filters} />
                   </aside>
                 )}
 
-                <div class="flex flex-col gap-9">
+                <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
                   {device === "desktop" && (
-                    <div class="flex justify-between items-center">
-                      {results}
-                      <div>
-                        {sortBy}
-                      </div>
+                    <div class="flex justify-end items-center gap-[10px]">
+                      <span class="font-bold">ORDENAR POR </span>{sortBy}
                     </div>
                   )}
                   <PageResult {...props} />

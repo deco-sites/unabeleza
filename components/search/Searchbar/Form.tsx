@@ -1,6 +1,6 @@
 /**
- * We use a custom route at /s?q= to perform the search. This component
- * redirects the user to /s?q={term} when the user either clicks on the
+ * We use a custom route at /busca?busca= to perform the search. This component
+ * redirects the user to /busca?busca={term} when the user either clicks on the
  * button or submits the form. Make sure this page exists in deco.cx/admin
  * of yout site. If not, create a new page on this route and add the appropriate
  * loader.
@@ -21,9 +21,9 @@ import { useScript } from "@deco/deco/hooks";
 import { asResolved } from "@deco/deco";
 import { type Resolved } from "@deco/deco";
 // When user clicks on the search button, navigate it to
-export const ACTION = "/s";
+export const ACTION = "/busca";
 // Querystring param used when navigating the user
-export const NAME = "q";
+export const NAME = "busca";
 export interface SearchbarProps {
   /**
    * @title Placeholder

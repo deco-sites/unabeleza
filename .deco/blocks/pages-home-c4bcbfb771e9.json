@@ -17,7 +17,7 @@
           "action": {
             "title": "Skate into Adventure",
             "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "/s?q=shoes&page=0",
+            "href": "/busca?busca=shoes&page=0",
             "label": "Grab Yours Now!"
           }
         },

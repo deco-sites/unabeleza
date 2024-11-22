@@ -72,7 +72,7 @@ function ProductCard({
         _class,
       )}
       style={{
-        "--productCard-width": `min(22.08vw, calc(96rem * 0.2208))`,
+        "--productCard-width": `min(22.0833vw, calc(96rem * 0.220833))`,
       }}
     >
       <figure
