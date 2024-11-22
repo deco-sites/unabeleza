@@ -42,21 +42,73 @@
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/SearchResult.tsx",
-        "page": {
-          "__resolveType": "wake"
-        },
-        "layout": {
-          "columns": {
-            "mobile": 2,
-            "desktop": 4
+      "__resolveType": "site/sections/Product/SearchResult.tsx",
+      "page": {
+        "__resolveType": "wake/loaders/productListingPage.ts",
+        "limit": 12,
+        "operation": "AND",
+        "sort": "NAME:ASC",
+        "filters": {
+          "attributes": {
+            "id": [],
+            "name": [],
+            "type": [],
+            "value": []
           },
-          "variant": "aside",
-          "pagination": "show-more"
+          "brandId": [],
+          "categoryId": [],
+          "ean": [],
+          "productId": [],
+          "productVariantId": [],
+          "sameParentAs": [],
+          "sku": [],
+          "stocks": {
+            "dcId": [],
+            "dcName": []
+          },
+          "prices": {}
         },
-        "startingPage": 1
+        "pageOffset": 0
+      },
+      "layout": {
+        "columns": {
+          "mobile": 2,
+          "desktop": 4
+        },
+        "variant": "aside",
+        "pagination": "show-more"
+      },
+      "startingPage": 1,
+      "productShelf": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "DISCOUNT",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          }
+        },
+        "title": "Veja os lançamentos",
+        "cta": "VER TODOS"
       }
     },
     {

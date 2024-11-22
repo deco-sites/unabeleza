@@ -133,7 +133,10 @@ function Newsletter({
               required
             />
 
-            <button class="btn btn-primary rounded-[5px] h-[45px]" type="submit">
+            <button
+              class="btn btn-primary rounded-[5px] h-[45px]"
+              type="submit"
+            >
               <span class="[.htmx-request_&]:hidden inline text-black text-sm font-bold">
                 {label}
               </span>
@@ -151,7 +154,7 @@ function Newsletter({
               id="acceptInfo"
               class={clx(
                 "accent-primary hover:border-secondary w-[17px] h-[17px] p-[2px]",
-                "mobile:w-5 mobile:h-5"
+                "mobile:w-5 mobile:h-5",
               )}
               required
             />

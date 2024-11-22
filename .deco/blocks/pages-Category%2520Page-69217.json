@@ -56,7 +56,38 @@
           "variant": "aside",
           "pagination": "show-more"
         },
-        "startingPage": 1
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {}
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        }
       }
     },
     {

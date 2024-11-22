@@ -15,7 +15,9 @@ export default function MenuMobileFooter(
           <Accordion title={title}>
             <ul class="flex flex-col gap-2 max-w-[174px]">
               {items.map(({ title, href }) => {
-                const newTitle = title.includes("strong") ? title : title.replace(/<\/?p>/g, "") ;
+                const newTitle = title.includes("strong")
+                  ? title
+                  : title.replace(/<\/?p>/g, "");
                 return (
                   <li>
                     <a
@@ -24,7 +26,7 @@ export default function MenuMobileFooter(
                       dangerouslySetInnerHTML={{ __html: newTitle }}
                     />
                   </li>
-                )
+                );
               })}
             </ul>
           </Accordion>
