@@ -17,7 +17,8 @@ const manifest = {
   islands: {
     "./islands/Accordion.tsx": $Accordion,
     "./islands/AccordionItem.tsx": $AccordionItem,
-    "./islands/ButtonMenuInstitucionalMobile.tsx": $ButtonMenuInstitucionalMobile,
+    "./islands/ButtonMenuInstitucionalMobile.tsx":
+      $ButtonMenuInstitucionalMobile,
     "./islands/Modal.tsx": $Modal,
     "./islands/Popup.tsx": $Popup,
   },

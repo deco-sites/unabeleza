@@ -23,25 +23,26 @@ const colors: Record<string, Record<string, string>> = {
 };
 
 const variants = {
-  active: "ring-base-content",
+  active: "ring-1 ring-offset-2 ring-[#707070]",
   disabled: "line-through",
-  default: "ring-base-400",
+  default: "border border-[#707070]",
 };
 
 function Avatar({ content, variant = "default" }: Props) {
+
+
   return (
     <div class="avatar placeholder">
       <div
         class={clx(
-          "h-6 w-6",
-          "rounded-full",
-          "ring-1 ring-offset-2",
+          "h-[30px] w-[30px]",
+          "rounded-[5px]",
           variants[variant],
         )}
-        style={colors[content]}
+        style={content.includes("#") ? { backgroundColor: content } : undefined}
       >
-        <span class="uppercase">''
-          {colors[content] ? "" : content.substring(0, 2)}
+        <span class="uppercase">
+          {content.includes("#") ? "" : content.substring(0, 2)}
         </span>
       </div>
     </div>

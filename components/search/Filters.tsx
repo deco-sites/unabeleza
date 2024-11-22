@@ -29,19 +29,21 @@ function ValueItem(
 }
 
 function FilterValues({ key, values }: FilterToggle) {
-  const avatars = key === "tamanho" || key === "cor";
+
+  const avatars = key === "Atributos" || key === "Atributos";
   const flexDirection = avatars ? "flex-row items-center" : "flex-col";
 
   return (
-    <ul class={clx(`flex flex-wrap gap-2`, flexDirection)}>
+    <ul class={clx(`flex flex-wrap gap-[10px]`, flexDirection)}>
       {values.map((item) => {
         const { url, selected, value } = item;
 
         if (avatars) {
+          const [content, color] = value.split(" ");
           return (
             <a href={url} rel="nofollow">
               <Avatar
-                content={value}
+                content={color ? color : content}
                 variant={selected ? "active" : "default"}
               />
             </a>
@@ -66,6 +68,7 @@ function FilterValues({ key, values }: FilterToggle) {
 }
 
 function Filters({ filters }: Props) {
+
   return (
     <ul class="flex flex-col gap-6 pl-[60px] pr-8">
       {filters
