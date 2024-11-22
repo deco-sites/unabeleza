@@ -122,7 +122,7 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Footer/Footer.tsx"
+        "__resolveType": "Footer"
       }
     }
   ],

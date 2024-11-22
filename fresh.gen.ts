@@ -6,6 +6,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $Accordion from "./islands/Accordion.tsx";
 import * as $AccordionItem from "./islands/AccordionItem.tsx";
 import * as $ButtonMenuInstitucionalMobile from "./islands/ButtonMenuInstitucionalMobile.tsx";
+import * as $Popup from "./islands/Popup.tsx";
 import type { Manifest } from "$fresh/server.ts";
 import * as $Popup from "./islands/Popup.tsx";
 
