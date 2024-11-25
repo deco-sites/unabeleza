@@ -263,7 +263,8 @@ const setPageQuerystring = (page: string, id: string) => {
     }
     history.replaceState({ prevPage }, "", url.href);
   }).observe(element);
-};
+}
+
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
@@ -293,14 +294,17 @@ function Result(props: SectionProps<typeof loader>) {
       },
     },
   });
+
   const results = (
     <span class="text-sm font-normal">
       {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
     </span>
   );
+
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
+
   return (
     <>
       <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto">
@@ -326,7 +330,7 @@ function Result(props: SectionProps<typeof loader>) {
                         </label>
                       </div>
                       <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} url={url}/>
+                        <Filters filters={filters} url={url} />
                       </div>
                     </div>
                   }
@@ -350,8 +354,7 @@ function Result(props: SectionProps<typeof loader>) {
                     <span class="text-2xl font-[PP-Hatton] font-bold h-12 flex items-center flex gap-4 pl-[60px]">
                       Filtros <Icon id="filter" width={18} height={18} />
                     </span>
-
-                    <Filters filters={filters} url={url}/>
+                    <Filters filters={filters} url={url} />
                   </aside>
                 )}
 
@@ -381,12 +384,14 @@ function Result(props: SectionProps<typeof loader>) {
     </>
   );
 }
+
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
   if (!page) {
     return <NotFound {...props} />;
   }
   return <Result {...props} page={page} />;
 }
+
 export const loader = (props: Props, req: Request) => {
   const url = new URL(req.url);
   const searchParams = url.search ?? null;
@@ -396,4 +401,5 @@ export const loader = (props: Props, req: Request) => {
     searchParams,
   };
 };
+
 export default SearchResult;

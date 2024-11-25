@@ -8,6 +8,7 @@ import * as $AccordionItem from "./islands/AccordionItem.tsx";
 import * as $ButtonMenuInstitucionalMobile from "./islands/ButtonMenuInstitucionalMobile.tsx";
 import * as $Modal from "./islands/Modal.tsx";
 import * as $Popup from "./islands/Popup.tsx";
+import * as $ShowPriceItem from "./islands/ShowPriceItem.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -21,6 +22,7 @@ const manifest = {
       $ButtonMenuInstitucionalMobile,
     "./islands/Modal.tsx": $Modal,
     "./islands/Popup.tsx": $Popup,
+    "./islands/ShowPriceItem.tsx": $ShowPriceItem,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
