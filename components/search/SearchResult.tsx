@@ -326,7 +326,7 @@ function Result(props: SectionProps<typeof loader>) {
                         </label>
                       </div>
                       <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} />
+                        <Filters filters={filters} url={url}/>
                       </div>
                     </div>
                   }
@@ -351,7 +351,7 @@ function Result(props: SectionProps<typeof loader>) {
                       Filtros <Icon id="filter" width={18} height={18} />
                     </span>
 
-                    <Filters filters={filters} />
+                    <Filters filters={filters} url={url}/>
                   </aside>
                 )}
 

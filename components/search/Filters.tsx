@@ -11,6 +11,7 @@ import { formatPrice } from "../../sdk/format.ts";
 
 interface Props {
   filters: ProductListingPage["filters"];
+  url: string
 }
 
 const isToggle = (filter: Filter): filter is FilterToggle =>
@@ -67,23 +68,24 @@ function FilterValues({ key, values }: FilterToggle) {
   );
 }
 
-function Filters({ filters }: Props) {
-
+function Filters(props: Props) {
+  const filtred = props.filters.filter((obj) => obj.key !== "precoPor" || obj["@type"] !== "FilterToggle")
+  console.log(filtred)
   return (
     <ul class="flex flex-col gap-6 pl-[60px] pr-8">
-      {filters
+      {props.filters
         .filter(isToggle)
         .map((filter) => (
-          <li class="flex flex-col gap-4">
-            <div tabIndex={0} className="collapse collapse-arrow2">
-              <input type="checkbox" className="peer" />
-              <div className="collapse-title text-sm font-bold uppercase">{filter.label}</div>
-              <div className="collapse-content">
-                <FilterValues {...filter} />
+            <li class="flex flex-col gap-4" key={filter.label}>
+              <div tabIndex={0} className="collapse collapse-arrow2">
+                <input type="checkbox" className="peer" />
+                <div className="collapse-title text-sm font-bold uppercase">{filter.label}</div>
+                <div className="collapse-content">
+                  <FilterValues {...filter} />
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          ))}
     </ul>
   );
 }

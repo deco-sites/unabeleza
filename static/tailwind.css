@@ -3571,25 +3571,6 @@ details.collapse summary::-webkit-details-marker {
   border-end-end-radius: inherit;
   border-start-end-radius: inherit;
 }
-.range-xs {
-  height: 1rem;
-}
-.range-xs::-webkit-slider-runnable-track {
-  height: 0.25rem;
-}
-.range-xs::-moz-range-track {
-  height: 0.25rem;
-}
-.range-xs::-webkit-slider-thumb {
-  height: 1rem;
-  width: 1rem;
-  --filler-offset: 0.4rem;
-}
-.range-xs::-moz-range-thumb {
-  height: 1rem;
-  width: 1rem;
-  --filler-offset: 0.4rem;
-}
 .tabs-md :where(.tab) {
   height: 2rem;
   font-size: 0.875rem;
