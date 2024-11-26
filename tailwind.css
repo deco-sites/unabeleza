@@ -53,13 +53,13 @@
   display: block;
   height: 0.5rem;
   width: 0.5rem;
-  transform: translate(0, -100%) rotate(45deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  transform: translate(0, -50%) rotate(45deg) skewX(0) skewY(0) scaleX(1) scaleY(1);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 0.2s;
-  top: 1.9rem;
+  top: 45%;
   inset-inline-end: 1.4rem;
   content: "";
   transform-origin: 75% 75%;
@@ -72,6 +72,10 @@
 .collapse-arrow2:focus:not(.collapse-close) > .collapse-title:after,
 .collapse-arrow2:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after,
 .collapse-arrow2:not(.collapse-close) > input[type="radio"]:checked ~ .collapse-title:after {
+  transform: translate(0, -50%) rotate(-45deg) skewX(var(--tw-skew-x)) skewY(0) scaleX(1) scaleY(1);
+}
+
+.dropdown[open].collapse-arrow2 > .collapse-title:after {
   transform: translate(0, -50%) rotate(-45deg) skewX(var(--tw-skew-x)) skewY(0) scaleX(1) scaleY(1);
 }
 

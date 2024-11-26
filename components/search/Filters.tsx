@@ -9,6 +9,7 @@ import Avatar from "../../components/ui/Avatar.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import ShowPriceItem from "../../islands/ShowPriceItem.tsx";
+import SelectedFilters from "./Filters/SelectedFilters.tsx";
 
 interface Props {
   filters: ProductListingPage["filters"];
@@ -58,32 +59,43 @@ function FilterValues({ key, values }: FilterToggle) {
   );
 }
 
-function Filters(props: Props) {
-  const filtred = props.filters.filter((obj) => obj.key !== "precoPor" || obj["@type"] !== "FilterToggle")
-  console.log(props)
+
+function Filters({ filters, url }: Props) {
+  const filtersSanitized = filters.filter(isToggle)
+  const selectedFilters = filtersSanitized.filter((filter) => {
+    const selectedValue = filter.values.find((value) => value.selected);
+    return selectedValue ? true : false;
+  });
+
+  const filtred = filters.filter((obj) => obj.key !== "precoPor" || obj["@type"] !== "FilterToggle")
   return (
     <ul class="flex flex-col gap-6 pl-[60px] pr-8">
+      <li>
+        {selectedFilters.length > 0 && (
+          <SelectedFilters filters={selectedFilters} />
+        )}
+      </li>
       {filtred
         .map((filter) => (
-            <li class="flex flex-col gap-4" key={filter.label}>
-              <div tabIndex={0} className="collapse collapse-arrow2">
-                <input type="checkbox" className="peer" />
-                <div className="collapse-title text-sm font-bold uppercase">{filter.label}</div>
-                <div className="collapse-content">
-                  {
-                    filter.key === "precoPor" && filter["@type"] === "FilterRange"
+          <li class="flex flex-col gap-4" key={filter.label}>
+            <div tabIndex={0} className="collapse collapse-arrow2">
+              <input type="checkbox" className="peer" />
+              <div className="collapse-title text-sm font-bold uppercase">{filter.label}</div>
+              <div className="collapse-content">
+                {
+                  filter.key === "precoPor" && filter["@type"] === "FilterRange"
                     ? (
-                      <ShowPriceItem  url={props.url} filterToogle={filter}/>
+                      <ShowPriceItem url={url} filterToogle={filter} />
                     )
-                    : filter["@type"] === "FilterToggle" && 
+                    : filter["@type"] === "FilterToggle" &&
                     (
                       <FilterValues {...filter} />
                     )
-                  }  
-                </div>
+                }
               </div>
-            </li>
-          ))}
+            </div>
+          </li>
+        ))}
     </ul>
   );
 }

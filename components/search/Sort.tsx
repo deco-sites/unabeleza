@@ -1,5 +1,6 @@
 import { ProductListingPage } from "apps/commerce/types.ts";
 import { useScript } from "@deco/deco/hooks";
+import { clx } from "../../sdk/clx.ts";
 const SORT_QUERY_PARAM = "sort";
 const PAGE_QUERY_PARAM = "page";
 export type Props = Pick<ProductListingPage, "sortOptions"> & {
@@ -21,6 +22,11 @@ const labels: Record<string, string> = {
   "release:desc": "Lançamento",
   "discount:desc": "Maior desconto",
 };
+
+const onClick = (value: string) => {
+  window.location.href = value;
+}
+
 function Sort({ sortOptions, url }: Props) {
   const current = getUrl(
     url,
@@ -30,27 +36,34 @@ function Sort({ sortOptions, url }: Props) {
     value: getUrl(url, value),
     label,
   }));
+
+  const currentLabel = options?.find((option) => option.value === current)?.label ?? "Selecione"
+
   return (
     <>
-      <label for="sort" class="sr-only">Sort by</label>
-      <select
-        name="sort"
-        class="select w-full max-w-sm rounded-lg"
-        hx-on:change={useScript(() => {
-          const select = event!.currentTarget as HTMLSelectElement;
-          window.location.href = select.value;
-        })}
-      >
+      <details className="dropdown collapse-arrow2 w-full desktop:max-w-[14.58vw]">
+        <summary
+          className="btn my-1 collapse-title min-h-0 h-10 py-0 px-10 hover:!border hover:!border-[#363B4B] rounded-[5px] border border-[#363B4B]" 
+        >
+            <span class="w-full text-start font-normal text-sm">
+            {currentLabel} 
+            </span>
+        </summary>
+        <ul className="menu dropdown-content w-full bg-white rounded-box z-[1] w-52 px-[14.5px] py-5 space-y-[10px] shadow">
         {options.map(({ value, label }) => (
-          <option
-            label={labels[label] ?? label}
-            value={value}
-            selected={value === current}
+          <li key={label} hx-on:click={useScript(onClick, value)} 
+            class={clx(
+              "cursor-pointer !h-10 border rounded-[5px] text-sm", 
+              "hover:border-[#363B4B] hover:bg-[#F0F0F0] hover:font-bold",
+              "flex w-full justify-center items-center",
+              label === currentLabel ? "border-[#363B4B] bg-[#F0F0F0] font-bold" : "border-[#F0F0F0]"
+            )}
           >
             {label}
-          </option>
+          </li>
         ))}
-      </select>
+        </ul>
+      </details>
     </>
   );
 }
