@@ -19,9 +19,7 @@ export default function ShowPriceItem(props: Props) {
     const max = currentPrice ? currentPrice.split(";")[1] : maxPrice;
 
     const changeUrl = useCallback((min: number, max: number) => {
-       const url = new URL(window.location.href)
-       url.searchParams.set("precoPor",`${min};${max}`)
-       window.location.href = url.toString()
+        window.FILTER_LOGICS.updatePriceFilter(min, max);
     }, [values]);
 
     return (

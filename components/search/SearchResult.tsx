@@ -295,11 +295,6 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
 
-  const results = (
-    <span class="text-sm font-normal">
-      {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
-    </span>
-  );
 
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
@@ -307,43 +302,55 @@ function Result(props: SectionProps<typeof loader>) {
 
   return (
     <>
-      <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto">
+      <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto mobile:px-5 mobile:py-8">
         {partial
           ? <PageResult {...props} />
           : (
             <div class="container flex flex-col gap-4 w-full">
-              <div class="pl-[60px]">
+              <div class="pl-[60px] mobile:pl-0">
                 <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
               </div>
 
               {device === "mobile" && (
                 <Drawer
                   id={controls}
+                  class="drawer-end"
                   aside={
-                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
-                      <div class="flex justify-between items-center">
-                        <h1 class="px-4 py-3">
-                          <span class="font-medium text-2xl">Filters</span>
-                        </h1>
-                        <label class="btn btn-ghost" for={controls}>
-                          <Icon id="close" />
+                    <div class="bg-base-100 flex flex-col h-full w-[79.73vw] divide-y overflow-y-hidden">
+                      <div class="flex justify-center items-center relative p-5 border-b border-[#F5F5F5]">
+                        <label class="btn btn-ghost p-0 absolute left-5 top-1/2 -translate-y-1/2" for={controls}>
+                          <Icon id="closeFilter" width={15} height={15} />
                         </label>
+
+                        <h1 class="font-bold text-lg font-[PP-Hatton]">
+                          Filtrar por
+                        </h1>
                       </div>
+
                       <div class="flex-grow overflow-auto">
                         <Filters filters={filters} url={url} />
                       </div>
                     </div>
                   }
                 >
-                  <div class="flex sm:hidden justify-between items-end">
-                    <div class="flex flex-col">
-                      {results}
+                  <div class="flex justify-between items-center">
+                    <label
+                      class={clx(
+                        "btn w-full max-w-[41.86vw] pl-[31.5px] pr-[22.5px] py-[10px]",
+                        "flex justify-between h-[45px] min-h-0",
+                        "hover:!border hover:!border-[#363B4B] rounded-[5px] border border-[#363B4B]",
+                      )}
+                      for={controls}
+                    >
+                      <Icon id="filterMobile" width={23} height={15.33} />
+                      <span class="font-bold">
+                        FILTRO
+                      </span>
+                    </label>
+
+                    <div class="flex flex-col w-full max-w-[41.86vw]">
                       {sortBy}
                     </div>
-
-                    <label class="btn btn-ghost" for={controls}>
-                      Filtros
-                    </label>
                   </div>
                 </Drawer>
               )}

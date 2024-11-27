@@ -170,9 +170,9 @@ export default function MultiRangeSlider(props: MultiRangeSliderProps) {
     }, []);
 
     return (
-        <div id={id}>
-            <div class="double-range max-w-[calc(100vw_-_20px_-_-48px)] lg:max-w-[255px]">
-                <div class="range-slider  max-w-[calc(100vw_-_20px_-_-48px)] lg:max-w-[255px]">
+        <div id={id} class="w-full">
+            <div class="double-range max-w-full">
+                <div class="range-slider  max-w-full">
                     <span class="range-fill"></span>
                 </div>
                 <div class="range-input">
@@ -193,39 +193,20 @@ export default function MultiRangeSlider(props: MultiRangeSliderProps) {
                         step={step}
                     />
                 </div>
-                <div class="flex justify-between text-[#676767] text-xs leading-[18px] my-4">
-                    <span>{formatBRL(parseFloat(min))}</span>
-                    <span>{formatBRL(parseFloat(max))}</span>
-                </div>
-                <div class="text-input max-w-[calc(100vw_-_20px_-_-48px)] lg:max-w-[255px] gap-3 grid grid-cols-2">
-                    <div class="flex flex-col">
-                        <label
-                            for="min"
-                            class="text-[#676767] text-xs leading-[18px] font-bold mb-0.5"
-                        >
-                            Mínimo
-                        </label>
-                        <input
-                            id="min"
-                            class="bg-[#F5F4F1] rounded w-full outline-none text-[#676767] text-xs leading-[18px] h-9 flex items-center pl-3 before:content-['R$']"
-                            name="min"
-                            value={formatBRL(parseFloat(minVal))}
-                        />
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <label
-                            for="max"
-                            class="text-[#676767] text-xs leading-[18px] font-bold mb-0.5"
-                        >
-                            Máximo
-                        </label>
-                        <input
-                            id="max"
-                            class="bg-[#F5F4F1] rounded outline-none w-full text-[#676767] text-xs leading-[18px] h-9 flex items-center pl-3 before:content-['R$']"
-                            name="max"
-                            value={formatBRL(parseFloat(maxVal))}
-                        />
-                    </div>
+                <div class="text-input flex flex-nowrap justify-end items-center">
+                    <input
+                        id="min"
+                        class="bg-transaprent text-xs font-bold text-black rounded w-[calc(100%_/_3)] pl-0 outline-none leading-[18px] h-9 flex items-center pl-3 before:content-['R$']"
+                        name="min"
+                        value={formatBRL(parseFloat(minVal))}
+                    />
+                    <span class="text-xs font-bold text-black"> - </span>
+                    <input
+                        id="max"
+                        class="bg-transaprent rounded outline-none w-[calc(100%_/_3)] pl-0 text-xs font-bold text-black leading-[18px] h-9 flex items-center pl-3 before:content-['R$']"
+                        name="max"
+                        value={formatBRL(parseFloat(maxVal))}
+                    />
                 </div>
             </div>
         </div>
