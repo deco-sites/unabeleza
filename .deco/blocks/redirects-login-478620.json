@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/login",
+    "to": "https://unikapro.checkout.fbits.store/Login/Authenticate?returnUrl=",
+    "type": "temporary"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
