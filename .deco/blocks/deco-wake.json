@@ -2,7 +2,7 @@
   "__resolveType": "site/apps/deco/wake.ts",
   "storefrontToken": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "464201f2c7f017bce95c269bc99c6ecc98dfcffafa637cbec171e1663776bd34e34f4698420e5d6665541733eb32f5ef",
+    "encrypted": "3a6610877c7ab6d4b8621bfc34d4779d1626704b81efde33469aec5eba0af55f4045f36a01184fc5f032fb972872478d",
     "name": "WAKE_STOREFRONT_TOKEN"
   },
   "platform": "wake",
@@ -10,7 +10,7 @@
   "checkoutUrl": "https://unikapro.checkout.fbits.store/",
   "token": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "7be4c94cc87ae51c9d7a8a328c0229f8",
+    "encrypted": "644d04f0c192363931dafc0e113c4e45",
     "name": "WAKE_TOKEN"
   }
 }
