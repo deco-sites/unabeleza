@@ -99,7 +99,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
 
       <div class="flex items-center">
-        <ul class="flex w-full justify-between py-2 border-y border-neutral-100">
+        <ul class="flex w-full justify-between items-center h-[45px] border-y border-neutral-100">
           {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
         </ul>
         <div>

@@ -4324,11 +4324,11 @@ details.collapse summary::-webkit-details-marker {
 .min-h-screen {
   min-height: 100vh;
 }
+.\!w-\[--quantity-tabs\] {
+  width: var(--quantity-tabs) !important;
+}
 .\!w-\[calc\(\(38\.19vw_-_40px\)_\/_3\)\] {
   width: calc((38.19vw - 40px) / 3) !important;
-}
-.\!w-\[calc\(82\.36vw_\/_3\)\] {
-  width: calc(82.36vw / 3) !important;
 }
 .\!w-full {
   width: 100% !important;
@@ -6140,6 +6140,10 @@ details.collapse summary::-webkit-details-marker {
   cursor: pointer;
 }
 
+.tab-width {
+  width: calc(min(82.39583vw, calc(96rem - 254px)) / var(--quantity-tabs)) !important;
+}
+
 .invalid\:input-error:invalid {
   --tw-border-opacity: 1;
   border-color: var(--fallback-er,oklch(var(--er)/var(--tw-border-opacity)));
@@ -7253,6 +7257,10 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:max-w-\[calc\(\(100\%_\+_60px\)_\*_0\.69027\)\] {
     max-width: calc((100% + 60px) * 0.69027);
+  }
+
+  .desktop\:max-w-\[calc\(100\%_-_254px\)\] {
+    max-width: calc(100% - 254px);
   }
 
   .desktop\:max-w-\[var\(--bannerSlider-width\)\] {

@@ -64,19 +64,23 @@ function VariantSelector({ product }: Props) {
     >
       {filteredNames.map((name) => (
         <li class="space-y-2 collapse">
-          <input type="checkbox" className="peer max-w-[134px] h-[30px] !row-start-[last] mt-6" />
-          <button
-            className={clx(
-              "collapse-title btn flex justify-between items-center border-2 !row-start-[last] max-w-[134px] h-[30px] top-6", 
-              "min-h-0 border-primary rounded-[5px] py-[6px] px-4 font-bold text-primary text-xs whitespace-nowrap"
-              )}>
-            Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
-          </button>
+          {Object.entries(possibilities[name]).filter(([value]) => value).length >= 7 && (
+            <>
+              <input type="checkbox" className="peer max-w-[134px] h-[30px] !row-start-[last] mt-6" />
+              <button
+                className={clx(
+                  "collapse-title btn flex justify-between items-center border-2 !row-start-[last] max-w-[134px] h-[30px] top-6",
+                  "min-h-0 border-primary rounded-[5px] py-[6px] px-4 font-bold text-primary text-xs whitespace-nowrap"
+                )}>
+                Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
+              </button>
+            </>
+          )}
           <span class="text-sm">{name}</span>
           <ul class={clx(
-              "grid grid-cols-6 desktop-lg:grid-cols-7 desktop-sm:grid-cols-5 mobile:grid-cols-4 mobile-lg:grid-cols-6",
-               "gap-4 h-[110px] overflow-hidden peer-checked:h-full"
-            )}>
+            "grid grid-cols-6 desktop-lg:grid-cols-7 desktop-sm:grid-cols-5 mobile:grid-cols-4 mobile-lg:grid-cols-6",
+            "gap-4 h-[110px] overflow-hidden peer-checked:h-full"
+          )}>
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {

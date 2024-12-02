@@ -8,8 +8,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const uniqueIdentifiers = [
     ...new Set(children.map((node) => node.identifier)),
   ];
-  children.forEach((node) => {
-    if (node.children.length > 0) {
+  children?.forEach((node) => {
+    if (node.children && node.children.length > 0) {
       const seeAll = {
         name: "ver todos",
         url: node.url,
@@ -34,9 +34,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-between gap-6 border-t-2 border-b-2 border-base-200 w-screen px-[60px] py-6 h-fit"
+            class="fixed hidden shadow-custom hover:flex group-hover:flex bg-base-100 z-40 items-start justify-between gap-6 border-t-2 border-b-2 border-base-200 w-screen px-[60px] py-6 h-fit"
             style={{
-              top: "0px",
+              top: "10.2px",
               left: "0px",
               marginTop: HEADER_HEIGHT_DESKTOP,
             }}
@@ -47,7 +47,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                   .map((node) => (
                     <li class="flex flex-col gap-3">
                       <a class="cursor-pointer" href={node.url}>
-                        <span class="font-bold">{node.name}</span>
+                        <span class="font-bold text-xs">{node.name}</span>
                       </a>
                       <ul class="flex flex-col gap-2">
                         {node.children?.map((leaf) => (

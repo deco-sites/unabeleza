@@ -49,7 +49,7 @@ export default function ProductDetails(props: Props) {
             <ProductInfo {...props} />
           </div>
         </div>
-        <div class="max-w-full">
+        <div class="w-full desktop:max-w-[calc(100%_-_254px)]">
           <Tabs page={props.page} />
         </div>
       </Section.Container>
