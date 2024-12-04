@@ -1,32 +1,25 @@
-/**
- * TODO: support other platforms. Currently only for VTEX
- */
+
 import { AppContext } from "apps/vtex/mod.ts";
-import type { SimulationOrderForm, SKU, Sla } from "apps/vtex/utils/types.ts";
 import { formatPrice } from "../../sdk/format.ts";
 import { ComponentProps } from "../../sections/Component.tsx";
+import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 
 export interface Props {
   items: SKU[];
 }
 
-const formatShippingEstimate = (estimate: string) => {
-  const [, time, type] = estimate.split(/(\d+)/);
-
-  if (type === "bd") return `${time} dias úteis`;
-  if (type === "d") return `${time} dias`;
-  if (type === "h") return `${time} horas`;
-};
+function formatShippingEstimate(estimate: number): string {
+  return `${estimate} dias úteis`;
+}
 
 export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();
 
   try {
-    const result = await ctx.invoke("vtex/actions/cart/simulation.ts", {
-      items: props.items,
-      postalCode: `${form.get("postalCode") ?? ""}`,
-      country: "BRA",
-    }) as SimulationOrderForm | null;
+    const result = await ctx.invoke("wake/actions/shippingSimulation.ts", {
+      ...props.items[0],
+      cep: `${form.get("postalCode") ?? ""}`,
+    }) as ShippingQuotesQuery["shippingQuotes"];
 
     return { result };
   } catch {
@@ -35,12 +28,14 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 }
 
 export default function Results({ result }: ComponentProps<typeof action>) {
-  const methods = result?.logisticsInfo?.reduce(
-    (initial, { slas }) => [...initial, ...slas],
-    [] as Sla[],
-  ) ?? [];
+  console.log(result)
 
-  if (!methods.length) {
+  // const methods = result?.reduce(
+  //   (initial, slas) => [...initial, ...slas],
+  //   [] as Sla[],
+  // ) ?? [];
+
+  if (!result.length) {
     return (
       <div class="p-2">
         <span>CEP inválido</span>
@@ -50,18 +45,18 @@ export default function Results({ result }: ComponentProps<typeof action>) {
 
   return (
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
-      {methods.map((method) => (
-        <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
-          <span class="text-button text-center">
+      {result.map((method) => (
+        <li class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t">
+          <span class="text-button">
             Entrega {method.name}
           </span>
           <span class="text-button">
-            até {formatShippingEstimate(method.shippingEstimate)}
+            até {formatShippingEstimate(method.deadline)}
           </span>
           <span class="text-base font-semibold text-right">
-            {method.price === 0 ? "Grátis" : (
-              formatPrice(method.price / 100, "BRL", "pt-BR")
-            )}
+            {method.value === 0 ? "Grátis" : 
+              method.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            }
           </span>
         </li>
       ))}

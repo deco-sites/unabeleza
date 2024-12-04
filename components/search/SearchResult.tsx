@@ -402,6 +402,7 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 export const loader = (props: Props, req: Request) => {
   const url = new URL(req.url);
   const searchParams = url.search ?? null;
+  console.log(searchParams)
   return {
     ...props,
     url: url.href,

@@ -13,7 +13,7 @@ const onClick = (delta: number) => {
   input.value = `${Math.min(Math.max(input.valueAsNumber + delta, min), max)}`;
   input.dispatchEvent(new Event("change", { bubbles: true }));
 };
-function QuantitySelector(
+function QuantitySelectorMinicart(
   { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
 ) {
   return (
@@ -58,4 +58,4 @@ function QuantitySelector(
     </div>
   );
 }
-export default QuantitySelector;
+export default QuantitySelectorMinicart;

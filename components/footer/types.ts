@@ -33,6 +33,10 @@ export interface DeveloperLogo {
     image: ImageWidget;
     url: string;
   };
+  yav: {
+    image: ImageWidget;
+    url: string;
+  };
 }
 
 export interface Props {

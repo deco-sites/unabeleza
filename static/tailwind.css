@@ -856,21 +856,6 @@ html {
 .carousel-end .carousel-item {
   scroll-snap-align: end;
 }
-.\!checkbox {
-  flex-shrink: 0 !important;
-  --chkbg: var(--fallback-bc,oklch(var(--bc)/1)) !important;
-  --chkfg: var(--fallback-b1,oklch(var(--b1)/1)) !important;
-  height: 1.5rem !important;
-  width: 1.5rem !important;
-  cursor: pointer !important;
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
-  border-radius: var(--rounded-btn, 0.5rem) !important;
-  border-width: 1px !important;
-  border-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity))) !important;
-  --tw-border-opacity: 0.2 !important;
-}
 .checkbox {
   flex-shrink: 0;
   --chkbg: var(--fallback-bc,oklch(var(--bc)/1));
@@ -2214,41 +2199,14 @@ input.tab:checked + .tab-content,
 .carousel::-webkit-scrollbar {
   display: none;
 }
-.\!checkbox:focus {
-  box-shadow: none !important;
-}
 .checkbox:focus {
   box-shadow: none;
-}
-.\!checkbox:focus-visible {
-  outline-style: solid !important;
-  outline-width: 2px !important;
-  outline-offset: 2px !important;
-  outline-color: var(--fallback-bc,oklch(var(--bc)/1)) !important;
 }
 .checkbox:focus-visible {
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
   outline-color: var(--fallback-bc,oklch(var(--bc)/1));
-}
-.\!checkbox:checked,
-  .\!checkbox[checked="true"],
-  .\!checkbox[aria-checked="true"] {
-  background-repeat: no-repeat !important;
-  animation: checkmark var(--animation-input, 0.2s) ease-out !important;
-  background-color: var(--chkbg) !important;
-  background-image: linear-gradient(-45deg, transparent 65%, var(--chkbg) 65.99%),
-      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
-      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
-      linear-gradient(
-        45deg,
-        var(--chkbg) 30%,
-        var(--chkfg) 30.99%,
-        var(--chkfg) 40%,
-        transparent 40.99%
-      ),
-      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%) !important;
 }
 .checkbox:checked,
   .checkbox[checked="true"],
@@ -2268,33 +2226,6 @@ input.tab:checked + .tab-content,
       ),
       linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%);
 }
-.\!checkbox:checked,
-  .\!checkbox[checked="true"],
-  .\!checkbox[aria-checked="true"] {
-  background-repeat: no-repeat !important;
-  animation: checkmark var(--animation-input, 0.2s) ease-out !important;
-  background-color: var(--chkbg) !important;
-  background-image: linear-gradient(-45deg, transparent 65%, var(--chkbg) 65.99%),
-      linear-gradient(45deg, transparent 75%, var(--chkbg) 75.99%),
-      linear-gradient(-45deg, var(--chkbg) 40%, transparent 40.99%),
-      linear-gradient(
-        45deg,
-        var(--chkbg) 30%,
-        var(--chkfg) 30.99%,
-        var(--chkfg) 40%,
-        transparent 40.99%
-      ),
-      linear-gradient(-45deg, var(--chkfg) 50%, var(--chkbg) 50.99%) !important;
-}
-.\!checkbox:indeterminate {
-  --tw-bg-opacity: 1 !important;
-  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity))) !important;
-  background-repeat: no-repeat !important;
-  animation: checkmark var(--animation-input, 0.2s) ease-out !important;
-  background-image: linear-gradient(90deg, transparent 80%, var(--chkbg) 80%),
-      linear-gradient(-90deg, transparent 80%, var(--chkbg) 80%),
-      linear-gradient(0deg, var(--chkbg) 43%, var(--chkfg) 43%, var(--chkfg) 57%, var(--chkbg) 57%) !important;
-}
 .checkbox:indeterminate {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
@@ -2303,13 +2234,6 @@ input.tab:checked + .tab-content,
   background-image: linear-gradient(90deg, transparent 80%, var(--chkbg) 80%),
       linear-gradient(-90deg, transparent 80%, var(--chkbg) 80%),
       linear-gradient(0deg, var(--chkbg) 43%, var(--chkfg) 43%, var(--chkfg) 57%, var(--chkbg) 57%);
-}
-.\!checkbox:disabled {
-  cursor: not-allowed !important;
-  border-color: transparent !important;
-  --tw-bg-opacity: 1 !important;
-  background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity))) !important;
-  opacity: 0.2 !important;
 }
 .checkbox:disabled {
   cursor: not-allowed;
@@ -3792,6 +3716,9 @@ details.collapse summary::-webkit-details-marker {
 .left-\[20px\] {
   left: 20px;
 }
+.left-\[21px\] {
+  left: 21px;
+}
 .left-\[60px\] {
   left: 60px;
 }
@@ -4157,6 +4084,9 @@ details.collapse summary::-webkit-details-marker {
 .\!h-\[53px\] {
   height: 53px !important;
 }
+.\!h-\[91px\] {
+  height: 91px !important;
+}
 .h-1 {
   height: 0.25rem;
 }
@@ -4232,6 +4162,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[6\.04vw\] {
   height: 6.04vw;
 }
+.h-\[88px\] {
+  height: 88px;
+}
 .h-\[var\(--categoryCardCircle-size\)\] {
   height: var(--categoryCardCircle-size);
 }
@@ -4276,6 +4209,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-\[30px\] {
   max-height: 30px;
 }
+.max-h-\[41px\] {
+  max-height: 41px;
+}
 .max-h-\[420px\] {
   max-height: 420px;
 }
@@ -4293,6 +4229,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-h-\[87px\] {
   max-height: 87px;
+}
+.max-h-\[91px\] {
+  max-height: 91px;
 }
 .max-h-full {
   max-height: 100%;
@@ -4357,8 +4296,8 @@ details.collapse summary::-webkit-details-marker {
 .w-\[10px\] {
   width: 10px;
 }
-.w-\[133px\] {
-  width: 133px;
+.w-\[118px\] {
+  width: 118px;
 }
 .w-\[17px\] {
   width: 17px;
@@ -4386,6 +4325,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[363px\] {
   width: 363px;
+}
+.w-\[375px\] {
+  width: 375px;
 }
 .w-\[38\.19vw\] {
   width: 38.19vw;
@@ -4420,8 +4362,14 @@ details.collapse summary::-webkit-details-marker {
 .w-\[79\.73vw\] {
   width: 79.73vw;
 }
+.w-\[88px\] {
+  width: 88px;
+}
 .w-\[90\%\] {
   width: 90%;
+}
+.w-\[97px\] {
+  width: 97px;
 }
 .w-\[calc\(100\%_\/_3\)\] {
   width: calc(100% / 3);
@@ -4506,6 +4454,9 @@ details.collapse summary::-webkit-details-marker {
 .max-w-\[11\.25vw\] {
   max-width: 11.25vw;
 }
+.max-w-\[133px\] {
+  max-width: 133px;
+}
 .max-w-\[134px\] {
   max-width: 134px;
 }
@@ -4571,6 +4522,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .max-w-\[421px\] {
   max-width: 421px;
+}
+.max-w-\[425px\] {
+  max-width: 425px;
 }
 .max-w-\[480px\] {
   max-width: 480px;
@@ -4836,6 +4790,9 @@ details.collapse summary::-webkit-details-marker {
 .gap-\[20px\] {
   gap: 20px;
 }
+.gap-\[22px\] {
+  gap: 22px;
+}
 .gap-\[2px\] {
   gap: 2px;
 }
@@ -4946,6 +4903,9 @@ details.collapse summary::-webkit-details-marker {
   white-space: nowrap;
 }
 .overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+.text-ellipsis {
   text-overflow: ellipsis;
 }
 .whitespace-nowrap {
@@ -5228,10 +5188,6 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.bg-error {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-er,oklch(var(--er)/var(--tw-bg-opacity)));
-}
 .bg-info {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-in,oklch(var(--in)/var(--tw-bg-opacity)));
@@ -5267,9 +5223,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-opacity-15 {
-  --tw-bg-opacity: 0.15;
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
@@ -5466,6 +5419,10 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .py-\[10\.5px\] {
   padding-top: 10.5px;
   padding-bottom: 10.5px;
@@ -5498,11 +5455,17 @@ details.collapse summary::-webkit-details-marker {
 .pb-5 {
   padding-bottom: 1.25rem;
 }
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
 .pb-\[15px\] {
   padding-bottom: 15px;
 }
 .pb-\[31px\] {
   padding-bottom: 31px;
+}
+.pb-\[33px\] {
+  padding-bottom: 33px;
 }
 .pb-\[39\.2px\] {
   padding-bottom: 39.2px;
@@ -5855,10 +5818,6 @@ details.collapse summary::-webkit-details-marker {
 .text-base-100 {
   --tw-text-opacity: 1;
   color: var(--fallback-b1,oklch(var(--b1)/var(--tw-text-opacity)));
-}
-.text-base-300 {
-  --tw-text-opacity: 1;
-  color: var(--fallback-b3,oklch(var(--b3)/var(--tw-text-opacity)));
 }
 .text-base-content {
   --tw-text-opacity: 1;
@@ -6876,6 +6835,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:w-\[42\.66vw\] {
     width: 42.66vw;
+  }
+
+  .mobile\:w-\[79\.73vw\] {
+    width: 79.73vw;
   }
 
   .mobile\:w-\[89\.4\%\] {

@@ -24,24 +24,11 @@ const onClick = () => {
   window.STOREFRONT.CART.addToCart(item, platformProps);
 };
 
-// Copy cart form values into AddToCartButton
 const onLoad = (id: string) => {
-  window.STOREFRONT.CART.subscribe((sdk) => {
+  window.STOREFRONT.CART.subscribe((_) => {
+
     const container = document.getElementById(id);
-    const checkbox = container?.querySelector<HTMLInputElement>(
-      'input[type="checkbox"]',
-    );
-    const input = container?.querySelector<HTMLInputElement>(
-      'input[type="number"]',
-    );
-    const itemID = container?.getAttribute("data-item-id")!;
-    const quantity = sdk.getQuantity(itemID) || 0;
-    if (!input || !checkbox) {
-      return;
-    }
-    input.value = quantity.toString();
-    checkbox.checked = quantity > 0;
-    // enable interactivity
+
     container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
       node.disabled = false
     );

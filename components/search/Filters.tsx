@@ -99,7 +99,6 @@ const filtersToRename: Record<string, string> = {
 }
 
 function Filters({ filters, url }: Props) {
-  console.log(filters)
   const selectedFilters = filters
   .filter(isToggle)
   .filter((filter) => {

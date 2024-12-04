@@ -116,7 +116,7 @@ export default function Cart(
   return (
     <>
       <form
-        class="contents"
+        class="contents w-full"
         id={MINICART_FORM_ID}
         hx-sync="this:replace"
         hx-trigger="submit, change delay:300ms"
@@ -151,7 +151,7 @@ export default function Cart(
 
         <div
           class={clx(
-            "flex flex-col flex-grow justify-center items-center overflow-hidden w-full",
+            "flex flex-col flex-grow justify-center items-center w-full",
             "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300",
           )}
         >
@@ -169,20 +169,10 @@ export default function Cart(
             )
             : (
               <>
-                {/* Free Shipping Bar */}
-                <div class="px-2 py-4 w-full">
-                  <FreeShippingProgressBar
-                    total={total}
-                    locale={locale}
-                    currency={currency}
-                    target={freeShippingTarget}
-                  />
-                </div>
-
                 {/* Cart Items */}
                 <ul
                   role="list"
-                  class="mt-6 px-2 flex-grow overflow-y-auto flex flex-col gap-6 w-full"
+                  class="mt-6 px-5 pb-[33px] flex-grow overflow-y-auto flex flex-col gap-[22px] w-full"
                 >
                   {items.map((item, index) => (
                     <li>
@@ -197,8 +187,8 @@ export default function Cart(
                 </ul>
 
                 {/* Cart Footer */}
-                <footer class="w-full">
-                  {/* Subtotal */}
+                <footer class="w-full p-5">
+                  {/* Subtotal and Total */} 
                   <div class="border-t border-base-200 py-2 flex flex-col">
                     {discounts > 0 && (
                       <div class="flex justify-between items-center px-4">
@@ -214,11 +204,6 @@ export default function Cart(
                         {formatPrice(subtotal, currency, locale)}
                       </output>
                     </div>
-                    {enableCoupon && <Coupon coupon={coupon} />}
-                  </div>
-
-                  {/* Total */}
-                  <div class="border-t border-base-200 pt-4 flex flex-col justify-end items-end gap-2 mx-4">
                     <div class="flex justify-between items-center w-full">
                       <span>Total</span>
                       <output
@@ -228,9 +213,6 @@ export default function Cart(
                         {formatPrice(total, currency, locale)}
                       </output>
                     </div>
-                    <span class="text-sm text-base-300">
-                      Fees and shipping will be calculated at checkout
-                    </span>
                   </div>
 
                   <div class="p-4">

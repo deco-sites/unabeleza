@@ -46,7 +46,7 @@ function ProductCard({
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
-  {/* Add click event to dataLayer */}
+  {/* Add click event to dataLayer */ }
   const event = useSendEvent({
     on: "click",
     event: {
@@ -126,18 +126,6 @@ function ProductCard({
         </a>
 
         {/* Wishlist button */}
-        <div class="absolute top-0 left-0 w-full flex items-center justify-between">
-          {/* Notify Me */}
-          <span
-            class={clx(
-              "text-sm/4 font-normal text-black bg-error bg-opacity-15 text-center rounded-badge px-2 py-1",
-              inStock && "opacity-0",
-            )}
-          >
-            Notify me
-          </span>
-        </div>
-
         <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px]">
           <WishlistButton item={item} variant="icon" stroke="#BD87ED" />
         </div>

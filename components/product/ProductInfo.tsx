@@ -140,7 +140,7 @@ function ProductInfo({ page, itemsShare }: Props) {
         {/* Shipping Simulation */}
         <div class="desktop:mt-8">
           <ShippingSimulationForm
-            items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}
+            items={[{ productVariantId: Number(product.productID), quantity: 1 }]}
           />
         </div>
 
