@@ -28,7 +28,7 @@ function Drawer(
 ) {
   return (
     <>
-      <div class={clx("drawer", _class)}>
+      <div class={clx("drawer z-50", _class)}>
         <input
           id={id}
           name={id}
@@ -45,7 +45,7 @@ function Drawer(
         <aside
           data-aside
           class={clx(
-            "drawer-side h-full z-40 overflow-hidden",
+            "drawer-side h-full overflow-hidden",
             "[[data-aside]&_section]:contents",
           )}
         >
@@ -73,8 +73,8 @@ function Aside({ title, drawer, children, hasLogged = true }: {
         class="bg-base-100 grid grid-rows-[auto_1fr] h-full w-[375px] mobile:w-screen max-w-[425px]"
       >
         <div class="flex justify-center relative items-center p-5 w-full px-5 py-8">
-          <label for={drawer} aria-label="X" class="btn btn-ghost p-0 absolute left-[21px] top-1/2 -translate-y-1/2">
-            <Icon id="close" />
+          <label for={drawer} aria-label="X" class="cursor-pointer p-0 absolute left-[21px] top-1/2 -translate-y-1/2">
+            <Icon id="closeCart" size={16}/>
           </label>
           <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
         </div>
@@ -91,7 +91,7 @@ function Aside({ title, drawer, children, hasLogged = true }: {
           {hasLogged && title
             ? (
               <>
-                <label for={drawer} aria-label="X" class="btn btn-ghost p-0">
+                <label for={drawer} aria-label="X" class="cursor-pointer p-0">
                   <Icon id="drawerArrowLeft" width={30} height={30} />
                 </label>
                 <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
@@ -109,7 +109,7 @@ function Aside({ title, drawer, children, hasLogged = true }: {
                 </div>
               </div>
             )}
-          <label for={drawer} aria-label="X" class="btn btn-ghost p-0">
+          <label for={drawer} aria-label="X" class="cursor-pointer p-0">
             <Icon id="close" />
           </label>
         </div>

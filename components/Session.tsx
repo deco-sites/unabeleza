@@ -76,8 +76,7 @@ const sdk = () => {
           `[data-item-id="${itemId}"] input[type="number"]`,
         );
         const item = getCart()?.items.find((item) =>
-          // deno-lint-ignore no-explicit-any
-          (item as any).item_id === itemId
+          (item as any).item_id === Number(itemId)
         );
         if (!input || !item) {
           return false;
@@ -107,7 +106,7 @@ const sdk = () => {
         const quantity = platformProps.quantity;
         window.DECO.events.dispatch({
           name: "add_to_cart",
-          params: { items: [{ ...item, quantity }]},
+          params: { items: [{ ...item, quantity }] },
         });
         input.value = encodeURIComponent(JSON.stringify(platformProps));
         button.click();
@@ -281,7 +280,7 @@ export default function Session(
       {/* Minicart Drawer */}
       <Drawer
         id={MINICART_DRAWER_ID}
-        class="drawer-end z-50"
+        class="drawer-end z-[1000]"
         aside={
           <Drawer.Aside title="Meu carrinho" drawer={MINICART_DRAWER_ID}>
             <div

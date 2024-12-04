@@ -129,7 +129,7 @@ function ProductInfo({ page, itemsShare }: Props) {
         )}
 
         {/* Add to Cart and Favorites button */}
-        <div class="desktop:mt-4 mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-50">
+        <div class="desktop:mt-4 mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30">
           {availability === "https://schema.org/InStock"
             ? (
               <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} />

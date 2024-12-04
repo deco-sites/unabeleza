@@ -7,6 +7,7 @@ import Coupon from "./Coupon.tsx";
 import FreeShippingProgressBar from "./FreeShippingProgressBar.tsx";
 import CartItem, { Item } from "./Item.tsx";
 import { useScript } from "@deco/deco/hooks";
+import Icon from "../ui/Icon.tsx"
 export interface Minicart {
   /** Cart from the ecommerce platform */
   platformCart: Record<string, unknown>;
@@ -103,8 +104,6 @@ export default function Cart(
         discounts,
         locale,
         currency,
-        enableCoupon = true,
-        freeShippingTarget,
         checkoutHref,
       },
     },
@@ -151,20 +150,24 @@ export default function Cart(
 
         <div
           class={clx(
-            "flex flex-col flex-grow justify-center items-center w-full",
+            "flex flex-col flex-grow justify-center items-center w-full divide-y divide-[#F5F5F5]",
             "[.htmx-request_&]:pointer-events-none [.htmx-request_&]:opacity-60 [.htmx-request_&]:cursor-wait transition-opacity duration-300",
           )}
         >
           {count === 0
             ? (
-              <div class="flex flex-col gap-6">
-                <span class="font-medium text-2xl">Your bag is empty</span>
+              <div class="flex flex-col items-center justify-center">
+                <Icon id="cart" size={96}/>
+                <span class="text-center w-[275px] mt-[26px] mb-[39px]">Sacola Vazia. Adicione produtos para finalizar uma compra!</span>
                 <label
-                  for={MINICART_DRAWER_ID}
-                  class="btn btn-outline no-animation"
-                >
-                  Choose products
-                </label>
+                      for={MINICART_DRAWER_ID}
+                      class={clx(
+                        "btn bg-[#fff] no-animation w-full border-2 border-[#8F2AED] rounded-[5px]",
+                        "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]"
+                      )}
+                    >
+                      CONTINUAR COMPRANDO
+                    </label>
               </div>
             )
             : (
@@ -172,10 +175,10 @@ export default function Cart(
                 {/* Cart Items */}
                 <ul
                   role="list"
-                  class="mt-6 px-5 pb-[33px] flex-grow overflow-y-auto flex flex-col gap-[22px] w-full"
+                  class="px-5 pb-[33px] flex-grow overflow-y-auto flex flex-col gap-[22px] w-full"
                 >
                   {items.map((item, index) => (
-                    <li>
+                    <li class="h-[115px] pb-6 border-b border-[#F5F5F5]">
                       <CartItem
                         item={item}
                         index={index}
@@ -189,40 +192,48 @@ export default function Cart(
                 {/* Cart Footer */}
                 <footer class="w-full p-5">
                   {/* Subtotal and Total */} 
-                  <div class="border-t border-base-200 py-2 flex flex-col">
+                  <div class="flex flex-col gap-4">
                     {discounts > 0 && (
-                      <div class="flex justify-between items-center px-4">
+                      <div class="flex justify-between items-center">
                         <span class="text-sm">Discounts</span>
                         <span class="text-sm">
                           {formatPrice(discounts, currency, locale)}
                         </span>
                       </div>
                     )}
-                    <div class="w-full flex justify-between px-4 text-sm">
+                    <div class="w-full flex justify-between text-sm text-[#060D21]">
                       <span>Subtotal</span>
                       <output form={MINICART_FORM_ID}>
                         {formatPrice(subtotal, currency, locale)}
                       </output>
                     </div>
-                    <div class="flex justify-between items-center w-full">
+                    <div class="flex justify-between items-center w-full font-bold text-base text-[#060D21]">
                       <span>Total</span>
                       <output
                         form={MINICART_FORM_ID}
-                        class="font-medium text-xl"
                       >
                         {formatPrice(total, currency, locale)}
                       </output>
                     </div>
                   </div>
 
-                  <div class="p-4">
+                  <div class="flex flex-col gap-2 mt-6">
+                    <label
+                      for={MINICART_DRAWER_ID}
+                      class={clx(
+                        "btn bg-[#fff] no-animation w-full border-2 border-[#8F2AED] rounded-[5px]",
+                        "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]"
+                      )}
+                    >
+                      CONTINUAR COMPRANDO
+                    </label>
                     <a
-                      class="btn btn-primary w-full no-animation"
+                      class="btn btn-primary w-full no-animation boder-0 rounded-[5px] hover:bg-[#C493EF] hover:border-0"
                       href={checkoutHref}
                       hx-on:click={useScript(sendBeginCheckoutEvent)}
                     >
-                      <span class="[.htmx-request_&]:hidden">
-                        Begin Checkout
+                      <span class="[.htmx-request_&]:hidden text-sm font-bold text-black">
+                        FINALIZAR COMPRA
                       </span>
                       <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
                     </a>

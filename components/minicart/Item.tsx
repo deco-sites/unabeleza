@@ -33,7 +33,7 @@ function CartItem({ item, index, locale, currency }: Props) {
     <fieldset
       // deno-lint-ignore no-explicit-any
       data-item-id={(item as any).item_id}
-      class="grid grid-rows-1 gap-2 !h-[91px] max-h-[91px] pb-6 border-b border-[#F5F5F5]"
+      class="grid grid-rows-1 gap-[10px] !h-[91px] max-h-[91px]"
       style={{ gridTemplateColumns: "auto 1fr" }}
     >
 
@@ -69,11 +69,11 @@ function CartItem({ item, index, locale, currency }: Props) {
 
         {/* Price Block */}
         <div class="flex gap-[22px] justify-between">
-          <div class="flex flex-col items-start w-[118px]">
-            <span class="line-through text-sm">
+          <div class="flex flex-col items-start w-[118px] justify-end">
+            <span class="line-through text-xs text-[#999999]">
               {formatPrice(listPrice, currency, locale)}
             </span>
-            <span class="text-sm text-secondary">
+            <span class="text-sm text-secondary font-bold text-base text-primary">
               {isGift ? "Grátis" : formatPrice(price, currency, locale)}
             </span>
           </div>
