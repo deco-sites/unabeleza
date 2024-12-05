@@ -17,10 +17,15 @@ const onLoad = (id: string, productID: string) =>
     const inWishlist = sdk.inWishlist(productID);
     button.disabled = false;
     button.classList.remove("htmx-request");
-    button.querySelector("svg")?.setAttribute(
-      "fill",
-      inWishlist ? "#8F2AED" : "none",
-    );
+    
+    const svg = button.querySelector("svg");
+
+    inWishlist 
+    ? svg.classList.add("text-[#8F2AED]") 
+    : svg.classList.remove("text-[#8F2AED]") 
+
+    console.log(inWishlist)
+    console.log(productID)
     const span = button.querySelector("span");
     if (span) {
       span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";
@@ -39,7 +44,7 @@ const onClick = (productID: string, productGroupID: string) => {
 function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
   // deno-lint-ignore no-explicit-any
   const productID = (item as any).item_id;
-  const productGroupID = item.item_group_id ?? "";
+  const productGroupID = item.item_group_id.toString() ?? "";
   const id = useId();
   const device = useDevice();
   const addToWishlistEvent = useSendEvent({
@@ -68,7 +73,6 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
             <Icon
               id="favorite"
               class="[.htmx-request_&]:hidden"
-              fill="none"
               width={device === "desktop" ? 26 : 17}
               height={device === "desktop" ? 23 : 15}
               stroke={stroke}
@@ -77,7 +81,7 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
       </button>
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, productID) }}
+        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, productGroupID) }}
       />
     </>
   );

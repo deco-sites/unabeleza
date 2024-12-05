@@ -39,7 +39,7 @@ function MenuItem({ item, loading }: MenuItemProps) {
                   : (
                     <ul class="flex-grow flex flex-col divide-y divide-base-200 overflow-y-auto">
                       {item.children.map((leaf) => {
-                        if (leaf.children.length > 0) {
+                        if (leaf?.children) {
                           return <MenuItem item={leaf} />;
                         }
 

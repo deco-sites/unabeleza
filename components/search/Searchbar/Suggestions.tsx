@@ -2,32 +2,35 @@ import { Suggestion } from "apps/commerce/types.ts";
 import type { AppContext } from "../../../apps/site.ts";
 import { clx } from "../../../sdk/clx.ts";
 import { ComponentProps } from "../../../sections/Component.tsx";
-import ProductCard from "../../product/ProductCard.tsx";
-import Icon from "../../ui/Icon.tsx";
-import Slider from "../../ui/Slider.tsx";
+import { slot } from "./Form.tsx"
+import SearchItem from "./SearchItem.tsx";
 import { ACTION, NAME } from "./Form.tsx";
 import { type Resolved } from "@deco/deco";
+import { useDevice, useScript } from "@deco/deco/hooks";
+import Icon from "../../ui/Icon.tsx";
 export interface Props {
   /**
    * @title Suggestions Integration
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
   loader: Resolved<Suggestion | null>;
+  query: string
 }
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
   const { loader: { __resolveType, ...loaderProps } } = props;
   const form = await req.formData();
-  const query = `${form.get(NAME ?? "q")}`;
+  const query = `${form.get(NAME ?? "busca")}`;
+
   // @ts-expect-error This is a dynamic resolved loader
   const suggestion = await ctx.invoke(__resolveType, {
     ...loaderProps,
     query,
   }) as Suggestion | null;
-  return { suggestion };
+  return { suggestion, query };
 };
 export const loader = async (props: Props, req: Request, ctx: AppContext) => {
   const { loader: { __resolveType, ...loaderProps } } = props;
-  const query = new URL(req.url).searchParams.get(NAME ?? "q");
+  const query = new URL(req.url).searchParams.get(NAME ?? "busca");
   // @ts-expect-error This is a dynamic resolved loader
   const suggestion = await ctx.invoke(__resolveType, {
     ...loaderProps,
@@ -35,58 +38,80 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
   }) as Suggestion | null;
   return { suggestion };
 };
-function Suggestions(
-  { suggestion }: ComponentProps<typeof loader, typeof action>,
-) {
 
-  console.log(suggestion)
+const onClick = (id: string) => {
+  document.querySelector(`#${id}`).innerHTML = ""
+}
+
+
+function Suggestions(
+  { suggestion, query }: ComponentProps<typeof loader, typeof action>,
+) {
   const { products = [], searches = [] } = suggestion ?? {};
-  const hasProducts = Boolean(products.length);
+  const hasProducts = Boolean(products?.length);
   const hasTerms = Boolean(searches.length);
+  const device = useDevice();
   return (
     <div
-      class={clx(`overflow-y-scroll`, !hasProducts && !hasTerms && "hidden")}
+      class={clx(
+        "fixed desktop:right-[calc(60px_+_((100vw_-_min(96rem,100vw))_/_2))] left-0 desktop:-z-10 z-50 desktop:mt-6 bg-white",
+        "w-[min(54.30vw,834px)] mobile:w-screen h-[611px] mobile:h-[72.33vh] mobile:max-h-[596px] mobile:top-[172px] overflow-y-auto",
+        !hasProducts && !hasTerms && "hidden",
+      )}
     >
-      <div class="gap-4 grid grid-cols-1 sm:grid-rows-1 sm:grid-cols-[150px_1fr]">
-        <div class="flex flex-col gap-6">
-          <span class="font-medium text-xl" role="heading" aria-level={3}>
+      <div class="gap-4 grid grid-cols-2 mobile:grid-cols-1 mobile:gap-8 p-[30px] mobile:px-5 mobile:pt-5 relative">
+        {device === "mobile" && (
+          <button class="absolute top-5 right-5" hx-on:click={useScript(onClick, slot)}>
+            <Icon id="closeCart" size={15} />
+          </button>
+        )}
+        <div class="flex flex-col gap-5">
+          <span class="font-[PP-Hatton] font-bold" role="heading" aria-level={3}>
             Sugestões
           </span>
-          <ul class="flex flex-col gap-6">
-            {searches.map(({ term }) => (
-              <li>
-                {/* TODO @gimenes: use name and action from searchbar form */}
-                <a
-                  href={`${ACTION}?${NAME}=${term}`}
-                  class="flex gap-4 items-center"
-                >
-                  <span>
-                    <Icon id="search" />
-                  </span>
-                  <span dangerouslySetInnerHTML={{ __html: term }} />
-                </a>
-              </li>
-            ))}
+          <ul class="flex flex-col gap-4">
+            {(device === "mobile" ? searches.slice(0, 4) : searches).map(({ term }) => {
+              const highlightedTerm = term.replace(
+                new RegExp(`(${query})`, 'gi'), // Busca case-insensitive
+                '<span class="text-primary">$1</span>' // Envolve o texto buscado em um span
+              );
+
+              return (
+                <li>
+                  {/* TODO @gimenes: use name and action from searchbar form */}
+                  <a
+                    href={`${ACTION}?${NAME}=${term}`}
+                    class="flex gap-4 items-center cursor-pointer"
+                  >
+                    <span class="text-sm uppercase" dangerouslySetInnerHTML={{ __html: highlightedTerm }} />
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </div>
-        <div class="flex flex-col pt-6 md:pt-0 gap-6 overflow-x-hidden">
-          <span class="font-medium text-xl" role="heading" aria-level={3}>
+        <div class="flex flex-col gap-5">
+          <span class="font-[PP-Hatton] font-bold" role="heading" aria-level={3}>
             Produtos sugeridos
           </span>
-          <Slider class="carousel">
-            {products.map((product, index) => (
-              <Slider.Item
-                index={index}
-                class="carousel-item first:ml-4 last:mr-4 min-w-[200px] max-w-[200px]"
-              >
-                <ProductCard
+          <ul
+            role="list"
+            class="flex-grow flex flex-col gap-[22px] w-full"
+          >
+            {products?.slice(0, (device === "desktop" ? 3 : 2)).map((product) => (
+              <li class="h-[115px] pb-6 border-b border-[#F5F5F5]">
+                <SearchItem
                   product={product}
-                  index={index}
-                  itemListName="Suggeestions"
                 />
-              </Slider.Item>
-            ))}
-          </Slider>
+              </li>
+            ))
+            }
+          </ul>
+          {products?.length > (device === "desktop" ? 3 : 2) && (
+            <a href={`${ACTION}?${NAME}=${query}`} class="text-center underline text-xs cursor-pointer">
+              Veja todos os {products?.length} produtos
+            </a>
+          )}
         </div>
       </div>
     </div>

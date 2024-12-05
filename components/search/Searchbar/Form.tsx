@@ -1,13 +1,3 @@
-/**
- * We use a custom route at /busca?busca= to perform the search. This component
- * redirects the user to /busca?busca={term} when the user either clicks on the
- * button or submits the form. Make sure this page exists in deco.cx/admin
- * of yout site. If not, create a new page on this route and add the appropriate
- * loader.
- *
- * Note that this is the most performatic way to perform a search, since
- * no JavaScript is shipped to the browser!
- */
 import { Suggestion } from "apps/commerce/types.ts";
 import {
   SEARCHBAR_INPUT_FORM_ID,
@@ -35,6 +25,7 @@ export interface SearchbarProps {
   loader: Resolved<Suggestion | null>;
 }
 const script = (formId: string, name: string, popupId: string) => {
+  console.log(popupId)
   const form = document.getElementById(formId) as HTMLFormElement | null;
   const input = form?.elements.namedItem(name) as HTMLInputElement | null;
   form?.addEventListener("submit", () => {
@@ -52,6 +43,7 @@ const script = (formId: string, name: string, popupId: string) => {
     // Open Searchbar on meta+k
     if (e.metaKey === true && isK) {
       const input = document.getElementById(popupId) as HTMLInputElement | null;
+      
       if (input) {
         input.checked = true;
         document.getElementById(formId)?.focus();
@@ -59,31 +51,21 @@ const script = (formId: string, name: string, popupId: string) => {
     }
   });
 };
+export const slot = "SEARCH_BAR_RESULT";
 const Suggestions = import.meta.resolve("./Suggestions.tsx");
 export default function Searchbar(
   { placeholder = "What are you looking for?", loader }: SearchbarProps,
 ) {
-  const slot = useId();
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6"
+      class="w-full grid gap-8 rounded-[5px] border border-[#E7E7E7] h-10 p-0 overflow-hidden"
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
-        <button
-          type="submit"
-          class="btn join-item btn-square no-animation"
-          aria-label="Search"
-          for={SEARCHBAR_INPUT_FORM_ID}
-          tabIndex={-1}
-        >
-          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
-        </button>
+      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join flex items-center gap-1 h-10">
         <input
-          autoFocus
+          id={SEARCHBAR_POPUP_ID}
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="join-item w-full text-base-400 mobile:text-black truncate h-full focus:outline-0 py-[10px] pl-5"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -94,15 +76,19 @@ export default function Searchbar(
           hx-trigger={`input changed delay:300ms, ${NAME}`}
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
-        />
-        <label
-          type="button"
-          class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
-          for={SEARCHBAR_POPUP_ID}
-          aria-label="Toggle searchbar"
+        /> 
+
+
+        <button
+          type="submit"
+          class="cursor-pointer join-item h-full px-[10px] py-[10px]"
+          aria-label="Search"
+          for={SEARCHBAR_INPUT_FORM_ID}
+          tabIndex={-1}
         >
-          <Icon id="close" />
-        </label>
+          <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
+          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
+        </button>
       </form>
 
       {/* Suggestions slot */}

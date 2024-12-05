@@ -28,7 +28,7 @@ function Drawer(
 ) {
   return (
     <>
-      <div class={clx("drawer z-50", _class)}>
+      <div class={clx("drawer z-30", _class)}>
         <input
           id={id}
           name={id}
