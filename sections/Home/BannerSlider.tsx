@@ -3,6 +3,7 @@ import Image from "apps/website/components/Image.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { clx } from "../../sdk/clx.ts";
+import { useId } from "../../sdk/useId.ts";
 
 /** @title {{title}} */
 interface ItemProps {
@@ -72,18 +73,50 @@ function SliderItem({ btn = false, ...props }: ItemProps) {
 export default function BannerSlider(
   { items, title }: FavoritesSliderProps,
 ) {
+  const id = useId();
+
   return (
-    <div class="px-[60px] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
-      <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
-        {title}
-      </h2>
-      <Slider class="carousel carousel-center w-full !justify-between gap-[1.11vw] h-full mx-auto mobile mobile:gap-4">
-        {items.map((item, index) => (
-          <Slider.Item index={index} class="carousel-item">
-            <SliderItem {...item} />
-          </Slider.Item>
+    <div id={id} class={clx(
+      "px-[60px] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto",
+      "mobile:grid",
+      "mobile:grid-rows-[1fr_32px_1fr_64px]",
+      "w-screen",
+    )}>
+      {title && (
+        <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
+          {title}
+        </h2>
+      )}
+      <div class="col-span-full row-span-full">
+        <Slider class="carousel carousel-center w-full desktop:!justify-between gap-[1.11vw] h-full mx-auto mobile mobile:gap-6">
+          {items.map((item, index) => (
+            <Slider.Item index={index} class="carousel-item mobile:w-full h-full">
+              <SliderItem {...item} />
+            </Slider.Item>
+          ))}
+        </Slider>
+      </div>
+      <ul
+        class={clx(
+          "col-span-full row-start-4 z-10 desktop:hidden",
+          "carousel justify-center gap-[10px] items-end mb-8",
+        )}
+      >
+        {items.map((_, index) => (
+          <li class="carousel-item">
+            <Slider.Dot
+              index={index}
+              class={clx(
+                "bg-white h-1 w-8 no-animation rounded-[1px]",
+                "disabled:bg-secondary disabled:opacity-100 transition-[width]",
+              )}
+            >
+            </Slider.Dot>
+          </li>
         ))}
-      </Slider>
+      </ul>
+
+      <Slider.JS rootId={id} infinite />
     </div>
   );
 }
