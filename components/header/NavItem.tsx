@@ -23,7 +23,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   });
 
   return (
-    <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-primary h-[29px] last:rounded-[5px] last:py-1 last:px-3">
+    <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-[#DBB9F9] h-[29px] last:rounded-[5px] last:py-1 last:px-3">
       <a
         href={url}
         class="group-last:font-bold group-hover:font-bold text-sm font-normal leading-[21px]"

@@ -19,7 +19,7 @@ export default function BenefitBar({ items, class: _class }: BenefitBarProps) {
   return (
     <div
       class={clx(
-        "w-full bg-primary",
+        "w-full bg-[#DBB9F9]",
         _class,
       )}
     >

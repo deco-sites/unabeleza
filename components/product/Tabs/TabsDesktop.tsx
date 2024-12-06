@@ -24,8 +24,8 @@ export default function TabsDesktop({ productInformations }: TabsDesktopProps) {
                             }}
                             class={clx(
                                 "tab justify-self-center !w-[--quantity-tabs] max-w-[421px] py-4 px-[10px] !max-h-full !h-[53px]",
-                                "!border-b border-[#F5F5F5] checked:!border-b-[5px] checked:!border-primary",
-                                "font-bold text-sm checked:text-primary text-black uppercase flex-1"
+                                "!border-b border-[#F5F5F5] checked:!border-b-[5px] checked:!border-secondary",
+                                "font-bold text-sm checked:text-secondary text-black uppercase flex-1"
                             )}
                         />
                         <div

@@ -36,7 +36,7 @@ export default function Form({ items }: Props) {
           maxLength={8}
           size={8}
         >
-          <button type="submit" class="join-item no-animation px-4 text-primary font-semibold text-sm border border-l-0 border-[#DBDBDB]">
+          <button type="submit" class="join-item no-animation px-4 text-secondary font-semibold text-sm border border-l-0 border-[#DBDBDB]">
             <span class="[.htmx-request_&]:hidden inline">CALCULAR</span>
             <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
           </button>

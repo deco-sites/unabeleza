@@ -65,7 +65,7 @@ export default function Searchbar(
         <input
           id={SEARCHBAR_POPUP_ID}
           tabIndex={0}
-          class="join-item w-full text-base-400 mobile:text-black truncate h-full focus:outline-0 py-[10px] pl-5"
+          class="join-item w-full text-[#999999] mobile:text-black truncate h-full focus:outline-0 py-[10px] pl-5"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"

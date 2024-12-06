@@ -21,7 +21,7 @@ export default function Modal({ title, children, cta }: ModalProps) {
         <>
             <button 
                 onClick={() => setIsOpen(true)}
-                class="w-fit font-bold text-xs text-primary cursor-pointer uppercase hover:underline decoration-primary"
+                class="w-fit font-bold text-xs text-secondary cursor-pointer uppercase hover:underline decoration-secondary"
             >
                 {cta}
             </button>

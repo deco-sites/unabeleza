@@ -27,7 +27,7 @@ export default function Duvidas({
   subTitleDown,
 }: ItemsDuvidasProps) {
   return (
-    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] mb-[80px] pl-[333px] pr-[118px]">
+    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] mb-[80px] pl-[333px] pr-[118px] max-w-[96rem] mx-auto">
       <TituloSubtitulo
         title={title}
         subTitle={subTitle}

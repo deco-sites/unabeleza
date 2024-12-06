@@ -19,15 +19,18 @@ export interface Banner {
   /** @description Image's alt text */
   alt: string;
 
+  /** @description when user clicks on the image, go to this link */
+  linkImage?: string
+
   action?: {
     /** @description when user clicks on the image, go to this link */
-    href: string;
+    href?: string;
     /** @description Image text title */
-    title: string;
+    title?: string;
     /** @description Image text subtitle */
-    subTitle: string;
+    subTitle?: string;
     /** @description Button label */
-    label: string;
+    label?: string;
   };
 }
 
@@ -54,6 +57,7 @@ function BannerItem(
     mobile,
     desktop,
     action,
+    linkImage
   } = image;
   const params = { promotion_name: image.alt };
 
@@ -70,11 +74,11 @@ function BannerItem(
   return (
     <a
       {...selectPromotionEvent}
-      href={action?.href ?? "#"}
+      href={linkImage ?? "#"}
       aria-label={action?.label}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
+      {/* {action && (
         <div
           class={clx(
             "absolute h-full w-full top-0 left-0",
@@ -96,7 +100,7 @@ function BannerItem(
             {action.label}
           </button>
         </div>
-      )}
+      )} */}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"

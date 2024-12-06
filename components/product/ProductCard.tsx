@@ -135,6 +135,7 @@ function ProductCard({
               "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
               "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
               "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]",
+              inStock && "opacity-0"
             )}
           >
             NOVIDADE

@@ -1,5 +1,5 @@
 import type { Product } from "apps/commerce/types.ts";
-
+import { useDevice } from "@deco/deco/hooks";
 import ProductSlider from "../../components/product/ProductSlider.tsx";
 import { clx } from "../../sdk/clx.ts";
 
@@ -18,6 +18,11 @@ export default function ShelfWithText(
     return null;
   }
 
+  const device = useDevice();
+  const filteredProducts = device === "desktop"
+  ? products.slice(0, 2)
+  : products;
+
   return (
     <div class={clx("flex flex-col justify-between w-full", _class)}>
       <div class="flex flex-col gap-6">
@@ -27,7 +32,7 @@ export default function ShelfWithText(
         <p class="text-sm font-normal">{text}</p>
       </div>
       <div class="mobile:py-[30px] w-full">
-        <ProductSlider products={products} itemListName={title} />
+        <ProductSlider products={filteredProducts} itemListName={title} class="desktop:hidden"/>
       </div>
     </div>
   );

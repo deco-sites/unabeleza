@@ -9,7 +9,7 @@ export default function SocialMedia({ social }: SocialMediaProps) {
   if (!social) return null;
   return (
     <div class="flex flex-col gap-[9.39px] mobile:justify-center">
-      <span class="font-[PP-Hatton] text-sm font-bold mobile:text-center">
+      <span class="text-sm font-bold mobile:text-center">
         Redes sociais
       </span>
       <ul class="flex gap-4 mobile:justify-center">

@@ -14,12 +14,7 @@
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "alt": "Shoes",
-          "action": {
-            "title": "Skate into Adventure",
-            "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "/busca?busca=shoes&page=0",
-            "label": "Grab Yours Now!"
-          }
+          "action": {}
         },
         {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d26304f4-355b-48d0-b649-e24b9cbf0ded",
@@ -819,7 +814,8 @@
           },
           "prices": {}
         }
-      }
+      },
+      "linkImage": "#"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

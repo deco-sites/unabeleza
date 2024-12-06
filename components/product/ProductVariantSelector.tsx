@@ -12,8 +12,8 @@ interface Props {
 const useStyles = (checked: boolean) => {
   return clx(
     "btn shadow-custom-2 w-12 h-12",
-    "hover:border hover:border-[#8F2AED] hover:bg-transparent",
-    checked ? "border border-[#8F2AED]" : "border-0"
+    "hover:border hover:border-secondary hover:bg-transparent",
+    checked ? "border border-secondary" : "border-0"
   );
 };
 export const Ring = ({ value, checked = false, class: _class }: {
@@ -70,7 +70,7 @@ function VariantSelector({ product }: Props) {
               <button
                 className={clx(
                   "collapse-title btn flex justify-between items-center border-2 !row-start-[last] max-w-[134px] h-[30px] top-6",
-                  "min-h-0 border-primary rounded-[5px] py-[6px] px-4 font-bold text-primary text-xs whitespace-nowrap"
+                  "min-h-0 border-secondary rounded-[5px] py-[6px] px-4 font-bold text-secondary text-xs whitespace-nowrap"
                 )}>
                 Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
               </button>

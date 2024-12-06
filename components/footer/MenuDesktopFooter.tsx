@@ -32,7 +32,7 @@ export default function MenuDesktopFooter(
             <ul class="flex justify-evenly w-full">
               {menus?.map(({ title, items }) => (
                 <li class="flex flex-col gap-4">
-                  <h3 class="font-[PP-Hatton] text-sm font-bold">{title}</h3>
+                  <h3 class="text-sm font-bold">{title}</h3>
                   <ul class="flex flex-col gap-2 max-w-[174px]">
                     {items.map(({ title, href }) => {
                       const newTitle = title.includes("strong")
@@ -41,7 +41,7 @@ export default function MenuDesktopFooter(
                       return (
                         <li>
                           <a
-                            class="text-sm font-medium text-base-400 flex gap-[5px]"
+                            class="text-xs font-medium text-base-400 flex gap-[5px]"
                             href={href}
                             dangerouslySetInnerHTML={{ __html: newTitle }}
                           />
@@ -55,7 +55,7 @@ export default function MenuDesktopFooter(
           </div>
 
           <div class="flex flex-col flex-[1] gap-4">
-            <h3 class="font-[PP-Hatton] text-sm font-bold">
+            <h3 class="text-sm font-bold">
               {paymentMethods?.title}
             </h3>
             <ul class="grid grid-cols-5 auto-rows-auto gap-x-[6px] gap-y-[10px] w-fit">

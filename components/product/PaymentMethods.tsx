@@ -53,7 +53,7 @@ export default function PaymentMethods({ methods, priceCurrency }: PaymentMethod
                                     defaultChecked
                                     class={clx(
                                         "tab !w-[calc((38.19vw_-_40px)_/_3)] mobile:!w-[calc((100vw_-_64px)_/_3)] h-fit !border-b checked:!border-b-2",
-                                        "checked:!border-primary font-bold text-sm mobile:text-xs checked:text-primary uppercase"
+                                        "checked:!border-secondary font-bold text-sm mobile:text-xs checked:text-secondary uppercase"
                                     )}
                                     aria-label={obj.name}
                                 />
@@ -79,7 +79,7 @@ export default function PaymentMethods({ methods, priceCurrency }: PaymentMethod
                                 role="tab"
                                 class={clx(
                                     "tab !w-[calc((38.19vw_-_40px)_/_3)] mobile:!w-[calc((100vw_-_64px)_/_3)]  h-fit !border-b checked:!border-b-2",
-                                    "checked:!border-primary font-bold text-sm mobile:text-xs checked:text-primary uppercase"
+                                    "checked:!border-secondary font-bold text-sm mobile:text-xs checked:text-secondary uppercase"
                                 )}
                                 aria-label={obj.name}
                             />

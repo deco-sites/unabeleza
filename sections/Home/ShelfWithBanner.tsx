@@ -13,10 +13,11 @@ import { clx } from "../../sdk/clx.ts";
 interface ShelfWithBannerProps extends ShelfWithTextProps {
   img: ImageWidget;
   alt?: string;
+  linkImage?: string
 }
 
 export default function ShelfWithBanner(
-  { img, ...props }: ShelfWithBannerProps,
+  { img, linkImage, ...props }: ShelfWithBannerProps,
 ) {
   if (!props.products || props.products.length === 0) {
     return null;
@@ -44,20 +45,26 @@ export default function ShelfWithBanner(
       <Section.Header title={props.title} />
       <div
         class={clx(
-          "w-full flex gap-4",
+          "w-full grid grid-cols-2 gap-4",
           "mobile:flex-col mobile:gap-6",
         )}
       >
-        <Image
-          src={img}
-          alt={props.alt ?? props?.title}
-          width={652}
-          height={700}
-          loading="lazy"
-          class={clx(
-            "w-1/2 full h-full object-cover mobile:w-full desktop:pb-4",
-          )}
-        />
+        <div class="w-full">
+          <Image
+            src={img}
+            alt={props.alt ?? props?.title}
+            width={652}
+            height={700}
+            loading="lazy"
+            class={clx(
+              "w-full h-full object-cover mobile:w-full",
+            )}
+          />
+          <a>
+            
+          </a>
+        </div>
+
         <ShelfWithText
           class={clx(
             "w-1/2 mobile:w-full",

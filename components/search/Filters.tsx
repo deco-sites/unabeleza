@@ -111,15 +111,13 @@ function Filters({ filters, url }: Props) {
 
   return (
     <div class="mobile:flex mobile:flex-col mobile:justify-between mobile:h-full">
-    <ul class="flex flex-col max-w-full mobile:mt-10 desktop:gap-6 pl-[60px] pr-8 mobile:px-5">
-      <li class="w-full">
+    <ul class="flex flex-col max-w-full mobile:mt-10 desktop:gap-6 pr-8 mobile:px-5">
         {selectedFilters.length > 0 && (
           <SelectedFilters filters={selectedFilters} />
         )}
-      </li>
       {filtred
         .map((filter) => (
-          <li class="flex flex-col gap-4 border-b border-[#F5F5F5] w-full" key={filter.label}>
+          <li class="flex flex-col gap-4 border-b border-[#F5F5F5] mobile:w-full desktop:ml-[60px]" key={filter.label}>
             <div tabIndex={0} className="collapse collapse-arrow2 mobile:p-0">
               <input type="checkbox" className="peer" />
               <div className="collapse-title text-sm font-bold uppercase mobile:py-4 mobile:pr-2 mobile:px-0">{filtersToRename[filter.label.toLocaleLowerCase()] || filter.label}</div>

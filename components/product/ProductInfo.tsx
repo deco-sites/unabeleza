@@ -32,7 +32,7 @@ function ProductInfo({ page, itemsShare }: Props) {
   const { productID, offers, isVariantOf, aggregateRating } = product;
   const title = isVariantOf?.name ?? product.name;
 
-  const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({...obj})) ?? [];
+  const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({ ...obj })) ?? [];
 
   const {
     price = 0,
@@ -114,22 +114,25 @@ function ProductInfo({ page, itemsShare }: Props) {
 
           {
             priceSpecification && (
-              <Modal title="Opções de pagamento" cta="Formas de pagamento">
-                <PaymentMethods methods={priceSpecification} priceCurrency={offers?.priceCurrency} />
-              </Modal>
+              <div class="mt-3">
+                <Modal title="Opções de pagamento" cta="Formas de pagamento">
+                  <PaymentMethods methods={priceSpecification} priceCurrency={offers?.priceCurrency} />
+                </Modal>
+              </div>
             )
           }
         </div>
 
         {/* Sku Selector */}
         {hasValidVariants && (
-          <div className="desktop:mt-4 sm:mt-8">
             <ProductSelector product={product} />
-          </div>
         )}
 
         {/* Add to Cart and Favorites button */}
-        <div class="desktop:mt-4 mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30">
+        <div class={clx(
+          "desktop:mt-4 ",
+          availability === "https://schema.org/InStock" && "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30"
+        )}>
           {availability === "https://schema.org/InStock"
             ? (
               <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} />

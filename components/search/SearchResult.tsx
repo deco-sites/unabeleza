@@ -40,17 +40,18 @@ export interface Props {
   searchParams?: string | null;
 }
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
+  console.log("params", searchParams)
   return (
     <>
-      {searchParams
+      { searchParams
         ? (
-          <div class="w-full flex flex-col justify-center items-center">
-            <div class="w-full flex flex-col justify-center items-center py-10">
+          <div class="w-full flex flex-col gap-[30px] mobile:gap-6 justify-center items-center">
+            <div class="w-full flex flex-col gap-10 mobile:gap-6 justify-center items-center ">
               <Icon
                 id="faceIcon"
                 width="70"
                 height="69"
-                class="mt-[87px] mb-[40px]"
+                class="mt-[87px]"
               />
               <span class="font-[PP-Hatton] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">
                 OPS... Não encontramos nenhum resultado para:
@@ -393,7 +394,7 @@ function Result(props: SectionProps<typeof loader>) {
 }
 
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  if (!page) {
+  if (!page?.pageInfo.records) {
     return <NotFound {...props} />;
   }
   return <Result {...props} page={page} />;
@@ -402,7 +403,6 @@ function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
 export const loader = (props: Props, req: Request) => {
   const url = new URL(req.url);
   const searchParams = url.search ?? null;
-  console.log(searchParams)
   return {
     ...props,
     url: url.href,
