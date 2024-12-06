@@ -7262,6 +7262,10 @@ details.collapse summary::-webkit-details-marker {
     display: flex;
   }
 
+  .desktop\:grid {
+    display: grid;
+  }
+
   .desktop\:hidden {
     display: none;
   }
@@ -7321,6 +7325,10 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:max-w-\[var\(--favoriteSlider-width\)\] {
     max-width: var(--favoriteSlider-width);
+  }
+
+  .desktop\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .desktop\:justify-center {

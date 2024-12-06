@@ -1,3 +1,5 @@
+import { type LoadingFallbackProps } from "@deco/deco";
+
 export interface Props {
   phone?: number;
 }
@@ -41,6 +43,9 @@ function WhatsApp({ phone }: Props) {
   );
 }
 
-export const LoadingFallback = () => null;
+export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
+  // deno-lint-ignore no-explicit-any
+  <WhatsApp {...props as any} loading="lazy" />
+);
 
 export default WhatsApp;

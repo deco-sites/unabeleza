@@ -45,8 +45,8 @@ export default function ShelfWithBanner(
       <Section.Header title={props.title} />
       <div
         class={clx(
-          "w-full grid grid-cols-2 gap-4",
-          "mobile:flex-col mobile:gap-6",
+          "w-full desktop:grid desktop:grid-cols-2 gap-4",
+          "mobile:flex mobile:flex-col mobile:gap-6",
         )}
       >
         <div class="w-full">
