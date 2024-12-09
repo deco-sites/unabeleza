@@ -40,7 +40,6 @@ export interface Props {
   searchParams?: string | null;
 }
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
-  console.log("params", searchParams)
   return (
     <>
       { searchParams

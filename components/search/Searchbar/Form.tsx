@@ -25,7 +25,6 @@ export interface SearchbarProps {
   loader: Resolved<Suggestion | null>;
 }
 const script = (formId: string, name: string, popupId: string) => {
-  console.log(popupId)
   const form = document.getElementById(formId) as HTMLFormElement | null;
   const input = form?.elements.namedItem(name) as HTMLInputElement | null;
   form?.addEventListener("submit", () => {

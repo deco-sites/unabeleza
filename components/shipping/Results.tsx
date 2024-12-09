@@ -28,12 +28,6 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 }
 
 export default function Results({ result }: ComponentProps<typeof action>) {
-  console.log(result)
-
-  // const methods = result?.reduce(
-  //   (initial, slas) => [...initial, ...slas],
-  //   [] as Sla[],
-  // ) ?? [];
 
   if (!result.length) {
     return (

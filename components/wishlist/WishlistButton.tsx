@@ -24,8 +24,6 @@ const onLoad = (id: string, productID: string) =>
     ? svg.classList.add("text-[#8F2AED]") 
     : svg.classList.remove("text-[#8F2AED]") 
 
-    console.log(inWishlist)
-    console.log(productID)
     const span = button.querySelector("span");
     if (span) {
       span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";

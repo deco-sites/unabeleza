@@ -17,7 +17,6 @@ async function action(
 ): Promise<Wishlist> {
   const { productID, productGroupID } = props;
   const platform = usePlatform();
-  console.log(props)
 
   if (platform === "vtex") {
     const vtex = ctx as unknown as AppContextVTEX;
@@ -50,7 +49,6 @@ async function action(
     const wake = ctx as unknown as AppContextWAKE;
 
     const list = await wake.invoke("wake/loaders/wishlist.ts");
-    console.log(list)
     const item = list.find((i) => i.productId === Number(productGroupID));
 
     try {
