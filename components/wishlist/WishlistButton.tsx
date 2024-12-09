@@ -7,9 +7,6 @@ import { useDevice, useScript } from "@deco/deco/hooks";
 interface Props {
   variant?: "full" | "icon";
   item: AnalyticsItem;
-  stroke: string
-  fill?: string
-  typeTwo?: boolean
 }
 const onLoad = (id: string, productID: string) =>
   window.STOREFRONT.WISHLIST.subscribe((sdk) => {
@@ -17,15 +14,10 @@ const onLoad = (id: string, productID: string) =>
     const inWishlist = sdk.inWishlist(productID);
     button.disabled = false;
     button.classList.remove("htmx-request");
-    
-    const svg = button.querySelector("svg");
-
-    inWishlist 
-    ? svg.classList.add("text-[#8F2AED]") 
-    : svg.classList.remove("text-[#8F2AED]") 
-
-    console.log(inWishlist)
-    console.log(productID)
+    button.querySelector("svg")?.setAttribute(
+      "fill",
+      inWishlist ? "#8F2AED" : "none",
+    );
     const span = button.querySelector("span");
     if (span) {
       span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";
@@ -41,10 +33,10 @@ const onClick = (productID: string, productGroupID: string) => {
     window.alert(`Please login to add the product to your wishlist`);
   }
 };
-function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
+function WishlistButton({ item, variant = "full" }: Props) {
   // deno-lint-ignore no-explicit-any
   const productID = (item as any).item_id;
-  const productGroupID = item.item_group_id.toString() ?? "";
+  const productGroupID = item.item_group_id ?? "";
   const id = useId();
   const device = useDevice();
   const addToWishlistEvent = useSendEvent({
@@ -64,24 +56,39 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
         aria-label="Add to wishlist"
         hx-on:click={useScript(onClick, productID, productGroupID)}
         class={clx(
-          "btn btn-circle no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
-           `btn-ghost btn-sm hover:bg-info`,
-           fill ? `text-[${fill}]` : "text-transparent",
-           typeTwo ? "shadow-custom-2" : "border border-[#E3EBED]"
+          "btn btn-circle border border-[#E3EBED] no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
+          variant === "icon"
+            ? "btn-ghost btn-sm text-transparent hover:bg-info"
+            : "btn-primary btn-outline gap-2",
         )}
       >
+        {device === "desktop"
+          ? (
             <Icon
               id="favorite"
               class="[.htmx-request_&]:hidden"
-              width={device === "desktop" ? 26 : 17}
-              height={device === "desktop" ? 23 : 15}
-              stroke={stroke}
+              fill="none"
+              width={26}
+              height={23}
             />
+          )
+          : (
+            <Icon
+              id="favoriteMobile"
+              class="[.htmx-request_&]:hidden"
+              fill="none"
+              width={17}
+              height={15}
+            />
+          )}
+        {variant === "full" && (
+          <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
+        )}
         <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
       </button>
       <script
         type="module"
-        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, productGroupID) }}
+        dangerouslySetInnerHTML={{ __html: useScript(onLoad, id, productID) }}
       />
     </>
   );

@@ -9,12 +9,11 @@ export interface Props {
 export default function Form({ items }: Props) {
   const slot = useId();
 
-
   return (
     <div class="flex flex-col gap-2">
       <div class="flex flex-col">
-        <span class="text-black font-bold text-sm">
-         CEP
+        <span class="text-[#616B6B] text-sm pt-5 border-t-[1px] border-gray-300">
+          Please provide your ZIP code to check the delivery times.
         </span>
       </div>
 
@@ -30,17 +29,16 @@ export default function Form({ items }: Props) {
         <input
           as="input"
           type="text"
-          class="input flex-1 focus:outline-0 input-bordered join-item w-48 border-r-0 border-[#DBDBDB]"
+          class="input input-bordered join-item w-48"
           placeholder="00000000"
           name="postalCode"
           maxLength={8}
           size={8}
-        >
-          <button type="submit" class="join-item no-animation px-4 text-secondary font-semibold text-sm border border-l-0 border-[#DBDBDB]">
-            <span class="[.htmx-request_&]:hidden inline">CALCULAR</span>
-            <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
-          </button>
-        </input>
+        />
+        <button type="submit" class="btn join-item no-animation">
+          <span class="[.htmx-request_&]:hidden inline">Calculate</span>
+          <span class="[.htmx-request_&]:inline hidden loading loading-spinner loading-xs" />
+        </button>
       </form>
 
       {/* Results Slot */}

@@ -5,7 +5,6 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import { useDevice } from "@deco/deco/hooks";
 
 export interface Props {
   /** @title Integration */
@@ -39,18 +38,15 @@ export default function GallerySlider(props: Props) {
     name?.includes(img.alternateName || "")
   );
   const images = filtered.length > 0 ? filtered : groupImages;
-  const device = useDevice();
 
   return (
     <>
       <div
         id={id}
-        class="grid grid-flow-col grid-cols-[min-content_1fr] gap-5 mobile:flex mobile:flex-col"
+        class="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-[min-content_1fr] gap-5"
       >
         {/* Image Slider */}
-        <div class={clx(
-          "col-span-1 col-start-2",
-        )}>
+        <div class="col-start-1 col-span-1 sm:col-start-2">
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
               {images.map((img, index) => (
@@ -59,8 +55,8 @@ export default function GallerySlider(props: Props) {
                   class="carousel-item w-full"
                 >
                   <Image
-                    class="w-full object-contain"
-                    sizes="(max-width: 640px) 100vw, 40vw "
+                    class="w-full"
+                    sizes="(max-width: 640px) 100vw, 40vw"
                     style={{ aspectRatio: ASPECT_RATIO }}
                     src={img.url!}
                     alt={img.alternateName}
@@ -97,46 +93,30 @@ export default function GallerySlider(props: Props) {
         </div>
 
         {/* Dots */}
-        <div class={clx(
-          "col-start-1 col-span-1 mobile:flex mobile:justify-center",
-        )}>
+        <div class="col-start-1 col-span-1">
           <ul
             class={clx(
               "carousel carousel-center",
-              "carousel-vertical mobile:carousel-horizontal",
+              "sm:carousel-vertical",
               "gap-2",
               "max-w-full",
               "overflow-x-auto",
-              "overflow-y-auto",
+              "sm:overflow-y-auto",
             )}
             style={{ maxHeight: "600px" }}
           >
             {images.map((img, index) => (
-              <li class="carousel-item desktop:w-16 desktop:h-16">
-                {
-                  device === "desktop"
-                    ? (
-                      <Slider.Dot index={index}>
-                        <Image
-                          style={{ aspectRatio: "1 / 1" }}
-                          class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
-                          width={64}
-                          height={64}
-                          src={img.url!}
-                          alt={img.alternateName}
-                        />
-                      </Slider.Dot>
-                    )
-                    : (
-                      <Slider.Dot
-                        index={index}
-                        class={clx(
-                          "bg-[#EBECF0] h-1 w-8 no-animation rounded-[1px]",
-                          "disabled:bg-primary disabled:opacity-100 transition-[width]"
-                        )}
-                      />
-                    )
-                }
+              <li class="carousel-item w-16 h-16">
+                <Slider.Dot index={index}>
+                  <Image
+                    style={{ aspectRatio: "1 / 1" }}
+                    class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
+                    width={64}
+                    height={64}
+                    src={img.url!}
+                    alt={img.alternateName}
+                  />
+                </Slider.Dot>
               </li>
             ))}
           </ul>

@@ -14,9 +14,6 @@ declare global {
     STOREFRONT: SDK;
   }
 }
-
-export type PlatformProps = { quantity: number } & Record<string, unknown>
-
 export interface Cart {
   currency: string;
   coupon: string;
@@ -28,7 +25,7 @@ export interface SDK {
     getCart: () => Cart | null;
     getQuantity: (itemId: string) => number | undefined;
     setQuantity: (itemId: string, quantity: number) => boolean;
-    addToCart: (item: Item, platformProps: PlatformProps) => boolean;
+    addToCart: (item: Item, platformProps: unknown) => boolean;
     subscribe: (
       cb: (sdk: SDK["CART"]) => void,
       opts?: boolean | AddEventListenerOptions,
@@ -76,7 +73,8 @@ const sdk = () => {
           `[data-item-id="${itemId}"] input[type="number"]`,
         );
         const item = getCart()?.items.find((item) =>
-          (item as any).item_id === Number(itemId)
+          // deno-lint-ignore no-explicit-any
+          (item as any).item_id === itemId
         );
         if (!input || !item) {
           return false;
@@ -103,10 +101,9 @@ const sdk = () => {
         if (!input || !button) {
           return false;
         }
-        const quantity = platformProps.quantity;
         window.DECO.events.dispatch({
           name: "add_to_cart",
-          params: { items: [{ ...item, quantity }] },
+          params: { items: { item } },
         });
         input.value = encodeURIComponent(JSON.stringify(platformProps));
         button.click();
@@ -280,11 +277,15 @@ export default function Session(
       {/* Minicart Drawer */}
       <Drawer
         id={MINICART_DRAWER_ID}
-        class="drawer-end z-[1000]"
+        class="drawer-end z-50"
         aside={
-          <Drawer.Aside title="Meu carrinho" drawer={MINICART_DRAWER_ID}>
+          <Drawer.Aside title="My Bag" drawer={MINICART_DRAWER_ID}>
             <div
-              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto w-full"
+              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto"
+              style={{
+                minWidth: "calc(min(100vw, 425px))",
+                maxWidth: "425px",
+              }}
             >
               <CartProvider cart={minicart!} />
             </div>

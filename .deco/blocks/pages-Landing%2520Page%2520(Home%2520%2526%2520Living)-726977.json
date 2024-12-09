@@ -1,6 +1,6 @@
 {
-  "name": "Search Page",
-  "path": "/s",
+  "name": "Landing Page (Home & Living)",
+  "path": "/home-and-living",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -22,7 +22,10 @@
       "section": {
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
-          "__resolveType": "PLP Loader"
+          "__resolveType": "shopify/loaders/ProductListingPage.ts",
+          "count": 12,
+          "collectionName": "Home & Living",
+          "query": "home & living"
         },
         "layout": {
           "columns": {

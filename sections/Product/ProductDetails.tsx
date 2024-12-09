@@ -4,21 +4,17 @@ import ProductInfo from "../../components/product/ProductInfo.tsx";
 import Breadcrumb from "../../components/ui/Breadcrumb.tsx";
 import Section from "../../components/ui/Section.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { ShareProps } from "../../components/ui/Share.tsx";
-import Tabs from "../../components/product/Tabs/index.tsx";
-import { ProductShelfComponent } from "../../sections/Product/ProductShelf.tsx";
-import { type Section as SectionType } from "@deco/deco/blocks";
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  itemsShare: ShareProps
-  productShelf: SectionType<ProductShelfComponent>;
 }
 
-export default function ProductDetails(props: Props) {
-
-  if (!props.page) {
+export default function ProductDetails({ page }: Props) {
+  /**
+   * Rendered when a not found is returned by any of the loaders run on this page
+   */
+  if (!page) {
     return (
       <div class="w-full flex justify-center items-center py-28">
         <div class="flex flex-col items-center justify-center gap-6">
@@ -32,29 +28,24 @@ export default function ProductDetails(props: Props) {
   }
 
   return (
-    <>
-      <Section.Container class="mobile:mt-[60px]">
-        <Breadcrumb itemListElement={props.page.breadcrumbList.itemListElement} />
+    <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
+      <Breadcrumb itemListElement={page.breadcrumbList.itemListElement} />
 
-        <div
-          class={clx(
-            "flex gap-5",
-            "mobile:flex-col w-full"
-          )}
-        >
-          <div class="desktop:w-[45.13vw]">
-            <ImageGallerySlider page={props.page} />
-          </div>
-          <div class="desktop:w-[45.13vw]">
-            <ProductInfo {...props} />
-          </div>
+      <div
+        class={clx(
+          "container grid",
+          "grid-cols-1 gap-2 py-0",
+          "sm:grid-cols-5 sm:gap-6",
+        )}
+      >
+        <div class="sm:col-span-3">
+          <ImageGallerySlider page={page} />
         </div>
-        <div class="w-full desktop:max-w-[calc(100%_-_254px)]">
-          <Tabs page={props.page} />
+        <div class="sm:col-span-2">
+          <ProductInfo page={page} />
         </div>
-      </Section.Container>
-      <props.productShelf.Component {...props.productShelf.props} />
-    </>
+      </div>
+    </div>
   );
 }
 

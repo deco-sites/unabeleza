@@ -9,10 +9,9 @@ import { useDevice } from "@deco/deco/hooks";
 interface Props {
   products: Product[];
   itemListName?: string;
-  class?: string
 }
 
-function ProductSlider({ products, itemListName, class: _class }: Props) {
+function ProductSlider({ products, itemListName }: Props) {
   const id = useId();
   const device = useDevice();
 
@@ -20,7 +19,7 @@ function ProductSlider({ products, itemListName, class: _class }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1 w-full mobile:max-w-[89.6vw]"
+        class="grid grid-rows-1 w-full mobile:max-w-[336px]"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
@@ -47,10 +46,7 @@ function ProductSlider({ products, itemListName, class: _class }: Props) {
           </Slider>
         </div>
 
-        <div class={clx(
-          "col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]",
-          _class
-        )}>
+        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
           <Slider.PrevButton
             class={clx(
               "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
@@ -67,10 +63,7 @@ function ProductSlider({ products, itemListName, class: _class }: Props) {
           </Slider.PrevButton>
         </div>
 
-        <div class={clx(
-          "col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]",
-          _class
-          )}>
+        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center p-2 relative bottom-[15%]">
           <Slider.NextButton
             class={clx(
               "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",

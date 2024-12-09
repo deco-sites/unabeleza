@@ -3,7 +3,6 @@ import { type Wishlist } from "../../components/wishlist/Provider.tsx";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 
 import { AppContext as AppContextVTEX } from "apps/vtex/mod.ts";
-import { AppContext as AppContextWAKE } from "apps/wake/mod.ts";
 
 interface Props {
   productID: string;
@@ -17,7 +16,6 @@ async function action(
 ): Promise<Wishlist> {
   const { productID, productGroupID } = props;
   const platform = usePlatform();
-  console.log(props)
 
   if (platform === "vtex") {
     const vtex = ctx as unknown as AppContextVTEX;
@@ -42,35 +40,6 @@ async function action(
     } catch {
       return {
         productIDs: list.map((item) => item.sku),
-      };
-    }
-  }
-
-  if (platform === "wake") {
-    const wake = ctx as unknown as AppContextWAKE;
-
-    const list = await wake.invoke("wake/loaders/wishlist.ts");
-    console.log(list)
-    const item = list.find((i) => i.productId === Number(productGroupID));
-
-    try {
-      const response = item
-        ? await wake.invoke(
-          "wake/actions/wishlist/removeProduct.ts",
-          { productId: Number(productGroupID) },
-        )
-        : await wake.invoke(
-          "wake/actions/wishlist/addProduct.ts",
-          { productId: Number(productGroupID) },
-        );
-
-
-      return {
-        productIDs: response.productId.toString(),
-      };
-    } catch {
-      return {
-        productIDs: list.map((item) => item.productId.toString()),
       };
     }
   }

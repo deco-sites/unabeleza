@@ -4,16 +4,37 @@ import { relative } from "../../sdk/url.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useVariantPossibilities } from "../../sdk/useVariantPossiblities.ts";
 import { useSection } from "@deco/deco/hooks";
-import Icon from "../ui/Icon.tsx";
 interface Props {
   product: Product;
 }
-
-const useStyles = (checked: boolean) => {
+const colors: Record<string, string | undefined> = {
+  "White": "white",
+  "Black": "black",
+  "Gray": "gray",
+  "Blue": "#99CCFF",
+  "Green": "#aad1b5",
+  "Yellow": "#F1E8B0",
+  "DarkBlue": "#4E6E95",
+  "LightBlue": "#bedae4",
+  "DarkGreen": "#446746",
+  "LightGreen": "#aad1b5",
+  "DarkYellow": "#c6b343",
+  "LightYellow": "#F1E8B0",
+};
+const useStyles = (value: string, checked: boolean) => {
+  if (colors[value]) {
+    return clx(
+      "border border-base-300 rounded-full",
+      "w-12 h-12 block",
+      "border border-[#C9CFCF] rounded-full",
+      "ring-2 ring-offset-2",
+      checked ? "ring-primary" : "ring-transparent",
+    );
+  }
   return clx(
-    "btn shadow-custom-2 w-12 h-12",
-    "hover:border hover:border-secondary hover:bg-transparent",
-    checked ? "border border-secondary" : "border-0"
+    "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:border-[#C9CFCF] w-12 h-12",
+    "ring-2 ring-offset-2",
+    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]",
   );
 };
 export const Ring = ({ value, checked = false, class: _class }: {
@@ -21,25 +42,12 @@ export const Ring = ({ value, checked = false, class: _class }: {
   checked?: boolean;
   class?: string;
 }) => {
-
-  const [colorName, color] = value.split(" ");
-
-  const styles = clx(useStyles(checked), _class);
+  const color = colors[value];
+  const styles = clx(useStyles(value, checked), _class);
   return (
-
-    <div style={{ backgroundColor: color }} class={clx(
-      "w-[4.44vw] mobile:w-16 max-w-16 flex flex-col justify-end items-center rounded-[5px] overflow-hidden p-0",
-      color && "h-[6.04vw] mobile:h-[87px] max-h-[87px]",
-      styles
-    )}>
-
-      <span class={clx(
-        "bg-white h-[42px] w-full flex justify-center items-center p-[6.5px]",
-        "font-normal text-[10px]"
-      )}>
-        {colorName ? colorName : null}
-      </span>
-    </div>
+    <span style={{ backgroundColor: color }} class={styles}>
+      {color ? null : value}
+    </span>
   );
 };
 function VariantSelector({ product }: Props) {
@@ -49,12 +57,11 @@ function VariantSelector({ product }: Props) {
   const relativeUrl = relative(url);
   const id = useId();
   const filteredNames = Object.keys(possibilities).filter((name) =>
-    name.toLowerCase() === "cor"
+    name.toLowerCase() !== "title" && name.toLowerCase() !== "default title"
   );
   if (filteredNames.length === 0) {
     return null;
   }
-
   return (
     <ul
       class="flex flex-col gap-4"
@@ -63,24 +70,9 @@ function VariantSelector({ product }: Props) {
       hx-sync="this:replace"
     >
       {filteredNames.map((name) => (
-        <li class="space-y-2 collapse">
-          {Object.entries(possibilities[name]).filter(([value]) => value).length >= 7 && (
-            <>
-              <input type="checkbox" className="peer max-w-[134px] h-[30px] !row-start-[last] mt-6" />
-              <button
-                className={clx(
-                  "collapse-title btn flex justify-between items-center border-2 !row-start-[last] max-w-[134px] h-[30px] top-6",
-                  "min-h-0 border-secondary rounded-[5px] py-[6px] px-4 font-bold text-secondary text-xs whitespace-nowrap"
-                )}>
-                Mostrar mais <Icon id="chevron-bottom" stroke="#8F2AED" width={5} height={10} />
-              </button>
-            </>
-          )}
+        <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
-          <ul class={clx(
-            "grid grid-cols-6 desktop-lg:grid-cols-7 desktop-sm:grid-cols-5 mobile:grid-cols-4 mobile-lg:grid-cols-6",
-            "gap-4 h-[110px] overflow-hidden peer-checked:h-full"
-          )}>
+          <ul class="flex flex-row gap-4">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {
@@ -92,6 +84,7 @@ function VariantSelector({ product }: Props) {
                       class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
                       hx-get={useSection({ href: relativeLink })}
                     >
+                      {/* Checkbox for radio button on the frontend */}
                       <input
                         class="hidden peer"
                         type="radio"
@@ -121,8 +114,6 @@ function VariantSelector({ product }: Props) {
                 );
               })}
           </ul>
-
-
         </li>
       ))}
     </ul>

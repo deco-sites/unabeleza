@@ -28,7 +28,7 @@ async function loader(
     );
 
     return {
-      productIDs: response.map((item) => item.productId.toString()),
+      productIDs: response.map((item) => item.productId),
     };
   }
   if (platform === "shopify") {

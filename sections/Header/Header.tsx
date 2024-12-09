@@ -9,10 +9,13 @@ import Searchbar, {
 } from "../../components/search/Searchbar/Form.tsx";
 import Drawer from "../../components/ui/Drawer.tsx";
 import Icon from "../../components/ui/Icon.tsx";
+import Modal from "../../components/ui/Modal.tsx";
 import {
   HEADER_HEIGHT_DESKTOP,
   HEADER_HEIGHT_MOBILE,
   NAVBAR_HEIGHT_MOBILE,
+  SEARCHBAR_DRAWER_ID,
+  SEARCHBAR_POPUP_ID,
   SIDEMENU_CONTAINER_ID,
   SIDEMENU_DRAWER_ID,
 } from "../../constants.ts";
@@ -53,6 +56,21 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert">;
 const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
   <>
+    <Modal id={SEARCHBAR_POPUP_ID}>
+      <div
+        class="absolute top-0 bg-base-100 container"
+        style={{ marginTop: HEADER_HEIGHT_MOBILE }}
+      >
+        {loading === "lazy"
+          ? (
+            <div class="flex justify-center items-center">
+              <span class="loading loading-spinner" />
+            </div>
+          )
+          : <Searchbar {...searchbar} />}
+      </div>
+    </Modal>
+
     <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-15 max-w-[96rem]">
       <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
@@ -67,13 +85,16 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
         </div>
 
         <div class="flex items-center gap-10 w-full">
-          {loading === "lazy"
-            ? (
-              <div class="flex justify-center items-center">
-                <span class="loading loading-spinner" />
-              </div>
-            )
-            : <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />}
+          <label
+            for={SEARCHBAR_POPUP_ID}
+            class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
+            aria-label="search icon button"
+          >
+            <span class="text-base-400 truncate">
+              Faça sua busca aqui
+            </span>
+            <Icon id="search" width="20" height="20" />
+          </label>
 
           <div class="flex gap-5 items-center">
             <Icon id="heart" class="cursor-pointer" />
@@ -84,7 +105,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
       </div>
 
       <div class="flex items-center">
-        <ul class="flex w-full justify-between bg-white items-center h-[45px] border-y border-neutral-100">
+        <ul class="flex w-full justify-between py-2 border-y border-neutral-100">
           {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
         </ul>
         <div>
@@ -96,6 +117,22 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
 );
 const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
   <>
+    <Drawer
+      id={SEARCHBAR_DRAWER_ID}
+      aside={
+        <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
+          <div class="w-screen overflow-y-auto">
+            {loading === "lazy"
+              ? (
+                <div class="h-full w-full flex items-center justify-center">
+                  <span class="loading loading-spinner" />
+                </div>
+              )
+              : <Searchbar {...searchbar} />}
+          </div>
+        </Drawer.Aside>
+      }
+    />
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
@@ -109,7 +146,7 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
                 <span class="loading loading-spinner" />
               </div>
             )
-            : <MenuMobile navItems={navItems} />}
+            : <MenuMobile navItems={navItems ?? []} />}
         </Drawer.Aside>
       }
     />
@@ -152,13 +189,16 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
       </div>
     </div>
     <div class="flex place-items-center w-screen px-5 my-4 gap-4">
-    {loading === "lazy"
-        ? (
-          <div class="flex justify-center items-center">
-            <span class="loading loading-spinner" />
-          </div>
-        )
-        : <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />}
+      <label
+        for={SEARCHBAR_DRAWER_ID}
+        class="input input-bordered flex items-center px-5 py-[10.5px] justify-between gap-2 w-full h-10 rounded-[5px] border-[#E7E7E7]"
+        aria-label="search icon button"
+      >
+        <span class="text-base-400 truncate">
+          Faça sua busca aqui
+        </span>
+        <Icon id="search" width="20" height="20" />
+      </label>
     </div>
   </>
 );
@@ -185,7 +225,8 @@ function Header({
     >
       <div class="bg-base-100 fixed w-full z-40">
         <PopUp {...popUp}/>
-        {alerts && <Alert alerts={alerts} />}
+        {alerts !== undefined &&         
+        alerts?.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />
           : <Mobile logo={logo} {...props} />}

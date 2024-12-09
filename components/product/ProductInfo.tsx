@@ -7,21 +7,15 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import ShippingSimulationForm from "../shipping/Form.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
+import AddToCartButton from "./AddToCartButton.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
-import AddQuantityToCart from "./AddQuantityToCart.tsx";
-import ReviewRating from "./ReviewRating.tsx";
-import Share, { ShareProps } from "../ui/Share.tsx";
-import { useDevice } from "@deco/deco/hooks";
-import Modal from "../../islands/Modal.tsx";
-import PaymentMethods, { Method } from "./PaymentMethods.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
-  itemsShare: ShareProps
 }
 
-function ProductInfo({ page, itemsShare }: Props) {
+function ProductInfo({ page }: Props) {
   const id = useId();
 
   if (page === null) {
@@ -29,18 +23,20 @@ function ProductInfo({ page, itemsShare }: Props) {
   }
 
   const { breadcrumbList, product } = page;
-  const { productID, offers, isVariantOf, aggregateRating } = product;
+  const { productID, offers, isVariantOf } = product;
+  const description = product.description || isVariantOf?.description;
   const title = isVariantOf?.name ?? product.name;
-
-  const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({ ...obj })) ?? [];
 
   const {
     price = 0,
     listPrice,
-    installments,
     seller = "1",
-    availability
+    availability,
   } = useOffer(offers);
+
+  const percent = listPrice && price
+    ? Math.round(((listPrice - price) / listPrice) * 100)
+    : 0;
 
   const breadcrumb = {
     ...breadcrumbList,
@@ -74,88 +70,80 @@ function ProductInfo({ page, itemsShare }: Props) {
       variant?.name?.toLowerCase() !== "default title",
   ) ?? false;
 
-  const device = useDevice();
-
   return (
-    <div class={clx("flex desktop:gap-[3.61vw]")}>
-      <div {...viewItemEvent} class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full flex-1" id={id}>
-
-        {/* Product Name */}
-        <span class={clx("text-2xl font-bold")}>
-          {title}
-        </span>
-
-        <div class="space-y-[7px]">
-          <span class={clx("text-xs text-[#252429]")}>
-            REF: {productID}
-          </span>
-          <ReviewRating reviewCount={aggregateRating?.reviewCount} ratingValue={aggregateRating?.ratingValue} />
-        </div>
-
-
-        {/* Prices */}
-        <div class="flex flex-col gap-1">
-          <div class="flex gap-2.5 items-center">
-            {listPrice && (
-              <span class="line-through text-base text-black">
-                {formatPrice(listPrice, offers?.priceCurrency)}
-              </span>
-            )}
-            <span class="text-xl font-bold text-secondary">
-              {formatPrice(price, offers?.priceCurrency)}
-            </span>
-          </div>
-
-          {installments && (
-            <span class="text-xs font-semibold texy-black">
-              Até {installments}
-            </span>
-          )}
-
-          {
-            priceSpecification && (
-              <div class="mt-3">
-                <Modal title="Opções de pagamento" cta="Formas de pagamento">
-                  <PaymentMethods methods={priceSpecification} priceCurrency={offers?.priceCurrency} />
-                </Modal>
-              </div>
-            )
-          }
-        </div>
-
-        {/* Sku Selector */}
-        {hasValidVariants && (
-            <ProductSelector product={product} />
+    <div {...viewItemEvent} class="flex flex-col" id={id}>
+      {/* Price tag */}
+      <span
+        class={clx(
+          "text-sm/4 font-normal text-black bg-primary bg-opacity-15 text-center rounded-badge px-2 py-1",
+          percent < 1 && "opacity-0",
+          "w-fit",
         )}
+      >
+        {percent} % off
+      </span>
 
-        {/* Add to Cart and Favorites button */}
-        <div class={clx(
-          "desktop:mt-4 ",
-          availability === "https://schema.org/InStock" && "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30"
-        )}>
-          {availability === "https://schema.org/InStock"
-            ? (
-              <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} />
-            )
-            : <OutOfStock productID={productID} />}
-        </div>
+      {/* Product Name */}
+      <span class={clx("text-3xl font-semibold", "pt-4")}>
+        {title}
+      </span>
 
-        {/* Shipping Simulation */}
-        <div class="desktop:mt-8">
-          <ShippingSimulationForm
-            items={[{ productVariantId: Number(product.productID), quantity: 1 }]}
-          />
-        </div>
-
+      {/* Prices */}
+      <div class="flex gap-3 pt-1">
+        <span class="text-3xl font-semibold text-base-400">
+          {formatPrice(price, offers?.priceCurrency)}
+        </span>
+        <span class="line-through text-sm font-medium text-gray-400">
+          {formatPrice(listPrice, offers?.priceCurrency)}
+        </span>
       </div>
-      {
-        device === "desktop" && (
-          <div class="space-y-3 max-w-10">
-            <WishlistButton item={item} stroke="#707070" typeTwo={true} />
-            <Share {...itemsShare} />
-          </div>
-        )
-      }
+
+      {/* Sku Selector */}
+      {hasValidVariants && (
+        <div className="mt-4 sm:mt-8">
+          <ProductSelector product={product} />
+        </div>
+      )}
+
+      {/* Add to Cart and Favorites button */}
+      <div class="mt-4 sm:mt-10 flex flex-col gap-2">
+        {availability === "https://schema.org/InStock"
+          ? (
+            <>
+              <AddToCartButton
+                item={item}
+                seller={seller}
+                product={product}
+                class="btn btn-primary no-animation"
+                disabled={false}
+              />
+              <WishlistButton item={item} />
+            </>
+          )
+          : <OutOfStock productID={productID} />}
+      </div>
+
+      {/* Shipping Simulation */}
+      <div class="mt-8">
+        <ShippingSimulationForm
+          items={[{ id: Number(product.sku), quantity: 1, seller: seller }]}
+        />
+      </div>
+
+      {/* Description card */}
+      <div class="mt-4 sm:mt-6">
+        <span class="text-sm">
+          {description && (
+            <details>
+              <summary class="cursor-pointer">Description</summary>
+              <div
+                class="ml-2 mt-2"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
+            </details>
+          )}
+        </span>
+      </div>
     </div>
   );
 }

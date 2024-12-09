@@ -3,9 +3,7 @@
   "searchbar": {
     "loader": {
       "__resolveType": "resolved",
-      "data": {
-        "__resolveType": "wake/loaders/suggestion.ts"
-      }
+      "data": null
     },
     "placeholder": "Faça sua busca aqui"
   },

@@ -3,27 +3,20 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-import * as $Accordion from "./islands/Accordion.tsx";
 import * as $AccordionItem from "./islands/AccordionItem.tsx";
 import * as $ButtonMenuInstitucionalMobile from "./islands/ButtonMenuInstitucionalMobile.tsx";
-import * as $Modal from "./islands/Modal.tsx";
-import * as $Popup from "./islands/Popup.tsx";
-import * as $ShowPriceItem from "./islands/ShowPriceItem.tsx";
-import type { Manifest } from "$fresh/server.ts";
+import * as $PopUp from "./islands/PopUp.tsx";
+import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
   islands: {
-    "./islands/Accordion.tsx": $Accordion,
     "./islands/AccordionItem.tsx": $AccordionItem,
     "./islands/ButtonMenuInstitucionalMobile.tsx":
       $ButtonMenuInstitucionalMobile,
-    "./islands/Modal.tsx": $Modal,
-    "./islands/Popup.tsx": $Popup,
-    "./islands/ShowPriceItem.tsx": $ShowPriceItem,
-
+    "./islands/PopUp.tsx": $PopUp,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
