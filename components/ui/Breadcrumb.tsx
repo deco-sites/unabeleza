@@ -25,8 +25,8 @@ function Breadcrumb({ itemListElement = [] }: Props) {
               )
             }
             return (
-              <li class="group">
-                <a  class="group-last:font-bold breadcrumb-item text-xs" href={relative(item)}>{name}</a>
+              <li class="group overflow-hidden text-ellipsis">
+                <a  class="group-last:font-bold breadcrumb-item text-xs whitespace-nowrap" href={relative(item)}>{name}</a>
               </li>
             )
           })}

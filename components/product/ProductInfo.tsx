@@ -78,7 +78,7 @@ function ProductInfo({ page, itemsShare }: Props) {
 
   return (
     <div class={clx("flex desktop:gap-[3.61vw]")}>
-      <div {...viewItemEvent} class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full" id={id}>
+      <div {...viewItemEvent} class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full flex-1" id={id}>
 
         {/* Product Name */}
         <span class={clx("text-2xl font-bold")}>
