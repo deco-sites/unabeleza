@@ -1,20 +1,18 @@
 {
   "name": "Product Page",
-  "path": "/products/:slug",
+  "path": "/produto/:slug",
   "default": {
     "possiblePaths": []
   },
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "commerce/sections/Seo/SeoPDPV2.tsx",
-        "jsonLD": {
-          "__resolveType": "PDP Loader"
-        },
-        "jsonLDs": [
-          {}
-        ]
+      "__resolveType": "commerce/sections/Seo/SeoPDP.tsx",
+      "jsonLD": {
+        "__resolveType": "wake/loaders/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        }
       }
     },
     {
@@ -28,35 +26,57 @@
       "section": {
         "__resolveType": "site/sections/Product/ProductDetails.tsx",
         "page": {
-          "__resolveType": "PDP Loader"
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "You may also like",
-        "products": {
-          "__resolveType": "shopify/loaders/ProductList.ts",
-          "props": {
-            "sort": "",
-            "query": "a",
-            "count": 9
-          },
-          "filters": {
-            "tags": [],
-            "productTypes": [],
-            "productVendors": [],
-            "variantOptions": []
+          "__resolveType": "wake/loaders/productDetailsPage.ts",
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
           }
+        },
+        "itemsShare": {
+          "items": [
+            {
+              "url": "https://www.facebook.com/sharer.php?u={{url}}",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/642b1809-abc6-4035-a549-d743e5040f9e/facebook.svg",
+              "name": "Facebook"
+            },
+            {
+              "name": "WhatsApp",
+              "url": "https://api.whatsapp.com/send?text=Venha conhecer esse lindo produto que encontrei! É simplesmente encantador! {{url}}",
+              "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/67e4a615-28aa-43c0-b013-a96c56c82805/whatsapp-Unabeleza.svg"
+            }
+          ]
+        },
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {}
+            }
+          },
+          "title": "Veja por lançamentos",
+          "cta": "VER TODOS"
         }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
       }
     },
     {

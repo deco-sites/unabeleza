@@ -28,7 +28,7 @@ interface Props extends JSX.SVGAttributes<SVGSVGElement> {
    *
    * Example: <Icon id="search" />
    */
-  id: AvailableIcons;
+  id: AvailableIcons | string;
   size?: number;
 }
 

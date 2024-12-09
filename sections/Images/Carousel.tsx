@@ -19,16 +19,8 @@ export interface Banner {
   /** @description Image's alt text */
   alt: string;
 
-  action?: {
-    /** @description when user clicks on the image, go to this link */
-    href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
-    /** @description Button label */
-    label: string;
-  };
+  /** @description when user clicks on the image, go to this link */
+  linkImage?: string
 }
 
 export interface Props {
@@ -53,7 +45,7 @@ function BannerItem(
     alt,
     mobile,
     desktop,
-    action,
+    linkImage
   } = image;
   const params = { promotion_name: image.alt };
 
@@ -70,33 +62,10 @@ function BannerItem(
   return (
     <a
       {...selectPromotionEvent}
-      href={action?.href ?? "#"}
-      aria-label={action?.label}
+      href={linkImage ?? "#"}
+      aria-label={alt}
       class="relative block overflow-y-hidden w-full"
     >
-      {action && (
-        <div
-          class={clx(
-            "absolute h-full w-full top-0 left-0",
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
-          )}
-        >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="btn btn-primary btn-outline border-0 bg-base-100 min-w-[180px]"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
-        </div>
-      )}
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"
@@ -177,7 +146,7 @@ function Carousel({ images = [], preload, interval }: Props) {
               index={index}
               class={clx(
                 "bg-white h-1 w-8 no-animation rounded-[1px]",
-                "disabled:bg-primary disabled:opacity-100 transition-[width]",
+                "disabled:bg-secondary disabled:opacity-100 transition-[width]",
               )}
             >
             </Slider.Dot>

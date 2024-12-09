@@ -28,7 +28,7 @@ export default function MenuInstitucional(
   }: ReturnType<typeof loader>,
 ) {
   return (
-    <div className="hidden desktop:block absolute top-[280px] left-[80px] list-none bg-[#FAFAFA] py-[40px] pl-[40px] pr-[49px]">
+    <div className="hidden desktop:block absolute top-[280px] left-[calc(80px_+_((100vw_-_min(96rem,100vw))_/_2))] list-none bg-[#FAFAFA] py-[40px] pl-[40px] pr-[49px]">
       <h3 className="text-black text-[16px] font-bold mb-[20px]">
         {institutionalTitle}
       </h3>

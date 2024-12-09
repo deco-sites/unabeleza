@@ -2,7 +2,7 @@ import Slider from "../../components/ui/Slider.tsx";
 import { useId } from "../../sdk/useId.ts";
 
 export interface Props {
-  alerts?: string[];
+  alerts: string[];
   /**
    * @title Autoplay interval
    * @description time (in seconds) to start the carousel autoplay
@@ -15,7 +15,7 @@ function Alert({ alerts = [], interval = 5 }: Props) {
 
   return (
     <div id={id}>
-      <Slider class="carousel carousel-center w-screen gap-6 bg-secondary text-secondary-content text-sm/4">
+      <Slider class="carousel carousel-center w-screen gap-6 bg-[#DBB9F9] text-black text-sm/4">
         {alerts.map((alert, index) => (
           <Slider.Item index={index} class="carousel-item">
             <span

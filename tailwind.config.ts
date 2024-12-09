@@ -17,6 +17,7 @@ export default {
     extend: {
       boxShadow: {
         "custom": "1.28px 1.28px 5.12px 0px rgba(0, 0, 0, 0.25)",
+        "custom-2": "0px 0px 20px 0px #1E253714"
       },
       animation: {
         sliding: "sliding 30s linear infinite",
@@ -35,6 +36,9 @@ export default {
       phone: { max: "768px" },
       mobile: { max: "1025px" },
       desktop: { min: "1026px" },
+      "desktop-lg": { min: "1340px"},
+      "desktop-sm": { min: "1026px", max: "1200px"},
+      "mobile-lg": { min: "768px", max: "1025px"},
     },
   },
 };

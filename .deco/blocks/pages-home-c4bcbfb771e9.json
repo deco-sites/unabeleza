@@ -14,12 +14,7 @@
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "alt": "Shoes",
-          "action": {
-            "title": "Skate into Adventure",
-            "subTitle": "Top-quality roller skate shoes for all levels. ",
-            "href": "/s?q=shoes&page=0",
-            "label": "Grab Yours Now!"
-          }
+          "action": {}
         },
         {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d26304f4-355b-48d0-b649-e24b9cbf0ded",
@@ -819,7 +814,8 @@
           },
           "prices": {}
         }
-      }
+      },
+      "linkImage": "#"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -848,6 +844,20 @@
       "title": "Sobre Nós",
       "subtitle": "Nós somos a Unabeleza",
       "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/LGPD/PopupLGPD.tsx",
+        "text": "<p><span>Para sua maior segurança, atualizamos as </span><strong><span>Políticas de Privacidade e Termos de Uso</span></strong><span> do site. <br>Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</span></p>",
+        "btnText": "CONCORDAR E FECHAR"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

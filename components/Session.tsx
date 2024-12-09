@@ -14,6 +14,9 @@ declare global {
     STOREFRONT: SDK;
   }
 }
+
+export type PlatformProps = { quantity: number } & Record<string, unknown>
+
 export interface Cart {
   currency: string;
   coupon: string;
@@ -25,7 +28,7 @@ export interface SDK {
     getCart: () => Cart | null;
     getQuantity: (itemId: string) => number | undefined;
     setQuantity: (itemId: string, quantity: number) => boolean;
-    addToCart: (item: Item, platformProps: unknown) => boolean;
+    addToCart: (item: Item, platformProps: PlatformProps) => boolean;
     subscribe: (
       cb: (sdk: SDK["CART"]) => void,
       opts?: boolean | AddEventListenerOptions,
@@ -73,8 +76,7 @@ const sdk = () => {
           `[data-item-id="${itemId}"] input[type="number"]`,
         );
         const item = getCart()?.items.find((item) =>
-          // deno-lint-ignore no-explicit-any
-          (item as any).item_id === itemId
+          (item as any).item_id === Number(itemId)
         );
         if (!input || !item) {
           return false;
@@ -101,9 +103,10 @@ const sdk = () => {
         if (!input || !button) {
           return false;
         }
+        const quantity = platformProps.quantity;
         window.DECO.events.dispatch({
           name: "add_to_cart",
-          params: { items: { item } },
+          params: { items: [{ ...item, quantity }] },
         });
         input.value = encodeURIComponent(JSON.stringify(platformProps));
         button.click();
@@ -277,15 +280,11 @@ export default function Session(
       {/* Minicart Drawer */}
       <Drawer
         id={MINICART_DRAWER_ID}
-        class="drawer-end z-50"
+        class="drawer-end z-[1000]"
         aside={
-          <Drawer.Aside title="My Bag" drawer={MINICART_DRAWER_ID}>
+          <Drawer.Aside title="Meu carrinho" drawer={MINICART_DRAWER_ID}>
             <div
-              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto"
-              style={{
-                minWidth: "calc(min(100vw, 425px))",
-                maxWidth: "425px",
-              }}
+              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto w-full"
             >
               <CartProvider cart={minicart!} />
             </div>

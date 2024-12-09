@@ -7,10 +7,15 @@ import Section, {
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import { type LoadingFallbackProps } from "@deco/deco";
+import { JSX } from "preact";
+
+export type ProductShelfComponent = JSX.Element;
+
 export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
-export default function ProductShelf({ products, title, cta }: Props) {
+
+export default function ProductShelf({ products, title, cta }: Props): ProductShelfComponent | null {
   if (!products || products.length === 0) {
     return null;
   }

@@ -5,6 +5,7 @@ import { useId } from "../../sdk/useId.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 import QuantitySelector from "../ui/QuantitySelector.tsx";
 import { useScript } from "@deco/deco/hooks";
+import { relative } from "../../sdk/url.ts";
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   product: Product;
   seller: string;
@@ -34,22 +35,10 @@ const onChange = () => {
 };
 // Copy cart form values into AddToCartButton
 const onLoad = (id: string) => {
-  window.STOREFRONT.CART.subscribe((sdk) => {
+  window.STOREFRONT.CART.subscribe((_) => {
+
     const container = document.getElementById(id);
-    const checkbox = container?.querySelector<HTMLInputElement>(
-      'input[type="checkbox"]',
-    );
-    const input = container?.querySelector<HTMLInputElement>(
-      'input[type="number"]',
-    );
-    const itemID = container?.getAttribute("data-item-id")!;
-    const quantity = sdk.getQuantity(itemID) || 0;
-    if (!input || !checkbox) {
-      return;
-    }
-    input.value = quantity.toString();
-    checkbox.checked = quantity > 0;
-    // enable interactivity
+
     container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
       node.disabled = false
     );
@@ -109,6 +98,10 @@ function AddToCartButton(props: Props) {
   const { product, item, class: _class, text, quantityButton } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
+
+  const { url } = product
+  const relativeUrl = relative(url);
+
   return (
     <div
       id={id}
@@ -129,12 +122,12 @@ function AddToCartButton(props: Props) {
           </div>
         )
         : (
-          <button
+          <a
+            href={relativeUrl}
             class={clx("flex-grow", _class?.toString())}
-            hx-on:click={useScript(onClick)}
           >
             {text ? text : "Add to Cart"}
-          </button>
+          </a>
         )}
 
       <script

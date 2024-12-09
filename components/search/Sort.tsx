@@ -1,5 +1,7 @@
 import { ProductListingPage } from "apps/commerce/types.ts";
-import { useScript } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
+import { clx } from "../../sdk/clx.ts";
+import Icon from "../ui/Icon.tsx";
 const SORT_QUERY_PARAM = "sort";
 const PAGE_QUERY_PARAM = "page";
 export type Props = Pick<ProductListingPage, "sortOptions"> & {
@@ -11,16 +13,11 @@ const getUrl = (href: string, value: string) => {
   url.searchParams.set(SORT_QUERY_PARAM, value);
   return url.href;
 };
-const labels: Record<string, string> = {
-  "relevance:desc": "Relevância",
-  "price:desc": "Maior Preço",
-  "price:asc": "Menor Preço",
-  "orders:desc": "Mais vendidos",
-  "name:desc": "Nome - de Z a A",
-  "name:asc": "Nome - de A a Z",
-  "release:desc": "Lançamento",
-  "discount:desc": "Maior desconto",
-};
+
+const onClick = (value: string) => {
+  window.location.href = value;
+}
+
 function Sort({ sortOptions, url }: Props) {
   const current = getUrl(
     url,
@@ -30,27 +27,50 @@ function Sort({ sortOptions, url }: Props) {
     value: getUrl(url, value),
     label,
   }));
+
+  const currentLabel = options?.find((option) => option.value === current)?.label ?? "ORDENAR"
+  
+  const device = useDevice() 
+
   return (
     <>
-      <label for="sort" class="sr-only">Sort by</label>
-      <select
-        name="sort"
-        class="select w-full max-w-sm rounded-lg"
-        hx-on:change={useScript(() => {
-          const select = event!.currentTarget as HTMLSelectElement;
-          window.location.href = select.value;
-        })}
-      >
+      <details className={clx(
+          "dropdown w-full desktop:max-w-[14.58vw] !z-20",
+          device === "desktop" && "collapse-arrow2"
+        )}>
+        <summary
+          className={clx(
+              "btn flex justify-between items-center min-h-0 h-10 mobile:h-[45px] py-0",
+              "hover:!border hover:!border-[#363B4B] rounded-[5px] border border-[#363B4B]",
+              "mobile:pl-[19.5px] mobile:pr-[7.5px] mobile:py-[10px] mobile:shadow-md",
+              "pl-[42.5px]  pr-[30px]",
+              device === "desktop" && "collapse-title"
+            )}
+        >
+          {device === "mobile" && <Icon id="sort" width={23} height={15.33}/>}
+            <span class="desktop:w-fit text-start font-normal mobile:font-bold desktop:text-sm">
+            {device === "desktop" ? currentLabel : "ORDENAR"} 
+            </span>
+        </summary>
+        <ul className={clx(
+          "menu dropdown-content top-8 w-full bg-white rounded-box -z-[1]", 
+          "px-[14.5px] pt-[30px] pb-5 space-y-[10px] shadow",
+          "mobile:px-[11px] mobile:pt-7 mobile:pb-[18px]"
+        )}>
         {options.map(({ value, label }) => (
-          <option
-            label={labels[label] ?? label}
-            value={value}
-            selected={value === current}
+          <li key={label} hx-on:click={useScript(onClick, value)} 
+            class={clx(
+              "cursor-pointer !h-10 border rounded-[5px] text-sm", 
+              "hover:border-[#363B4B] hover:bg-[#F0F0F0] hover:font-bold",
+              "flex w-full justify-center items-center mobile:px-2 text-center",
+              label === currentLabel ? "border-[#363B4B] bg-[#F0F0F0] font-bold" : "border-[#F0F0F0]"
+            )}
           >
             {label}
-          </option>
+          </li>
         ))}
-      </select>
+        </ul>
+      </details>
     </>
   );
 }

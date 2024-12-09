@@ -3,6 +3,11 @@ import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalytic
 import ProductCard from "../../components/product/ProductCard.tsx";
 import Filters from "../../components/search/Filters.tsx";
 import Icon from "../../components/ui/Icon.tsx";
+import Searchbar, {
+  type SearchbarProps,
+} from "../../components/search/Searchbar/Form.tsx";
+import { type Section as SectionType } from "@deco/deco/blocks";
+import { ProductShelfComponent } from "../../sections/Product/ProductShelf.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
@@ -21,20 +26,101 @@ export interface Layout {
 }
 export interface Props {
   /** @title Integration */
-  page: ProductListingPage | null;
+  page?: ProductListingPage | null;
   layout?: Layout;
   /** @description 0 for ?page=0 as your first page */
   startingPage?: 0 | 1;
   /** @hidden */
   partial?: "hideMore" | "hideLess";
+
+  searchbar: SearchbarProps;
+
+  productShelf: SectionType<ProductShelfComponent>;
+
+  searchParams?: string | null;
 }
-function NotFound() {
+function NotFound({ searchbar, productShelf, searchParams }: Props) {
+  console.log("params", searchParams)
   return (
-    <div class="w-full flex justify-center items-center py-10">
-      <span>Not Found!</span>
-    </div>
+    <>
+      { searchParams
+        ? (
+          <div class="w-full flex flex-col gap-[30px] mobile:gap-6 justify-center items-center">
+            <div class="w-full flex flex-col gap-10 mobile:gap-6 justify-center items-center ">
+              <Icon
+                id="faceIcon"
+                width="70"
+                height="69"
+                class="mt-[87px]"
+              />
+              <span class="font-[PP-Hatton] text-center text-[24px] mobile:text-[20px] w-[526px] mobile:w-[333px]">
+                OPS... Não encontramos nenhum resultado para:
+              </span>
+            </div>
+            <div class="w-[526px] mobile:w-[89.4%]">
+              <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />
+            </div>
+            <div class="flex justify-start ml-[-120px] mobile:ml-[0px] flex-col font-[Montserrat] text-[14px]">
+              <li class="marker:text-[#BD87ED]">
+                Verifique se a palavra foi digitada corretamente;
+              </li>
+              <li class="marker:text-[#BD87ED]">
+                Tente palavras menos específicas;
+              </li>
+              <li class="marker:text-[#BD87ED]">
+                Tente palavras-chave diferentes;
+              </li>
+              <li class="marker:text-[#BD87ED]">Faça buscas relacionadas.</li>
+            </div>
+          </div>
+        )
+        : (
+          <div class="w-full flex justify-around items-center py-[120px] phone:flex-col">
+            <div>
+              <h1 class="font-[PP-Hatton] text-[200px] phone:text-[127px] text-[#A3E3FF]">
+                404
+              </h1>
+            </div>
+            <div class="flex flex-col justify-start phone:ml-[20px] gap-6">
+              <div class="flex flex-col ">
+                <span class="font-[PP-Hatton] font-bold text-[30px] phone:text-[20px] mb-[20px]">
+                  Página não encontrada
+                </span>
+                <span class="font-[Montserrat] text-[16px] phone:text-[14px] phone:w-[335px]">
+                  A página que você procura não existe ou não está disponível
+                </span>
+              </div>
+              <div class="flex justify-start flex-col font-[Montserrat] text-[14px]">
+                <span class="font-bold text-[16px] mb-[20px]">
+                  Causas possíveis
+                </span>
+                <li class="marker:text-[#BD87ED] mb-[16px]">
+                  O conteúdo não está mais no ar;
+                </li>
+                <li class="marker:text-[#BD87ED] mb-[16px]">
+                  A página mudou de lugar;
+                </li>
+                <li class="marker:text-[#BD87ED] mb-[16px]">
+                  O servidor está fora do ar;
+                </li>
+                <li class="marker:text-[#BD87ED] mb-[16px]">
+                  Você digitou o endereço errado
+                </li>
+              </div>
+              <a
+                href="/"
+                class="btn no-animation w-[335px] h-[45px] uppercase text-[#8F2AED] border-[1px] border-[#8F2AED] bg-none hover:bg-[#8F2AED] hover:text-[#FFF]"
+              >
+                Voltar para o início
+              </a>
+            </div>
+          </div>
+        )}
+      <productShelf.Component {...productShelf.props} />
+    </>
   );
 }
+
 const useUrlRebased = (overrides: string | undefined, base: string) => {
   let url: string | undefined = undefined;
   if (overrides) {
@@ -67,7 +153,7 @@ function PageResult(props: SectionProps<typeof loader>) {
   });
   const infinite = layout?.pagination !== "pagination";
   return (
-    <div class="grid grid-flow-row grid-cols-1 place-items-center">
+    <div class="grid grid-flow-row grid-cols-1 place-items-stretch ">
       <div
         class={clx(
           "pb-2 sm:pb-10",
@@ -90,9 +176,9 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         data-product-list
         class={clx(
-          "grid items-center",
-          "grid-cols-2 gap-2",
-          "sm:grid-cols-4 sm:gap-10",
+          "grid grid-cols-3",
+          "gap-5 justify-items-center",
+          "mobile:grid-cols-2 mobile:gap-4",
           "w-full",
         )}
       >
@@ -102,7 +188,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
+            class="h-full "
           />
         ))}
       </div>
@@ -178,7 +264,8 @@ const setPageQuerystring = (page: string, id: string) => {
     }
     history.replaceState({ prevPage }, "", url.href);
   }).observe(element);
-};
+}
+
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
@@ -208,73 +295,81 @@ function Result(props: SectionProps<typeof loader>) {
       },
     },
   });
-  const results = (
-    <span class="text-sm font-normal">
-      {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
-    </span>
-  );
+
+
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
+
   return (
     <>
-      <div id={container} {...viewItemListEvent} class="w-full">
+      <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto mobile:px-5 mobile:py-8">
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+            <div class="container flex flex-col gap-4 w-full">
+              <div class="pl-[60px] mobile:pl-0">
+                <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+              </div>
 
               {device === "mobile" && (
                 <Drawer
                   id={controls}
+                  class="drawer-end"
                   aside={
-                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
-                      <div class="flex justify-between items-center">
-                        <h1 class="px-4 py-3">
-                          <span class="font-medium text-2xl">Filters</span>
-                        </h1>
-                        <label class="btn btn-ghost" for={controls}>
-                          <Icon id="close" />
+                    <div class="bg-base-100 flex flex-col h-full w-[79.73vw] divide-y overflow-y-hidden">
+                      <div class="flex justify-center items-center relative p-5 border-b border-[#F5F5F5]">
+                        <label class="btn btn-ghost p-0 absolute left-5 top-1/2 -translate-y-1/2" for={controls}>
+                          <Icon id="closeFilter" width={15} height={15} />
                         </label>
+
+                        <h1 class="font-bold text-lg font-[PP-Hatton]">
+                          Filtrar por
+                        </h1>
                       </div>
+
                       <div class="flex-grow overflow-auto">
-                        <Filters filters={filters} />
+                        <Filters filters={filters} url={url} />
                       </div>
                     </div>
                   }
                 >
-                  <div class="flex sm:hidden justify-between items-end">
-                    <div class="flex flex-col">
-                      {results}
+                  <div class="flex justify-between items-center">
+                    <label
+                      class={clx(
+                        "btn w-full max-w-[41.86vw] pl-[31.5px] pr-[22.5px] py-[10px]",
+                        "flex justify-between h-[45px] min-h-0",
+                        "hover:!border hover:!border-[#363B4B] rounded-[5px] border border-[#363B4B]",
+                      )}
+                      for={controls}
+                    >
+                      <Icon id="filterMobile" width={23} height={15.33} />
+                      <span class="font-bold">
+                        FILTRO
+                      </span>
+                    </label>
+
+                    <div class="flex flex-col w-full max-w-[41.86vw]">
                       {sortBy}
                     </div>
-
-                    <label class="btn btn-ghost" for={controls}>
-                      Filters
-                    </label>
                   </div>
                 </Drawer>
               )}
 
-              <div class="grid place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
+              <div class="flex gap-10 justify-between sm:grid-cols-[250px_1fr]">
                 {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col gap-9">
-                    <span class="text-base font-semibold h-12 flex items-center">
-                      Filters
+                  <aside class="sticky h-full place-self-start flex flex-col gap-9 desktop:w-[calc((100%_+_60px)_*_0.2402)]">
+                    <span class="text-2xl font-[PP-Hatton] font-bold h-12 flex items-center flex gap-4 pl-[60px]">
+                      Filtros <Icon id="filter" width={18} height={18} />
                     </span>
-
-                    <Filters filters={filters} />
+                    <Filters filters={filters} url={url} />
                   </aside>
                 )}
 
-                <div class="flex flex-col gap-9">
+                <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
                   {device === "desktop" && (
-                    <div class="flex justify-between items-center">
-                      {results}
-                      <div>
-                        {sortBy}
-                      </div>
+                    <div class="flex justify-end items-center gap-[10px]">
+                      <span class="font-bold">ORDENAR POR </span>{sortBy}
                     </div>
                   )}
                   <PageResult {...props} />
@@ -297,16 +392,22 @@ function Result(props: SectionProps<typeof loader>) {
     </>
   );
 }
+
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
-  if (!page) {
-    return <NotFound />;
+  if (!page?.pageInfo.records) {
+    return <NotFound {...props} />;
   }
   return <Result {...props} page={page} />;
 }
+
 export const loader = (props: Props, req: Request) => {
+  const url = new URL(req.url);
+  const searchParams = url.search ?? null;
   return {
     ...props,
-    url: req.url,
+    url: url.href,
+    searchParams,
   };
 };
+
 export default SearchResult;

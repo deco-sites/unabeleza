@@ -1,3 +1,5 @@
+import { type LoadingFallbackProps } from "@deco/deco";
+
 export interface Props {
   phone?: number;
 }
@@ -14,7 +16,7 @@ function WhatsApp({ phone }: Props) {
       aria-label="Chat on WhatsApp"
     >
       <button
-        class="bg-[#45D268] text-white p-2 rounded-full shadow-lg"
+        class="bg-[#267F46] text-white p-2 rounded-full shadow-lg"
         aria-label="Chat on WhatsApp"
       >
         <svg
@@ -41,6 +43,9 @@ function WhatsApp({ phone }: Props) {
   );
 }
 
-export const LoadingFallback = () => null;
+export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
+  // deno-lint-ignore no-explicit-any
+  <WhatsApp {...props as any} loading="lazy" />
+);
 
 export default WhatsApp;
