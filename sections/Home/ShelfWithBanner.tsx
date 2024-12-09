@@ -49,7 +49,7 @@ export default function ShelfWithBanner(
           "mobile:flex mobile:flex-col mobile:gap-6",
         )}
       >
-        <div class="w-full">
+        <div class="w-full relative">
           <Image
             src={img}
             alt={props.alt ?? props?.title}
@@ -60,9 +60,7 @@ export default function ShelfWithBanner(
               "w-full h-full object-cover mobile:w-full",
             )}
           />
-          <a>
-            
-          </a>
+          <a href={linkImage} class="absolute inset-0"/>
         </div>
 
         <ShelfWithText
