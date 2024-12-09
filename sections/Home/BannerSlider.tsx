@@ -80,7 +80,7 @@ export default function BannerSlider(
       "px-[60px] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto",
       "mobile:grid",
       "mobile:grid-rows-[1fr_32px_1fr_64px]",
-      "w-screen",
+      "w-full",
     )}>
       {title && (
         <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
