@@ -1,5 +1,5 @@
 import { RichText } from "apps/admin/widgets.ts";
-import Popup from "../../islands/Popup.tsx";
+import Popup from "../../islands/PopupLGPD.tsx";
 
 interface PopupProps {
   text: RichText;

@@ -3,7 +3,8 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$$$$$$$0 from "./actions/minicart/submit.ts";
-import * as $$$$$$$$$1 from "./actions/wishlist/submit.ts";
+import * as $$$$$$$$$1 from "./actions/sendPopUpNewsLetter.ts";
+import * as $$$$$$$$$2 from "./actions/wishlist/submit.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/analytics.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/deco/wake.ts";
@@ -43,17 +44,18 @@ import * as $$$$$$26 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$27 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$28 from "./sections/Newsletter/Newsletter.tsx";
 import * as $$$$$$29 from "./sections/Politicas/Politicas.tsx";
-import * as $$$$$$30 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$31 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$32 from "./sections/Product/ProductShelfTabbed.tsx";
-import * as $$$$$$33 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$34 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$35 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$36 from "./sections/Quem Somos/quemSomos.tsx";
-import * as $$$$$$37 from "./sections/Session.tsx";
-import * as $$$$$$38 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$39 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$40 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$30 from "./sections/PopUp/PopUp.tsx";
+import * as $$$$$$31 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$32 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$33 from "./sections/Product/ProductShelfTabbed.tsx";
+import * as $$$$$$34 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$35 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$36 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$37 from "./sections/Quem Somos/quemSomos.tsx";
+import * as $$$$$$38 from "./sections/Session.tsx";
+import * as $$$$$$39 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$40 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$41 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -94,21 +96,23 @@ const manifest = {
     "site/sections/Miscellaneous/CookieConsent.tsx": $$$$$$27,
     "site/sections/Newsletter/Newsletter.tsx": $$$$$$28,
     "site/sections/Politicas/Politicas.tsx": $$$$$$29,
-    "site/sections/Product/ProductDetails.tsx": $$$$$$30,
-    "site/sections/Product/ProductShelf.tsx": $$$$$$31,
-    "site/sections/Product/ProductShelfTabbed.tsx": $$$$$$32,
-    "site/sections/Product/SearchResult.tsx": $$$$$$33,
-    "site/sections/Product/ShelfWithImage.tsx": $$$$$$34,
-    "site/sections/Product/Wishlist.tsx": $$$$$$35,
-    "site/sections/Quem Somos/quemSomos.tsx": $$$$$$36,
-    "site/sections/Session.tsx": $$$$$$37,
-    "site/sections/Social/InstagramPosts.tsx": $$$$$$38,
-    "site/sections/Social/WhatsApp.tsx": $$$$$$39,
-    "site/sections/Theme/Theme.tsx": $$$$$$40,
+    "site/sections/PopUp/PopUp.tsx": $$$$$$30,
+    "site/sections/Product/ProductDetails.tsx": $$$$$$31,
+    "site/sections/Product/ProductShelf.tsx": $$$$$$32,
+    "site/sections/Product/ProductShelfTabbed.tsx": $$$$$$33,
+    "site/sections/Product/SearchResult.tsx": $$$$$$34,
+    "site/sections/Product/ShelfWithImage.tsx": $$$$$$35,
+    "site/sections/Product/Wishlist.tsx": $$$$$$36,
+    "site/sections/Quem Somos/quemSomos.tsx": $$$$$$37,
+    "site/sections/Session.tsx": $$$$$$38,
+    "site/sections/Social/InstagramPosts.tsx": $$$$$$39,
+    "site/sections/Social/WhatsApp.tsx": $$$$$$40,
+    "site/sections/Theme/Theme.tsx": $$$$$$41,
   },
   "actions": {
     "site/actions/minicart/submit.ts": $$$$$$$$$0,
-    "site/actions/wishlist/submit.ts": $$$$$$$$$1,
+    "site/actions/sendPopUpNewsLetter.ts": $$$$$$$$$1,
+    "site/actions/wishlist/submit.ts": $$$$$$$$$2,
   },
   "apps": {
     "site/apps/deco/analytics.ts": $$$$$$$$$$$0,

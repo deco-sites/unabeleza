@@ -1,42 +1,152 @@
-import { RichText } from "apps/admin/widgets.ts";
+import { ImageWidget } from "apps/admin/widgets.ts";
+import Icon from "../components/ui/Icon.tsx";
 import { useEffect, useState } from "preact/hooks";
+import { clx } from "../sdk/clx.ts";
+import { invoke } from "../runtime.ts";
 
-interface PopupProps {
-  text: RichText;
-  btnText: string;
+export interface PopUpProps {
+  title?: string;
+  text?: string;
+  image?: ImageWidget;
 }
 
-export default function Popup({ text, btnText }: PopupProps) {
-  const [isVisible, setIsVisible] = useState(false);
+export default function PopUp(
+  { title, text, image }: PopUpProps,
+) {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    notifications: false,
+    terms: false
+  })
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   useEffect(() => {
-    const hasAccepted = JSON.parse(
-      localStorage.getItem("lgpdAccepted") || "false",
-    );
-    setIsVisible(!hasAccepted);
-  }, []);
+    const popup = Boolean(localStorage.getItem('popup_closed'))
+    if (popup === true) {
+      closePopup()
+      document.body.style.overflow = ""
+    } else {
+      setIsOpen(true)
+      document.body.style.overflow = "hidden"
+    }
+  }, [isOpen])
 
-  const handleAccept = () => {
-    localStorage.setItem("lgpdAccepted", JSON.stringify(true));
-    setIsVisible(false);
+  if (!isOpen) return null
+
+  const closePopup = () => {
+    localStorage.setItem('popup_closed', JSON.stringify(true))
+    setIsOpen(false)
+  }
+
+  // deno-lint-ignore no-explicit-any
+  const handleChange = (e: any) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: type === 'checkbox' ? checked : value
+    }));
   };
 
-  if (!isVisible) return null;
+  // deno-lint-ignore no-explicit-any
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    await invoke.site.actions.sendPopUpNewsLetter({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone
+    })
+
+    closePopup()
+  }
 
   return (
-    <div className="fixed inset-0 flex justify-center items-end p-0 m-0 z-50">
-      <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
-      <div className="relative bg-white flex mobile:flex-col items-center justify-between px-6 py-4 max-w-[1030px] w-full shadow-md z-50 mb-4 rounded-none mobile:mx-5">
-        <p
-          className="font-[Montserrat] font-medium text-[14px] leading-[21px] text-black mobile:text-center"
-          dangerouslySetInnerHTML={{ __html: text }}
-        />
-        <button
-          className="bg-[#BD87ED] hover:bg-[#C493EF] max-w-[257px] w-full h-[45px] rounded-md ml-4 mobile:ml-0 mobile:mt-[24px] font-[Montserrat] font-bold text-[14px] leading-[21px] text-black"
-          onClick={handleAccept}
-        >
-          {btnText}
-        </button>
+    <div class="fixed z-[9999] inset-0 bg-black bg-opacity-50">
+      <div id="popup" class={clx(
+        "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#FFFFFF]",
+        "flex justify-between mobile:justify-center w-[861px] mobile:w-[93%] mobile:mr-[10px] rounded-[5px]"
+      )}>
+        <Icon onClick={closePopup} id="close" class="absolute top-8 right-10 cursor-pointer mobile:top-4 mobile:right-5" />
+        <section class="mobile:hidden">
+          <div>
+            <img class="rounded-l-[5px]" src={image} alt="imagem do popup" />
+          </div>
+        </section>
+        <section class="flex flex-col justify-center phone:justify-start items-center phone:items-start pr-[75px] mobile:p-[20px]">
+          <div>
+            <p class="font-[PP-Hatton] text-[28px] text-center phone:text-left mb-[12px]">
+              {title}
+            </p>
+            <p class="font-[Montserrat] text-[16px]">{text}</p>
+          </div>
+          <div>
+            <form
+              onSubmit={handleSubmit}
+              class="flex flex-col font-[Montserrat]"
+            >
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                class="w-[332px] h-[45px] mt-[23.99px] mb-[10px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
+                placeholder="Digite seu nome:" />
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                class="w-[332px] h-[45px] mb-[10px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
+                placeholder="Digite seu e-mail:" />
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                class="w-[332px] h-[45px] mb-[16px] rounded-[5px] py-[12px] px-[16px] border-[1px] border-[#DBDBDB]"
+                placeholder="Celular com DDD:" />
+              <label class="flex items-center justify-between w-[332px] pr-[25px] cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="notifications"
+                  checked={formData.notifications}
+                  onChange={handleChange}
+                  class="cursor-pointer"
+                  style={{
+                    accentColor: "#A3E3FF"
+                  }}
+                />
+                <p class="font-[Montserrat] text-[12px] cursor-pointer">
+                  Quero receber as ofertas por e-mail e Whatsapp
+                </p>
+              </label>
+              <label class="flex items-center justify-between w-[332px] pr-[50px] cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="terms"
+                  checked={formData.terms}
+                  onChange={handleChange}
+                  required
+                  class="cursor-pointer" 
+                  style={{
+                    accentColor: "#A3E3FF"
+                  }}
+                />
+                <p class="font-[Montserrat] text-[12px] cursor-pointer">
+                  Li e concordo com os termos de privacidade
+                </p>
+              </label>
+              <button 
+                type="submit" class="mt-[18px] w-[100%] h-[45px] rounded-[5px] font-bold bg-primary hover:bg-[#C493EF]"
+              >CADASTRAR
+            </button>
+            </form>
+          </div>
+        </section>
       </div>
     </div>
   );
