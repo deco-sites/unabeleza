@@ -22,23 +22,20 @@ export default function PopUp(
   })
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  useEffect(() => {
-    const popup = Boolean(localStorage.getItem('popup_closed'))
-    if (popup === true) {
-      closePopup()
-      document.body.style.overflow = ""
-    } else {
-      setIsOpen(true)
-      document.body.style.overflow = "hidden"
-    }
-  }, [isOpen])
-
-  if (!isOpen) return null
-
   const closePopup = () => {
     localStorage.setItem('popup_closed', JSON.stringify(true))
     setIsOpen(false)
   }
+
+  useEffect(() => {
+    const popup = Boolean(localStorage.getItem('popup_closed'))
+    popup === true ? closePopup() : setIsOpen(true);
+    isOpen 
+    ? document.body.style.overflow = "hidden"
+    : document.body.style.overflow = ""
+  }, [isOpen])
+
+  if (!isOpen) return null
 
   // deno-lint-ignore no-explicit-any
   const handleChange = (e: any) => {

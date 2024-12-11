@@ -1,4 +1,4 @@
-import type { SKU } from "apps/vtex/utils/types.ts";
+import type { Props as SKU } from "apps/wake/actions/shippingSimulation.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useComponent } from "../../sections/Component.tsx";
 
@@ -8,7 +8,6 @@ export interface Props {
 
 export default function Form({ items }: Props) {
   const slot = useId();
-
 
   return (
     <div class="flex flex-col gap-2">

@@ -21,8 +21,8 @@ const onLoad = (id: string, productID: string) =>
     const svg = button.querySelector("svg");
 
     inWishlist 
-    ? svg.classList.add("text-[#8F2AED]") 
-    : svg.classList.remove("text-[#8F2AED]") 
+    ? svg.classList.add("text-[#BD87ED]") 
+    : svg.classList.remove("text-[#BD87ED]") 
 
     const span = button.querySelector("span");
     if (span) {

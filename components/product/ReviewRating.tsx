@@ -14,7 +14,7 @@ export default function ReviewRating({ ratingValue = 0, reviewCount }: ReviewRat
                     return (<Icon key={index} id={id} width={11} height={12}/>)
                 })}
             </div>
-            {ratingValue > 0 && (
+            {reviewCount && (
                 <span class="text-[11px] text-black">({reviewCount})</span>
             )}
         </div>

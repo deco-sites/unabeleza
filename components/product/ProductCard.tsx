@@ -8,6 +8,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
+import ReviewRating from "./ReviewRating.tsx";
 
 interface Props {
   product: Product;
@@ -34,7 +35,7 @@ function ProductCard({
   index,
   class: _class,
 }: Props) {
-  const { url, image: images, offers, isVariantOf } = product;
+  const { url, image: images, offers, isVariantOf, aggregateRating } = product;
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
@@ -143,12 +144,14 @@ function ProductCard({
         </div>
       </figure>
 
-      <a href={relativeUrl} class="pt-5 gap-4">
+      <a href={relativeUrl} class="flex flex-col pt-5 gap-[9px]">
+        <ReviewRating ratingValue={aggregateRating?.ratingValue} />
+        
         <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}
         </span>
 
-        <div class="flex flex-col gap-2 pt-2">
+        <div class="flex flex-col gap-2">
           <span class="font-bold text-base text-black">
             {formatPrice(price, offers?.priceCurrency)}
           </span>

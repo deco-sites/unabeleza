@@ -28,11 +28,24 @@ export default function TabsDesktop({ productInformations }: TabsDesktopProps) {
                                 "font-bold text-sm checked:text-secondary text-black uppercase flex-1"
                             )}
                         />
-                        <div
-                            role="tabpanel"
-                            class="tab-content p-10 text-sm text-black w-full"
-                            dangerouslySetInnerHTML={{ __html: item.value ?? '' }}
-                        />
+                        {
+                            item.name === "OUTRAS INFORMAÇÕES"
+                                ? (
+                                    <div
+                                        role="tabpanel"
+                                        class="tab-content p-10 text-sm text-black w-full">
+                                        {item.value}
+                                    </div>
+                            ) :
+                                (
+                                    <div
+                                        role="tabpanel"
+                                        class="tab-content p-10 text-sm text-black w-full"
+                                        dangerouslySetInnerHTML={{ __html: item.value ?? '' }}
+                                    />
+                                )
+                        }
+
                     </>
                 ))
             }

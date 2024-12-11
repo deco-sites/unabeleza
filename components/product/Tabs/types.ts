@@ -1,3 +1,5 @@
+import { JSX } from "preact";
+
 export type Property = {
-  [key: string]: string;
+  [key: string]: string | JSX.ElementType;
 };

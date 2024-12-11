@@ -8,6 +8,7 @@ import { ShareProps } from "../../components/ui/Share.tsx";
 import Tabs from "../../components/product/Tabs/index.tsx";
 import { ProductShelfComponent } from "../../sections/Product/ProductShelf.tsx";
 import { type Section as SectionType } from "@deco/deco/blocks";
+import ReviewForm from "../../components/product/ProductReview/ReviewForm.tsx";
 
 export interface Props {
   /** @title Integration */
