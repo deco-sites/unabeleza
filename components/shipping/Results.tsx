@@ -1,6 +1,6 @@
 
 import { AppContext } from "../../apps/deco/wake.ts";
-import { ComponentProps } from "../../sections/Component.tsx";
+import { type ComponentProps } from "../../sections/Component.tsx";
 import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 import type { Props as SKU } from "apps/wake/actions/shippingSimulation.ts";
 
@@ -14,9 +14,8 @@ function formatShippingEstimate(estimate: number): string {
 
 export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();
-
   try {
-    const result = await (ctx as any).invoke.wake.actions.review.create({
+    const result = await (ctx as any).invoke.wake.actions.shippingSimulation({
       ...props.items[0],
       cep: `${form.get("postalCode") ?? ""}`,
     }) as ShippingQuotesQuery["shippingQuotes"];
@@ -41,10 +40,10 @@ export default function Results({ result }: ComponentProps<typeof action>) {
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
       {result?.map((method) => (
         <li key={method?.id} class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t">
-          <span class="text-button">
+          <span class="text-button text-center">
             Entrega {method?.name}
           </span>
-          <span class="text-button">
+          <span class="text-button text-center">
             até {formatShippingEstimate(method!.deadline)}
           </span>
           <span class="text-base font-semibold text-right">
