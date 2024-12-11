@@ -21,12 +21,12 @@ const onLoad = (id: string, productID: string) =>
     const svg = button.querySelector("svg");
 
     inWishlist 
-    ? svg.classList.add("text-[#BD87ED]") 
-    : svg.classList.remove("text-[#BD87ED]") 
+    ? svg?.classList.add("text-[#BD87ED]") 
+    : svg?.classList.remove("text-[#BD87ED]") 
 
     const span = button.querySelector("span");
     if (span) {
-      span.innerHTML = inWishlist ? "Remove from wishlist" : "Add to wishlist";
+      span.innerHTML = inWishlist ? "Remover da lista de desejos" : "Adicionar à lista de desejos";
     }
   });
 const onClick = (productID: string, productGroupID: string) => {
@@ -36,13 +36,13 @@ const onClick = (productID: string, productGroupID: string) => {
     button.classList.add("htmx-request");
     window.STOREFRONT.WISHLIST.toggle(productID, productGroupID);
   } else {
-    window.alert(`Please login to add the product to your wishlist`);
+    window.alert(`Faça login para adicionar o produto à sua lista de desejos`);
   }
 };
 function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
   // deno-lint-ignore no-explicit-any
   const productID = (item as any).item_id;
-  const productGroupID = item.item_group_id.toString() ?? "";
+  const productGroupID = item.item_group_id?.toString() ?? "";
   const id = useId();
   const device = useDevice();
   const addToWishlistEvent = useSendEvent({
