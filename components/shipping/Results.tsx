@@ -1,8 +1,8 @@
 
-import { AppContext } from "apps/vtex/mod.ts";
-import { formatPrice } from "../../sdk/format.ts";
+import { AppContext } from "../../apps/deco/wake.ts";
 import { ComponentProps } from "../../sections/Component.tsx";
 import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
+import type { Props as SKU } from "apps/wake/actions/shippingSimulation.ts";
 
 export interface Props {
   items: SKU[];
@@ -16,7 +16,7 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();
 
   try {
-    const result = await ctx.invoke("wake/actions/shippingSimulation.ts", {
+    const result = await (ctx as any).invoke.wake.actions.review.create({
       ...props.items[0],
       cep: `${form.get("postalCode") ?? ""}`,
     }) as ShippingQuotesQuery["shippingQuotes"];
@@ -29,7 +29,7 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
 
 export default function Results({ result }: ComponentProps<typeof action>) {
 
-  if (!result.length) {
+  if (!result) {
     return (
       <div class="p-2">
         <span>CEP inválido</span>
@@ -39,17 +39,17 @@ export default function Results({ result }: ComponentProps<typeof action>) {
 
   return (
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
-      {result.map((method) => (
-        <li class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t">
+      {result?.map((method) => (
+        <li key={method?.id} class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t">
           <span class="text-button">
-            Entrega {method.name}
+            Entrega {method?.name}
           </span>
           <span class="text-button">
-            até {formatShippingEstimate(method.deadline)}
+            até {formatShippingEstimate(method!.deadline)}
           </span>
           <span class="text-base font-semibold text-right">
-            {method.value === 0 ? "Grátis" : 
-              method.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            {method?.value === 0 ? "Grátis" : 
+              method?.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
             }
           </span>
         </li>

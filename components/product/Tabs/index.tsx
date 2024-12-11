@@ -53,6 +53,12 @@ export default function Tabs({ page }: TabsProps) {
 
     if (productInformations?.length === 0) return null
 
+    // productInformations.push({
+    //     "@type": "PropertyValue",
+    //     name: "OUTRAS INFORMAÇÕES",
+    //     value: <ReviewForm productVariantId={Number(product.productID)}/>
+    // })
+
     const device = useDevice();
 
     return (
