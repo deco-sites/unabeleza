@@ -152,3 +152,18 @@
 .tab-width {
   width: calc(min(82.39583vw, calc(96rem - 254px)) / var(--quantity-tabs)) !important;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #DBB9F9;
+  border-radius: 20px;
+  border: 1px solid #E7E7E7;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #E7E7E7;
+  border-radius: 20px;
+}

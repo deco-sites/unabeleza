@@ -74,20 +74,6 @@ export default function GallerySlider(props: Props) {
               ))}
             </Slider>
 
-            <Slider.PrevButton
-              class="no-animation absolute left-2 top-1/2 btn btn-circle btn-outline disabled:invisible"
-              disabled
-            >
-              <Icon id="chevron-right" class="rotate-180" />
-            </Slider.PrevButton>
-
-            <Slider.NextButton
-              class="no-animation absolute right-2 top-1/2 btn btn-circle btn-outline disabled:invisible"
-              disabled={images.length < 2}
-            >
-              <Icon id="chevron-right" />
-            </Slider.NextButton>
-
             <div class="absolute top-2 right-2 bg-base-100 rounded-full">
               <label class="btn btn-ghost hidden sm:inline-flex" for={zoomId}>
                 <Icon id="pan_zoom" />
@@ -96,16 +82,22 @@ export default function GallerySlider(props: Props) {
           </div>
         </div>
 
+
         {/* Dots */}
         <div class={clx(
-          "col-start-1 col-span-1 mobile:flex mobile:justify-center",
+          "col-start-1 col-span-1 mobile:flex mobile:justify-center flex flex-col desktop:gap-10 desktop:items-center",
         )}>
+
+          <Slider.PrevButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
+            <Icon id="arrow-top" stroke="#8F2AED" width={20} height={12} />
+          </Slider.PrevButton>
+
           <ul
             class={clx(
               "carousel carousel-center",
-              "carousel-vertical mobile:carousel-horizontal",
-              "gap-2",
-              "max-w-full",
+              "desktop:carousel-vertical",
+              "gap-2 desktop:gap-10",
+              "max-w-full items-center mobile:justify-center",
               "overflow-x-auto",
               "overflow-y-auto",
             )}
@@ -119,7 +111,7 @@ export default function GallerySlider(props: Props) {
                       <Slider.Dot index={index}>
                         <Image
                           style={{ aspectRatio: "1 / 1" }}
-                          class="group-disabled:border-base-400 border rounded object-cover w-full h-full"
+                          class="group-disabled:border-primary border-2 border-[#F5F5F5] rounded object-cover w-full h-full"
                           width={64}
                           height={64}
                           src={img.url!}
@@ -140,6 +132,9 @@ export default function GallerySlider(props: Props) {
               </li>
             ))}
           </ul>
+          <Slider.NextButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
+            <Icon id="arrow-bottom" stroke="#8F2AED" width={20} height={12} />
+          </Slider.NextButton>
         </div>
 
         <Slider.JS rootId={id} />

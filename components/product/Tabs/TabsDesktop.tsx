@@ -10,7 +10,7 @@ export default function TabsDesktop({ productInformations }: TabsDesktopProps) {
     const quantityTabs = productInformations.length;
 
     return (
-        <div role="tablist" class="tabs tabs-bordered !w-full mx-auto !max-w-[82.36%]  justify-items-stretch">
+        <div role="tablist" class="tabs tabs-bordered !w-full mx-auto !max-w-full justify-items-stretch">
             {
                 productInformations?.map(item => (
                     <>

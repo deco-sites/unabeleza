@@ -89,7 +89,7 @@ function ProductInfo({ page, itemsShare }: Props) {
           <span class={clx("text-xs text-[#252429]")}>
             REF: {productID}
           </span>
-          <ReviewRating reviewCount={aggregateRating?.reviewCount} ratingValue={aggregateRating?.ratingValue} />
+          <ReviewRating reviewCount={aggregateRating?.reviewCount ?? 0} ratingValue={aggregateRating?.ratingValue ?? 0} />
         </div>
 
 

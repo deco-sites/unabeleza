@@ -2,7 +2,6 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { useDevice, useScript } from "@deco/deco/hooks";
 import TabsDesktop from "./TabsDesktop.tsx";
 import TabsMobile from "./TabsMobile.tsx";
-import ReviewForm from "../ProductReview/ReviewForm.tsx";
 
 interface TabsProps {
     page: ProductDetailsPage
@@ -41,7 +40,7 @@ const onLoad = () => {
 export default function Tabs({ page }: TabsProps) {
     const product = page.product
     const requiredContent = ['Descrição', 'Dados Técnicos']
-    const productInformations: any[] = product.additionalProperty?.filter(
+    const productInformations = product.additionalProperty?.filter(
         item => item.name && item.value && requiredContent.includes(item.name)
     ).sort((a, b) => {
         if (a.name === 'Descrição') return -1;
@@ -52,12 +51,6 @@ export default function Tabs({ page }: TabsProps) {
     }) ?? [];
 
     if (productInformations?.length === 0) return null
-
-    // productInformations.push({
-    //     "@type": "PropertyValue",
-    //     name: "OUTRAS INFORMAÇÕES",
-    //     value: <ReviewForm productVariantId={Number(product.productID)}/>
-    // })
 
     const device = useDevice();
 

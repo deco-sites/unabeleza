@@ -15,6 +15,7 @@ function formatShippingEstimate(estimate: number): string {
 export async function action(props: Props, req: Request, ctx: AppContext) {
   const form = await req.formData();
   try {
+    // deno-lint-ignore no-explicit-any
     const result = await (ctx as any).invoke.wake.actions.shippingSimulation({
       ...props.items[0],
       cep: `${form.get("postalCode") ?? ""}`,
