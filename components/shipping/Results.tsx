@@ -1,6 +1,6 @@
 
 import { AppContext } from "../../apps/deco/wake.ts";
-import { type SectionProps } from "@deco/deco";
+import { type ComponentProps } from "../../sections/Component.tsx";
 import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 import type { Props as SKU } from "apps/wake/actions/shippingSimulation.ts";
 
@@ -27,7 +27,7 @@ export async function action(props: Props, req: Request, ctx: AppContext) {
   }
 }
 
-export default function Results({ result }: SectionProps<typeof action>) {
+export default function Results({ result }: ComponentProps<typeof action>) {
 
   if (!result) {
     return (

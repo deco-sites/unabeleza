@@ -88,9 +88,11 @@ export default function GallerySlider(props: Props) {
           "col-start-1 col-span-1 mobile:flex mobile:justify-center flex flex-col desktop:gap-10 desktop:items-center",
         )}>
 
-          <Slider.PrevButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
-            <Icon id="arrow-top" stroke="#8F2AED" width={20} height={12} />
-          </Slider.PrevButton>
+          {images.length >= 3 && (
+            <Slider.PrevButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
+              <Icon id="arrow-top" stroke="#8F2AED" width={20} height={12} />
+            </Slider.PrevButton>
+          )}
 
           <ul
             class={clx(
@@ -132,9 +134,13 @@ export default function GallerySlider(props: Props) {
               </li>
             ))}
           </ul>
-          <Slider.NextButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
-            <Icon id="arrow-bottom" stroke="#8F2AED" width={20} height={12} />
-          </Slider.NextButton>
+
+          {images.length >= 3 && (
+            <Slider.NextButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
+              <Icon id="arrow-bottom" stroke="#8F2AED" width={20} height={12} />
+            </Slider.NextButton>
+          )}
+          
         </div>
 
         <Slider.JS rootId={id} />

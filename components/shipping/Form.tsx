@@ -22,7 +22,7 @@ export default function Form({ items }: Props) {
         hx-target={`#${slot}`}
         hx-swap="innerHTML"
         hx-sync="this:replace"
-        hx-post={useComponent(import.meta.resolve("./Results.tsx"), {
+        hx-post={useComponent("/components/shipping/Results.tsx", {
           items,
         })}
       >
