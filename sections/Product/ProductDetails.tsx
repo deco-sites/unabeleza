@@ -33,9 +33,7 @@ export default function ProductDetails(props: Props) {
   }
 
   const { productID, aggregateRating, review } = props?.page?.product
-  console.log(review)
-  console.log(aggregateRating)
-
+  
   return (
     <>
       <Section.Container class="mobile:mt-[60px]">
