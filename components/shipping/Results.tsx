@@ -1,33 +1,15 @@
 
-import { AppContext } from "../../apps/deco/wake.ts";
-import { type ComponentProps } from "../../sections/Component.tsx";
 import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
-import type { Props as SKU } from "apps/wake/actions/shippingSimulation.ts";
 
 export interface Props {
-  items: SKU[];
+  result: ShippingQuotesQuery["shippingQuotes"]
 }
 
 function formatShippingEstimate(estimate: number): string {
   return `${estimate} dias úteis`;
 }
 
-export async function action(props: Props, req: Request, ctx: AppContext) {
-  const form = await req.formData();
-  try {
-    // deno-lint-ignore no-explicit-any
-    const result = await (ctx as any).invoke.wake.actions.shippingSimulation({
-      ...props.items[0],
-      cep: `${form.get("postalCode") ?? ""}`,
-    }) as ShippingQuotesQuery["shippingQuotes"];
-
-    return { result };
-  } catch {
-    return { result: null };
-  }
-}
-
-export default function Results({ result }: ComponentProps<typeof action>) {
+export default function Results({ result }: Props) {
 
   if (!result) {
     return (

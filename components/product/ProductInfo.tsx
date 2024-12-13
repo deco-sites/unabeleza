@@ -5,7 +5,6 @@ import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import ShippingSimulationForm from "../shipping/Form.tsx";
 import WishlistButton from "../wishlist/WishlistButton.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
@@ -15,6 +14,7 @@ import Share, { ShareProps } from "../ui/Share.tsx";
 import { useDevice } from "@deco/deco/hooks";
 import Modal from "../../islands/Modal.tsx";
 import PaymentMethods, { Method } from "./PaymentMethods.tsx";
+import ShippingSimulationForm from "../../islands/ShippingSimulationForm.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
@@ -142,8 +142,8 @@ function ProductInfo({ page, itemsShare }: Props) {
 
         {/* Shipping Simulation */}
         <div class="desktop:mt-8">
-          <ShippingSimulationForm
-            items={[{ productVariantId: Number(product.productID), quantity: 1 }]}
+          <ShippingSimulationForm 
+             items={[{ productVariantId: Number(product.productID), quantity: 1 }]}
           />
         </div>
 

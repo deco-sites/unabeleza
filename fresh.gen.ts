@@ -9,6 +9,7 @@ import * as $ButtonMenuInstitucionalMobile from "./islands/ButtonMenuInstitucion
 import * as $Modal from "./islands/Modal.tsx";
 import * as $Popup from "./islands/Popup.tsx";
 import * as $PopupLGPD from "./islands/PopupLGPD.tsx";
+import * as $ShippingSimulationForm from "./islands/ShippingSimulationForm.tsx";
 import * as $ShowPriceItem from "./islands/ShowPriceItem.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -24,6 +25,7 @@ const manifest = {
     "./islands/Modal.tsx": $Modal,
     "./islands/Popup.tsx": $Popup,
     "./islands/PopupLGPD.tsx": $PopupLGPD,
+    "./islands/ShippingSimulationForm.tsx": $ShippingSimulationForm,
     "./islands/ShowPriceItem.tsx": $ShowPriceItem,
   },
   baseUrl: import.meta.url,
