@@ -76,6 +76,7 @@ const sdk = () => {
           `[data-item-id="${itemId}"] input[type="number"]`,
         );
         const item = getCart()?.items.find((item) =>
+          // deno-lint-ignore no-explicit-any
           (item as any).item_id === Number(itemId)
         );
         if (!input || !item) {

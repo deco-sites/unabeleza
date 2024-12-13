@@ -13,15 +13,7 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   text?: string;
   quantityButton?: boolean;
 }
-const onClick = () => {
-  event?.stopPropagation();
-  const button = event?.currentTarget as HTMLButtonElement | null;
-  const container = button!.closest<HTMLDivElement>("div[data-cart-item]")!;
-  const { item, platformProps } = JSON.parse(
-    decodeURIComponent(container.getAttribute("data-cart-item")!),
-  );
-  window.STOREFRONT.CART.addToCart(item, platformProps);
-};
+
 const onChange = () => {
   const input = event!.currentTarget as HTMLInputElement;
   const productID = input!

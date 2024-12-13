@@ -11,7 +11,7 @@ const action = async (
     _: Request,
     ctx: AppContext,
 ): Promise<void> => {
-
+    // deno-lint-ignore no-explicit-any
     await (ctx as any).invoke("wake/actions/newsletter/register.ts", {
         email: props.email,
         name: props.name,
