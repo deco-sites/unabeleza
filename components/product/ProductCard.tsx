@@ -6,7 +6,7 @@ import { formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import WishlistButton from "../wishlist/WishlistButton.tsx";
+import WishlistButton from "../../islands/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
 import ReviewRating from "./ReviewRating.tsx";
 
@@ -145,7 +145,7 @@ function ProductCard({
       </figure>
 
       <a href={relativeUrl} class="flex flex-col pt-5 gap-[9px]">
-        <ReviewRating ratingValue={aggregateRating?.ratingValue} />
+        <ReviewRating ratingValue={aggregateRating?.ratingValue ?? 0}  reviewCount={0}/>
         
         <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}

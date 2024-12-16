@@ -11,6 +11,7 @@ import * as $Popup from "./islands/Popup.tsx";
 import * as $PopupLGPD from "./islands/PopupLGPD.tsx";
 import * as $ShippingSimulationForm from "./islands/ShippingSimulationForm.tsx";
 import * as $ShowPriceItem from "./islands/ShowPriceItem.tsx";
+import * as $WishlistButton from "./islands/WishlistButton.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -27,6 +28,7 @@ const manifest = {
     "./islands/PopupLGPD.tsx": $PopupLGPD,
     "./islands/ShippingSimulationForm.tsx": $ShippingSimulationForm,
     "./islands/ShowPriceItem.tsx": $ShowPriceItem,
+    "./islands/WishlistButton.tsx": $WishlistButton,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

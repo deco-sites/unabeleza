@@ -5,7 +5,7 @@ import { formatPrice } from "../../sdk/format.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import WishlistButton from "../wishlist/WishlistButton.tsx";
+import WishlistButton from "../../islands/WishlistButton.tsx";
 import OutOfStock from "./OutOfStock.tsx";
 import ProductSelector from "./ProductVariantSelector.tsx";
 import AddQuantityToCart from "./AddQuantityToCart.tsx";
