@@ -11,6 +11,7 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   item: AnalyticsItem;
   text?: string;
   quantityButton?: boolean;
+  inventoryLevel?: number
 }
 const onClick = () => {
   const button = event?.currentTarget as HTMLButtonElement | null;
@@ -51,6 +52,7 @@ function AddQuantityToCart(props: Props) {
   const { product, item, text } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
+  
   return (
     <div
       id={id}
@@ -64,7 +66,7 @@ function AddQuantityToCart(props: Props) {
           <div class={clx("bg-white")}>
             <QuantitySelector
               min={1}
-              max={100}
+              max={props.inventoryLevel ?? 100}
               id="quantitySelectorItems"
             />
           </div>

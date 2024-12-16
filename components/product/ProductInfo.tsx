@@ -33,13 +33,14 @@ function ProductInfo({ page, itemsShare }: Props) {
   const title = isVariantOf?.name ?? product.name;
 
   const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({ ...obj })) ?? [];
+  const inventoryLevel = offers?.offers[0].inventoryLevel.value
 
   const {
     price = 0,
     listPrice,
     installments,
     seller = "1",
-    availability
+    availability,
   } = useOffer(offers);
 
   const breadcrumb = {
@@ -135,7 +136,7 @@ function ProductInfo({ page, itemsShare }: Props) {
         )}>
           {availability === "https://schema.org/InStock"
             ? (
-              <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} />
+              <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} inventoryLevel={inventoryLevel}/>
             )
             : <OutOfStock productID={productID} />}
         </div>
