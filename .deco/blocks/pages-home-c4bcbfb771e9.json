@@ -11,13 +11,13 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/2da97fd7-ef2e-4b36-bc39-758acada79fb/Una-Me-Ajuda-(1).png",
           "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
           "alt": "Shoes",
           "action": {}
         },
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d26304f4-355b-48d0-b649-e24b9cbf0ded",
+          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/39d20d1b-82b9-4999-be25-6f299ce0699b/Produtos-Wella-(1).png",
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/47a4d85a-1150-4e5d-abc2-5c642445ff12",
           "alt": "Men",
           "action": {
