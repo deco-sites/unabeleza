@@ -29,8 +29,9 @@
             }
           ],
           "children": [],
-          "name": "BARROMINAS",
-          "identifier": "group1"
+          "name": "Esponja de Maquiagem",
+          "identifier": "group1",
+          "url": "acessorios/esponja-de-maquiagem"
         },
         {
           "image": [],
@@ -96,137 +97,21 @@
               "name": "Wanne be blond"
             }
           ],
-          "name": "BRAÉ",
-          "identifier": "group1"
+          "name": "Luva de Aplicação",
+          "identifier": "group1",
+          "url": "acessorios/luva-de-aplicacao"
         },
         {
           "image": [],
           "children": [],
-          "name": "BRUNA TAVARES",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "FOREVER LISS",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "KNUT HAIR CARE",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "SKELT",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "VAKENO",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [
-            {
-              "image": [],
-              "children": [],
-              "name": "Finalizadores"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Recovery"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Ressurection"
-            }
-          ],
-          "name": "TIGI BED HEAD",
-          "identifier": "group2"
-        },
-        {
-          "image": [],
-          "children": [
-            {
-              "image": [],
-              "children": [],
-              "name": "Balance"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "CPR"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Detangler"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Inner Restore"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Moisture Lock"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Purify"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Renewal"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Silk Moisture"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Skin Care"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Smooth"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "Specialty"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "True Hue"
-            },
-            {
-              "image": [],
-              "children": [],
-              "name": "True Hue Violet"
-            }
-          ],
-          "name": "SENSCIENCE",
-          "identifier": "group3"
+          "identifier": "group2",
+          "url": "acessorios/papel-para-mechas",
+          "name": "Papel para Mechas"
         }
       ],
       "@type": "SiteNavigationElement",
-      "url": "/cabelos",
-      "name": "Cabelos",
+      "url": "/acessorios",
+      "name": "Acessórios",
       "image": [
         {
           "image": [],
