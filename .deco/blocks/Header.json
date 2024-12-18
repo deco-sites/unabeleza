@@ -61,9 +61,22 @@
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/make",
-      "name": "Make",
-      "children": []
+      "url": "/beleza-e-cuidado-pessoal",
+      "name": "Beleza e Cuidado Pessoal",
+      "children": [
+        {
+          "image": [],
+          "children": [],
+          "url": "/beleza-e-cuidado-pessoal/artigos-para-cabeleireiros",
+          "name": "Artigo para Cabeleireiros"
+        },
+        {
+          "image": [],
+          "children": [],
+          "name": "Cuidados com o Cabelo",
+          "url": "/beleza-e-cuidado-pessoal/cuidados-com-o-cabelo"
+        }
+      ]
     },
     {
       "@type": "SiteNavigationElement",
