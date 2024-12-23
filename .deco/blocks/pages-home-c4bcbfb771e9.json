@@ -70,14 +70,14 @@
       "__resolveType": "site/sections/Home/FavoritesSlider.tsx",
       "items": [
         {
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/37c48bef-096c-4b5e-be93-0e23a1dec9da/favorites-banner1.png",
+          "image": "https://data.decoassets.com/unabeleza/cac701c6-4773-43a5-a410-cfd7fead2402/Desktop---Compre-e-Ganhe.png",
           "title": "Compre e ganhe",
           "alt": "Compre e ganhe",
           "href": "#",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         {
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/5af052de-1eaf-4bac-8240-e8d6c161eb96/favorites-banner2.png",
+          "image": "https://data.decoassets.com/unabeleza/2c62b5e8-e178-4ef1-abe7-21c9dc1dd1df/Desktop---Cabelo.png",
           "title": "Cabelo",
           "alt": "Cabelo",
           "href": "#",
@@ -88,13 +88,13 @@
           "alt": "Maquiagem",
           "href": "#",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d8492902-2b4f-4a51-83af-180232c000f2/favorites-banner3.png"
+          "image": "https://data.decoassets.com/unabeleza/f7d71ce1-e621-48df-9886-1d048c00944b/Desktop---Maquiagem.png"
         },
         {
           "title": "Corpo & banho",
           "alt": "Corpo & banho",
           "href": "#",
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/54b8b3e9-bdb5-482e-b064-26dd48a8eb53/favorites-banner4.png",
+          "image": "https://data.decoassets.com/unabeleza/0b11d91a-9865-4af0-9e18-f2e72a5ec276/Desktop---Corpo-e-Banho.png",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         }
       ],
