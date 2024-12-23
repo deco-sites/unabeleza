@@ -12,31 +12,31 @@
       "images": [
         {
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/2da97fd7-ef2e-4b36-bc39-758acada79fb/Una-Me-Ajuda-(1).png",
-          "mobile": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/71b461f6-3a28-4bbc-b825-23f840969c93/home-banner.png",
-          "alt": "Shoes",
-          "action": {}
+          "mobile": "https://data.decoassets.com/unabeleza/9e8165eb-369a-4073-9696-c86453d98321/Una-Me-Ajuda.png",
+          "action": {},
+          "alt": "Una me ajuda"
         },
         {
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/39d20d1b-82b9-4999-be25-6f299ce0699b/Produtos-Wella-(1).png",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/47a4d85a-1150-4e5d-abc2-5c642445ff12",
-          "alt": "Men",
+          "mobile": "https://data.decoassets.com/unabeleza/9556e768-a0a5-4d14-b956-34bab7c4d91e/Produtos-Wella.png",
           "action": {
             "title": "Discover Fresh Looks",
             "subTitle": "Modern men's clothing and accessories.",
             "href": "/men",
             "label": "Shop the Collection"
-          }
+          },
+          "alt": "produto wella"
         },
         {
           "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/3088f639-a204-4960-a574-5b52c18417a4/Produtos-Verao-(1).png",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f7ea4cbe-7498-4e64-9205-c741753edfcc",
+          "mobile": "https://data.decoassets.com/unabeleza/2a4734d6-c502-434f-8816-b610936bf454/Produtos-Verao.jpg",
           "action": {
             "label": "Shop Now!",
             "href": "/women",
             "title": "Embrace New Trends",
             "subTitle": "Stylish clothes and accessories."
           },
-          "alt": "Woman"
+          "alt": "salvar cabelo"
         }
       ],
       "preload": true
