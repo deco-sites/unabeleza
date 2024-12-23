@@ -825,12 +825,12 @@
         "images": [
           {
             "mobile": {
-              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/7e83fa80-5216-4231-a8c6-f2f917b29dce/banner-kits-mobile.png",
+              "img": "https://data.decoassets.com/unabeleza/7e49986f-2bf8-47be-bd52-dd6dbbfb3ede/Banner-Expansivo---Mobile-01.png",
               "w": 375,
               "h": 520
             },
             "desktop": {
-              "img": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/27767041-3afa-47c4-8bcd-18c8067b0de4/banner-kits.png",
+              "img": "https://data.decoassets.com/unabeleza/7890ead9-355c-4489-81cf-1ec975e12024/Banner-Expansivo---Desktop-01.png",
               "w": 1440,
               "h": 489
             },
