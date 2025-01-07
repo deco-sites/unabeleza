@@ -5,6 +5,8 @@ import { useId } from "../../sdk/useId.ts";
 import { usePlatform } from "../../sdk/usePlatform.tsx";
 import QuantitySelector from "../ui/QuantitySelector.tsx";
 import { useScript } from "@deco/deco/hooks";
+import { MINICART_DRAWER_ID } from "../../constants.ts";
+
 export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   product: Product;
   seller: string;
@@ -70,12 +72,13 @@ function AddQuantityToCart(props: Props) {
               id="quantitySelectorItems"
             />
           </div>
-          <button
-            class={clx("flex-1 bg-primary text-black desktop:rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
+          <label
+            class={clx("flex-1 btn bg-primary text-black desktop:rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
             hx-on:click={useScript(onClick)}
+            for={MINICART_DRAWER_ID} 
           >
             {text ? text : "COMPRAR"}
-          </button>
+          </label>
 
       <script
         type="module"

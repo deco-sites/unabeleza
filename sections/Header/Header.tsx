@@ -71,7 +71,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
 
           <div class="flex gap-5 items-center">
             <Icon id="heart" class="cursor-pointer" />
-            <Icon id="user" class="cursor-pointer" />
+            <a href="/login"><Icon id="user" class="cursor-pointer" /></a>
             <Bag />
           </div>
         </div>
@@ -141,12 +141,12 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
       )}
       <div class="flex gap-[10px] items-center">
         <Icon id="heart" />
-        <Icon id="user" />
+        <a href="/login"><Icon id="user"/></a>
         <Bag />
       </div>
     </div>
     <div class="flex place-items-center w-screen px-5 my-4 gap-4">
-    {loading === "lazy"
+      {loading === "lazy"
         ? (
           <div class="flex justify-center items-center">
             <span class="loading loading-spinner" />
