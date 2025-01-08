@@ -4249,6 +4249,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[89px\] {
   height: 89px;
 }
+.h-\[min\(3\.402vw\2c 52\.25px\)\] {
+  height: min(3.402vw,52.25px);
+}
 .h-\[var\(--categoryCardCircle-size\)\] {
   height: var(--categoryCardCircle-size);
 }
@@ -4472,6 +4475,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[calc\(100\%_\/_3\)\] {
   width: calc(100% / 3);
+}
+.w-\[min\(3\.402vw\2c 52\.25px\)\] {
+  width: min(3.402vw,52.25px);
 }
 .w-\[min\(54\.30vw\2c 834px\)\] {
   width: min(54.30vw,834px);
@@ -7027,6 +7033,10 @@ details.collapse summary::-webkit-details-marker {
     height: 72.33vh;
   }
 
+  .mobile\:h-\[8\.533vw\] {
+    height: 8.533vw;
+  }
+
   .mobile\:h-\[87px\] {
     height: 87px;
   }
@@ -7089,6 +7099,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:w-\[79\.73vw\] {
     width: 79.73vw;
+  }
+
+  .mobile\:w-\[8\.533vw\] {
+    width: 8.533vw;
   }
 
   .mobile\:w-\[89\.4\%\] {

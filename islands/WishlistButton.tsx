@@ -3,6 +3,7 @@ import { clx } from "../sdk/clx.ts";
 import Icon from "../components/ui/Icon.tsx";
 import { useCallback, useEffect } from "preact/hooks";
 import { invoke } from "../runtime.ts";
+import { useDevice } from "@deco/deco/hooks";
 
 interface Props {
     variant?: "full" | "icon";
@@ -16,6 +17,7 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
     // deno-lint-ignore no-explicit-any
     const productID = (item as any).item_id.toString() ?? "";
     const productGroupID = item.item_group_id?.toString() ?? "";
+    const device = useDevice();
 
     const handleResults = useCallback(
         async () => {
@@ -29,8 +31,8 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
                     : await invoke.wake.actions.wishlist.addProduct({ productId: Number(productGroupID) })
 
                 const svg = button.querySelector("svg");
-                if(svg) {
-                    svg.classList.toggle("text-[#BD87ED]") 
+                if (svg) {
+                    svg.classList.toggle("text-[#BD87ED]")
                     button.disabled = false;
                     button.classList.remove("htmx-request");
                 }
@@ -68,7 +70,6 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
     }, [productID, productGroupID]);
 
     return (
-        <>
             <button
                 id={productID}
                 data-wishlist-button
@@ -76,22 +77,31 @@ function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
                 aria-label="Add to wishlist"
                 onClick={handleResults}
                 class={clx(
-                    "btn btn-circle no-animation w-[49px] h-[49px] mobile:w-8 mobile:h-8",
+                    "btn btn-circle no-animation w-[min(3.402vw,52.25px)] h-[min(3.402vw,52.25px)] mobile:w-[8.533vw] mobile:h-[8.533vw]",
                     `btn-ghost btn-sm hover:bg-info`,
                     fill ? `text-[${fill}]` : "text-transparent",
                     typeTwo ? "shadow-custom-2" : "border border-[#E3EBED]"
                 )}
             >
-                <Icon
-                    id="favorite"
-                    class="[.htmx-request_&]:hidden"
-                    width={26}
-                    height={23}
-                    stroke={stroke}
-                />
+                {device === "desktop"
+                    ? <Icon
+                        id="favorite"
+                        class="[.htmx-request_&]:hidden"
+                        width="min(1.805vw,27.72px)"
+                        height="min(1.597vw,24.52px)"
+                        stroke={stroke}
+                    />
+                    : <Icon
+                        id="favorite"
+                        class="[.htmx-request_&]:hidden"
+                        width="4.528vw"
+                        height="4.005vw"
+                        stroke={stroke}
+                    />
+                }
+
                 <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
             </button>
-        </>
     );
 }
 export default WishlistButton;

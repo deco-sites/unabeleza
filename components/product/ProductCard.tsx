@@ -127,7 +127,7 @@ function ProductCard({
         </a>
 
         {/* Wishlist button */}
-        <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px]">
+        <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px] z-30">
           <WishlistButton item={item} variant="icon" stroke="#BD87ED" />
         </div>
         <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
