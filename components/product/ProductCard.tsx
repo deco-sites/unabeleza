@@ -9,6 +9,7 @@ import { useSendEvent } from "../../sdk/useSendEvent.ts";
 import WishlistButton from "../../islands/WishlistButton.tsx";
 import AddToCartButton from "./AddToCartButton.tsx";
 import ReviewRating from "./ReviewRating.tsx";
+import { useDevice } from "@deco/deco/hooks";
 
 interface Props {
   product: Product;
@@ -42,6 +43,8 @@ function ProductCard({
   const { listPrice, price, seller = "1", availability, installments } =
     useOffer(offers);
 
+  if (!price || price <= 0) return null;
+
   const inStock = availability === "https://schema.org/InStock";
   const relativeUrl = relative(url);
 
@@ -59,7 +62,7 @@ function ProductCard({
     },
   });
 
-  if (!price || price <= 0) return null;
+  const device = useDevice()
 
   return (
     <div
@@ -128,7 +131,7 @@ function ProductCard({
 
         {/* Wishlist button */}
         <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px] z-30">
-          <WishlistButton item={item} variant="icon" stroke="#BD87ED" />
+          <WishlistButton item={item} variant="icon" stroke="#BD87ED" device={device}/>
         </div>
         <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
           <span
@@ -145,8 +148,8 @@ function ProductCard({
       </figure>
 
       <a href={relativeUrl} class="flex flex-col pt-5 gap-[9px]">
-        <ReviewRating ratingValue={aggregateRating?.ratingValue ?? 0}  reviewCount={0}/>
-        
+        <ReviewRating ratingValue={aggregateRating?.ratingValue ?? 0} reviewCount={0} />
+
         <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}
         </span>

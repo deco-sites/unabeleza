@@ -31,7 +31,7 @@ export default function Footer(
         : <MenuMobileFooter {...props} />}
       <div
         class={clx(
-          "bg-[#DBB9F9] px-[60px] py-2.5 h-[56px]",
+          "bg-[#DBB9F9] px-[min(4.16vw,63.89px)] py-2.5 h-[56px]",
           "mobile:px-5 mobile:py-4 h-auto",
         )}
       >

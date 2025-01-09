@@ -26,7 +26,7 @@ function ProductSlider({ products, itemListName, class: _class }: Props) {
         }}
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1 w-full">
-          <Slider class="carousel carousel-center sm:carousel-end justify-between gap-[1.11vw] mobile:gap-[4.26vw] flex w-full">
+          <Slider class="carousel justify-between gap-[1.11vw] mobile:gap-[4.26vw] flex w-full">
             {products?.filter((product) =>
               product.offers!.highPrice > 0 || product.offers!.lowPrice > 0
             )

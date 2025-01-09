@@ -59,13 +59,13 @@ export default function FavoritesSlider(
   { items, title }: FavoritesSliderProps,
 ) {
   return (
-    <div class="px-[60px] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
+    <div class="px-[min(4.16vw,63.89px)] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
       <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
         {title}
       </h2>
       <Slider class="carousel carousel-center w-full gap-[1.11vw] h-full mx-auto desktop:justify-center mobile mobile:gap-0">
         {items.map((item, index) => (
-          <Slider.Item index={index} class="carousel-item">
+          <Slider.Item index={index} class="carousel-item mobile:w-full">
             <SliderItem {...item} />
           </Slider.Item>
         ))}

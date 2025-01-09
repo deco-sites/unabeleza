@@ -152,7 +152,7 @@ function ProductInfo({ page, itemsShare }: Props) {
       {
         device === "desktop" && (
           <div class="space-y-3 max-w-10">
-            <WishlistButton item={item} stroke="#707070" typeTwo={true} />
+            <WishlistButton item={item} stroke="#707070" typeTwo={true} device={device}/>
             <Share {...itemsShare} />
           </div>
         )

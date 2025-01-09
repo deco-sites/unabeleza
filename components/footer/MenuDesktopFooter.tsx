@@ -11,7 +11,7 @@ export default function MenuDesktopFooter(
     <div class="bg-primary pt-[57.63px] pb-[39.2px]">
       <div
         class={clx(
-          "px-[60px] flex flex-col gap-12",
+          "px-[min(4.16vw,63.89px)] flex flex-col gap-12",
           "mobile:px-5",
         )}
       >

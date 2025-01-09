@@ -5459,10 +5459,6 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
-.px-15 {
-  padding-left: 60px;
-  padding-right: 60px;
-}
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -5519,9 +5515,9 @@ details.collapse summary::-webkit-details-marker {
   padding-left: 17.5px;
   padding-right: 17.5px;
 }
-.px-\[60px\] {
-  padding-left: 60px;
-  padding-right: 60px;
+.px-\[min\(4\.16vw\2c 63\.89px\)\] {
+  padding-left: min(4.16vw,63.89px);
+  padding-right: min(4.16vw,63.89px);
 }
 .py-0 {
   padding-top: 0px;

@@ -1,9 +1,8 @@
 import { AnalyticsItem } from "apps/commerce/types.ts";
 import { clx } from "../sdk/clx.ts";
 import Icon from "../components/ui/Icon.tsx";
-import { useCallback, useEffect } from "preact/hooks";
+import { useCallback, useEffect, } from "preact/hooks";
 import { invoke } from "../runtime.ts";
-import { useDevice } from "@deco/deco/hooks";
 
 interface Props {
     variant?: "full" | "icon";
@@ -11,13 +10,13 @@ interface Props {
     stroke: string
     fill?: string
     typeTwo?: boolean
+    device?: string
 }
 
-function WishlistButton({ item, stroke, fill, typeTwo }: Props) {
+function WishlistButton({ item, stroke, fill, typeTwo, device = 'desktop' }: Props) {
     // deno-lint-ignore no-explicit-any
     const productID = (item as any).item_id.toString() ?? "";
     const productGroupID = item.item_group_id?.toString() ?? "";
-    const device = useDevice();
 
     const handleResults = useCallback(
         async () => {

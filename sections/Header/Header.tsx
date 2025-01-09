@@ -47,7 +47,7 @@ export interface SectionProps {
 type Props = Omit<SectionProps, "alert">;
 const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
   <>
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-15 max-w-[96rem]">
+    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300 px-[min(4.16vw,63.89px)] max-w-[96rem]">
       <div class="grid grid-cols-2 place-items-center">
         <div class="place-self-start">
           <a href="/" aria-label="Store logo">

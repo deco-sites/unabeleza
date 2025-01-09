@@ -23,7 +23,7 @@ export default function BenefitBar({ items, class: _class }: BenefitBarProps) {
         _class,
       )}
     >
-      <div class="w-full max-w-[96rem] flex justify-between desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar mx-auto px-[60px] py-[10px] mobile:p-0 ">
+      <div class="w-full max-w-[96rem] flex justify-between desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar mx-auto px-[min(4.16vw,63.89px)] py-[10px] mobile:p-0 ">
         {items &&
           items.map((item) => (
             <div class="flex gap-[10px] items-center justify-center mobile:py-[10px] mobile:min-w-[100vw]">
