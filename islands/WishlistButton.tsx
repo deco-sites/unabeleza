@@ -46,7 +46,6 @@ function WishlistButton({ item, stroke, fill, typeTwo, device = 'desktop' }: Pro
         const updateButton = async () => {
             const user = await invoke.wake.loaders.user();
             const button = document.getElementById(productID) as HTMLButtonElement;
-            button.disabled = false;
             button.classList.remove("htmx-request");
 
             if (user?.email) {
@@ -72,7 +71,6 @@ function WishlistButton({ item, stroke, fill, typeTwo, device = 'desktop' }: Pro
             <button
                 id={productID}
                 data-wishlist-button
-                disabled
                 aria-label="Add to wishlist"
                 onClick={handleResults}
                 class={clx(
