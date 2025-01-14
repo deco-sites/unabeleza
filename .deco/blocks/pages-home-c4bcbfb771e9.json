@@ -818,28 +818,6 @@
       "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Images/Banner.tsx",
-        "title": "Kit Senscience",
-        "images": [
-          {
-            "mobile": {
-              "img": "https://data.decoassets.com/unabeleza/7e49986f-2bf8-47be-bd52-dd6dbbfb3ede/Banner-Expansivo---Mobile-01.png",
-              "w": 375,
-              "h": 520
-            },
-            "desktop": {
-              "img": "https://data.decoassets.com/unabeleza/7890ead9-355c-4489-81cf-1ec975e12024/Banner-Expansivo---Desktop-01.png",
-              "w": 1440,
-              "h": 489
-            },
-            "contentPosition": "start"
-          }
-        ]
-      }
-    },
-    {
       "__resolveType": "site/sections/Home/AboutUs.tsx",
       "title": "Sobre Nós",
       "subtitle": "Nós somos a Unabeleza",
