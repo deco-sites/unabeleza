@@ -74,20 +74,20 @@
           "title": "Compre e ganhe",
           "alt": "Compre e ganhe",
           "href": "#",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          "text": "Produtos que vão ajudar você e seu bolso!"
         },
         {
           "image": "https://data.decoassets.com/unabeleza/2c62b5e8-e178-4ef1-abe7-21c9dc1dd1df/Desktop---Cabelo.png",
           "title": "Cabelo",
           "alt": "Cabelo",
           "href": "#",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          "text": "Cuide dos fios com produtos que transformam e revitalizam!"
         },
         {
           "title": "Maquiagem",
           "alt": "Maquiagem",
           "href": "#",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+          "text": "Realce sua beleza com maquiagem de alta performance!",
           "image": "https://data.decoassets.com/unabeleza/f7d71ce1-e621-48df-9886-1d048c00944b/Desktop---Maquiagem.png"
         },
         {
@@ -95,7 +95,7 @@
           "alt": "Corpo & banho",
           "href": "#",
           "image": "https://data.decoassets.com/unabeleza/0b11d91a-9865-4af0-9e18-f2e72a5ec276/Desktop---Corpo-e-Banho.png",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+          "text": "Experimente um cuidado completo para pele macia e hidratada!"
         }
       ],
       "title": "Veja os favoritos"
