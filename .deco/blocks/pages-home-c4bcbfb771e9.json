@@ -683,17 +683,17 @@
         "__resolveType": "site/sections/Home/BannerSlider.tsx",
         "items": [
           {
-            "image": "https://data.decoassets.com/unabeleza/2cda1039-2a95-4efb-b05e-cb5a8b86b05e/Banner-Categoria-2---Desktop-01.png",
+            "image": "https://data.decoassets.com/unabeleza/4e5e5f85-fd8a-45ec-bc89-927068ace1c5/Banner-Categoria-2---Desktop-03.png",
             "title": "Equipamentos",
             "btn": true
           },
           {
-            "image": "https://data.decoassets.com/unabeleza/05a25edd-fac6-4156-872a-e3c5aaf01f78/Banner-Categoria-2---Desktop-02.png",
+            "image": "https://data.decoassets.com/unabeleza/2cda1039-2a95-4efb-b05e-cb5a8b86b05e/Banner-Categoria-2---Desktop-01.png",
             "title": "Marcas para salão",
             "btn": true
           },
           {
-            "image": "https://data.decoassets.com/unabeleza/4e5e5f85-fd8a-45ec-bc89-927068ace1c5/Banner-Categoria-2---Desktop-03.png",
+            "image": "https://data.decoassets.com/unabeleza/05a25edd-fac6-4156-872a-e3c5aaf01f78/Banner-Categoria-2---Desktop-02.png",
             "title": "Marcas para loja",
             "btn": true
           }
