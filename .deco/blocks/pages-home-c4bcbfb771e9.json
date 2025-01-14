@@ -786,7 +786,6 @@
     {
       "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
       "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum felis ut nulla aliquam, nec rutrum sem gravida. Cras vulputate sit amet ante vitae tincidunt.Pellentesque finibus malesuada facilisis. Ut in dui eu enim ultricies convallis ut sed magna. ",
       "title": "Destaques",
       "subtitle": "Ultra hidratantes",
       "products": {
@@ -815,7 +814,8 @@
           "prices": {}
         }
       },
-      "linkImage": "#"
+      "linkImage": "#",
+      "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟"
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
