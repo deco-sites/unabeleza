@@ -69,21 +69,6 @@
       "alt": "Instagram",
       "href": "https://www.instagram.com/unabelezaoficial/",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/0ae48999-8067-45df-ae97-693b2f3905db/instagram.svg"
-    },
-    {
-      "alt": "Facebook",
-      "href": "#",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/642b1809-abc6-4035-a549-d743e5040f9e/facebook.svg"
-    },
-    {
-      "alt": "Linkedin",
-      "href": "#",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/c3f14a02-d883-484f-a619-9b6f196d49af/linkedin.svg"
-    },
-    {
-      "alt": "Youtube",
-      "href": "#",
-      "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/aac8cecd-bd6a-4a5d-b132-3334be54d4e0/youtube.svg"
     }
   ],
   "paymentMethods": {
