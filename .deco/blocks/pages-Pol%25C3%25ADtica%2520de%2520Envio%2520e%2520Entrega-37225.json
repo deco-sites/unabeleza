@@ -1,0 +1,162 @@
+{
+  "name": "Política de Envio e Entrega",
+  "path": "/política-de-envio",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+      "titulo": "Institucional",
+      "links": [
+        {
+          "rota": "https://www.google.com",
+          "etiqueta": "Google"
+        }
+      ],
+      "titulo_institucional": "Institucionais",
+      "titulo_suporte": "Ajuda e Suporte",
+      "links_institucionais": [
+        {
+          "etiqueta": "Quem somos",
+          "rota": "/quem-somos"
+        },
+        {
+          "etiqueta": "Políticas de privacidade",
+          "rota": "/politicas-de-privacidade"
+        },
+        {
+          "etiqueta": "Política de Frete",
+          "rota": "/politicas-de-frete"
+        }
+      ],
+      "links_ajudas": [
+        {
+          "etiqueta": "Dúvidas",
+          "rota": "/duvidas-frequentes"
+        },
+        {
+          "etiqueta": "Fale Conosco",
+          "rota": "/fale-conosco"
+        },
+        {
+          "etiqueta": "Troca e devolução",
+          "rota": "/troca-e-devolucao"
+        }
+      ],
+      "institutionalTitle": "Institucionais",
+      "supportTitle": "Ajuda e Suporte",
+      "institutionalLinks": [
+        {
+          "label": "Quem somos",
+          "route": "/quem-somos"
+        },
+        {
+          "route": "/trocas-e-devolucoes",
+          "label": "Trocas e Devoluções"
+        },
+        {
+          "route": "/politicas-de-privacidade",
+          "label": "Políticas de privacidade"
+        },
+        {
+          "label": "Política de Envio e Entrega",
+          "route": "/politicas-de-frete"
+        }
+      ],
+      "helpLinks": [
+        {
+          "label": "Dúvidas",
+          "route": "/duvidas-frequentes"
+        },
+        {
+          "route": "/fale-conosco",
+          "label": "Fale Conosco"
+        },
+        {
+          "route": "/troca-e-devolucao",
+          "label": "Troca e Devolução"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+      "links": [
+        {
+          "etiqueta": "Quem somos",
+          "rota": "/quem-somos",
+          "route": "/quem-somos",
+          "label": "Quem somos"
+        },
+        {
+          "etiqueta": "Troca e Devolução",
+          "route": "/trocas-e-devolucoes",
+          "label": "Trocas e Devoluções"
+        },
+        {
+          "etiqueta": "Políticas de privacidade",
+          "route": "/politicas-de-privacidade",
+          "label": "Políticas de Privacidade"
+        },
+        {
+          "etiqueta": "Política de frete",
+          "rota": "https://www.google.com",
+          "route": "/politicas-de-frete",
+          "label": "Política de Envio e Entrega"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
+      "pageTitle": "Política de Privacidade"
+    },
+    {
+      "__resolveType": "site/sections/Politicas/Politicas.tsx",
+      "text": "Hello world",
+      "title": "Políticas de Privacidade",
+      "subtitle": "Lorem Ipsum",
+      "titulo": "Políticas de Privacidade",
+      "subtitulo": "Lorem Ipsum",
+      "paragrafo": "Lorem ipsum dolor sit amet consectetur. Integer nisi tristique quis sit ornare orci massa viverra tellus. Sed libero aenean vitae pellentesque eget. Risus ultrices fames sit arcu tempus mi id vivamus. Erat elementum erat id fermentum sed nibh in maecenas. In sed duis pulvinar nam ac porta lectus. Purus risus blandit montes lacus et nibh feugiat tristique laoreet. Lacus ut ultricies donec fermentum montes viverra. Donec fames consectetur id adipiscing turpis volutpat convallis consectetur. Dictum lectus sit iaculis nam mattis. Faucibus volutpat amet donec ut. Cras dictumst blandit ullamcorper sapien risus quam. Luctus sit cursus ipsum aliquam eu scelerisque. Nunc morbi amet id proin vitae ut. Dolor nibh tristique blandit cursus tincidunt. Aliquam aliquam massa sit platea pellentesque. Augue quam et amet sit vel elementum egestas enim sed. Ullamcorper diam luctus gravida nunc purus. Ligula non elit in erat duis condimentum urna diam adipiscing. Arcu laoreet et tempus sed ac faucibus massa ultricies tellus. ut ac. Ornare vitae ut egestas praesent mi consectetur. Mauris ultricies sed neque fermentum mollis dolor aliquet mi. Ullamcorper varius feugiat a urna. Natoque adipiscing nam adipiscing volutpat sed mauris adipiscing sollicitudin gravida. Odio pellentesque curabitur ornare sit. Tristique mollis condimentum euismod bibendum gravida amet. Elementum odio velit semper duis quis tempor praesent consequat pharetra. Blandit nec felis ut elit tempus arcu nibh mauris. Sed leo fermentum nisl lectus varius consectetur. Non odio consequat vitae accumsan ac nisl vitae et volutpat. Sed maecenas fames lobortis diam vitae mus in nunc. Egestas odio donec lacus nam sit tempor. Sed diam viverra libero fringilla. Nibh enim sit diam id. Id sed risus pulvinar tellus quis fringilla. Scelerisque augue aliquam senectus turpis elit ut habitasse.",
+      "linkLabel": "Vestibulum tempor viverra viverra id sociis lacus",
+      "primeiro_paragrafo": "Lorem ipsum dolor sit amet consectetur. Integer nisi tristique quis sit ornare orci massa viverra tellus. Sed libero aenean vitae pellentesque eget. Risus ultrices fames sit arcu tempus mi id vivamus. Erat elementum erat id fermentum sed nibh in maecenas. In sed duis pulvinar nam ac porta lectus. Purus risus blandit montes lacus et nibh feugiat tristique laoreet. Lacus ut ultricies donec fermentum montes viverra. Donec fames consectetur id adipiscing turpis volutpat convallis consectetur. Dictum lectus sit iaculis nam mattis. Faucibus volutpat amet donec ut. Cras dictumst blandit ullamcorper sapien risus quam. Luctus sit cursus ipsum aliquam eu scelerisque. Nunc morbi amet id proin vitae ut. Dolor nibh tristique blandit cursus tincidunt. Aliquam aliquam massa sit platea pellentesque. Augue quam et amet sit vel elementum egestas enim sed. Ullamcorper diam luctus gravida nunc purus. Ligula non elit in erat duis condimentum urna diam adipiscing. Arcu laoreet et tempus sed ac faucibus massa ultricies tellus. ",
+      "segundo_paragrafo": " ut ac. Ornare vitae ut egestas praesent mi consectetur. Mauris ultricies sed neque fermentum mollis dolor aliquet mi. Ullamcorper varius feugiat a urna. Natoque adipiscing nam adipiscing volutpat sed mauris adipiscing sollicitudin gravida. Odio pellentesque curabitur ornare sit. Tristique mollis condimentum euismod bibendum gravida amet. Elementum odio velit semper duis quis tempor praesent consequat pharetra. Blandit nec felis ut elit tempus arcu nibh mauris. Sed leo fermentum nisl lectus varius consectetur. Non odio consequat vitae accumsan ac nisl vitae et volutpat. Sed maecenas fames lobortis diam vitae mus in nunc. Egestas odio donec lacus nam sit tempor. Sed diam viverra libero fringilla. Nibh enim sit diam id. Id sed risus pulvinar tellus quis fringilla. Scelerisque augue aliquam senectus turpis elit ut habitasse.",
+      "paragrafos": [
+        "Lorem ipsum dolor sit amet consectetur. Integer nisi tristique quis sit ornare orci massa viverra tellus. Sed libero aenean vitae pellentesque eget. Risus ultrices fames sit arcu tempus mi id vivamus. Erat elementum erat id fermentum sed nibh in maecenas. In sed duis pulvinar nam ac porta lectus. Purus risus blandit montes lacus et nibh feugiat tristique laoreet. Lacus ut ultricies donec fermentum montes viverra. Donec fames consectetur id adipiscing turpis volutpat convallis consectetur. Dictum lectus sit iaculis nam mattis. Faucibus volutpat amet donec ut. Cras dictumst blandit ullamcorper sapien risus quam. Luctus sit cursus ipsum aliquam eu scelerisque. Nunc morbi amet id proin vitae ut. Dolor nibh tristique blandit cursus tincidunt. Aliquam aliquam massa sit platea pellentesque. Augue quam et amet sit vel elementum egestas enim sed. Ullamcorper diam luctus gravida nunc purus. Ligula non elit in erat duis condimentum urna diam adipiscing. Arcu laoreet et tempus sed ac faucibus massa ultricies tellus.",
+        "Ornare vitae ut egestas praesent mi consectetur. Mauris ultricies sed neque fermentum mollis dolor aliquet mi. Ullamcorper varius feugiat a urna. Natoque adipiscing nam adipiscing volutpat sed mauris adipiscing sollicitudin gravida. Odio pellentesque curabitur ornare sit. Tristique mollis condimentum euismod bibendum gravida amet. Elementum odio velit semper duis quis tempor praesent consequat pharetra. Blandit nec felis ut elit tempus arcu nibh mauris. Sed leo fermentum nisl lectus varius consectetur. Non odio consequat vitae accumsan ac nisl vitae et volutpat. Sed maecenas fames lobortis diam vitae mus in nunc. Egestas odio donec lacus nam sit tempor. Sed diam viverra libero fringilla. Nibh enim sit diam id. Id sed risus pulvinar tellus quis fringilla. Scelerisque augue aliquam senectus turpis elit ut habitasse."
+      ],
+      "link": [
+        "https://www.google.com"
+      ],
+      "links": [],
+      "item": [
+        {
+          "titulo": "Políticas de Privacidade",
+          "subtitulo": "Lorem Ipsum",
+          "paragrafos": "<p>Lorem ipsum dolor sit amet consectetur. Integer nisi tristique quis sit ornare orci massa viverra tellus. Sed libero aenean vitae pellentesque eget. Risus ultrices fames sit arcu tempus mi id vivamus. Erat elementum erat id fermentum sed nibh in maecenas. In sed duis pulvinar nam ac porta lectus. Purus risus blandit montes lacus et nibh feugiat tristique laoreet. Lacus ut ultricies donec fermentum montes viverra. Donec fames consectetur id adipiscing turpis volutpat convallis consectetur. Dictum lectus sit iaculis nam mattis. Faucibus volutpat amet donec ut. Cras dictumst blandit ullamcorper sapien risus quam.</p><p>Luctus sit cursus ipsum aliquam eu scelerisque. Nunc morbi amet id proin vitae ut. Dolor nibh tristique blandit cursus tincidunt. Aliquam aliquam massa sit platea pellentesque. Augue quam et amet sit vel elementum egestas enim sed. Ullamcorper diam luctus gravida nunc purus. Ligula non elit in erat duis condimentum urna diam adipiscing. <u><span style=\"color: rgb(143, 42, 237)\">Vestibulum tempor viverra viverra id sociis lacus</span></u> ut ac. Ornare vitae ut egestas praesent mi consectetur. Mauris ultricies sed neque fermentum mollis dolor aliquet mi. Ullamcorper varius feugiat a urna. Natoque adipiscing nam adipiscing volutpat sed mauris adipiscing sollicitudin gravida. Odio pellentesque curabitur ornare sit. Tristique mollis condimentum euismod bibendum gravida amet.</p><p>Elementum odio velit semper duis quis tempor praesent consequat pharetra. Blandit nec felis ut elit tempus arcu nibh mauris. Sed leo fermentum nisl lectus varius consectetur. Non odio consequat vitae accumsan ac nisl vitae et volutpat. Sed maecenas fames lobortis diam vitae mus in nunc. Egestas odio donec lacus nam sit tempor. Sed diam viverra libero fringilla. Nibh enim sit diam id. Id sed risus pulvinar tellus quis fringilla. Scelerisque augue aliquam senectus turpis elit ut habitasse.</p>",
+          "paragraph": "<p><strong><span style=\"font-size: 16pt\">Política de Envio e Entrega</span></strong></p><p></p><p>Nós, da Uma Beleza, nos dedicamos a oferecer uma experiência de compra confiável e prática. Trabalhamos com transportadoras de renome para garantir que nossos produtos sejam entregues em todo o Brasil com pontualidade e segurança, sempre buscando as melhores condições para você.</p><p></p><p><strong>POSSO MODIFICAR O ENDEREÇO DE ENTREGA?</strong></p><p></p><p>Uma vez que o pedido tenha sido finalizado, não será possível alterar o endereço de entrega.</p><p></p><p><strong>QUAL É O HORÁRIO DE ENTREGA DOS PEDIDOS?</strong></p><p></p><p>As entregas são realizadas de segunda a sexta-feira, entre 8h e 18h. Para garantir que o pedido seja recebido, é importante que haja alguém disponível no endereço indicado para assinar o comprovante de recebimento.</p><p></p><p><strong>QUAIS SÃO AS OPÇÕES DE ENTREGA DISPONÍVEIS?</strong></p><p></p><p>O prazo de entrega será calculado automaticamente ao inserir o CEP no campo apropriado, logo após selecionar os produtos e adicioná-los ao carrinho. Assim que a compra for confirmada e o pagamento processado, você será informado sobre o tempo estimado de entrega com base na transportadora escolhida. Lembrando que o prazo começa a contar a partir da confirmação do pagamento e dos dados cadastrais.</p><p></p><p><strong>COMO ACOMPANHAR O ANDAMENTO DO MEU PEDIDO?</strong></p><p></p><p>Você pode acompanhar o status do seu pedido acessando nossa plataforma e fazendo login na área “Meus Pedidos”. Através dessa seção, você conseguirá visualizar os detalhes do envio e acompanhar o progresso da entrega diretamente no site da transportadora.</p><p></p><p><strong>REALIZAMOS ENTREGAS AOS FINAIS DE SEMANA E FERIADOS?</strong></p><p></p><p>Nossas entregas são realizadas exclusivamente de segunda a sexta-feira, das 8h às 18h. Não há entregas aos finais de semana ou feriados.</p><p></p><p><strong>O QUE FAZER SE MEU PEDIDO NÃO CHEGAR NO PRAZO?</strong></p><p></p><p>Antes de mais nada, verifique se o prazo previsto para a entrega já expirou. Essa informação pode ser confirmada na seção “Meus Pedidos” em nosso site. Se o prazo já tiver sido ultrapassado e você ainda não recebeu seu pedido, certifique-se de que o pagamento foi aprovado. Para pagamentos por boleto, lembre-se de que a confirmação pode levar até 72 horas úteis.</p><p>Caso o pedido tenha sido enviado via Correios, ele pode estar disponível para retirada em uma agência. Verifique o rastreamento para obter mais detalhes sobre a localização do seu pedido.</p><p></p><p><strong>RECEBI UM PRODUTO DIFERENTE DO QUE COMPREI. O QUE FAZER?</strong></p><p></p><p>Se você receber um item diferente do solicitado, recuse a entrega e avise nossa Central de Atendimento imediatamente. Caso perceba o erro após o recebimento, não remova o produto da embalagem e informe nossa equipe para que possamos resolver o problema o mais rápido possível.</p><p></p><p><strong>O QUE ACONTECE SE NÃO HOUVER NINGUÉM PARA RECEBER O PEDIDO?</strong></p><p></p><p>Serão feitas até três tentativas de entrega em horários diferentes. Caso todas as tentativas falhem, o pedido será devolvido ao nosso Centro de Distribuição. Lembre-se de acompanhar o status do pedido em nosso site para se manter informado sobre as tentativas de entrega.</p><p></p>",
+          "title": "Política de Envio e Entrega"
+        }
+      ]
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
