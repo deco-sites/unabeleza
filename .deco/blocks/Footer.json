@@ -149,17 +149,17 @@
       "title": "card"
     },
     {
-      "text": "<p><strong>Compre </strong>no site e <strong>troque </strong>na loja</p>",
+      "text": "<p>Entrega em todo o<strong> Brasil</strong></p>",
       "icon": "benefitBarMap",
       "title": "map"
     },
     {
-      "text": "<p><strong>Frete Grátis </strong>- acima de R$ 500</p>",
+      "text": "<p><strong>Frete Grátis </strong>- acima de R$ 200 (Sul e Sudeste)</p>",
       "icon": "benefitBarTruck",
       "title": "truck"
     },
     {
-      "text": "<p>Pague com Pix e ganhe <strong>3%OFF</strong></p>",
+      "text": "<p>Pague com Pix e ganhe <strong>5%OFF</strong></p>",
       "icon": "benefitBarQrCode",
       "title": "qrCode"
     }
