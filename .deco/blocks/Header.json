@@ -22,103 +22,100 @@
     {
       "children": [
         {
-          "image": [
-            {
-              "image": [],
-              "video": []
-            }
-          ],
           "children": [],
-          "name": "Esponja de Maquiagem",
-          "identifier": "group1",
-          "url": "acessorios/esponja-de-maquiagem"
+          "image": null,
+          "name": "Acessórios",
+          "url": "cabelos/acessorios"
         },
         {
-          "image": [],
           "children": [],
-          "name": "Luva de Aplicação",
-          "identifier": "group1",
-          "url": "acessorios/luva-de-aplicacao"
+          "image": null,
+          "name": "Coloração",
+          "url": "cabelos/coloracao"
         },
         {
-          "image": [],
           "children": [],
-          "identifier": "group2",
-          "url": "acessorios/papel-para-mechas",
-          "name": "Papel para Mechas"
+          "image": null,
+          "name": "Condicionador",
+          "url": "cabelos/condicionador"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Equipamento",
+          "url": "cabelos/equipamento"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Finalizador",
+          "url": "cabelos/finalizador"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Kits para Cabelo",
+          "url": "cabelos/kits-para-cabelo"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "cabelos/leave-in-e-creme-de-pentear",
+          "name": "Leave in e Creme de Pentear"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Máscara Capilar",
+          "url": "cabelos/mascara-capilar"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "cabelos/progressiva",
+          "name": "Progressiva"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Shampoo",
+          "url": "cabelos/shampoo"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "cabelos/tratamento",
+          "name": "Tratamento"
         }
       ],
-      "@type": "SiteNavigationElement",
-      "url": "/acessorios",
-      "name": "Acessórios",
-      "image": [
-        {
-          "image": [],
-          "video": [],
-          "url": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/81acf10f-968f-40e1-8b36-b3de3c76931a/banner-menu.png"
-        }
-      ]
+      "url": "/cabelos",
+      "image": null,
+      "name": "Cabelos"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/beleza-e-cuidado-pessoal",
-      "name": "Beleza e Cuidado Pessoal",
-      "children": [
-        {
-          "image": [],
-          "children": [],
-          "url": "/beleza-e-cuidado-pessoal/artigos-para-cabeleireiros",
-          "name": "Artigo para Cabeleireiros"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "Cuidados com o Cabelo",
-          "url": "/beleza-e-cuidado-pessoal/cuidados-com-o-cabelo"
-        }
-      ]
+      "url": "/maquiagem",
+      "name": "Maquiagem",
+      "children": [],
+      "image": null
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/skincare",
-      "name": "Skincare",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/cuidados-pessoais",
-      "name": "Cuidados Pessoais",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/acessorios",
-      "name": "Acessórios",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
       "url": "/kits-e-combos",
       "name": "Kits e Combos",
-      "children": []
+      "children": [],
+      "image": null,
+      "@type": "SiteNavigationElement"
     },
     {
-      "children": [],
-      "image": [],
+      "url": "/marcas",
       "name": "Marcas",
-      "url": "/marcas"
+      "children": [],
+      "image": []
     },
     {
       "children": [],
       "image": [],
-      "name": "Cupons",
-      "url": "/cupons"
-    },
-    {
-      "children": [],
-      "image": [],
-      "name": "Outlet - Bruno",
-      "url": "/outlet"
+      "url": "/outlet",
+      "name": "Outlet"
     }
   ],
   "loading": "eager"
