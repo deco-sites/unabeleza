@@ -108,31 +108,6 @@
         "alt": "Visa",
         "href": "#",
         "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/72e312ee-9133-4f15-9af4-d8f0de1522fa/Visa.svg"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/80965587-a90e-41f0-83a5-5cc4ee3959d8/Paymee.svg",
-        "alt": "PayMee",
-        "href": "#"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/d64e1889-2232-43ed-96bd-63cba41cb2a1/mercadolivre.svg",
-        "alt": "Mercado Livre",
-        "href": "#"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/20478692-9853-44b4-b7ba-744959ce6bb4/americanas.svg",
-        "alt": "AME",
-        "href": "#"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/407c55a4-f0e9-4045-8cc8-57db1e46b855/Pic-Pay.svg",
-        "alt": "PicPay",
-        "href": "#"
-      },
-      {
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/cc52aa81-11f2-4dd8-9a15-0f6fcf8a5b00/paypal.svg",
-        "alt": "PayPal",
-        "href": "#"
       }
     ]
   },
