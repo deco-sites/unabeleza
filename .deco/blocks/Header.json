@@ -106,8 +106,8 @@
       "@type": "SiteNavigationElement"
     },
     {
-      "url": "/marcas",
-      "name": "Marcas",
+      "url": "fabricante/wella-professionals",
+      "name": "Wella Professionals",
       "children": [],
       "image": []
     },
