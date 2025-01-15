@@ -25,66 +25,66 @@
           "children": [],
           "image": null,
           "name": "Acessórios",
-          "url": "cabelos/acessorios"
+          "url": "/acessorios"
         },
         {
           "children": [],
           "image": null,
           "name": "Coloração",
-          "url": "cabelos/coloracao"
+          "url": "/coloracao"
         },
         {
           "children": [],
           "image": null,
           "name": "Condicionador",
-          "url": "cabelos/condicionador"
+          "url": "/condicionador"
         },
         {
           "children": [],
           "image": null,
           "name": "Equipamento",
-          "url": "cabelos/equipamento"
+          "url": "/equipamento"
         },
         {
           "children": [],
           "image": null,
           "name": "Finalizador",
-          "url": "cabelos/finalizador"
+          "url": "/finalizador"
         },
         {
           "children": [],
           "image": null,
           "name": "Kits para Cabelo",
-          "url": "cabelos/kits-para-cabelo"
+          "url": "/kits-para-cabelo"
         },
         {
           "children": [],
           "image": null,
-          "url": "cabelos/leave-in-e-creme-de-pentear",
+          "url": "/leave-in-e-creme-de-pentear",
           "name": "Leave in e Creme de Pentear"
         },
         {
           "children": [],
           "image": null,
           "name": "Máscara Capilar",
-          "url": "cabelos/mascara-capilar"
+          "url": "/mascara-capilar"
         },
         {
           "children": [],
           "image": null,
-          "url": "cabelos/progressiva",
+          "url": "/progressiva",
           "name": "Progressiva"
         },
         {
           "children": [],
           "image": null,
           "name": "Shampoo",
-          "url": "cabelos/shampoo"
+          "url": "/shampoo"
         },
         {
           "children": [],
           "image": null,
-          "url": "cabelos/tratamento",
+          "url": "/tratamento",
           "name": "Tratamento"
         }
       ],
