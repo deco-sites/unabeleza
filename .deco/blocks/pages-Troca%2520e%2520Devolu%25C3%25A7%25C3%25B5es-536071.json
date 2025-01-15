@@ -55,12 +55,16 @@
           "route": "/quem-somos"
         },
         {
+          "route": "/trocas-e-devolucoes",
+          "label": "Trocas e Devoluções"
+        },
+        {
           "route": "/politicas-de-privacidade",
           "label": "Políticas de privacidade"
         },
         {
-          "route": "/politicas-de-frete",
-          "label": "Políticas de Frete"
+          "label": "Política de Envio e Entrega",
+          "route": "/politicas-de-frete"
         }
       ],
       "helpLinks": [
@@ -88,6 +92,11 @@
           "label": "Quem somos"
         },
         {
+          "etiqueta": "Troca e Devolução",
+          "route": "/trocas-e-devolucoes",
+          "label": "Trocas e Devoluções"
+        },
+        {
           "etiqueta": "Políticas de privacidade",
           "route": "/politicas-de-privacidade",
           "label": "Políticas de Privacidade"
@@ -96,23 +105,7 @@
           "etiqueta": "Política de frete",
           "rota": "https://www.google.com",
           "route": "/politicas-de-frete",
-          "label": "Políticas de Frete"
-        },
-        {
-          "etiqueta": "Dúvidas",
-          "rota": "/duvidas-frequentes",
-          "route": "/duvidas-frequentes",
-          "label": "Dúvidas"
-        },
-        {
-          "etiqueta": "Fale conosco",
-          "label": "Fale Conosco",
-          "route": "/fale-conosco"
-        },
-        {
-          "etiqueta": "Troca e Devolução",
-          "route": "/troca-e-devolucao",
-          "label": "Troca e Devolução"
+          "label": "Política de Envio e Entrega"
         }
       ]
     },
