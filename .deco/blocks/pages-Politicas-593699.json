@@ -60,7 +60,10 @@
         },
         {
           "route": "/politicas-de-frete",
-          "label": "Políticas de Frete"
+          "label": "Trocas e Devoluções"
+        },
+        {
+          "label": "Política de Envio e Entrega"
         }
       ],
       "helpLinks": [
