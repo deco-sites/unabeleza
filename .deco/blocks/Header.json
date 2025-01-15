@@ -106,10 +106,16 @@
       "@type": "SiteNavigationElement"
     },
     {
-      "url": "fabricante/wella-professionals",
-      "name": "Wella Professionals",
-      "children": [],
-      "image": []
+      "children": [
+        {
+          "children": [],
+          "image": null,
+          "url": "fabricante/wella-professionals",
+          "name": "Wella Professionals"
+        }
+      ],
+      "image": [],
+      "name": "Marcas"
     },
     {
       "children": [],
