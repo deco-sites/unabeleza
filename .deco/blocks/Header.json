@@ -37,54 +37,54 @@
           "children": [],
           "image": null,
           "name": "Condicionador",
-          "url": "/condicionador"
+          "url": "/cabelos/condicionador"
         },
         {
           "children": [],
           "image": null,
           "name": "Equipamento",
-          "url": "/equipamento"
+          "url": "/cabelos/equipamento"
         },
         {
           "children": [],
           "image": null,
           "name": "Finalizador",
-          "url": "/finalizador"
+          "url": "/cabelos/finalizador"
         },
         {
           "children": [],
           "image": null,
           "name": "Kits para Cabelo",
-          "url": "/kits-para-cabelo"
+          "url": "/cabelos/kits-para-cabelo"
         },
         {
           "children": [],
           "image": null,
-          "url": "/leave-in-e-creme-de-pentear",
+          "url": "/cabelos/leave-in-e-creme-de-pentear",
           "name": "Leave in e Creme de Pentear"
         },
         {
           "children": [],
           "image": null,
           "name": "Máscara Capilar",
-          "url": "/mascara-capilar"
+          "url": "/cabelos/mascara-capilar"
         },
         {
           "children": [],
           "image": null,
-          "url": "/progressiva",
+          "url": "/cabelos/progressiva",
           "name": "Progressiva"
         },
         {
           "children": [],
           "image": null,
           "name": "Shampoo",
-          "url": "/shampoo"
+          "url": "/cabelos/shampoo"
         },
         {
           "children": [],
           "image": null,
-          "url": "/tratamento",
+          "url": "/cabelos/tratamento",
           "name": "Tratamento"
         }
       ],
