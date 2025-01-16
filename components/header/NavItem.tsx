@@ -1,6 +1,7 @@
 import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { HEADER_HEIGHT_DESKTOP } from "../../constants.ts";
+import { clx } from "../../sdk/clx.ts";
 
 function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
@@ -34,10 +35,14 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden shadow-custom hover:flex group-hover:flex bg-base-100 z-40 items-start justify-between gap-6 border-t-2 border-b-2 border-base-200 w-screen px-[min(4.16vw,63.89px)] py-6 h-fit"
+            class={clx(
+                "fixed hidden shadow-custom max-h-[calc(100vh-186.2px)] max-w-[96rem] overflow-y-auto hover:flex group-hover:flex",
+                "bg-base-100 z-40 items-start justify-between gap-6 border-t-2 border-b-2 border-base-200 w-screen px-[min(4.16vw,63.89px)] py-6 h-fit"
+              )}
             style={{
               top: "10.2px",
-              left: "0px",
+              left: "50%",
+              transform: "translateX(-50%)",
               marginTop: HEADER_HEIGHT_DESKTOP,
             }}
           >
