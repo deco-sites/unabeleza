@@ -9,10 +9,6 @@
           "href": "/quem-somos"
         },
         {
-          "title": "Políticas de Privacidade",
-          "href": "/politicas-de-privacidade"
-        },
-        {
           "title": "<p>Trocas e Devoluções</p>",
           "href": "/trocas-e-devolucoes"
         },
@@ -36,8 +32,8 @@
           "href": "#"
         },
         {
-          "title": "Segurança e Privacidade",
-          "href": "#"
+          "title": "<p>Política de Privacidade</p>",
+          "href": "/politicas-de-privacidade"
         }
       ]
     },
