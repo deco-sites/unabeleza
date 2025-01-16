@@ -673,7 +673,7 @@
               "dcName": []
             },
             "prices": {},
-            "available": false
+            "available": true
           }
         }
       }
