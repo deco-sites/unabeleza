@@ -762,7 +762,7 @@
         },
         {
           "label": "CABELO",
-          "href": "/cabelo",
+          "href": "/cabelos",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
           "icon": "categoryHair"
         },
@@ -780,7 +780,7 @@
         },
         {
           "label": "EQUIPAMENTO",
-          "href": "/equipamento",
+          "href": "/cabelos/equipamento",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
           "icon": "categoryEquipment"
         }
