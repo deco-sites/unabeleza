@@ -4320,6 +4320,9 @@ details.collapse summary::-webkit-details-marker {
 .max-h-\[91px\] {
   max-height: 91px;
 }
+.max-h-\[calc\(100vh-186\.2px\)\] {
+  max-height: calc(100vh - 186.2px);
+}
 .max-h-full {
   max-height: 100%;
 }
