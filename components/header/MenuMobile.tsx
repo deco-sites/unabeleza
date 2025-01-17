@@ -44,11 +44,11 @@ function MenuItem({ item, loading }: MenuItemProps) {
                         }
 
                         return (
-                          <div class="collapse border-b border-neutral-100">
+                          <a class="collapse border-b border-neutral-100" href={leaf.url}>
                             <div class="collapse-title">
                               {leaf.name}
                             </div>
-                          </div>
+                          </a>
                         );
                       })}
                     </ul>
@@ -74,11 +74,11 @@ function MenuItem({ item, loading }: MenuItemProps) {
   }
 
   return (
-    <div class="collapse border-b border-neutral-100">
+    <a class="collapse border-b border-neutral-100" href={item.url}>
       <div class="collapse-title">
         {item.name}
       </div>
-    </div>
+    </a>
   );
 }
 

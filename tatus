@@ -1,0 +1,992 @@
+[33mcommit 9e14096cc59f9ac015c1bd6be40e8f9b3dd58c9d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mqa[m[33m, [m[1;31morigin/qa[m[33m)[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Jan 16 10:21:54 2025 -0300
+
+    fix: fixed bug into navitem
+
+[33mcommit 1f8b84a8c508edd12a2f57831830cf59ac1c9ca5[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Jan 9 15:54:05 2025 -0300
+
+    fix: bugs fixed
+
+[33mcommit e2cb66c4eaf439da2424ba0760879d5d33d1ff7a[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Jan 9 15:40:31 2025 -0300
+
+    fix: bugs fixed
+
+[33mcommit 3cdfb99d5ba2a582efb39105266e0fb31eb608a7[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Jan 8 15:52:12 2025 -0300
+
+    fix: bugs fixed
+
+[33mcommit 2f65bf573dd9147900bf42b15f6e201b08644260[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Jan 7 11:10:44 2025 -0300
+
+    fix: adjustments made
+
+[33mcommit ea3e1fbaab6ef35baa7bbd6cd9bf2d539d8180dd[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:15:52 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 5933ad3b0d3a56df215aa080a14de3b7d9ff80a7[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:14:21 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 20fb9bdabc60f7702988d4dd303ca3cb2a03be49[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:12:11 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 48b0d6a6440f671e8adfcc43ca11a036910a8d37[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:10:22 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit fb4cbf3edfbcf26e4646d75cd71035ce0f312b2a[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:07:58 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 9bf5374e539df331d4f6ff6bc01701126a6527b9[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:05:52 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit f34a7ed325ab90990390b307c574653f3f74cac7[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Mon Dec 23 12:02:34 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit dd1c9da6f0010beb4c3014e5d555381675d77a6d[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 16:42:48 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit f53a7a171937f80d87023f4f38a9deb1bdf8b952[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 16:26:42 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit baefdccfe71330543f0bac69f50139437bcb7780[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 16:14:58 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 105d85a3226c967748950b389be126532b90684d[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 15:58:16 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 16be1abce133204e4f3a8b5a60d8688ca82dbb2f[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 15:56:31 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit f15dd370cca2eb7f7652b545d1ea90c50a8acb77[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 13:38:54 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 9ff5471570b387db58d5b764404cc03c46e0c075[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Wed Dec 18 13:29:15 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit b362bc5ae2a683ba09b2cbd7e818c38c52f6b409[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Tue Dec 17 18:44:51 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit bf65a7017bc68ca7ba6c79bf401e074050560ea4[m
+Author: Bruno Pereira <bruno.pereira@yavconsultoria.com.br>
+Date:   Tue Dec 17 18:42:57 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 37ae8a63d1b0dab8678b650b9fd896d1547e3641[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 16 15:58:02 2024 -0300
+
+    feat: add alert in add to cart button
+
+[33mcommit c1850d61bfbf547482c9dacf30bc38944fd2053f[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 16 15:20:37 2024 -0300
+
+    fix: bugs in wishlist button fixed
+
+[33mcommit dd8c22e57c2be2cb23103c850b6f6bfa3e271f56[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 13 15:32:18 2024 -0300
+
+    refactor: never used code removed
+
+[33mcommit 7b7df399442fbbe04e630132a8f62d363d417c7f[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 13 15:26:53 2024 -0300
+
+    fix: bug shipping fixed
+
+[33mcommit ee24bb59bc0c4cc1600294e66184405fb75b14e4[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 13 11:28:39 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit dcf199c14af945d5a051649946ff8c7da2b2ae77[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 13 10:38:44 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit f72035c25569f455b3618a3f4bb36ad41f77cf98[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 13 10:28:19 2024 -0300
+
+    feat: form reviews
+
+[33mcommit 816f1be02ce22ffea9a17dea3980f61bc0476419[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 17:59:50 2024 -0300
+
+    fix: bugs in wishlist button fixed
+
+[33mcommit 779607fbe147297dc6dd40b83dec98dc54259bd4[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 14:25:10 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 0ee1fadfd5dc946045b52165a128be0eb666aac0[m
+Merge: 2ea8cf6 46667a5
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 14:13:48 2024 -0300
+
+    Merge remote-tracking branch 'origin' into qa
+
+[33mcommit 2ea8cf6f6fe82a5df4a403cd7476a6f169fecb66[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 14:13:18 2024 -0300
+
+    fix: bugs in shipping fixed
+
+[33mcommit 46667a5bf1225e85f6d7f6eab3f15ea189d2dbdb[m
+Merge: 7f0e4d6 3b85117
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 13:55:17 2024 -0300
+
+    Merge branch 'main' of https://github.com/deco-sites/unabeleza
+
+[33mcommit 7f0e4d67dc49b254325820b8744ec1c6c3ec7ea3[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 11 13:54:24 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 3b851178315fb797908ca9d7c39e8223dfe705df[m
+Author: Leandro Heitor <leandro.heitor@econverse.com.br>
+Date:   Wed Dec 11 12:15:17 2024 +0000
+
+    Publish 3 from staging into origin/main
+
+[33mcommit a422ace8650354bfa718ad58ea0f62db06c9a5fe[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 9 16:51:20 2024 -0300
+
+    chore: remove logs
+
+[33mcommit b7869d74b4504e9f6de4096cc069baf9e15de345[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 9 16:45:27 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 7a180d2a16bc30ea39a542409647d3903b2f7622[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 9 16:36:27 2024 -0300
+
+    feat: entry popup
+
+[33mcommit ba4880534cc09661416fa5ade4e45ea952d726ad[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 9 11:46:07 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 583d07a8dcc4ce40a528d28964e987a474ddc827[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 9 11:21:19 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 8f887d2a21289ae58b9467ab02e49e9c77331f46[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 6 18:33:50 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 037d208957ec722b9ce039946fafbfc23d210d8f[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 6 17:40:58 2024 -0300
+
+    fix: WhatsApp added to all pages
+
+[33mcommit 84c1231fef0485b6588f5ec150dd836f2e520763[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 6 17:10:02 2024 -0300
+
+    feat: whatsapp button
+
+[33mcommit e5d6386680eeb61c0c506548cf8874cdb4c7a7fe[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 6 16:56:31 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit 6d0acafb4d1bd0ae0b0c4930804c4f44f02d507e[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Dec 6 16:40:07 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit a4e05db25f479fd13134a8bc40bc2490a608cafb[m[33m ([m[1;31morigin/feature/29759/header[m[33m)[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Dec 5 18:38:34 2024 -0300
+
+    feat: search bar
+
+[33mcommit 83e294783fa4c4a87c332151fab4f1116d277a56[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 4 16:41:42 2024 -0300
+
+    feat: minicart
+
+[33mcommit a51d256e21420c450a9fe7963f1e030e5428a1ed[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Dec 4 12:30:41 2024 -0300
+
+    fix: bugs fixed
+
+[33mcommit a99d3e447c8f809b3da9d8a04e99d0e6ee507ee4[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 2 17:13:34 2024 -0300
+
+    fix: bugs in the menu, buy button and pdp table have been resolved
+
+[33mcommit dd23d30d89a3182d1fc4d451718a982180d1b025[m
+Merge: 394cbde b705e6f
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 2 14:07:43 2024 -0300
+
+    Merge branch 'main' of https://github.com/deco-sites/unabeleza
+
+[33mcommit 394cbdea4d35d7726e7494870a9d0e628194a1cf[m
+Merge: 54486bb 44a1925
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Dec 2 14:05:46 2024 -0300
+
+    feat: merge main in category
+
+[33mcommit 54486bb5ac0efd91cc6a9029db2b145cdc98d4c9[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Nov 27 18:40:52 2024 -0300
+
+    feat: finished category
+
+[33mcommit b705e6f7be709be33f731b364cce32ac738e9c3e[m
+Author: George Tonietti <george.tonietti@econverse.com.br>
+Date:   Wed Nov 27 12:39:47 2024 +0000
+
+    Publish 1 from staging into origin/main
+
+[33mcommit 44a1925dd92e783a96ec186c231ce9601783f8c7[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Nov 27 09:07:22 2024 -0300
+
+    docs: change in deno.json
+
+[33mcommit d47d78f54a2856ca47984c664855eac8e8538810[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Nov 26 15:59:37 2024 -0300
+
+    feat: filters and sort
+
+[33mcommit 80bd0108f1eae7c48449f67b5ee9037fdc49a223[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 25 16:57:17 2024 -0300
+
+    feat: category wip
+
+[33mcommit fbe9067b43e1a9679eff2c0d4e2b0e8d5201163b[m
+Author: George Tonietti <george.tonietti@econverse.com.br>
+Date:   Mon Nov 25 11:33:02 2024 -0300
+
+    Publish 2 from localhost into origin/main
+
+[33mcommit 899b1334f8c803fc78d91424cef06a43437bd924[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 25 11:21:28 2024 -0300
+
+    feat: category wip
+
+[33mcommit 2f78c970405b8dc1ca0110ef08e17f66087584cb[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 22 18:43:42 2024 -0300
+
+    feat: category wip
+
+[33mcommit 6b310b00fbc4b4caa3fd4a552a16ff2a85deb7fe[m
+Merge: cc548ec a22f448
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 22 14:44:32 2024 -0300
+
+    feat: updating with main branch
+
+[33mcommit a22f448f195d29bb0ee822838fcc8415568e1ee9[m[33m ([m[1;31morigin/feature/29762/pdp[m[33m)[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 22 14:36:31 2024 -0300
+
+    fix: merger conflicts resolved
+
+[33mcommit b3352e4c3f8af4ff785e0dce00cf54123e60be65[m
+Merge: 31bbde9 ec29c93
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 22 14:33:07 2024 -0300
+
+    feat: merge into main
+
+[33mcommit cc548ecd79100c9efb424d3c32ebf6edfb18c235[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 22 14:23:40 2024 -0300
+
+    feat: category page adjustments started
+
+[33mcommit ec29c93e6ac3bec07f7ebcef018515cac19c6ddf[m
+Merge: 5d08f2d 422c543
+Author: George Lucas <42789894+georgetonietti@users.noreply.github.com>
+Date:   Fri Nov 22 14:21:46 2024 -0300
+
+    Merge pull request #9 from deco-sites/feature/29771/notfound
+    
+    Feature/29771/notfound
+
+[33mcommit 31bbde9732076dbd72da147385083a7fe8f25e06[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Nov 21 19:38:24 2024 -0300
+
+    feat: pdp finished
+
+[33mcommit c867c638ac6d400b501316f86d106c0e6545c615[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Nov 19 15:31:56 2024 -0300
+
+    feat: modal paymentMethods
+
+[33mcommit a83794a413dd7f29eaa564fd47b1a477acffa2d8[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 18 18:10:18 2024 -0300
+
+    feat: pdp wip
+
+[33mcommit 346b3dd48c85bc482cc28db3711ed9cd666aba41[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Nov 14 12:49:16 2024 -0300
+
+    feat: share component
+
+[33mcommit 422c543baedba7cb51a6d5d9fbeeaf2db95885e3[m
+Merge: fb0d68c 5d08f2d
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Tue Nov 12 16:02:06 2024 -0300
+
+    merge solved
+
+[33mcommit fb0d68cbf89b07649c9644de528a0cf4dae7e830[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Tue Nov 12 15:59:12 2024 -0300
+
+    merge done, conflicts solved
+
+[33mcommit 5d08f2de1264ad31de090255d663bd62c1e80470[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Tue Nov 12 15:43:12 2024 -0300
+
+    update deco deploy to deno2
+
+[33mcommit a49d0015d9ccc2f88fb84c48c9910ee1f26c6ae5[m
+Author: Felipe Campos <felipe.campos@econverse.com.br>
+Date:   Tue Nov 12 18:40:02 2024 +0000
+
+    Required files for denodeploy platform setup
+
+[33mcommit e168603e013c4e9e7dd498fb36f1d01a0fb5507d[m[33m ([m[1;31morigin/feature/29775/login[m[33m, [m[1;31morigin/feature/29761/footer[m[33m)[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Nov 12 10:03:10 2024 -0300
+
+    feat: merge main in footer
+
+[33mcommit 14941ab7a5dd76cbd0843b1fc9fd6ee21910049c[m
+Merge: 075fb51 629faa0
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Nov 12 10:02:43 2024 -0300
+
+    feat: merge main in footer
+
+[33mcommit 96e7eec5cd6d236a66b53dc515cdeea2188e172f[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Nov 12 09:56:47 2024 -0300
+
+    feat: pdp wip
+
+[33mcommit 40c7eb586d03506eb200461decdf4fe9b50847f5[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Tue Nov 12 09:45:46 2024 -0300
+
+    feat: shelf ajustada
+
+[33mcommit 937eb86f1342e5cc34b988713b6a661a0d4237f0[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Nov 11 16:50:51 2024 -0300
+
+    feat: junção da função notfound e page404
+
+[33mcommit 06bf72fca7fd111cb405ff669c56241839d0253f[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Nov 11 16:20:42 2024 -0300
+
+    feat: junção da função notfound e page404
+
+[33mcommit 8e8952c4d0a93e88671679e6fdda42e17bd5efd7[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 11 16:20:38 2024 -0300
+
+    feat: pdp wip
+
+[33mcommit 2c8c61071f80a621eba65d8e4ab8550465969cde[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Nov 11 14:30:26 2024 -0300
+
+    feat: shelf adicionada no final da página, mobile ajustado
+
+[33mcommit 830782960e4955bcb7d305e72d1222100deaa227[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 8 19:05:53 2024 -0300
+
+    feat: addQuantityToCart
+
+[33mcommit 562a3441c1154ecae5585232d8e9f22af97005ed[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Fri Nov 8 15:54:15 2024 -0300
+
+    feat: barra de pesquisa adicionada
+
+[33mcommit 53ef3e7a573b8e175d3c256f67de2b0531a83ed8[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Nov 7 16:28:40 2024 -0300
+
+    feat: start build pdp
+
+[33mcommit c240509b0cdb6ff9310100fd590f430cf55d5b8e[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Thu Nov 7 15:51:58 2024 -0300
+
+    feat: estilização desktop e mobile feitas
+
+[33mcommit 075fb5183a0c18df57a91a5eef6a478e3775ff4c[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Nov 7 14:37:59 2024 -0300
+
+    feat: replace loaders from shopify to wake
+
+[33mcommit 629faa052a1cbbe9d337490c8a0b994629a9c033[m
+Merge: 5b91f9f b251157
+Author: Felipe F. Campos <84470488+Felipe-FCampos@users.noreply.github.com>
+Date:   Thu Nov 7 13:58:37 2024 -0300
+
+    Merge pull request #6 from deco-sites/feature/29770/politicas
+    
+    Feature/29770/politicas
+
+[33mcommit 5b91f9f3e0f3f83f20bf36408e992cc8a8f9b23f[m
+Merge: 0f2265f 826899e
+Author: Paulo Ziembick <102979940+ziembick@users.noreply.github.com>
+Date:   Thu Nov 7 13:52:00 2024 -0300
+
+    Merge pull request #7 from deco-sites/feat/29768/quemSomos
+    
+    Feat/29768/quem somos
+
+[33mcommit df64e6a51daa62f1c991b9df2ee31bd9e33d6ef4[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Nov 7 11:50:34 2024 -0300
+
+    feat: footer finished
+
+[33mcommit 15cd81207d974cd9a3e45ec627ba86150297c1c3[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Nov 6 20:34:10 2024 -0300
+
+    fix: bugs fixed in section and project
+
+[33mcommit 3a6b4f41d6d94fa95fd6e04572ce5c46687f95ef[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Nov 6 15:48:45 2024 -0300
+
+    feat: footer wip
+
+[33mcommit 826899e8bd803e1a79d4d1f600ec9388b5f81f12[m
+Merge: 216d395 0f2265f
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Tue Nov 5 10:01:27 2024 -0300
+
+    Merge branch 'main' of https://github.com/deco-sites/unabeleza into feat/29768/quemSomos
+
+[33mcommit 0f2265f36dd0aa448c20f4671559818c1bca97ec[m
+Merge: 08efb8d bbb1461
+Author: Paulo Ziembick <102979940+ziembick@users.noreply.github.com>
+Date:   Tue Nov 5 09:53:05 2024 -0300
+
+    Merge pull request #5 from deco-sites/feaet/29779/faleConosco
+    
+    Feaet/29779/fale conosco
+
+[33mcommit bbb1461adb94f49938e0d75fc35e50e63b95be42[m
+Merge: a1bffe0 08efb8d
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Tue Nov 5 09:52:50 2024 -0300
+
+    feat: merge main
+
+[33mcommit 216d395ed4b43e2bcd6bb81992d292c16caf7822[m
+Merge: cae4426 08efb8d
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Tue Nov 5 09:47:19 2024 -0300
+
+    feat: merge main
+
+[33mcommit 08efb8df8bb2b023cbba98c68ad04b7115d04a56[m
+Merge: d729144 c5abdb3
+Author: Paulo Ziembick <102979940+ziembick@users.noreply.github.com>
+Date:   Tue Nov 5 09:43:27 2024 -0300
+
+    Merge pull request #4 from deco-sites/feat/29782/popupLGPD
+    
+    Feat/29782/popup lgpd
+
+[33mcommit cae44269fd964e474d440b996c1beff51e6efa97[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Tue Nov 5 09:42:23 2024 -0300
+
+    fix: drawer
+
+[33mcommit 62c63ce2b5f0c0124024bd58df487b890704beb3[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Tue Nov 5 08:53:38 2024 -0300
+
+    feat: quem somos mobile e responsive
+
+[33mcommit 70a44a55c44d80fb1c141f52a0770ecd2fe51220[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 4 18:51:56 2024 -0300
+
+    feat: footer wip
+
+[33mcommit 6bbc3c19f871ddefbaa3fe34e8f2324c94bcd027[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 16:22:59 2024 -0300
+
+    feat: quem somos desktop
+
+[33mcommit b251157736590fe55918a690fa08b5436231356c[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Nov 4 14:38:29 2024 -0300
+
+    feat: menus e conteúdos ajustados
+
+[33mcommit b50a38061bd9a67cee2565b690d6fe2afa93bf06[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 14:24:25 2024 -0300
+
+    feat: quem somos desktop
+
+[33mcommit c5abdb32c52e5010328d93224fdbc9bdec0a978a[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 13:58:18 2024 -0300
+
+    fix: passei props pra tornar editável e retirei o section
+
+[33mcommit a1bffe019abf7a7d1d9e89425e4f68a1c497d2f3[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 13:36:20 2024 -0300
+
+    fix: espaçmento titulo responsivo
+
+[33mcommit 5481df5e44560b1c408c385ec9813233d91fdd4b[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Nov 4 12:54:20 2024 -0300
+
+    feat: ajustes nos menus e nas telas desktop e mobile
+
+[33mcommit c8991b5d957faded0c3ceb3a908fc2b67597611a[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 12:01:58 2024 -0300
+
+    fix: icon do menu responsivo
+
+[33mcommit 6c98625049c5cc817821ffe0e0432acf182447bd[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 11:12:12 2024 -0300
+
+    fix: image banner responsive
+
+[33mcommit 3e18edf1428b39f213d4d5df533e399a5471e90a[m
+Merge: 6736f52 d729144
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 4 11:03:57 2024 -0300
+
+    Merge branch 'main' of https://github.com/deco-sites/unabeleza into feature/29761/footer
+
+[33mcommit 22456858b8a39316c27cca9ae9acfb6edb2ccc4c[m
+Merge: a40a3b6 d729144
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 10:52:46 2024 -0300
+
+    merge main
+
+[33mcommit 51a59fe11b415d257e98edb709dc8d304dc9b179[m
+Merge: afc4e58 d729144
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 10:44:34 2024 -0300
+
+    feat: merge from duvidas
+
+[33mcommit 6736f522b61981d75fd0b43f9656309403635208[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Nov 4 10:38:33 2024 -0300
+
+    feat: footer wip
+
+[33mcommit d7291449c5f94c0e68728393853926e251392756[m[33m ([m[1;31morigin/feat/29780/duvidasfrequentes[m[33m)[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 10:35:00 2024 -0300
+
+    feat: coloquei imagem
+
+[33mcommit 4224b8b7b04572fc9edcae54e34750e1bcb5a448[m
+Merge: a68b631 247fd83
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 10:07:16 2024 -0300
+
+    feat: merge
+
+[33mcommit afc4e58f796fd098446a620883748edfd2b8560c[m
+Merge: 92850ee a68b631
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Mon Nov 4 09:50:24 2024 -0300
+
+    fix: menu
+
+[33mcommit f619128785761c4fa96666efc660b8e9b6e395fd[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 1 17:39:14 2024 -0300
+
+    feat: build footer wip
+
+[33mcommit a68b631f6d60bb65e4e34dca1f3bd807422631e8[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Fri Nov 1 17:06:47 2024 -0300
+
+    fix: tipagem de politicas
+
+[33mcommit e2042e8c6d353ac95306781bde3773674d1e6b57[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Fri Nov 1 17:00:51 2024 -0300
+
+    fix: fixed types and replaced useEffect for loader
+
+[33mcommit 247fd834c310d4a92a118861f53ea4470ccff4b3[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 1 16:02:54 2024 -0300
+
+    feat: code adjusted
+
+[33mcommit cd975e29822a8ff4d876f01b44dc4f024804f406[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 1 13:58:43 2024 -0300
+
+    feat: break adjustment
+
+[33mcommit a40a3b67bd9eebfd24d35b19a961d60fcae3089d[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Fri Nov 1 13:55:33 2024 -0300
+
+    feat: fale conosco mobile e responsivo
+
+[33mcommit 2972d05817206ede95d0d14d2cd3e45ae6c994fb[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Fri Nov 1 12:06:24 2024 -0300
+
+    feat: fale conosco desktop
+
+[33mcommit 200a6ade4924d587470fb7c7db3e23be99d16acc[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Fri Nov 1 10:59:33 2024 -0300
+
+    feat: fale conosco initial styling
+
+[33mcommit 81a6e5ecf092df8752e08dd1b4aa70a36fd5c521[m
+Merge: 2b2c4e0 c428e3a
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 1 10:50:36 2024 -0300
+
+    feat: merge develop
+
+[33mcommit c428e3a6c538af28696e75c4b54889d7cb882fcf[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Nov 1 10:32:23 2024 -0300
+
+    feat: config integration
+
+[33mcommit 3b4aa2b4ed3cd85d63b6cc0dacbadf23ec53a9be[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 31 18:10:31 2024 -0300
+
+    feat: integration bug resolved
+
+[33mcommit 2b2c4e098a6a2e8ef5f6cc399c1ed4259dafc19a[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 31 16:23:46 2024 -0300
+
+    feat: home finished
+
+[33mcommit 92850ee251771e3e90188e8c455fe55dedd14a7c[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 15:05:42 2024 -0300
+
+    feat: popup responsivo, mobile e funcionalidade de salvar no local storage
+
+[33mcommit d3e512c22dc496ef9fb9829ac8b8992640aceda8[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 13:31:02 2024 -0300
+
+    feat: popup responsivo e mobile
+
+[33mcommit 947ab7eaeca6ab9098c7f7550c41ea4cd6b8dd38[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 11:32:21 2024 -0300
+
+    fix: breadcrump mobile
+
+[33mcommit 1320b2a2909bc1b8ec1e452e233f11232be91247[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 11:27:39 2024 -0300
+
+    fix: menu desktop
+
+[33mcommit b701d8929966766806f91dbee99c7ba4c2f64503[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 11:02:49 2024 -0300
+
+    fix: menu responsive e mobile
+
+[33mcommit 840c99f38eda618b0b19220229918fb5f115890e[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Thu Oct 31 09:55:17 2024 -0300
+
+    feat: breadcrumb and title responsive
+
+[33mcommit b4561fdce2a2f277132b0ce5a943d1887b0945ac[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 16:26:15 2024 -0300
+
+    feat: menu responsivo hidden no desktop
+
+[33mcommit ed45c2b7608399c5df67aaed508f39a2ed33fe49[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 16:13:27 2024 -0300
+
+    fix: menu mobile
+
+[33mcommit 550b72a853db676dca39c89a54665879f10c29ff[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 15:38:38 2024 -0300
+
+    feat: fix mobile e responsive duvidas frequentes
+
+[33mcommit 67f0cebf56a043a0f5b499b6a368843c36817aa3[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 15:16:48 2024 -0300
+
+    feat: popup lgpd desktop
+
+[33mcommit b6abec675f8db90f440d89c962b3bee3a55d01cb[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 11:55:28 2024 -0300
+
+    feat: layout desktop
+
+[33mcommit baac6a478991f51e8141bf65608a7c9e2d03b912[m
+Author: Paulo Ziembick <pauloziembick@gmail.com>
+Date:   Wed Oct 30 11:12:40 2024 -0300
+
+    feat: menu accordion e layout desktop duvidas frequentes
+
+[33mcommit 97dfa5e5919479cd61cdaaf8eda62f5b2cb84638[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Tue Oct 29 16:09:49 2024 -0300
+
+    feat: categories
+
+[33mcommit 6af542e07af62bb5e52169de7c09c1c0666ad7f2[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Tue Oct 29 15:31:47 2024 -0300
+
+    feat: menus adicionados
+
+[33mcommit 15500374537783b78331479e60377ee18a8e02fd[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Oct 28 17:37:38 2024 -0300
+
+    feat: banner slider
+
+[33mcommit fd65b5543b93555df20d3cfa89724f77573363be[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Mon Oct 28 16:01:10 2024 -0300
+
+    feat: Desktop finalizado
+
+[33mcommit c606ba3d3aa0f1d5af070bdee25b56ffefd6c28b[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 25 20:29:04 2024 -0300
+
+    feat: shel wip
+
+[33mcommit c32d76ebcd2971a5a30658c2eb91f98aa4f6ef03[m
+Author: Felipe Campos <felipe.fcampos7@gmail.com>
+Date:   Fri Oct 25 15:25:51 2024 -0300
+
+    feat: initial commit
+
+[33mcommit f8afadc992e5265532c731c1bc935931f0ab2e76[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 24 17:40:32 2024 -0300
+
+    feat: shelf wip
+
+[33mcommit c1ff7d96f238e9f8741ecc0c29e0ec73a82292a3[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 24 12:52:50 2024 -0300
+
+    feat: start configuration to wake
+
+[33mcommit b09cbbe97fd036a067797dbd4153bcac6a0def09[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 24 12:23:58 2024 -0300
+
+    feat: adjusted shelf
+
+[33mcommit b1b6d873bfc9531e25485f929fbe25877d50edb1[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Oct 23 17:45:38 2024 -0300
+
+    feat(29760/home): minibanners
+
+[33mcommit 324a007c9218cd70cbb0122284d5a6d1634dbb8e[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Oct 21 17:15:04 2024 -0300
+
+    feat(29760/home): benefit bar and favorites
+
+[33mcommit 2d36f6ce8714a8e5c475877c1e6426911f2ac49b[m
+Merge: 3984da3 2510364
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 15:58:04 2024 -0300
+
+    Merge branch 'main' of https://github.com/deco-sites/unabeleza into feature/29760/home
+
+[33mcommit 3984da36387128b0ad736839aa20ad70057b82a5[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 15:42:24 2024 -0300
+
+    feat(29760/home): wip
+
+[33mcommit 25103641898169dd8e3471b90dc3befb25ffc6d6[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 14:58:50 2024 -0300
+
+    feat: adjusted submenu item
+
+[33mcommit 358f4d58daa2a4dbf8ff2c653d3ca30037f06373[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 14:43:18 2024 -0300
+
+    faet(29760/home): BenefitBar wip
+
+[33mcommit 46bc10e95291e2d911799b0e82bb4d5cd2d7d002[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 12:01:12 2024 -0300
+
+    feat: modified carousel
+
+[33mcommit 65123e9e9626054515ed9bf4879d780a90a8dcf6[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Fri Oct 18 10:06:11 2024 -0300
+
+    feat(29759/header): header finished
+
+[33mcommit b70368128fd2d826f3fe6ddd3dd40699536879b0[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Thu Oct 17 16:23:50 2024 -0300
+
+    faet: drawer menu wip
+
+[33mcommit 968c9215d24bbae1bf5aa9b317da74bca5f826cb[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Wed Oct 16 17:20:13 2024 -0300
+
+    feat: drawer wip
+
+[33mcommit 49aa006e0d32cfe2252bf9eb28e14c2fb9b721ec[m
+Author: georgetonietti <georgetonietti@gmail.com>
+Date:   Mon Oct 14 10:22:18 2024 -0300
+
+    docs: configured
+
+[33mcommit f9377247afc7f4c57a1618861686d5a71d548311[m
+Author: George Tonietti <george.tonietti@econverse.com.br>
+Date:   Mon Oct 14 10:17:57 2024 -0300
+
+    Publish 115 from localhost into origin/main
+
+[33mcommit cb0674a18f7c65c68b3ec00ac0e24f48562e8209[m
+Author: George Tonietti <george.tonietti@econverse.com.br>
+Date:   Fri Oct 11 13:34:09 2024 +0000
+
+    Let's get started!
+
+[33mcommit fc5bdedcf03dcdb659df1ef4a4ceb61b5cf91710[m
+Author: Deco Bot <114028756+decobot@users.noreply.github.com>
+Date:   Fri Oct 11 10:34:03 2024 -0300
+
+    Initial commit
