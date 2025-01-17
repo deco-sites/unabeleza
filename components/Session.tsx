@@ -55,6 +55,8 @@ export interface SDK {
 }
 const sdk = () => {
   const target = new EventTarget();
+  const CART_COOKIE = "carrinho-id";
+  const TEN_DAYS_MS = 10 * 24 * 3600 * 1_000;
   const createCartSDK = (): SDK["CART"] => {
     let form: HTMLFormElement | null = null;
     const getCart = (): Cart =>
@@ -226,6 +228,25 @@ const sdk = () => {
     return sdk;
   };
   createAnalyticsSDK();
+  const setClientCookie = (value: string) => {
+    let expires = "";
+  
+    const date = new Date(Date.now() + TEN_DAYS_MS);
+    expires = "; expires=" + date.toUTCString();
+  
+    document.cookie = CART_COOKIE + "=" + (value || "") + expires + "; path=/";
+  };
+  
+  const syncCartId = async () => {
+      const url = new URL("https://checkout.unabeleza.com.br//api/carrinho", );
+
+      const { Id } = await fetch(url, { credentials: "include" }).then((r) =>
+        r.json()
+      );
+
+      setClientCookie(Id);
+  }
+  syncCartId()
   window.STOREFRONT = {
     CART: createCartSDK(),
     USER: createUserSDK(),

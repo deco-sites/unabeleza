@@ -29,7 +29,7 @@ export const cartFrom = (cart: Cart): Minicart => {
       locale,
       currency,
       freeShippingTarget: 1000,
-      checkoutHref: `/checkout`,
+      checkoutHref: `https://checkout.unabeleza.com.br/`,
     },
   };
 };
