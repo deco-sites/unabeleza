@@ -40,7 +40,7 @@ export interface SectionProps {
   /** @title Logo */
   logo: Logo;
   /**
-   * @description Usefull for lazy loading hidden elements, like hamburguer menus etc
+   * @description Usefull for lazy loading hidden elements, like hamburguer menus etc.
    * @hide true */
   loading?: "eager" | "lazy";
 }
