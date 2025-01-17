@@ -70,7 +70,7 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
             : <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />}
 
           <div class="flex gap-5 items-center">
-            <Icon id="heart" class="cursor-pointer" />
+            <a href="/listadesejos"> <Icon id="heart" class="cursor-pointer" /></a>
             <a href="/login"><Icon id="user" class="cursor-pointer" /></a>
             <Bag />
           </div>
