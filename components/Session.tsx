@@ -238,7 +238,7 @@ const sdk = () => {
   };
   
   const syncCartId = async () => {
-      const url = new URL("https://checkout.unabeleza.com.br//api/carrinho", );
+      const url = new URL("https://checkout.unabeleza.com.br/api/carrinho", );
 
       const { Id } = await fetch(url, { credentials: "include" }).then((r) =>
         r.json()
