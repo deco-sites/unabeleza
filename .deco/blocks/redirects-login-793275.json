@@ -1,0 +1,8 @@
+{
+  "redirect": {
+    "from": "/login",
+    "to": "https://checkout.unabeleza.com.br/Login/Authenticate?returnUrl=",
+    "type": "temporary"
+  },
+  "__resolveType": "website/loaders/redirect.ts"
+}
