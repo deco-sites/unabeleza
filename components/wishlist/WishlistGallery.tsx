@@ -50,6 +50,7 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
 
   const productId =  wishlistIds.map((item) => Number(item.productId));
 
+  console.log(productId)
 
   const products = productId.length > 0
     ? await invoke.wake.loaders.productList({
@@ -64,7 +65,7 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
     : [];
 
   return {
-    products,w
+    products,
   };
 };
 

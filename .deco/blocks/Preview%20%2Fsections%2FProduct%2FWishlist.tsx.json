@@ -1,0 +1,15 @@
+{
+  "__resolveType": "site/sections/Product/Wishlist.tsx",
+  "layout": {
+    "pagination": "show-more"
+  },
+  "startingPage": 0,
+  "partial": "hideMore",
+  "searchbar": {
+    "placeholder": "What are you looking for?",
+    "loader": {
+      "__resolveType": "resolved"
+    }
+  },
+  "productShelf": {}
+}

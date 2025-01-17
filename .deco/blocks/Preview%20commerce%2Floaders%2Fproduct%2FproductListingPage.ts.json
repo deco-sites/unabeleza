@@ -1,16 +1,17 @@
 {
   "__resolveType": "commerce/loaders/product/productListingPage.ts",
   "data": {
-    "@type": "ProductListingPage",
-    "breadcrumb": {
-      "@type": "BreadcrumbList"
-    },
-    "filters": [],
-    "products": [],
-    "pageInfo": {
-      "pageTypes": []
-    },
-    "sortOptions": []
+    "__resolveType": "wake/loaders/productListingPage.ts",
+    "limit": 12,
+    "operation": "AND",
+    "sort": "NAME:ASC",
+    "pageOffset": 0,
+    "filters": {
+      "productId": [
+        150441,
+        150164
+      ]
+    }
   },
   "extensions": []
 }
