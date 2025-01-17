@@ -7,7 +7,7 @@
   },
   "platform": "wake",
   "account": "unikapro",
-  "checkoutUrl": "https://unikapro.checkout.fbits.store/",
+  "checkoutUrl": "https://checkout.unabeleza.com.br/",
   "token": {
     "__resolveType": "website/loaders/secret.ts",
     "encrypted": "644d04f0c192363931dafc0e113c4e45",
