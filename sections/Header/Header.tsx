@@ -70,8 +70,12 @@ const Desktop = ({ navItems, logo, searchbar, loading }: Props) => (
             : <Searchbar {...searchbar} placeholder="Faça sua busca aqui" />}
 
           <div class="flex gap-5 items-center">
-            <a href="/listadedesejos"> <Icon id="heart" class="cursor-pointer" /></a>
-            <a href="/login"><Icon id="user" class="cursor-pointer" /></a>
+            <a href="/listadedesejos">
+              <Icon id="heart" class="cursor-pointer" />
+            </a>
+            <a href="/login">
+              <Icon id="user" class="cursor-pointer" />
+            </a>
             <Bag />
           </div>
         </div>
@@ -140,8 +144,12 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
         </a>
       )}
       <div class="flex gap-[10px] items-center">
-        <a href="/listadedesejos"><Icon id="heart"/></a>
-        <a href="/login"><Icon id="user"/></a>
+        <a href="/listadedesejos">
+          <Icon id="heart" />
+        </a>
+        <a href="/login">
+          <Icon id="user" />
+        </a>
         <Bag />
       </div>
     </div>

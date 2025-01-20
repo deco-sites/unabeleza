@@ -44,7 +44,10 @@ function MenuItem({ item, loading }: MenuItemProps) {
                         }
 
                         return (
-                          <a class="collapse border-b border-neutral-100" href={leaf.url}>
+                          <a
+                            class="collapse border-b border-neutral-100"
+                            href={leaf.url}
+                          >
                             <div class="collapse-title">
                               {leaf.name}
                             </div>

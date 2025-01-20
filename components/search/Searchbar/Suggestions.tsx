@@ -2,7 +2,7 @@ import { Suggestion } from "apps/commerce/types.ts";
 import type { AppContext } from "../../../apps/site.ts";
 import { clx } from "../../../sdk/clx.ts";
 import { ComponentProps } from "../../../sections/Component.tsx";
-import { slot } from "./Form.tsx"
+import { slot } from "./Form.tsx";
 import SearchItem from "./SearchItem.tsx";
 import { ACTION, NAME } from "./Form.tsx";
 import { type Resolved } from "@deco/deco";
@@ -14,7 +14,7 @@ export interface Props {
    * @todo: improve this typings ({query: string, count: number}) => Suggestions
    */
   loader: Resolved<Suggestion | null>;
-  query: string
+  query: string;
 }
 export const action = async (props: Props, req: Request, ctx: AppContext) => {
   const { loader: { __resolveType, ...loaderProps } } = props;
@@ -40,9 +40,8 @@ export const loader = async (props: Props, req: Request, ctx: AppContext) => {
 };
 
 const onClick = (id: string) => {
-  document.querySelector(`#${id}`).innerHTML = ""
-}
-
+  document.querySelector(`#${id}`).innerHTML = "";
+};
 
 function Suggestions(
   { suggestion, query }: ComponentProps<typeof loader, typeof action>,
@@ -61,54 +60,72 @@ function Suggestions(
     >
       <div class="gap-4 grid grid-cols-2 mobile:grid-cols-1 mobile:gap-8 p-[30px] mobile:px-5 mobile:pt-5 relative">
         {device === "mobile" && (
-          <button class="absolute top-5 right-5" hx-on:click={useScript(onClick, slot)}>
+          <button
+            class="absolute top-5 right-5"
+            hx-on:click={useScript(onClick, slot)}
+          >
             <Icon id="closeCart" size={15} />
           </button>
         )}
         <div class="flex flex-col gap-5">
-          <span class="font-[PP-Hatton] font-bold" role="heading" aria-level={3}>
+          <span
+            class="font-[PP-Hatton] font-bold"
+            role="heading"
+            aria-level={3}
+          >
             Sugestões
           </span>
           <ul class="flex flex-col gap-4">
-            {(device === "mobile" ? searches.slice(0, 4) : searches).map(({ term }) => {
-              const highlightedTerm = term.replace(
-                new RegExp(`(${query})`, 'gi'), // Busca case-insensitive
-                '<span class="text-primary">$1</span>' // Envolve o texto buscado em um span
-              );
+            {(device === "mobile" ? searches.slice(0, 4) : searches).map(
+              ({ term }) => {
+                const highlightedTerm = term.replace(
+                  new RegExp(`(${query})`, "gi"), // Busca case-insensitive
+                  '<span class="text-primary">$1</span>', // Envolve o texto buscado em um span
+                );
 
-              return (
-                <li>
-                  {/* TODO @gimenes: use name and action from searchbar form */}
-                  <a
-                    href={`${ACTION}?${NAME}=${term}`}
-                    class="flex gap-4 items-center cursor-pointer"
-                  >
-                    <span class="text-sm uppercase" dangerouslySetInnerHTML={{ __html: highlightedTerm }} />
-                  </a>
-                </li>
-              )
-            })}
+                return (
+                  <li>
+                    {/* TODO @gimenes: use name and action from searchbar form */}
+                    <a
+                      href={`${ACTION}?${NAME}=${term}`}
+                      class="flex gap-4 items-center cursor-pointer"
+                    >
+                      <span
+                        class="text-sm uppercase"
+                        dangerouslySetInnerHTML={{ __html: highlightedTerm }}
+                      />
+                    </a>
+                  </li>
+                );
+              },
+            )}
           </ul>
         </div>
         <div class="flex flex-col gap-5">
-          <span class="font-[PP-Hatton] font-bold" role="heading" aria-level={3}>
+          <span
+            class="font-[PP-Hatton] font-bold"
+            role="heading"
+            aria-level={3}
+          >
             Produtos sugeridos
           </span>
           <ul
             role="list"
             class="flex-grow flex flex-col gap-[22px] w-full"
           >
-            {products?.slice(0, (device === "desktop" ? 3 : 2)).map((product) => (
+            {products?.slice(0, device === "desktop" ? 3 : 2).map((product) => (
               <li class="h-[115px] pb-6 border-b border-[#F5F5F5]">
                 <SearchItem
                   product={product}
                 />
               </li>
-            ))
-            }
+            ))}
           </ul>
           {products?.length > (device === "desktop" ? 3 : 2) && (
-            <a href={`${ACTION}?${NAME}=${query}`} class="text-center underline text-xs cursor-pointer">
+            <a
+              href={`${ACTION}?${NAME}=${query}`}
+              class="text-center underline text-xs cursor-pointer"
+            >
               Veja todos os {products?.length} produtos
             </a>
           )}

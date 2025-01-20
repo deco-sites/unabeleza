@@ -48,9 +48,11 @@ export default function GallerySlider(props: Props) {
         class="grid grid-flow-col grid-cols-[min-content_1fr] gap-5 mobile:flex mobile:flex-col"
       >
         {/* Image Slider */}
-        <div class={clx(
-          "col-span-1 col-start-2",
-        )}>
+        <div
+          class={clx(
+            "col-span-1 col-start-2",
+          )}
+        >
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
               {images.map((img, index) => (
@@ -82,12 +84,12 @@ export default function GallerySlider(props: Props) {
           </div>
         </div>
 
-
         {/* Dots */}
-        <div class={clx(
-          "col-start-1 col-span-1 mobile:flex mobile:justify-center flex flex-col desktop:gap-10 desktop:items-center",
-        )}>
-
+        <div
+          class={clx(
+            "col-start-1 col-span-1 mobile:flex mobile:justify-center flex flex-col desktop:gap-10 desktop:items-center",
+          )}
+        >
           {images.length >= 3 && (
             <Slider.PrevButton class="mobile:hidden no-animation btn btn-circle hover:bg-transparent hover:border-[#8F2AED] border border-[#8F2AED]">
               <Icon id="arrow-top" stroke="#8F2AED" width={20} height={12} />
@@ -107,30 +109,28 @@ export default function GallerySlider(props: Props) {
           >
             {images.map((img, index) => (
               <li class="carousel-item desktop:w-16 desktop:h-16">
-                {
-                  device === "desktop"
-                    ? (
-                      <Slider.Dot index={index}>
-                        <Image
-                          style={{ aspectRatio: "1 / 1" }}
-                          class="group-disabled:border-primary border-2 border-[#F5F5F5] rounded object-contain w-full h-full"
-                          width={64}
-                          height={64}
-                          src={img.url!}
-                          alt={img.alternateName}
-                        />
-                      </Slider.Dot>
-                    )
-                    : (
-                      <Slider.Dot
-                        index={index}
-                        class={clx(
-                          "bg-[#EBECF0] h-1 w-8 no-animation rounded-[1px]",
-                          "disabled:bg-primary disabled:opacity-100 transition-[width]"
-                        )}
+                {device === "desktop"
+                  ? (
+                    <Slider.Dot index={index}>
+                      <Image
+                        style={{ aspectRatio: "1 / 1" }}
+                        class="group-disabled:border-primary border-2 border-[#F5F5F5] rounded object-contain w-full h-full"
+                        width={64}
+                        height={64}
+                        src={img.url!}
+                        alt={img.alternateName}
                       />
-                    )
-                }
+                    </Slider.Dot>
+                  )
+                  : (
+                    <Slider.Dot
+                      index={index}
+                      class={clx(
+                        "bg-[#EBECF0] h-1 w-8 no-animation rounded-[1px]",
+                        "disabled:bg-primary disabled:opacity-100 transition-[width]",
+                      )}
+                    />
+                  )}
               </li>
             ))}
           </ul>
@@ -140,7 +140,6 @@ export default function GallerySlider(props: Props) {
               <Icon id="arrow-bottom" stroke="#8F2AED" width={20} height={12} />
             </Slider.NextButton>
           )}
-          
         </div>
 
         <Slider.JS rootId={id} />

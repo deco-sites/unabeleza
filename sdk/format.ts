@@ -22,7 +22,6 @@ export const formatPrice = (
   locale = "pt-BR",
 ) => price ? formatter(currency, locale).format(price) : null;
 
-
 export function formatInstallments(installments) {
   const regex = /(\d+x) de (R\$ \d+[,.]?\d*)/i;
   const match = installments.match(regex);
@@ -32,8 +31,8 @@ export function formatInstallments(installments) {
     price.replace(".", ",");
     return {
       times,
-      price
-    }
+      price,
+    };
   }
   return installments;
 }

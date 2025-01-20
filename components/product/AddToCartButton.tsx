@@ -28,7 +28,6 @@ const onChange = () => {
 // Copy cart form values into AddToCartButton
 const onLoad = (id: string) => {
   window.STOREFRONT.CART.subscribe((_) => {
-
     const container = document.getElementById(id);
 
     container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
@@ -91,7 +90,7 @@ function AddToCartButton(props: Props) {
   const platformProps = useAddToCart(props);
   const id = useId();
 
-  const { url } = product
+  const { url } = product;
   const relativeUrl = relative(url);
 
   return (

@@ -20,7 +20,7 @@ export interface Banner {
   alt: string;
 
   /** @description when user clicks on the image, go to this link */
-  linkImage?: string
+  linkImage?: string;
 }
 
 export interface Props {
@@ -45,7 +45,7 @@ function BannerItem(
     alt,
     mobile,
     desktop,
-    linkImage
+    linkImage,
   } = image;
   const params = { promotion_name: image.alt };
 

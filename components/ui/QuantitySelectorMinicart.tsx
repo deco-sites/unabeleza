@@ -25,28 +25,28 @@ function QuantitySelectorMinicart(
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
-        <Icon id="remove" size={20}/>
+        <Icon id="remove" size={20} />
       </button>
-        <input
-          id={id}
-          class={clx(
-            "input join-item min-h-0 w-1/3 text-center [appearance:textfield]",
-            "invalid:input-error p-0 h-[42px] font-bold text-sm",
-            "focus:outline-none focus:border-0 outline-none border-0",
-          )}
-          disabled={disabled}
-          inputMode="numeric"
-          value={1}
-          type="number"
-          {...props}
-        />
+      <input
+        id={id}
+        class={clx(
+          "input join-item min-h-0 w-1/3 text-center [appearance:textfield]",
+          "invalid:input-error p-0 h-[42px] font-bold text-sm",
+          "focus:outline-none focus:border-0 outline-none border-0",
+        )}
+        disabled={disabled}
+        inputMode="numeric"
+        value={1}
+        type="number"
+        {...props}
+      />
       <button
         type="button"
         class="btn min-h-0 h-[42px] w-1/3 p-0 no-animation hover:bg-transparent hover:border-0 border-0 bg-transparent join-item flex-1"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >
-        <Icon id="add" size={20}/>
+        <Icon id="add" size={20} />
       </button>
     </div>
   );

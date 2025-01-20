@@ -1,4 +1,3 @@
-
 import { AppContext } from "apps/wake/mod.ts";
 import { WishlistReducedProductFragment } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 import { SectionProps } from "deco/types.ts";
@@ -36,18 +35,19 @@ function WishlistGallery(props: SectionProps<typeof loader>) {
       <div
         class={"grid items-center grid-cols-[repeat(auto-fit,minmax(340px,1fr))] mobile:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-x-2 gap-y-16 "}
       >
-        {props.products?.map((product) => (
-          <ProductCard product={product} />
-        ))}
+        {props.products?.map((product) => <ProductCard product={product} />)}
       </div>
     </div>
   );
 }
 
-export const loader = async ({ page }: Props, req: Request, ctx: AppContext) => {
+export const loader = async (
+  { page }: Props,
+  ctx: AppContext,
+) => {
   const { invoke } = ctx;
 
-  const productId =  page.map((item) => Number(item.productId));
+  const productId = page.map((item) => Number(item.productId));
 
   const products = productId.length > 0
     ? await invoke.wake.loaders.productList({

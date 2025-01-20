@@ -1,7 +1,7 @@
 import ShowPriceItem, {
-    Props,
+  Props,
 } from "../components/search/Filters/ShowPriceItem.tsx";
 
 export default function Island(props: Props) {
-    return <ShowPriceItem {...props} />;
+  return <ShowPriceItem {...props} />;
 }

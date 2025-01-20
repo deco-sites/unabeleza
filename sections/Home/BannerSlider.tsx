@@ -76,12 +76,15 @@ export default function BannerSlider(
   const id = useId();
 
   return (
-    <div id={id} class={clx(
-      "px-[min(4.16vw,63.89px)] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto",
-      "mobile:grid",
-      "mobile:grid-rows-[1fr_32px_1fr_64px]",
-      "w-full",
-    )}>
+    <div
+      id={id}
+      class={clx(
+        "px-[min(4.16vw,63.89px)] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto",
+        "mobile:grid",
+        "mobile:grid-rows-[1fr_32px_1fr_64px]",
+        "w-full",
+      )}
+    >
       {title && (
         <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
           {title}
@@ -90,7 +93,10 @@ export default function BannerSlider(
       <div class="col-span-full row-span-full">
         <Slider class="carousel carousel-center w-full desktop:!justify-between gap-[1.11vw] h-full mx-auto mobile mobile:gap-6">
           {items.map((item, index) => (
-            <Slider.Item index={index} class="carousel-item mobile:w-full h-full">
+            <Slider.Item
+              index={index}
+              class="carousel-item mobile:w-full h-full"
+            >
               <SliderItem {...item} />
             </Slider.Item>
           ))}

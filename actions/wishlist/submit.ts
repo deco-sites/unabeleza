@@ -62,7 +62,6 @@ async function action(
           { productId: Number(productGroupID) },
         );
 
-
       return {
         productIDs: response.productId.toString(),
       };

@@ -36,18 +36,16 @@ function CartItem({ item, index, locale, currency }: Props) {
       class="grid grid-rows-1 gap-[10px] !h-[91px] max-h-[91px]"
       style={{ gridTemplateColumns: "auto 1fr" }}
     >
-
       <div class="w-[88px] h-[88px] border border-[#F1F1F1] rounded-sm flex justify-center items-center">
         <Image
-                alt={name}
-                src={image}
-                style={{ aspectRatio: "4 / 4" }}
-                width={80}
-                height={80}
-                class="h-full object-contain"
-              />
+          alt={name}
+          src={image}
+          style={{ aspectRatio: "4 / 4" }}
+          width={80}
+          height={80}
+          class="h-full object-contain"
+        />
       </div>
-            
 
       {/* Info */}
       <div class="flex flex-col">
@@ -79,10 +77,12 @@ function CartItem({ item, index, locale, currency }: Props) {
           </div>
 
           {/* Quantity Selector */}
-          <div class={clx(
-            "w-[97px]",
-            isGift && "hidden"
-          )}>
+          <div
+            class={clx(
+              "w-[97px]",
+              isGift && "hidden",
+            )}
+          >
             <QuantitySelectorMinicart
               min={0}
               max={QUANTITY_MAX_VALUE}

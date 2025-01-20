@@ -1,5 +1,5 @@
 import { RichText } from "apps/admin/widgets.ts";
-import { clx } from "../../sdk/clx.ts"
+import { clx } from "../../sdk/clx.ts";
 
 interface QuemSomosProps {
   title?: string;
@@ -18,8 +18,9 @@ export default function QuemSomos({ item }: SomosProps) {
         item.map((item, index) => (
           <section key={index}>
             <div
-              className={clx("font-[PP-Hatton] mobile:text-[24px] text-[32px] mt-12 font-bold",
-                index > 0 ? "hidden" : ""
+              className={clx(
+                "font-[PP-Hatton] mobile:text-[24px] text-[32px] mt-12 font-bold",
+                index > 0 ? "hidden" : "",
               )}
             >
               <h1 className="text-black">{item.title}</h1>

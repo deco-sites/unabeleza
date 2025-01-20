@@ -18,7 +18,7 @@ import ShippingSimulationForm from "../../islands/ShippingSimulationForm.tsx";
 
 interface Props {
   page: ProductDetailsPage | null;
-  itemsShare: ShareProps
+  itemsShare: ShareProps;
 }
 
 function ProductInfo({ page, itemsShare }: Props) {
@@ -32,8 +32,9 @@ function ProductInfo({ page, itemsShare }: Props) {
   const { productID, offers, isVariantOf, aggregateRating } = product;
   const title = isVariantOf?.name ?? product.name;
 
-  const priceSpecification: Method[] = offers?.offers[0].priceSpecification.map((obj) => ({ ...obj })) ?? [];
-  const inventoryLevel = offers?.offers[0].inventoryLevel.value
+  const priceSpecification: Method[] =
+    offers?.offers[0].priceSpecification.map((obj) => ({ ...obj })) ?? [];
+  const inventoryLevel = offers?.offers[0].inventoryLevel.value;
 
   const {
     price = 0,
@@ -79,8 +80,11 @@ function ProductInfo({ page, itemsShare }: Props) {
 
   return (
     <div class={clx("flex desktop:gap-[3.61vw]")}>
-      <div {...viewItemEvent} class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full flex-1" id={id}>
-
+      <div
+        {...viewItemEvent}
+        class="flex flex-col gap-6 desktop:max-w-[38.75vw] mobile:w-full flex-1"
+        id={id}
+      >
         {/* Product Name */}
         <span class={clx("text-2xl font-bold")}>
           {title}
@@ -90,9 +94,11 @@ function ProductInfo({ page, itemsShare }: Props) {
           <span class={clx("text-xs text-[#252429]")}>
             REF: {productID}
           </span>
-          <ReviewRating reviewCount={aggregateRating?.reviewCount ?? 0} ratingValue={aggregateRating?.ratingValue ?? 0} />
+          <ReviewRating
+            reviewCount={aggregateRating?.reviewCount ?? 0}
+            ratingValue={aggregateRating?.ratingValue ?? 0}
+          />
         </div>
-
 
         {/* Prices */}
         <div class="flex flex-col gap-1">
@@ -113,50 +119,63 @@ function ProductInfo({ page, itemsShare }: Props) {
             </span>
           )}
 
-          {
-            priceSpecification && (
-              <div class="mt-3">
-                <Modal title="Opções de pagamento" cta="Formas de pagamento">
-                  <PaymentMethods methods={priceSpecification} priceCurrency={offers?.priceCurrency} />
-                </Modal>
-              </div>
-            )
-          }
+          {priceSpecification && (
+            <div class="mt-3">
+              <Modal title="Opções de pagamento" cta="Formas de pagamento">
+                <PaymentMethods
+                  methods={priceSpecification}
+                  priceCurrency={offers?.priceCurrency}
+                />
+              </Modal>
+            </div>
+          )}
         </div>
 
         {/* Sku Selector */}
-        {hasValidVariants && (
-            <ProductSelector product={product} />
-        )}
+        {hasValidVariants && <ProductSelector product={product} />}
 
         {/* Add to Cart and Favorites button */}
-        <div class={clx(
-          "desktop:mt-4 ",
-          availability === "https://schema.org/InStock" && "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30"
-        )}>
+        <div
+          class={clx(
+            "desktop:mt-4 ",
+            availability === "https://schema.org/InStock" &&
+              "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30",
+          )}
+        >
           {availability === "https://schema.org/InStock"
             ? (
-              <AddQuantityToCart item={item} seller={seller} product={product} disabled={false} inventoryLevel={inventoryLevel}/>
+              <AddQuantityToCart
+                item={item}
+                seller={seller}
+                product={product}
+                disabled={false}
+                inventoryLevel={inventoryLevel}
+              />
             )
             : <OutOfStock productID={productID} />}
         </div>
 
         {/* Shipping Simulation */}
         <div class="desktop:mt-8">
-          <ShippingSimulationForm 
-             items={[{ productVariantId: Number(product.productID), quantity: 1 }]}
+          <ShippingSimulationForm
+            items={[{
+              productVariantId: Number(product.productID),
+              quantity: 1,
+            }]}
           />
         </div>
-
       </div>
-      {
-        device === "desktop" && (
-          <div class="space-y-3 max-w-10">
-            <WishlistButton item={item} stroke="#707070" typeTwo={true} device={device}/>
-            <Share {...itemsShare} />
-          </div>
-        )
-      }
+      {device === "desktop" && (
+        <div class="space-y-3 max-w-10">
+          <WishlistButton
+            item={item}
+            stroke="#707070"
+            typeTwo={true}
+            device={device}
+          />
+          <Share {...itemsShare} />
+        </div>
+      )}
     </div>
   );
 }

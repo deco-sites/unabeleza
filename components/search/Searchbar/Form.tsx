@@ -41,7 +41,7 @@ const script = (formId: string, name: string, popupId: string) => {
     // Open Searchbar on meta+k
     if (e.metaKey === true && isK) {
       const input = document.getElementById(popupId) as HTMLInputElement | null;
-      
+
       if (input) {
         input.checked = true;
         document.getElementById(formId)?.focus();
@@ -59,7 +59,11 @@ export default function Searchbar(
       class="w-full grid gap-8 rounded-[5px] border border-[#E7E7E7] h-10 p-0 overflow-hidden"
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join flex items-center gap-1 h-10">
+      <form
+        id={SEARCHBAR_INPUT_FORM_ID}
+        action={ACTION}
+        class="join flex items-center gap-1 h-10"
+      >
         <input
           id={SEARCHBAR_POPUP_ID}
           tabIndex={0}
@@ -74,8 +78,7 @@ export default function Searchbar(
           hx-trigger={`input changed delay:300ms, ${NAME}`}
           hx-indicator={`#${SEARCHBAR_INPUT_FORM_ID}`}
           hx-swap="innerHTML"
-        /> 
-
+        />
 
         <button
           type="submit"

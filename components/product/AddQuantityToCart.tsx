@@ -13,7 +13,7 @@ export interface Props extends JSX.HTMLAttributes<HTMLButtonElement> {
   item: AnalyticsItem;
   text?: string;
   quantityButton?: boolean;
-  inventoryLevel?: number
+  inventoryLevel?: number;
 }
 const onClick = () => {
   const button = event?.currentTarget as HTMLButtonElement | null;
@@ -21,15 +21,16 @@ const onClick = () => {
   const { item, platformProps } = JSON.parse(
     decodeURIComponent(container.getAttribute("data-cart-item")!),
   );
-  const input = document.querySelector('#quantitySelectorItems') as HTMLInputElement;
-  const quantity = Number(input.value ? input.value : 1)
+  const input = document.querySelector(
+    "#quantitySelectorItems",
+  ) as HTMLInputElement;
+  const quantity = Number(input.value ? input.value : 1);
   platformProps.quantity = quantity;
   window.STOREFRONT.CART.addToCart(item, platformProps);
 };
 
 const onLoad = (id: string) => {
   window.STOREFRONT.CART.subscribe((_) => {
-
     const container = document.getElementById(id);
 
     container?.querySelectorAll<HTMLButtonElement>("button").forEach((node) =>
@@ -54,7 +55,7 @@ function AddQuantityToCart(props: Props) {
   const { product, item, text } = props;
   const platformProps = useAddToCart(props);
   const id = useId();
-  
+
   return (
     <div
       id={id}
@@ -64,21 +65,22 @@ function AddQuantityToCart(props: Props) {
         JSON.stringify({ item, platformProps }),
       )}
     >
-
-          <div class={clx("bg-white")}>
-            <QuantitySelector
-              min={1}
-              max={props.inventoryLevel ?? 100}
-              id="quantitySelectorItems"
-            />
-          </div>
-          <label
-            class={clx("flex-1 btn bg-primary text-black desktop:rounded-[5px] text-sm font-bold hover:bg-[#C493EF]")}
-            hx-on:click={useScript(onClick)}
-            for={MINICART_DRAWER_ID} 
-          >
-            {text ? text : "COMPRAR"}
-          </label>
+      <div class={clx("bg-white")}>
+        <QuantitySelector
+          min={1}
+          max={props.inventoryLevel ?? 100}
+          id="quantitySelectorItems"
+        />
+      </div>
+      <label
+        class={clx(
+          "flex-1 btn bg-primary text-black desktop:rounded-[5px] text-sm font-bold hover:bg-[#C493EF]",
+        )}
+        hx-on:click={useScript(onClick)}
+        for={MINICART_DRAWER_ID}
+      >
+        {text ? text : "COMPRAR"}
+      </label>
 
       <script
         type="module"

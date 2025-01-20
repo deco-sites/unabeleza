@@ -20,8 +20,8 @@ export default function ShelfWithText(
 
   const device = useDevice();
   const filteredProducts = device === "desktop"
-  ? products.slice(0, 2)
-  : products;
+    ? products.slice(0, 2)
+    : products;
 
   return (
     <div class={clx("flex flex-col justify-between w-full", _class)}>
@@ -32,7 +32,11 @@ export default function ShelfWithText(
         <p class="text-sm font-normal">{text}</p>
       </div>
       <div class="mobile:py-[30px] w-full">
-        <ProductSlider products={filteredProducts} itemListName={title} class="desktop:hidden"/>
+        <ProductSlider
+          products={filteredProducts}
+          itemListName={title}
+          class="desktop:hidden"
+        />
       </div>
     </div>
   );

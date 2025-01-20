@@ -13,18 +13,17 @@ const actions: CartSubmitActions<AppContext> = {
     return cartFrom(response);
   },
   setQuantity: async ({ items, platformCart }, _req, ctx) => {
-
-            const cart = platformCart as Cart;
+    const cart = platformCart as Cart;
 
     const index =
       cart.products?.findIndex((product, index) =>
         product?.quantity !== items[index]
       ) ?? -1;
-          const props = {
+    const props = {
       productVariantId: cart.products?.[index]?.productVariantId,
       quantity: items[index],
     };
-           if (
+    if (
       typeof props.productVariantId !== "number" ||
       typeof props.quantity !== "number"
     ) {
@@ -32,12 +31,12 @@ const actions: CartSubmitActions<AppContext> = {
         "Unreachable code. This is probably a bug. Please report it to the developers.",
       );
     }
-       const response = await ctx.invoke(
+    const response = await ctx.invoke(
       "wake/actions/cart/updateItemQuantity.ts",
       props,
     );
 
-       return cartFrom(response);
+    return cartFrom(response);
   },
   setCoupon: async ({ coupon }, _req, ctx) => {
     const response = await ctx.invoke(

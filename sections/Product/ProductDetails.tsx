@@ -14,7 +14,7 @@ import Reviews from "../../components/product/ProductReview/Reviews.tsx";
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
-  itemsShare: ShareProps
+  itemsShare: ShareProps;
   productShelf: SectionType<ProductShelfComponent>;
 }
 
@@ -32,15 +32,18 @@ export default function ProductDetails(props: Props) {
     );
   }
 
-  const { productID, aggregateRating, review } = props?.page?.product
-  
+  const { productID, aggregateRating, review } = props?.page?.product;
+
   return (
     <>
       <Section.Container class="mobile:mt-[96px]">
-        <Breadcrumb itemListElement={props.page.breadcrumbList.itemListElement} />
-        <div class={clx(
+        <Breadcrumb
+          itemListElement={props.page.breadcrumbList.itemListElement}
+        />
+        <div
+          class={clx(
             "flex gap-5",
-            "mobile:flex-col w-full"
+            "mobile:flex-col w-full",
           )}
         >
           <div class="desktop:w-[45.13vw]">
@@ -55,16 +58,18 @@ export default function ProductDetails(props: Props) {
         </div>
       </Section.Container>
       <Section.Container class="bg-[#F5F5F5] desktop:!h-[507px] !py-12">
-        <div class={clx(
-          "flex gap-20 mobile:gap-[26px] items-center w-full desktop:max-w-[calc(100%_-_8.33%)] h-full mx-auto",
-          "mobile:flex-col-reverse"
-        )}>
-          <ReviewForm 
+        <div
+          class={clx(
+            "flex gap-20 mobile:gap-[26px] items-center w-full desktop:max-w-[calc(100%_-_8.33%)] h-full mx-auto",
+            "mobile:flex-col-reverse",
+          )}
+        >
+          <ReviewForm
             productVariantId={Number(productID)}
             reviewCount={aggregateRating?.reviewCount}
-            ratingValue={aggregateRating?.ratingValue} 
+            ratingValue={aggregateRating?.ratingValue}
           />
-          <Reviews reviews={review} aggregateRating={aggregateRating}/>
+          <Reviews reviews={review} aggregateRating={aggregateRating} />
         </div>
       </Section.Container>
       <props.productShelf.Component {...props.productShelf.props} />

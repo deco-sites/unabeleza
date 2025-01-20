@@ -1,1 +1,1 @@
-export { default } from "../../islands/Popup.tsx"
+export { default } from "../../islands/Popup.tsx";

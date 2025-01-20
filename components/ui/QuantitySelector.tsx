@@ -10,11 +10,13 @@ const onClick = (delta: number) => {
     ?.querySelector<HTMLInputElement>('input[type="number"]')!;
   const min = Number(input.min) || -Infinity;
   const max = Number(input.max) || Infinity;
-  if(input.valueAsNumber >= max && delta === 1) {
+  if (input.valueAsNumber >= max && delta === 1) {
     window.alert(`Não é possível adicionar mais do que ${max} produtos`);
   } else {
-    input.value = `${Math.min(Math.max(input.valueAsNumber + delta, min), max)}`;
-  input.dispatchEvent(new Event("change", { bubbles: true }));
+    input.value = `${
+      Math.min(Math.max(input.valueAsNumber + delta, min), max)
+    }`;
+    input.dispatchEvent(new Event("change", { bubbles: true }));
   }
 };
 function QuantitySelector(

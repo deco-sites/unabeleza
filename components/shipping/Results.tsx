@@ -1,8 +1,7 @@
-
 import { ShippingQuotesQuery } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 
 export interface Props {
-  result: ShippingQuotesQuery["shippingQuotes"]
+  result: ShippingQuotesQuery["shippingQuotes"];
 }
 
 function formatShippingEstimate(estimate: number): string {
@@ -10,7 +9,6 @@ function formatShippingEstimate(estimate: number): string {
 }
 
 export default function Results({ result }: Props) {
-
   if (!result) {
     return (
       <div class="p-2">
@@ -22,7 +20,10 @@ export default function Results({ result }: Props) {
   return (
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
       {result?.map((method) => (
-        <li key={method?.id} class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t">
+        <li
+          key={method?.id}
+          class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t"
+        >
           <span class="text-button text-center">
             Entrega {method?.name}
           </span>
@@ -30,9 +31,12 @@ export default function Results({ result }: Props) {
             até {formatShippingEstimate(method!.deadline)}
           </span>
           <span class="text-base font-semibold text-right">
-            {method?.value === 0 ? "Grátis" : 
-              method?.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-            }
+            {method?.value === 0
+              ? "Grátis"
+              : method?.value.toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+              })}
           </span>
         </li>
       ))}

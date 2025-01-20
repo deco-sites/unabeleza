@@ -5,7 +5,7 @@ import { formatPrice } from "../../sdk/format.ts";
 import { useComponent } from "../../sections/Component.tsx";
 import CartItem, { Item } from "./Item.tsx";
 import { useScript } from "@deco/deco/hooks";
-import Icon from "../ui/Icon.tsx"
+import Icon from "../ui/Icon.tsx";
 export interface Minicart {
   /** Cart from the ecommerce platform */
   platformCart: Record<string, unknown>;
@@ -155,17 +155,19 @@ export default function Cart(
           {count === 0
             ? (
               <div class="flex flex-col items-center justify-center">
-                <Icon id="cart" size={96}/>
-                <span class="text-center w-[275px] mt-[26px] mb-[39px]">Sacola Vazia. Adicione produtos para finalizar uma compra!</span>
+                <Icon id="cart" size={96} />
+                <span class="text-center w-[275px] mt-[26px] mb-[39px]">
+                  Sacola Vazia. Adicione produtos para finalizar uma compra!
+                </span>
                 <label
-                      for={MINICART_DRAWER_ID}
-                      class={clx(
-                        "btn bg-[#fff] no-animation w-full border-2 border-[#8F2AED] rounded-[5px]",
-                        "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]"
-                      )}
-                    >
-                      CONTINUAR COMPRANDO
-                    </label>
+                  for={MINICART_DRAWER_ID}
+                  class={clx(
+                    "btn bg-[#fff] no-animation w-full border-2 border-[#8F2AED] rounded-[5px]",
+                    "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]",
+                  )}
+                >
+                  CONTINUAR COMPRANDO
+                </label>
               </div>
             )
             : (
@@ -189,7 +191,7 @@ export default function Cart(
 
                 {/* Cart Footer */}
                 <footer class="w-full p-5">
-                  {/* Subtotal and Total */} 
+                  {/* Subtotal and Total */}
                   <div class="flex flex-col gap-4">
                     {discounts > 0 && (
                       <div class="flex justify-between items-center">
@@ -220,7 +222,7 @@ export default function Cart(
                       for={MINICART_DRAWER_ID}
                       class={clx(
                         "btn bg-[#fff] no-animation w-full border-2 border-[#8F2AED] rounded-[5px]",
-                        "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]"
+                        "text-sm font-bold text-[#8F2AED] hover:bg-[#8F2AED] hover:text-white  hover:border-[#8F2AED]",
                       )}
                     >
                       CONTINUAR COMPRANDO

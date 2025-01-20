@@ -16,7 +16,7 @@ export default function Popup({ text, btnText }: PopupProps) {
     );
     isVisible
       ? document.body.style.overflow = "hidden"
-      : document.body.style.overflow = ""
+      : document.body.style.overflow = "";
     setIsVisible(!hasAccepted);
   }, [isVisible]);
 
@@ -29,10 +29,12 @@ export default function Popup({ text, btnText }: PopupProps) {
 
   return (
     <div className="fixed z-[9999] inset-0 bg-black bg-opacity-50">
-      <div className={clx(
-        "absolute left-1/2 -translate-x-1/2 bottom-10 mobile:bottom-5 bg-white w-full max-w-[1030px] mobile:max-w-[calc(100vw_-_40px)]",
-        "flex mobile:flex-col items-center justify-between px-6 py-4 shadow-md rounded-none"
-        )}>
+      <div
+        className={clx(
+          "absolute left-1/2 -translate-x-1/2 bottom-10 mobile:bottom-5 bg-white w-full max-w-[1030px] mobile:max-w-[calc(100vw_-_40px)]",
+          "flex mobile:flex-col items-center justify-between px-6 py-4 shadow-md rounded-none",
+        )}
+      >
         <p
           className="font-[Montserrat] font-medium text-[14px] leading-[21px] text-black mobile:text-center"
           dangerouslySetInnerHTML={{ __html: text }}

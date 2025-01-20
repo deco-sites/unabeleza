@@ -22,13 +22,18 @@ function Breadcrumb({ itemListElement = [] }: Props) {
                     <Icon id="home" width="14" height="15" />
                   </a>
                 </li>
-              )
+              );
             }
             return (
               <li class="group overflow-hidden text-ellipsis">
-                <a  class="group-last:font-bold breadcrumb-item text-xs whitespace-nowrap" href={relative(item)}>{name}</a>
+                <a
+                  class="group-last:font-bold breadcrumb-item text-xs whitespace-nowrap"
+                  href={relative(item)}
+                >
+                  {name}
+                </a>
               </li>
-            )
+            );
           })}
       </ul>
     </div>

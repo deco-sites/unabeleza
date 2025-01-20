@@ -12,8 +12,6 @@ const variants = {
 };
 
 function Avatar({ content, variant = "default" }: Props) {
-
-
   return (
     <div class="avatar placeholder">
       <div

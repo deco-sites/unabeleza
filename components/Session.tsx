@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-export type PlatformProps = { quantity: number } & Record<string, unknown>
+export type PlatformProps = { quantity: number } & Record<string, unknown>;
 
 export interface Cart {
   currency: string;
@@ -230,23 +230,23 @@ const sdk = () => {
   createAnalyticsSDK();
   const setClientCookie = (value: string) => {
     let expires = "";
-  
+
     const date = new Date(Date.now() + TEN_DAYS_MS);
     expires = "; expires=" + date.toUTCString();
-  
+
     document.cookie = CART_COOKIE + "=" + (value || "") + expires + "; path=/";
   };
-  
+
   const syncCartId = async () => {
-      const url = new URL("https://checkout.unabeleza.com.br/api/carrinho", );
+    const url = new URL("https://checkout.unabeleza.com.br/api/carrinho");
 
-      const { Id } = await fetch(url, { credentials: "include" }).then((r) =>
-        r.json()
-      );
+    const { Id } = await fetch(url, { credentials: "include" }).then((r) =>
+      r.json()
+    );
 
-      setClientCookie(Id);
-  }
-  syncCartId()
+    setClientCookie(Id);
+  };
+  syncCartId();
   window.STOREFRONT = {
     CART: createCartSDK(),
     USER: createUserSDK(),
@@ -305,9 +305,7 @@ export default function Session(
         class="drawer-end z-[1000]"
         aside={
           <Drawer.Aside title="Meu carrinho" drawer={MINICART_DRAWER_ID}>
-            <div
-              class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto w-full"
-            >
+            <div class="h-full flex flex-col bg-base-100 items-center justify-center overflow-auto w-full">
               <CartProvider cart={minicart!} />
             </div>
           </Drawer.Aside>

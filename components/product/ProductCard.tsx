@@ -50,7 +50,7 @@ function ProductCard({
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
-  {/* Add click event to dataLayer */ }
+  {/* Add click event to dataLayer */}
   const event = useSendEvent({
     on: "click",
     event: {
@@ -62,7 +62,7 @@ function ProductCard({
     },
   });
 
-  const device = useDevice()
+  const device = useDevice();
 
   return (
     <div
@@ -131,7 +131,12 @@ function ProductCard({
 
         {/* Wishlist button */}
         <div class="absolute top-[9.79px] right-[2.85px] mobile:top-[5.22px] mobile:right-[3.88px] z-30">
-          <WishlistButton item={item} variant="icon" stroke="#BD87ED" device={device}/>
+          <WishlistButton
+            item={item}
+            variant="icon"
+            stroke="#BD87ED"
+            device={device}
+          />
         </div>
         <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
           <span
@@ -139,7 +144,7 @@ function ProductCard({
               "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
               "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
               "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]",
-              inStock && "opacity-0"
+              inStock && "opacity-0",
             )}
           >
             NOVIDADE
@@ -148,7 +153,10 @@ function ProductCard({
       </figure>
 
       <a href={relativeUrl} class="flex flex-col pt-5 gap-[9px]">
-        <ReviewRating ratingValue={aggregateRating?.ratingValue ?? 0} reviewCount={0} />
+        <ReviewRating
+          ratingValue={aggregateRating?.ratingValue ?? 0}
+          reviewCount={0}
+        />
 
         <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}

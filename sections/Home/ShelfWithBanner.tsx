@@ -13,7 +13,7 @@ import { clx } from "../../sdk/clx.ts";
 interface ShelfWithBannerProps extends ShelfWithTextProps {
   img: ImageWidget;
   alt?: string;
-  linkImage?: string
+  linkImage?: string;
 }
 
 export default function ShelfWithBanner(
@@ -60,7 +60,7 @@ export default function ShelfWithBanner(
               "w-full h-full object-cover mobile:w-full",
             )}
           />
-          <a href={linkImage} class="absolute inset-0"/>
+          <a href={linkImage} class="absolute inset-0" />
         </div>
 
         <ShelfWithText

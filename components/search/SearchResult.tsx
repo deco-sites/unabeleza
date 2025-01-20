@@ -42,7 +42,7 @@ export interface Props {
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
   return (
     <>
-      { searchParams
+      {searchParams
         ? (
           <div class="w-full flex flex-col gap-[30px] mobile:gap-6 justify-center items-center">
             <div class="w-full flex flex-col gap-10 mobile:gap-6 justify-center items-center ">
@@ -263,7 +263,7 @@ const setPageQuerystring = (page: string, id: string) => {
     }
     history.replaceState({ prevPage }, "", url.href);
   }).observe(element);
-}
+};
 
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
@@ -295,14 +295,17 @@ function Result(props: SectionProps<typeof loader>) {
     },
   });
 
-
   const sortBy = sortOptions.length > 0 && (
     <Sort sortOptions={sortOptions} url={url} />
   );
 
   return (
     <>
-      <div id={container} {...viewItemListEvent} class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto mobile:px-5 mobile:py-8">
+      <div
+        id={container}
+        {...viewItemListEvent}
+        class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto mobile:px-5 mobile:py-8"
+      >
         {partial
           ? <PageResult {...props} />
           : (
@@ -318,7 +321,10 @@ function Result(props: SectionProps<typeof loader>) {
                   aside={
                     <div class="bg-base-100 flex flex-col h-full w-[79.73vw] divide-y overflow-y-hidden">
                       <div class="flex justify-center items-center relative p-5 border-b border-[#F5F5F5]">
-                        <label class="btn btn-ghost p-0 absolute left-5 top-1/2 -translate-y-1/2" for={controls}>
+                        <label
+                          class="btn btn-ghost p-0 absolute left-5 top-1/2 -translate-y-1/2"
+                          for={controls}
+                        >
                           <Icon id="closeFilter" width={15} height={15} />
                         </label>
 
@@ -368,7 +374,8 @@ function Result(props: SectionProps<typeof loader>) {
                 <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
                   {device === "desktop" && (
                     <div class="flex justify-end items-center gap-[10px]">
-                      <span class="font-bold">ORDENAR POR </span>{sortBy}
+                      <span class="font-bold">ORDENAR POR</span>
+                      {sortBy}
                     </div>
                   )}
                   <PageResult {...props} />
