@@ -3920,9 +3920,6 @@ details.collapse summary::-webkit-details-marker {
 .m-0 {
   margin: 0px;
 }
-.m-2 {
-  margin: 0.5rem;
-}
 .m-8 {
   margin: 2rem;
 }
@@ -4792,6 +4789,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .grid-cols-\[min-content_1fr\] {
   grid-template-columns: min-content 1fr;
+}
+.grid-cols-\[repeat\(auto-fit\2c minmax\(340px\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
 }
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
@@ -7187,6 +7187,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mobile\:grid-cols-\[repeat\(auto-fit\2c minmax\(160px\2c 1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
   }
 
   .mobile\:grid-rows-\[1fr_32px_1fr_64px\] {

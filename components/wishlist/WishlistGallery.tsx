@@ -1,9 +1,10 @@
+
 import { AppContext } from "apps/wake/mod.ts";
 import { WishlistReducedProductFragment } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 import { SectionProps } from "deco/types.ts";
 import ProductCard from "../product/ProductCard.tsx";
 export type Props = {
-  whislist: WishlistReducedProductFragment[];
+  page: WishlistReducedProductFragment[];
 };
 
 function WishlistGallery(props: SectionProps<typeof loader>) {
@@ -26,31 +27,27 @@ function WishlistGallery(props: SectionProps<typeof loader>) {
   }
 
   return (
-    <div class="px-4 mx-auto max-lg:mt-5 xl:max-w-[1220px] mt-16 mb-16">
+    <div class="px-[min(4.16vw,63.89px)] mx-auto max-w-[96rem] mt-16 mb-16">
       <div class="mb-3">
         <h1 class="leading-8 lg:leading-10 font-bold text-xl lg:text-3xl text-center">
           Meus Favoritos
         </h1>
       </div>
       <div
-        class={"grid items-center grid-cols-2 gap-x-2 gap-y-16 sm:grid-cols-3 xl:grid-cols-4 sm:gap-4"}
+        class={"grid items-center grid-cols-[repeat(auto-fit,minmax(340px,1fr))] mobile:grid-cols-[repeat(auto-fit,minmax(160px,1fr))] gap-x-2 gap-y-16 "}
       >
         {props.products?.map((product) => (
-          <ProductCard product={product}  />
+          <ProductCard product={product} />
         ))}
       </div>
     </div>
   );
 }
 
-export const loader = async (props: Props, req: Request, ctx: AppContext) => {
+export const loader = async ({ page }: Props, req: Request, ctx: AppContext) => {
   const { invoke } = ctx;
 
-  const wishlistIds = await ctx.invoke("wake/loaders/wishlist.ts")
-
-  const productId =  wishlistIds.map((item) => Number(item.productId));
-
-  console.log(productId)
+  const productId =  page.map((item) => Number(item.productId));
 
   const products = productId.length > 0
     ? await invoke.wake.loaders.productList({
