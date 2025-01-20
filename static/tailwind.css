@@ -3839,9 +3839,6 @@ details.collapse summary::-webkit-details-marker {
 .top-\[9\.79px\] {
   top: 9.79px;
 }
-.\!z-20 {
-  z-index: 20 !important;
-}
 .-z-\[1\] {
   z-index: -1;
 }
@@ -7004,8 +7001,8 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 250px;
   }
 
-  .mobile\:mt-\[60px\] {
-    margin-top: 60px;
+  .mobile\:mt-\[96px\] {
+    margin-top: 96px;
   }
 
   .mobile\:block {
@@ -7070,6 +7067,11 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:max-h-\[596px\] {
     max-height: 596px;
+  }
+
+  .mobile\:min-h-min {
+    min-height: -moz-min-content;
+    min-height: min-content;
   }
 
   .mobile\:\!w-\[calc\(\(100vw_-_64px\)_\/_3\)\] {
@@ -7187,6 +7189,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .mobile\:grid-cols-\[112px_1fr_112px\] {
+    grid-template-columns: 112px 1fr 112px;
   }
 
   .mobile\:grid-cols-\[repeat\(auto-fit\2c minmax\(160px\2c 1fr\)\)\] {

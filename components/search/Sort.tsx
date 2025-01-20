@@ -35,7 +35,7 @@ function Sort({ sortOptions, url }: Props) {
   return (
     <>
       <details className={clx(
-          "dropdown w-full desktop:max-w-[14.58vw] !z-20",
+          "dropdown w-full desktop:max-w-[14.58vw]",
           device === "desktop" && "collapse-arrow2"
         )}>
         <summary

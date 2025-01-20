@@ -28,7 +28,7 @@ function Drawer(
 ) {
   return (
     <>
-      <div class={clx("drawer z-30", _class)}>
+      <div class={clx("drawer ", _class)}>
         <input
           id={id}
           name={id}
@@ -38,7 +38,7 @@ function Drawer(
           aria-label={open ? "open drawer" : "closed drawer"}
         />
 
-        <div class="drawer-content">
+        <div class="drawer-content z-40">
           {children}
         </div>
 
@@ -46,7 +46,7 @@ function Drawer(
           data-aside
           class={clx(
             "drawer-side h-full overflow-hidden",
-            "[[data-aside]&_section]:contents",
+            "[[data-aside]&_section]:contents z-50",
           )}
         >
           <label for={id} class="drawer-overlay" />

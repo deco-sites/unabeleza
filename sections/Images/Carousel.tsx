@@ -72,17 +72,15 @@ function BannerItem(
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
           width={412}
-          height={660}
         />
         <Source
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
           width={1440}
-          height={600}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-fill w-full h-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -102,8 +100,8 @@ function Carousel({ images = [], preload, interval }: Props) {
         "grid",
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px] h-[496px] max-w-full",
-        "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
+        "mobile:grid-cols-[112px_1fr_112px] mobile:min-h-min",
+        "w-screen mobile:mt-[96px]",
       )}
     >
       <div class="col-span-full row-span-full">
