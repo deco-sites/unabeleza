@@ -9,19 +9,19 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const uniqueIdentifiers = [
     ...new Set(children.map((node) => node.identifier)),
   ];
-  children?.forEach((node) => {
-    if (node.children && node.children.length > 0) {
-      const seeAll = {
-        name: "ver todos",
-        url: node.url,
-      };
 
-      const exists = node.children.some((leaf) => leaf.name === seeAll.name);
-      if (!exists) {
-        node.children.push(seeAll);
-      }
+  if (children && children.length > 0) {
+    const seeAll = {
+      name: "ver todos",
+      url: url,
+    };
+
+    const exists = children.some((leaf) => leaf.name === seeAll.name)
+
+    if (!exists) {
+      children.push(seeAll);
     }
-  });
+  }
 
   return (
     <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-[#DBB9F9] h-[29px] last:rounded-[5px] last:py-1 last:px-3">
@@ -50,9 +50,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
               <ul class="flex flex-col items-start justify-start gap-6 container w-fit m-0">
                 {children.filter((node) => node.identifier === uniIdentifier)
                   .map((node) => (
-                    <li class="flex flex-col gap-3">
+                    <li class="flex flex-col gap-3 group">
                       <a class="cursor-pointer" href={node.url}>
-                        <span class="font-bold text-xs">{node.name}</span>
+                        <span class="font-bold text-xs group-last:text-primary group-last:font-bold group-last:underline">{node.name}</span>
                       </a>
                       <ul class="flex flex-col gap-2">
                         {node.children?.map((leaf) => (

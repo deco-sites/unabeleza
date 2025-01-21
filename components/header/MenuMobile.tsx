@@ -18,13 +18,24 @@ export interface MenuItemProps {
 }
 
 function MenuItem({ item, loading }: MenuItemProps) {
-  if (item.children.length > 0) {
+  if (item.children && item.children.length > 0) {
+    const seeAll = {
+      name: "ver todos",
+      url: item.url,
+    };
+
+    const exists = item.children.some((leaf) => leaf.name === seeAll.name)
+
+    if (!exists) {
+      item.children.push(seeAll);
+    }
+
     return (
       <>
         <Drawer
           id={item.name}
           aside={
-            <Drawer.Aside title={item.name} drawer={item.name}>
+            <Drawer.Aside title={item.name} drawer={item.name} url={item.url}>
               <div
                 class="flex flex-col h-full overflow-y-auto"
                 code
@@ -44,14 +55,16 @@ function MenuItem({ item, loading }: MenuItemProps) {
                         }
 
                         return (
-                          <a
-                            class="collapse border-b border-neutral-100"
-                            href={leaf.url}
-                          >
-                            <div class="collapse-title">
-                              {leaf.name}
-                            </div>
-                          </a>
+                          <li class="group">
+                            <a
+                              class="collapse border-b border-neutral-100"
+                              href={leaf.url}
+                            >
+                              <div class="collapse-title group-last:text-primary group-last:font-bold group-last:underline">
+                                {leaf.name}
+                              </div>
+                            </a>
+                          </li>
                         );
                       })}
                     </ul>

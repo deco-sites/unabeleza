@@ -60,11 +60,12 @@ function Drawer(
     </>
   );
 }
-function Aside({ title, drawer, children, hasLogged = true }: {
+function Aside({ title, drawer, children, hasLogged = true, url }: {
   title?: string;
   drawer: string;
   children: ComponentChildren;
   hasLogged?: boolean;
+  url?: string
 }) {
   return drawer === "minicart-drawer"
     ? (
@@ -98,7 +99,10 @@ function Aside({ title, drawer, children, hasLogged = true }: {
                 <label for={drawer} aria-label="X" class="cursor-pointer p-0">
                   <Icon id="drawerArrowLeft" width={30} height={30} />
                 </label>
-                <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
+                <a href={url}>
+                  <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
+                </a>
+
               </>
             )
             : (
