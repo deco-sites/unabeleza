@@ -24,7 +24,7 @@ function MenuItem({ item, loading }: MenuItemProps) {
       url: item.url,
     };
 
-    const exists = item.children.some((leaf) => leaf.name === seeAll.name)
+    const exists = item.children.some((leaf) => leaf.name === seeAll.name);
 
     if (!exists) {
       item.children.push(seeAll);

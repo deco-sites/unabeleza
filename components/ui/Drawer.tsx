@@ -65,7 +65,7 @@ function Aside({ title, drawer, children, hasLogged = true, url }: {
   drawer: string;
   children: ComponentChildren;
   hasLogged?: boolean;
-  url?: string
+  url?: string;
 }) {
   return drawer === "minicart-drawer"
     ? (
@@ -100,9 +100,10 @@ function Aside({ title, drawer, children, hasLogged = true, url }: {
                   <Icon id="drawerArrowLeft" width={30} height={30} />
                 </label>
                 <a href={url}>
-                  <span class="text-2xl font-[PP-Hatton] font-bold">{title}</span>
+                  <span class="text-2xl font-[PP-Hatton] font-bold">
+                    {title}
+                  </span>
                 </a>
-
               </>
             )
             : (

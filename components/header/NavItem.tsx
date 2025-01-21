@@ -16,7 +16,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
       url: url,
     };
 
-    const exists = children.some((leaf) => leaf.name === seeAll.name)
+    const exists = children.some((leaf) => leaf.name === seeAll.name);
 
     if (!exists) {
       children.push(seeAll);
@@ -52,7 +52,9 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                   .map((node) => (
                     <li class="flex flex-col gap-3 group">
                       <a class="cursor-pointer" href={node.url}>
-                        <span class="font-bold text-xs group-last:text-primary group-last:font-bold group-last:underline">{node.name}</span>
+                        <span class="font-bold text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                          {node.name}
+                        </span>
                       </a>
                       <ul class="flex flex-col gap-2">
                         {node.children?.map((leaf) => (
