@@ -86,9 +86,9 @@ function ProductInfo({ page, itemsShare }: Props) {
         id={id}
       >
         {/* Product Name */}
-        <span class={clx("text-2xl font-bold")}>
+        <h1 class={clx("text-2xl font-bold")}>
           {title}
-        </span>
+        </h1>
 
         <div class="space-y-[7px]">
           <span class={clx("text-xs text-[#252429]")}>
@@ -139,7 +139,7 @@ function ProductInfo({ page, itemsShare }: Props) {
           class={clx(
             "desktop:mt-4 ",
             availability === "https://schema.org/InStock" &&
-              "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-30",
+              "mobile:fixed mobile:bottom-0 mobile:left-0 mobile:w-screen mobile:z-40",
           )}
         >
           {availability === "https://schema.org/InStock"
@@ -165,8 +165,8 @@ function ProductInfo({ page, itemsShare }: Props) {
           />
         </div>
       </div>
-      {device === "desktop" && (
-        <div class="space-y-3 max-w-10">
+      
+        <div class="space-y-3 max-w-10 mobile:absolute mobile:z-40 mobile:right-0 mobile:top-2">
           <WishlistButton
             item={item}
             stroke="#707070"
@@ -175,7 +175,7 @@ function ProductInfo({ page, itemsShare }: Props) {
           />
           <Share {...itemsShare} />
         </div>
-      )}
+   
     </div>
   );
 }

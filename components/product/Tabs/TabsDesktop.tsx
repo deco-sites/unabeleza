@@ -36,9 +36,9 @@ export default function TabsDesktop({ productInformations }: TabsDesktopProps) {
             ? (
               <div
                 role="tabpanel"
-                class="tab-content p-10 text-sm text-black w-full"
+                class="tab-content p-10 w-full"
               >
-                {item.value}
+                <h2 class="text-sm text-black">{item.value}</h2>
               </div>
             )
             : (

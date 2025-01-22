@@ -43,7 +43,7 @@ export default function ProductDetails(props: Props) {
         <div
           class={clx(
             "flex gap-5",
-            "mobile:flex-col w-full",
+            "mobile:flex-col w-full mobile:relative",
           )}
         >
           <div class="desktop:w-[45.13vw]">

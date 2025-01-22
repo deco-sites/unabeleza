@@ -12,8 +12,8 @@ export default function TabsMobile({ productInformations }: TabsMobileProps) {
       {productInformations?.map((item) => (
         <div tabIndex={0} className="collapse collapse-arrow" key={item.name}>
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-sm font-bold text-black uppercase peer-checked:text-primary">
-            {item.name}
+          <div className="collapse-title peer-checked:text-primary">
+            <h2 class="text-sm font-bold text-black uppercase">{item.name}</h2>
           </div>
           <div
             className="collapse-content text-sm mobile:text-xs"
