@@ -2,13 +2,13 @@
   "seo": {
     "type": "website",
     "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/74d13a55-4c18-4a5c-8cb4-dcaa27aae923",
-    "title": "Storefront",
     "jsonLDs": [],
     "noIndexing": false,
     "description": "Build profitable websites with deco.cx",
     "titleTemplate": "%s | deco.cx",
     "descriptionTemplate": "%s | deco.cx",
-    "favicon": "https://data.decoassets.com/unabeleza/57b4debb-944b-419c-9e21-27f5b21eedaf/image.ico"
+    "favicon": "https://data.decoassets.com/unabeleza/57b4debb-944b-419c-9e21-27f5b21eedaf/image.ico",
+    "title": "Una Beleza"
   },
   "theme": {
     "__resolveType": "Unabeleza"
