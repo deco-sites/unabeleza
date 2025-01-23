@@ -173,3 +173,8 @@
   border-radius: 20px;
 }
 
+
+.lgpd a:hover {
+  color: #BF8EEC;
+  text-decoration: underline;
+}
