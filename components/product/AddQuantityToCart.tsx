@@ -79,7 +79,7 @@ function AddQuantityToCart(props: Props) {
         hx-on:click={useScript(onClick)}
         for={MINICART_DRAWER_ID}
       >
-        {text ? text : "COMPRAR"}
+        {text ?? "COMPRAR"}
       </label>
 
       <script
