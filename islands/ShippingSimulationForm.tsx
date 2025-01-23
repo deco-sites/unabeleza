@@ -17,13 +17,19 @@ export default function ShippingSimulationForm({ items }: Props) {
   const handleResults = useCallback(
     async (e: JSX.TargetedSubmitEvent<HTMLFormElement>) => {
       e.preventDefault();
+
       const form = new FormData(e.currentTarget);
       if (!form.get("postalCode")) {
         setResult(null);
         return;
       }
+
+      const selectorQuantityItemPDP = document.querySelector("#quantitySelectorItems") as HTMLInputElement;
+      const qauntityItems = Number(selectorQuantityItemPDP.value)
+
       const data = await invoke.wake.actions.shippingSimulation({
         ...items[0],
+        quantity: qauntityItems,
         cep: `${form.get("postalCode") ?? ""}`,
       }) as ShippingQuotesQuery["shippingQuotes"];
 
