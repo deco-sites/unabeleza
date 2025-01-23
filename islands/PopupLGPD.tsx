@@ -9,6 +9,14 @@ interface PopupProps {
 
 export default function Popup({ text, btnText }: PopupProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [isPolicy, setIsPolicy] = useState(false);
+
+  useEffect(() => {
+    const currentPath = window.location.pathname
+    setIsPolicy(currentPath === "/politicas-de-privacidade")
+  }, [])
+
+  if (isPolicy) return
 
   useEffect(() => {
     const hasAccepted = JSON.parse(
@@ -36,7 +44,7 @@ export default function Popup({ text, btnText }: PopupProps) {
         )}
       >
         <p
-          className="font-[Montserrat] font-medium text-[14px] leading-[21px] text-black mobile:text-center"
+          className="font-[Montserrat] font-medium text-[14px] leading-[21px] text-black mobile:text-center lgpd"
           dangerouslySetInnerHTML={{ __html: text }}
         />
         <button

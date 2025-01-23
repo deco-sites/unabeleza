@@ -5607,9 +5607,6 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -5661,6 +5658,9 @@ details.collapse summary::-webkit-details-marker {
 .pl-\[60px\] {
   padding-left: 60px;
 }
+.pl-\[max\(min\(23\.125vw\2c 355\.2px\)\2c 353px\)\] {
+  padding-left: max(min(23.125vw,355.2px),353px);
+}
 .pr-2 {
   padding-right: 0.5rem;
 }
@@ -5693,6 +5693,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .pr-\[75px\] {
   padding-right: 75px;
+}
+.pr-\[min\(5\.55vw\2c 85\.24px\)\] {
+  padding-right: min(5.55vw,85.24px);
 }
 .pt-2 {
   padding-top: 0.5rem;
@@ -7743,3 +7746,4 @@ details.collapse summary::-webkit-details-marker {
 [data-aside].\[\[data-aside\]\&_section\]\:contents section {
   display: contents;
 }
+

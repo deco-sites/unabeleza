@@ -30,7 +30,7 @@
     },
     {
       "__resolveType": "site/sections/LGPD/PopupLGPD.tsx",
-      "text": "<p><span>Para sua maior segurança, atualizamos as </span><strong><span>Políticas de Privacidade e Termos de Uso</span></strong><span> do site. <br>Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</span></p>",
+      "text": "<p>Para sua maior segurança, atualizamos as <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/politicas-de-privacidade\"><strong><span style=\"color: #bf8eec\">Políticas de Privacidade e Termos de Uso</span></strong></a> do site. <br>Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</p>",
       "btnText": "CONCORDAR E FECHAR"
     },
     {

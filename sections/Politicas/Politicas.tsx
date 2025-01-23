@@ -18,7 +18,7 @@ export default function Politicas({
   item,
 }: ItemsProps) {
   return (
-    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] pl-[333px]">
+    <div className="mobile:mt-[250px] mobile:px-[20px] mt-[100px] pl-[max(min(23.125vw,355.2px),353px)] pr-[min(5.55vw,85.24px)] max-w-[96rem] mx-auto">
       {item &&
         item.map((item) => (
           <section>

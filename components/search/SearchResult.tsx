@@ -142,10 +142,6 @@ function PageResult(props: SectionProps<typeof loader>) {
   const offset = zeroIndexedOffsetPage * perPage;
   const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
   const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
-  const partialPrev = useSection({
-    href: prevPageUrl,
-    props: { partial: "hideMore" },
-  });
   const partialNext = useSection({
     href: nextPageUrl,
     props: { partial: "hideLess" },
@@ -153,25 +149,6 @@ function PageResult(props: SectionProps<typeof loader>) {
   const infinite = layout?.pagination !== "pagination";
   return (
     <div class="grid grid-flow-row grid-cols-1 place-items-stretch ">
-      <div
-        class={clx(
-          "pb-2 sm:pb-10",
-          (!prevPageUrl || partial === "hideLess") && "hidden",
-        )}
-      >
-        <a
-          rel="prev"
-          class="btn btn-ghost"
-          hx-swap="outerHTML show:parent:top"
-          hx-get={partialPrev}
-        >
-          <span class="inline [.htmx-request_&]:hidden">
-            Show Less
-          </span>
-          <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
-        </a>
-      </div>
-
       <div
         data-product-list
         class={clx(
@@ -192,7 +169,7 @@ function PageResult(props: SectionProps<typeof loader>) {
         ))}
       </div>
 
-      <div class={clx("pt-2 sm:pt-10 w-full", "")}>
+      <div class={clx("pt-2 mb-5 w-full")}>
         {infinite
           ? (
             <div class="flex justify-center [&_section]:contents">
@@ -206,7 +183,7 @@ function PageResult(props: SectionProps<typeof loader>) {
                 hx-get={partialNext}
               >
                 <span class="inline [.htmx-request_&]:hidden">
-                  Show More
+                  Ver Mais
                 </span>
                 <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
               </a>
@@ -304,7 +281,10 @@ function Result(props: SectionProps<typeof loader>) {
       <div
         id={container}
         {...viewItemListEvent}
-        class="w-full mt-10 max-w-[96rem] pr-[60px] mx-auto mobile:px-5 mobile:py-8"
+        class={clx(
+          "w-full mt-10 max-w-[96rem]  mx-auto mobile:px-5 mobile:py-8",
+          partial ?? "pr-[60px]"
+        )}
       >
         {partial
           ? <PageResult {...props} />
