@@ -90,7 +90,7 @@ function AddToCartButton(props: Props) {
             for={MINICART_DRAWER_ID}
             class={clx("flex-grow", _class?.toString())}
           >
-            {text ?? "Add to Cart"}
+            {text ?? "COMPRAR"}
           </label>
         )}
 
