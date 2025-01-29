@@ -163,7 +163,8 @@
         }
       ],
       "image": [],
-      "name": "Marcas"
+      "name": "Marcas",
+      "url": "/marcas"
     },
     {
       "children": [],

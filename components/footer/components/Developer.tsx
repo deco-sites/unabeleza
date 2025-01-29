@@ -8,14 +8,15 @@ export default function Developer({ econverse, wake, yav }: DeveloperLogo) {
         Layout e desenvolvimento
       </span>
       <div class="flex justify-center gap-4">
-        <Image
-          src={econverse.image}
-          width={85.83}
-          height={24.9}
-          href={econverse.url}
-        />
-        <Image src={wake.image} width={77.57} height={27.17} href={wake.url} />
-        <Image src={yav.image} width={133.33} height={25} href={yav.url} />
+        <a href={econverse.url} target="_blank-space">
+          <Image src={econverse.image} width={85.83} height={24.9} />
+        </a>
+        <a href={wake.url} target="_blank-space">
+          <Image src={wake.image} width={77.57} height={27.17} />
+        </a>
+        <a href={yav.url} target="_blank-space">
+          <Image src={yav.image} width={133.33} height={25} />
+        </a>
       </div>
     </div>
   );

@@ -380,6 +380,7 @@ function Result(props: SectionProps<typeof loader>) {
 }
 
 function SearchResult({ page, ...props }: SectionProps<typeof loader>) {
+  console.log(page?.pageInfo)
   if (!page?.pageInfo.records) {
     return <NotFound {...props} />;
   }

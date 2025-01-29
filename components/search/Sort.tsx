@@ -57,7 +57,7 @@ function Sort({ sortOptions, url }: Props) {
         </summary>
         <ul
           className={clx(
-            "menu dropdown-content top-8 w-full bg-white rounded-box -z-[1]",
+            "menu dropdown-content top-8 w-full bg-white rounded-box mobile:-z-[1] z-40",
             "px-[14.5px] pt-[30px] pb-5 space-y-[10px] shadow",
             "mobile:px-[11px] mobile:pt-7 mobile:pb-[18px]",
           )}
