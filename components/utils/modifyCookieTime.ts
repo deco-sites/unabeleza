@@ -9,7 +9,9 @@ const modifyCookieTime = (nomeCookie: string, dias: number) =>
             let expiracao = new Date();
             expiracao.setTime(expiracao.getTime() + (dias * 24 * 60 * 60 * 1000));
 
-            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${window.location.hostname}`;
+            const domain = window.location.hostname.replace(/^www\./, "");
+
+            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${domain}`;
             return;
         }
     }
