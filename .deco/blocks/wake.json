@@ -26,5 +26,6 @@
   "slug": {
     "__resolveType": "website/functions/requestToParam.ts",
     "param": "slug"
-  }
+  },
+  "query": "enrich"
 }

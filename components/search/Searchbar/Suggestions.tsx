@@ -8,6 +8,7 @@ import { ACTION, NAME } from "./Form.tsx";
 import { type Resolved } from "@deco/deco";
 import { useDevice, useScript } from "@deco/deco/hooks";
 import Icon from "../../ui/Icon.tsx";
+
 export interface Props {
   /**
    * @title Suggestions Integration
@@ -28,6 +29,7 @@ export const action = async (props: Props, req: Request, ctx: AppContext) => {
   }) as Suggestion | null;
   return { suggestion, query };
 };
+
 export const loader = async (props: Props, req: Request, ctx: AppContext) => {
   const { loader: { __resolveType, ...loaderProps } } = props;
   const query = new URL(req.url).searchParams.get(NAME ?? "busca");
@@ -43,6 +45,43 @@ const onClick = (id: string) => {
   document.querySelector(`#${id}`).innerHTML = "";
 };
 
+
+
+const searchElement = () => {
+  const suggestionsPopup = document.getElementById("suggestions-popup");
+  if (!suggestionsPopup || suggestionsPopup.classList.contains("hidden")) return;
+  
+  const handleClickOutside = (e: MouseEvent) => {
+    if (!findParentWithId(e.target, ["searchbar-popup", "suggestions-popup"])) {
+      suggestionsPopup.classList.add("hidden");
+      document.body.removeEventListener("click", handleClickOutside);
+    }
+  };
+
+  document.body.addEventListener('click', handleClickOutside)
+
+  const memo = new WeakMap<EventTarget, boolean>();
+
+  const findParentWithId = (element: EventTarget | null, targetIds: string[]): boolean => {
+    if (!element || !(element instanceof HTMLElement)) return false;
+
+    if (memo.has(element)) return memo.get(element)!;
+
+    let currentElement: HTMLElement = element;
+
+    while (currentElement && currentElement !== document.body) {
+      if (targetIds.includes(currentElement.id)) {
+        memo.set(element, true);
+        return true;
+      }
+      currentElement = currentElement.parentElement;
+    }
+
+    memo.set(element, false);
+    return false;
+  }
+} 
+
 function Suggestions(
   { suggestion, query }: ComponentProps<typeof loader, typeof action>,
 ) {
@@ -50,14 +89,19 @@ function Suggestions(
   const hasProducts = Boolean(products?.length);
   const hasTerms = Boolean(searches.length);
   const device = useDevice();
+  const openSuggestions = hasProducts && hasTerms;
+
+  if(!hasProducts && !hasTerms) return null
+
   return (
     <div
+      id="suggestions-popup"
       class={clx(
         "fixed desktop:right-[calc(60px_+_((100vw_-_min(96rem,100vw))_/_2))] mobile:left-0 desktop:-z-10 z-50 desktop:mt-6 bg-white",
         "w-[min(54.30vw,834px)] mobile:w-screen h-[611px] mobile:h-[72.33vh] mobile:max-h-[596px] mobile:top-[172px] overflow-y-auto",
-        !hasProducts && !hasTerms && "hidden",
       )}
     >
+      <script type="module" dangerouslySetInnerHTML={{__html: useScript(searchElement)}} />
       <div class="gap-4 grid grid-cols-2 mobile:grid-cols-1 mobile:gap-8 p-[30px] mobile:px-5 mobile:pt-5 relative">
         {device === "mobile" && (
           <button

@@ -47,7 +47,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
             }}
           >
             {uniqueIdentifiers.map((uniIdentifier) => (
-              <ul class="flex flex-col items-start justify-start gap-6 container w-fit m-0">
+              <ul class="grid grid-cols-[repeat(auto-fit,_minmax(18%,_1fr))] gap-x-6 gap-y-2 container w-full m-0">
                 {children.filter((node) => node.identifier === uniIdentifier)
                   .map((node) => (
                     <li class="flex flex-col gap-3 group">
@@ -56,20 +56,22 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                           {node.name}
                         </span>
                       </a>
-                      <ul class="flex flex-col gap-2">
-                        {node.children?.map((leaf) => (
-                          <li class="group">
-                            <a
-                              class="hover:underline cursor-pointer"
-                              href={leaf.url}
-                            >
-                              <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
-                                {leaf.name}
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                      {node.children && node.children.length > 0 && (
+                           <ul class="flex flex-col gap-2">
+                           {node.children?.map((leaf) => (
+                             <li class="group">
+                               <a
+                                 class="hover:underline cursor-pointer"
+                                 href={leaf.url}
+                               >
+                                 <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                                   {leaf.name}
+                                 </span>
+                               </a>
+                             </li>
+                           ))}
+                         </ul>
+                      )}
                     </li>
                   ))}
               </ul>

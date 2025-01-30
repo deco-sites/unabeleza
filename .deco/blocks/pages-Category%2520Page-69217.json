@@ -25,7 +25,7 @@
           "__resolveType": "wake/loaders/productListingPage.ts",
           "limit": 12,
           "operation": "AND",
-          "sort": "NAME:ASC",
+          "sort": "SALES:DESC",
           "filters": {
             "attributes": {
               "id": [],

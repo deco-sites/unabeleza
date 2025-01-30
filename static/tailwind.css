@@ -4780,6 +4780,9 @@ details.collapse summary::-webkit-details-marker {
 .grid-cols-\[min-content_1fr\] {
   grid-template-columns: min-content 1fr;
 }
+.grid-cols-\[repeat\(auto-fit\2c _minmax\(18\%\2c _1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+}
 .grid-cols-\[repeat\(auto-fit\2c minmax\(340px\2c 1fr\)\)\] {
   grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
 }
@@ -4943,12 +4946,19 @@ details.collapse summary::-webkit-details-marker {
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
 }
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
 .gap-x-\[6px\] {
   -moz-column-gap: 6px;
        column-gap: 6px;
 }
 .gap-y-16 {
   row-gap: 4rem;
+}
+.gap-y-2 {
+  row-gap: 0.5rem;
 }
 .gap-y-\[10px\] {
   row-gap: 10px;
