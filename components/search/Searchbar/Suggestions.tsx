@@ -98,7 +98,7 @@ function Suggestions(
       id="suggestions-popup"
       class={clx(
         "fixed desktop:right-[calc(60px_+_((100vw_-_min(96rem,100vw))_/_2))] mobile:left-0 desktop:-z-10 z-50 desktop:mt-6 bg-white",
-        "w-[min(54.30vw,834px)] mobile:w-screen h-[611px] mobile:h-[72.33vh] mobile:max-h-[596px] mobile:top-[172px] overflow-y-auto",
+        "w-[min(54.30vw,834px)] mobile:w-screen h-[525px] mobile:h-[72.33vh] mobile:max-h-[596px] mobile:top-[172px] mobile:overflow-y-auto",
       )}
     >
       <script type="module" dangerouslySetInnerHTML={{__html: useScript(searchElement)}} />

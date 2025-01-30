@@ -27,11 +27,10 @@ export function formatInstallments(installments) {
   const match = installments.match(regex);
 
   if (match) {
-    const [_, times, price] = match;
-    price.replace(".", ",");
+    let [_, times, price] = match;
     return {
       times,
-      price,
+      price: price.replace(".", ","),
     };
   }
   return installments;

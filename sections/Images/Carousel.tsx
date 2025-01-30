@@ -5,6 +5,7 @@ import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { useDevice } from "@deco/deco/hooks";
 
 /**
  * @titleBy alt
@@ -92,12 +93,13 @@ function BannerItem(
 
 function Carousel({ images = [], preload, interval }: Props) {
   const id = useId();
+  const device = useDevice()
 
   return (
     <div
       id={id}
       class={clx(
-        "grid",
+        "relative grid",
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px] h-fit max-w-full",
         "mobile:grid-cols-[112px_1fr_112px] mobile:min-h-min",
@@ -114,21 +116,40 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider>
       </div>
 
-      <div class="items-center justify-center z-10 col-start-1 row-start-2 hidden">
-        <Slider.PrevButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
-          disabled={false}
+      <div
+          class="absolute top-1/2 transform -translate-y-1/2 left-5 flex items-center justify-center z-10"
         >
-          <Icon id="chevron-right" class="rotate-180" />
-        </Slider.PrevButton>
-      </div>
+          <Slider.PrevButton
+            class={clx(
+              "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
+              "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
+            )}
+            disabled={false}
+          >
+            <Icon
+              id="chevron-right"
+              width={device === "desktop" ? 12 : 8}
+              height={device === "desktop" ? 22 : 16}
+              stroke="#8F2AED"
+              class="rotate-180"
+            />
+          </Slider.PrevButton>
+        </div>
 
-      <div class="items-center justify-center z-10 col-start-3 row-start-2 hidden">
+      <div class="absolute top-1/2 transform -translate-y-1/2 right-5 flex items-center justify-center z-10">
         <Slider.NextButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
+          class={clx(
+            "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
+            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
+          )}
           disabled={false}
         >
-          <Icon id="chevron-right" />
+          <Icon
+              id="chevron-right"
+              width={device === "desktop" ? 12 : 8}
+              height={device === "desktop" ? 22 : 16}
+              stroke="#8F2AED"
+            />
         </Slider.NextButton>
       </div>
 

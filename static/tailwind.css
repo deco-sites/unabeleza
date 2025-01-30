@@ -1918,10 +1918,6 @@ input.tab:checked + .tab-content,
     --btn-color: var(--fallback-a);
   }
 
-  .btn-neutral {
-    --btn-color: var(--fallback-n);
-  }
-
   .btn-error {
     --btn-color: var(--fallback-er);
   }
@@ -1987,10 +1983,6 @@ input.tab:checked + .tab-content,
     --btn-color: var(--a);
   }
 
-  .btn-neutral {
-    --btn-color: var(--n);
-  }
-
   .btn-error {
     --btn-color: var(--er);
   }
@@ -2004,11 +1996,6 @@ input.tab:checked + .tab-content,
   --tw-text-opacity: 1;
   color: var(--fallback-ac,oklch(var(--ac)/var(--tw-text-opacity)));
   outline-color: var(--fallback-a,oklch(var(--a)/1));
-}
-.btn-neutral {
-  --tw-text-opacity: 1;
-  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
-  outline-color: var(--fallback-n,oklch(var(--n)/1));
 }
 .btn-error {
   --tw-text-opacity: 1;
@@ -3901,9 +3888,6 @@ details.collapse summary::-webkit-details-marker {
 .row-start-1 {
   grid-row-start: 1;
 }
-.row-start-2 {
-  grid-row-start: 2;
-}
 .row-start-4 {
   grid-row-start: 4;
 }
@@ -4224,6 +4208,9 @@ details.collapse summary::-webkit-details-marker {
 .h-\[50px\] {
   height: 50px;
 }
+.h-\[525px\] {
+  height: 525px;
+}
 .h-\[52px\] {
   height: 52px;
 }
@@ -4232,9 +4219,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-\[6\.04vw\] {
   height: 6.04vw;
-}
-.h-\[611px\] {
-  height: 611px;
 }
 .h-\[88px\] {
   height: 88px;
@@ -7406,6 +7390,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:gap-\[6px\] {
     gap: 6px;
+  }
+
+  .mobile\:overflow-y-auto {
+    overflow-y: auto;
   }
 
   .mobile\:whitespace-nowrap {
