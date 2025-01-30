@@ -19,6 +19,9 @@ import {
 import { useDevice } from "@deco/deco/hooks";
 import { type LoadingFallbackProps } from "@deco/deco";
 import MenuMobile from "../../components/header/MenuMobile.tsx";
+import { useScript } from "@deco/deco/hooks";
+import modifyCookieTime from "../../components/utils/modifyCookieTime.ts";
+
 export interface Logo {
   src: ImageWidget;
   alt: string;
@@ -164,6 +167,18 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
     </div>
   </>
 );
+
+const setRandomCookie = () => {
+  // Gerando um valor aleatório para o cookie
+  const cookieValue = Math.random().toString(36).substring(2, 15);
+
+  // Criando o cookie
+  document.cookie = `random-cookie=${cookieValue}; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/; domain=${window.location.hostname}`;
+
+  console.log("Cookie aleatório criado:", cookieValue);
+};
+
+
 function Header({
   alerts = [],
   logo = {
@@ -176,7 +191,11 @@ function Header({
   ...props
 }: Props) {
   const device = useDevice();
+  
   return (
+    <>
+    <script type="module" dangerouslySetInnerHTML={{__html: useScript(modifyCookieTime, 'fbits-login', 7)}} />
+    <script type="module" dangerouslySetInnerHTML={{__html: useScript(setRandomCookie)}} />
     <header
       style={{
         height: device === "desktop"
@@ -191,6 +210,7 @@ function Header({
           : <Mobile logo={logo} {...props} />}
       </div>
     </header>
+    </>
   );
 }
 export const LoadingFallback = (props: LoadingFallbackProps<Props>) => (
