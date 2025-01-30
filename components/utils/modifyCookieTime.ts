@@ -11,7 +11,7 @@ const modifyCookieTime = (nomeCookie: string, dias: number) =>
 
             const domain = window.location.hostname.replace(/^www\./, "");
 
-            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${domain}`;
+            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${domain}; Secure; SameSite=Strict`;
             return;
         }
     }
