@@ -3,7 +3,7 @@ const modifyCookieTime = (nomeCookie: string, dias: number) =>
     const cookies = document.cookie.split("; ");
 
     for (let cookie of cookies) {
-        let [nome, valor] = cookie.split("=");
+        let [nome, valor] = cookie.split("=", 2);
 
         if (nome === nomeCookie) {
             let expiracao = new Date();
@@ -11,7 +11,7 @@ const modifyCookieTime = (nomeCookie: string, dias: number) =>
 
             const domain = window.location.hostname.replace(/^www\./, "");
 
-            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${domain}`;
+            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${domain}; Secure; SameSite=Strict`;
             return;
         }
     }
