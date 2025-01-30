@@ -4,7 +4,7 @@ const modifyCookieTime = (nameCookie: string, days: number) =>
 
     for (let cookie of cookies) {
         const [name] = cookie.split("=");
-        const [value] = cookie.replace(`${name}=`,'');
+        const value = cookie.replace(`${name}=`,'');
 
         if (name === nameCookie) {
             let expiration = new Date();
