@@ -117,7 +117,21 @@
     {
       "__resolveType": "site/sections/FaleConosco/FaleConosco.tsx",
       "titulo": "Fale Conosco",
-      "subTitulo": "Ainda em dúvida sobre algo? Mande uma mensagem! Responderemos o quanto antes."
+      "subTitulo": "Ainda em dúvida sobre algo? Mande uma mensagem! Responderemos o quanto antes.",
+      "contato": {
+        "titulo": "Canais de atendimento",
+        "descricao": "<p>Queremos receber seu contato! Nos escreva sempre que quiser, estaremos prontos para responder! :- )</p>",
+        "itens": [
+          {
+            "nome": "Telefone",
+            "valor": "(19) 99707-2021"
+          },
+          {
+            "nome": "Email",
+            "valor": "unabeleza@unikagroup.com.br "
+          }
+        ]
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

@@ -3687,6 +3687,9 @@ details.collapse summary::-webkit-details-marker {
   white-space: nowrap;
   border-width: 0;
 }
+.visible {
+  visibility: visible;
+}
 .collapse {
   visibility: collapse;
 }
@@ -3947,6 +3950,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.my-\[100px\] {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 .-mt-12 {
   margin-top: -3rem;
 }
@@ -4046,11 +4053,17 @@ details.collapse summary::-webkit-details-marker {
 .mt-2\.5 {
   margin-top: 0.625rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .mt-3 {
   margin-top: 0.75rem;
 }
 .mt-4 {
   margin-top: 1rem;
+}
+.mt-5 {
+  margin-top: 1.25rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
@@ -7137,6 +7150,10 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 250px;
   }
 
+  .mobile\:mt-\[60px\] {
+    margin-top: 60px;
+  }
+
   .mobile\:mt-\[96px\] {
     margin-top: 96px;
   }
@@ -7632,6 +7649,11 @@ details.collapse summary::-webkit-details-marker {
     z-index: -10;
   }
 
+  .desktop\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .desktop\:ml-\[60px\] {
     margin-left: 60px;
   }
@@ -7709,12 +7731,20 @@ details.collapse summary::-webkit-details-marker {
     width: fit-content;
   }
 
+  .desktop\:w-full {
+    width: 100%;
+  }
+
   .desktop\:max-w-\[14\.58vw\] {
     max-width: 14.58vw;
   }
 
   .desktop\:max-w-\[38\.75vw\] {
     max-width: 38.75vw;
+  }
+
+  .desktop\:max-w-\[900px\] {
+    max-width: 900px;
   }
 
   .desktop\:max-w-\[calc\(\(100\%_\+_60px\)_\*_0\.69027\)\] {
@@ -7735,6 +7765,14 @@ details.collapse summary::-webkit-details-marker {
 
   .desktop\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .desktop\:flex-col {
+    flex-direction: column;
+  }
+
+  .desktop\:items-end {
+    align-items: flex-end;
   }
 
   .desktop\:items-center {
@@ -7797,6 +7835,10 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 1rem;
   }
 
+  .desktop\:pr-5 {
+    padding-right: 1.25rem;
+  }
+
   .desktop\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -7812,7 +7854,15 @@ details.collapse summary::-webkit-details-marker {
 }
 
 
-@media (min-width: 1026px) and (max-width: 1200px) {
+@media (min-width: 1026px) and (max-width: 1300px) {
+
+  .desktop-sm\:ml-\[333px\] {
+    margin-left: 333px;
+  }
+
+  .desktop-sm\:max-w-\[700px\] {
+    max-width: 700px;
+  }
 
   .desktop-sm\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));

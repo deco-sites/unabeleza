@@ -16,3 +16,12 @@ export const HEADER_HEIGHT_MOBILE = "104px";
 export const NAVBAR_HEIGHT_MOBILE = "56px";
 export const HEADER_HEIGHT_DESKTOP = "176px";
 export const NAVBAR_HEIGHT_DESKTOP = "44px";
+
+export const COMMON_HTML_TAGS_TO_ALLOW = [
+  "p",
+  "strong",
+  "em",
+  "b",
+  "i",
+  "a",
+];
