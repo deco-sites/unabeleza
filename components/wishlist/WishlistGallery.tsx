@@ -2,9 +2,30 @@ import { AppContext } from "apps/wake/mod.ts";
 import { WishlistReducedProductFragment } from "apps/wake/utils/graphql/storefront.graphql.gen.ts";
 import ProductCard from "../product/ProductCard.tsx";
 import { type SectionProps } from "@deco/deco";
+
 export type Props = {
     page: WishlistReducedProductFragment[];
 };
+
+export const loader = async ({ page }: Props,  _, ctx: AppContext) => {
+  const { invoke } = ctx;
+  const productId = page.map((item) => Number(item.productId));
+  const products = productId.length > 0
+      ? await invoke.wake.loaders.productList({
+          first: 50,
+          sortDirection: "ASC",
+          sortKey: "NAME",
+          filters: {
+              productId,
+              mainVariant: true,
+          },
+      })
+      : [];
+  return {
+      products,
+  };
+};
+
 function WishlistGallery(props: SectionProps<typeof loader>) {
     const isEmpty = !props.products || props.products.length === 0;
     if (isEmpty) {
@@ -31,22 +52,5 @@ function WishlistGallery(props: SectionProps<typeof loader>) {
       </div>
     </div>);
 }
-export const loader = async ({ page }: Props, ctx: AppContext) => {
-    const { invoke } = ctx;
-    const productId = page.map((item) => Number(item.productId));
-    const products = productId.length > 0
-        ? await invoke.wake.loaders.productList({
-            first: 50,
-            sortDirection: "ASC",
-            sortKey: "NAME",
-            filters: {
-                productId,
-                mainVariant: true,
-            },
-        })
-        : [];
-    return {
-        products,
-    };
-};
+
 export default WishlistGallery;
