@@ -184,11 +184,12 @@ function Header({
   return (
     <>
       <script
-        type="module"
-        dangerouslySetInnerHTML={{
-          __html: useScript(modifyCookieTime, "fbits-login", 7),
-        }}
-      />
+      type="module"
+      dangerouslySetInnerHTML={{
+        __html: useScript(modifyCookieTime, "fbits-login", 7),
+      }}
+    />
+      
       <header
         style={{
           height: device === "desktop"
