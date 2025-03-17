@@ -14,12 +14,12 @@ export default function PopUp({ title, text, image }: PopUpProps) {
   const [isPolicy, setIsPolicy] = useState(false);
 
   useEffect(() => {
-    const currentPath = window.location.pathname
-    setIsPolicy(currentPath === "/politicas-de-privacidade")
-  }, [])
+    const currentPath = window.location.pathname;
+    setIsPolicy(currentPath === "/politicas-de-privacidade");
+  }, []);
 
-  if (isPolicy) return
-  
+  if (isPolicy) return;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -151,7 +151,14 @@ export default function PopUp({ title, text, image }: PopUpProps) {
                   }}
                 />
                 <p class="font-[Montserrat] text-[12px] cursor-pointer">
-                  Li e concordo com os <a href="/politicas-de-privacidade" target="_blank-space" class="text-primary hover:underline">termos de privacidade</a>
+                  Li e concordo com os{" "}
+                  <a
+                    href="/politicas-de-privacidade"
+                    target="_blank-space"
+                    class="text-primary hover:underline"
+                  >
+                    termos de privacidade
+                  </a>
                 </p>
               </label>
               <button

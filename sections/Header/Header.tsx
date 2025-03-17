@@ -180,24 +180,29 @@ function Header({
   ...props
 }: Props) {
   const device = useDevice();
-  
+
   return (
     <>
-    <script type="module" dangerouslySetInnerHTML={{__html: useScript(modifyCookieTime, 'fbits-login', 7)}} />
-    <header
-      style={{
-        height: device === "desktop"
-          ? HEADER_HEIGHT_DESKTOP
-          : HEADER_HEIGHT_MOBILE,
-      }}
-    >
-      <div class="bg-base-100 fixed w-full z-50">
-        {alerts && <Alert alerts={alerts} />}
-        {device === "desktop"
-          ? <Desktop logo={logo} {...props} />
-          : <Mobile logo={logo} {...props} />}
-      </div>
-    </header>
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{
+          __html: useScript(modifyCookieTime, "fbits-login", 7),
+        }}
+      />
+      <header
+        style={{
+          height: device === "desktop"
+            ? HEADER_HEIGHT_DESKTOP
+            : HEADER_HEIGHT_MOBILE,
+        }}
+      >
+        <div class="bg-base-100 fixed w-full z-50">
+          {alerts && <Alert alerts={alerts} />}
+          {device === "desktop"
+            ? <Desktop logo={logo} {...props} />
+            : <Mobile logo={logo} {...props} />}
+        </div>
+      </header>
     </>
   );
 }

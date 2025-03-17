@@ -24,8 +24,10 @@ export default function ShippingSimulationForm({ items }: Props) {
         return;
       }
 
-      const selectorQuantityItemPDP = document.querySelector("#quantitySelectorItems") as HTMLInputElement;
-      const qauntityItems = Number(selectorQuantityItemPDP.value)
+      const selectorQuantityItemPDP = document.querySelector(
+        "#quantitySelectorItems",
+      ) as HTMLInputElement;
+      const qauntityItems = Number(selectorQuantityItemPDP.value);
 
       const data = await invoke.wake.actions.shippingSimulation({
         ...items[0],

@@ -283,7 +283,7 @@ function Result(props: SectionProps<typeof loader>) {
         {...viewItemListEvent}
         class={clx(
           "w-full mt-10 max-w-[96rem]  mx-auto mobile:px-5 mobile:py-8",
-          partial ?? "pr-[60px]"
+          partial ?? "pr-[60px]",
         )}
       >
         {partial

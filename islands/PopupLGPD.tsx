@@ -12,11 +12,11 @@ export default function Popup({ text, btnText }: PopupProps) {
   const [isPolicy, setIsPolicy] = useState(false);
 
   useEffect(() => {
-    const currentPath = window.location.pathname
-    setIsPolicy(currentPath === "/politicas-de-privacidade")
-  }, [])
+    const currentPath = window.location.pathname;
+    setIsPolicy(currentPath === "/politicas-de-privacidade");
+  }, []);
 
-  if (isPolicy) return
+  if (isPolicy) return;
 
   useEffect(() => {
     const hasAccepted = JSON.parse(

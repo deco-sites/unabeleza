@@ -45,12 +45,12 @@ const onClick = (id: string) => {
   document.querySelector(`#${id}`).innerHTML = "";
 };
 
-
-
 const searchElement = () => {
   const suggestionsPopup = document.getElementById("suggestions-popup");
-  if (!suggestionsPopup || suggestionsPopup.classList.contains("hidden")) return;
-  
+  if (!suggestionsPopup || suggestionsPopup.classList.contains("hidden")) {
+    return;
+  }
+
   const handleClickOutside = (e: MouseEvent) => {
     if (!findParentWithId(e.target, ["searchbar-popup", "suggestions-popup"])) {
       suggestionsPopup.classList.add("hidden");
@@ -58,11 +58,14 @@ const searchElement = () => {
     }
   };
 
-  document.body.addEventListener('click', handleClickOutside)
+  document.body.addEventListener("click", handleClickOutside);
 
   const memo = new WeakMap<EventTarget, boolean>();
 
-  const findParentWithId = (element: EventTarget | null, targetIds: string[]): boolean => {
+  const findParentWithId = (
+    element: EventTarget | null,
+    targetIds: string[],
+  ): boolean => {
     if (!element || !(element instanceof HTMLElement)) return false;
 
     if (memo.has(element)) return memo.get(element)!;
@@ -79,8 +82,8 @@ const searchElement = () => {
 
     memo.set(element, false);
     return false;
-  }
-} 
+  };
+};
 
 function Suggestions(
   { suggestion, query }: ComponentProps<typeof loader, typeof action>,
@@ -91,7 +94,7 @@ function Suggestions(
   const device = useDevice();
   const openSuggestions = hasProducts && hasTerms;
 
-  if(!hasProducts && !hasTerms) return null
+  if (!hasProducts && !hasTerms) return null;
 
   return (
     <div
@@ -101,7 +104,10 @@ function Suggestions(
         "w-[min(54.30vw,834px)] mobile:w-screen h-[525px] mobile:h-[72.33vh] mobile:max-h-[596px] mobile:top-[172px] mobile:overflow-y-auto",
       )}
     >
-      <script type="module" dangerouslySetInnerHTML={{__html: useScript(searchElement)}} />
+      <script
+        type="module"
+        dangerouslySetInnerHTML={{ __html: useScript(searchElement) }}
+      />
       <div class="gap-4 grid grid-cols-2 mobile:grid-cols-1 mobile:gap-8 p-[30px] mobile:px-5 mobile:pt-5 relative">
         {device === "mobile" && (
           <button

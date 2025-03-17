@@ -57,20 +57,20 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                         </span>
                       </a>
                       {node.children && node.children.length > 0 && (
-                           <ul class="flex flex-col gap-2">
-                           {node.children?.map((leaf) => (
-                             <li class="group">
-                               <a
-                                 class="hover:underline cursor-pointer"
-                                 href={leaf.url}
-                               >
-                                 <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
-                                   {leaf.name}
-                                 </span>
-                               </a>
-                             </li>
-                           ))}
-                         </ul>
+                        <ul class="flex flex-col gap-2">
+                          {node.children?.map((leaf) => (
+                            <li class="group">
+                              <a
+                                class="hover:underline cursor-pointer"
+                                href={leaf.url}
+                              >
+                                <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                                  {leaf.name}
+                                </span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
                       )}
                     </li>
                   ))}

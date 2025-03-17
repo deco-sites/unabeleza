@@ -165,17 +165,16 @@ function ProductInfo({ page, itemsShare }: Props) {
           />
         </div>
       </div>
-      
-        <div class="space-y-3 max-w-10 mobile:absolute mobile:z-40 mobile:right-0 mobile:top-2">
-          <WishlistButton
-            item={item}
-            stroke="#707070"
-            typeTwo={true}
-            device={device}
-          />
-          <Share {...itemsShare} />
-        </div>
-   
+
+      <div class="space-y-3 max-w-10 mobile:absolute mobile:z-40 mobile:right-0 mobile:top-2">
+        <WishlistButton
+          item={item}
+          stroke="#707070"
+          typeTwo={true}
+          device={device}
+        />
+        <Share {...itemsShare} />
+      </div>
     </div>
   );
 }

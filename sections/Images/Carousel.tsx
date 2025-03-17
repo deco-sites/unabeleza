@@ -93,7 +93,7 @@ function BannerItem(
 
 function Carousel({ images = [], preload, interval }: Props) {
   const id = useId();
-  const device = useDevice()
+  const device = useDevice();
 
   return (
     <div
@@ -116,25 +116,23 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider>
       </div>
 
-      <div
-          class="absolute top-1/2 transform -translate-y-1/2 left-5 flex items-center justify-center z-10"
+      <div class="absolute top-1/2 transform -translate-y-1/2 left-5 flex items-center justify-center z-10">
+        <Slider.PrevButton
+          class={clx(
+            "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
+            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
+          )}
+          disabled={false}
         >
-          <Slider.PrevButton
-            class={clx(
-              "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
-              "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
-            )}
-            disabled={false}
-          >
-            <Icon
-              id="chevron-right"
-              width={device === "desktop" ? 12 : 8}
-              height={device === "desktop" ? 22 : 16}
-              stroke="#8F2AED"
-              class="rotate-180"
-            />
-          </Slider.PrevButton>
-        </div>
+          <Icon
+            id="chevron-right"
+            width={device === "desktop" ? 12 : 8}
+            height={device === "desktop" ? 22 : 16}
+            stroke="#8F2AED"
+            class="rotate-180"
+          />
+        </Slider.PrevButton>
+      </div>
 
       <div class="absolute top-1/2 transform -translate-y-1/2 right-5 flex items-center justify-center z-10">
         <Slider.NextButton
@@ -145,11 +143,11 @@ function Carousel({ images = [], preload, interval }: Props) {
           disabled={false}
         >
           <Icon
-              id="chevron-right"
-              width={device === "desktop" ? 12 : 8}
-              height={device === "desktop" ? 22 : 16}
-              stroke="#8F2AED"
-            />
+            id="chevron-right"
+            width={device === "desktop" ? 12 : 8}
+            height={device === "desktop" ? 22 : 16}
+            stroke="#8F2AED"
+          />
         </Slider.NextButton>
       </div>
 

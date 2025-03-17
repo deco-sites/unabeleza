@@ -1,4 +1,4 @@
- import { AnalyticsItem, Product } from "apps/commerce/types.ts";
+import { AnalyticsItem, Product } from "apps/commerce/types.ts";
 import { JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
