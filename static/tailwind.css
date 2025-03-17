@@ -3900,9 +3900,6 @@ details.collapse summary::-webkit-details-marker {
 .m-0 {
   margin: 0px;
 }
-.m-2 {
-  margin: 0.5rem;
-}
 .m-8 {
   margin: 2rem;
 }
@@ -7738,7 +7735,6 @@ details.collapse summary::-webkit-details-marker {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
-
 
 @media (min-width: 1026px) and (max-width: 1300px) {
 

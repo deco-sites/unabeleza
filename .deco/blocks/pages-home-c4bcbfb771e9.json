@@ -630,41 +630,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Veja por lançamentos",
-        "cta": "/mono",
-        "products": {
-          "__resolveType": "wake/loaders/productList.ts",
-          "first": 12,
-          "sortDirection": "ASC",
-          "sortKey": "DISCOUNT",
-          "filters": {
-            "attributes": {
-              "id": [],
-              "name": [],
-              "type": [],
-              "value": []
-            },
-            "brandId": [],
-            "categoryId": [],
-            "ean": [],
-            "productId": [],
-            "productVariantId": [],
-            "sameParentAs": [],
-            "sku": [],
-            "stocks": {
-              "dcId": [],
-              "dcName": []
-            },
-            "prices": {},
-            "available": true
-          }
-        }
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/Home/BannerSlider.tsx",
         "items": [
           {
@@ -752,8 +717,8 @@
     },
     {
       "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
-      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
       "title": "Destaques",
+      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
       "subtitle": "Ultra hidratantes",
       "products": {
         "__resolveType": "wake/loaders/productList.ts",
