@@ -1,6 +1,6 @@
 import { RichText } from "apps/admin/widgets.ts";
 import { sanitizeHTMLCode } from "../../sdk/htmlSanitizer.ts";
-import { COMMON_HTML_TAGS_TO_ALLOW } from "../../constants.ts";
+import { COMMON_HTML_TAGS_TO_ALLOW } from "../../constants.ts"
 
 interface Item {
   nome: string;
@@ -18,9 +18,7 @@ interface FaleConoscoProps {
   };
 }
 
-export default function FaleConosco(
-  { titulo, subTitulo, contato }: FaleConoscoProps,
-) {
+export default function FaleConosco({ titulo, subTitulo, contato }: FaleConoscoProps) {
   return (
     <div className="mobile:mt-[250px] mobile:px-[20px] my-[100px] desktop:w-full desktop:max-w-[900px] desktop:pr-5 mobile:pt-[44px] desktop:flex desktop:flex-col desktop:items-end desktop:mx-auto desktop-sm:max-w-[700px] desktop-sm:ml-[333px]">
       <form className="max-w-[750px] w-full">
