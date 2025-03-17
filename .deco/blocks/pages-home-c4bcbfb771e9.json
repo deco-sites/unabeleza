@@ -55,16 +55,6 @@
           "text": "<p>Entrega em todo<strong> </strong>o <strong>Brasil</strong></p>",
           "icon": "benefitBarMap",
           "title": "map"
-        },
-        {
-          "text": "<p><strong>Frete Grátis </strong>- acima de R$ 200 (Sul e Sudeste)</p>",
-          "icon": "benefitBarTruck",
-          "title": "truck"
-        },
-        {
-          "text": "<p>Pague com Pix e ganhe <strong>5%off</strong></p>",
-          "icon": "benefitBarQrCode",
-          "title": "qrCode"
         }
       ]
     },
@@ -369,12 +359,8 @@
               "w": 712,
               "h": 405
             },
-            "title": "Crystal Oil LOF",
-            "description": "<p>Sérum multi óleos LOF professional</p>",
-            "cta": {
-              "href": "#",
-              "label": "APROVEITE"
-            }
+            "description": "<p></p>",
+            "cta": {}
           },
           {
             "desktop": {
@@ -634,12 +620,8 @@
               "w": 375,
               "h": 469
             },
-            "title": "Shampoo + máscara matizadores",
-            "cta": {
-              "href": "#",
-              "label": "APROVEITE"
-            },
-            "description": "<p>Com óleo de monoi (ultrahidratante)!</p>",
+            "cta": {},
+            "description": "<p></p>",
             "contentPosition": "end"
           }
         ]
@@ -734,8 +716,8 @@
           },
           "getVariations": true
         },
-        "cta": "VER TODOS",
-        "title": "Veja nossas ofertas"
+        "title": "Veja nossas ofertas",
+        "cta": "outlet"
       }
     },
     {
@@ -765,24 +747,6 @@
           "href": "/cabelos",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
           "icon": "categoryHair"
-        },
-        {
-          "label": "MAQUIAGEM",
-          "href": "/maquiagem",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryMakeup"
-        },
-        {
-          "label": "CORPO E BANHO",
-          "href": "/corpo-e-banho",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryBodyAndBath"
-        },
-        {
-          "label": "EQUIPAMENTO",
-          "href": "/cabelos/equipamento",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryEquipment"
         }
       ]
     },
@@ -803,7 +767,9 @@
             "type": [],
             "value": []
           },
-          "brandId": [],
+          "brandId": [
+            5870
+          ],
           "categoryId": [],
           "ean": [],
           "productId": [],
@@ -823,8 +789,8 @@
     {
       "__resolveType": "site/sections/Home/AboutUs.tsx",
       "title": "Sobre Nós",
-      "subtitle": "Nós somos a Unabeleza",
-      "text": "O nome UNIKA reflete a nossa sede por fornecer experiências inesquecíveis que valorizam a beleza única de cada pessoa que passa por aqui, desde quem veste a nossa camisa como colaborador até os artistas e veículos da beleza que são impactados pelo nosso atendimento extraordinário. Estamos há mais de 10 anos no mercado de cosméticos distribuindo marcas renomadas como Wella, Braé, Senscience, Tigi, entre outras, conhecidos sempre por nossos serviços de ALTA QUALIDADE."
+      "subtitle": "Conheça um pouco da nossa história",
+      "text": "Na Una Beleza, acreditamos que beleza é mais do que só aparência – é sobre se sentir bem, confiante e verdadeira. Nossa loja online é pensada para quem ama produtos de alta qualidade e que realmente funcionam, sem complicação. Sabemos que cada pessoa é única e que a beleza pode ser expressada de mil maneiras diferentes. Por isso, nosso atendimento é sempre super próximo e atencioso, entendendo o que você precisa. E claro, a gente não abre mão de uma entrega rápida, porque ninguém tem tempo a perder, né? Aqui, você encontra mais do que só cosméticos. É sobre cuidar de você, se sentir bem e viver a sua beleza de forma autêntica e poderosa."
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

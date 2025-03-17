@@ -22,9 +22,10 @@ export const formatPrice = (
   locale = "pt-BR",
 ) => price ? formatter(currency, locale).format(price) : null;
 
-export function formatInstallments(installments) {
+export function formatInstallments(installments: string) {
   const regex = /(\d+x) de (R\$ \d+[,.]?\d*)/i;
   const match = installments.match(regex);
+  console.log(match)
 
   if (match) {
     let [_, times, price] = match;

@@ -74,8 +74,8 @@ function Banner({ images }: Props) {
                 dangerouslySetInnerHTML={{ __html: image.description }}
               />
             )}
-            <div class="">
-              {image.cta && (
+            {image.cta?.label && (
+              <div class="">
                 <a
                   href={image.cta.href}
                   class={clx(
@@ -85,8 +85,8 @@ function Banner({ images }: Props) {
                 >
                   {image.cta.label}
                 </a>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       ))}

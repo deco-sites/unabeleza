@@ -20,7 +20,9 @@
     {
       "__resolveType": "website/sections/Analytics/Analytics.tsx",
       "dangerouslyRunOnMainThread": true,
-      "trackingIds": []
+      "trackingIds": [
+        "GTM-T5WV26QC"
+      ]
     },
     {
       "__resolveType": "analytics/sections/Analytics/DecoAnalytics.tsx"
@@ -30,13 +32,13 @@
     },
     {
       "__resolveType": "site/sections/LGPD/PopupLGPD.tsx",
-      "text": "<p>Para sua maior segurança, atualizamos as <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/politicas-de-privacidade\"><strong><span style=\"color: #bf8eec\">Políticas de Privacidade e Termos de Uso</span></strong></a> do site. <br>Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</p>",
+      "text": "<p>Para sua maior segurança, atualizamos as <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"/politicas-de-privacidade\">Políticas de Privacidade e Termos de Uso</a> do site. Ao continuar navegando, entendemos que você está ciente e de acordo com elas.</p>",
       "btnText": "CONCORDAR E FECHAR"
     },
     {
       "__resolveType": "site/sections/PopUp/PopUp.tsx",
       "title": "Cadastre-se",
-      "text": "e ganhe 10% OFF na sua 1ª compra.",
+      "text": "e ganhe 5% OFF na sua 1ª compra.",
       "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/a4adce52-6900-4f61-a386-d4b53c37a8bb/image-85.png"
     }
   ],

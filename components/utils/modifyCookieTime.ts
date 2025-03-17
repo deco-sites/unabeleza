@@ -1,15 +1,18 @@
-const modifyCookieTime = (nomeCookie: string, dias: number) =>
+const modifyCookieTime = (nameCookie: string, days: number) =>
   window.STOREFRONT.USER.subscribe((_) => {
     const cookies = document.cookie.split("; ");
 
     for (let cookie of cookies) {
-        let [nome, valor] = cookie.split("=");
+        const [name] = cookie.split("=");
+        const value = cookie.replace(`${name}=`,'');
 
-        if (nome === nomeCookie) {
-            let expiracao = new Date();
-            expiracao.setTime(expiracao.getTime() + (dias * 24 * 60 * 60 * 1000));
+        if (name === nameCookie) {
+            let expiration = new Date();
+            expiration.setTime(expiration.getTime() + (days * 24 * 60 * 60 * 1000));
 
-            document.cookie = `${nome}=${valor}; expires=${expiracao.toUTCString()}; path=/; domain=${window.location.hostname}`;
+            const domain = window.location.hostname.replace(/^www\./, "");
+
+            document.cookie = `${name}=${value}; expires=${expiration.toUTCString()}; path=/; domain=${domain}; Secure; SameSite=Strict`;
             return;
         }
     }

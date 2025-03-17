@@ -14,7 +14,7 @@ function SearchItem({ product }: Props) {
   const { listPrice, price, installments } = useOffer(offers);
   const relativeUrl = relative(url);
   const image = images ? images[0].url : undefined;
-  const parcel = formatInstallments(installments);
+  const parcel = formatInstallments(installments ?? "");
 
   return (
     <fieldset
@@ -70,8 +70,8 @@ function SearchItem({ product }: Props) {
           >
             {installments && (
               <span class="text-xs whitespace-nowrap">
-                Ou <strong>{parcel.times}</strong> de{" "}
-                <strong>{parcel.price}</strong>
+                Ou <strong>{parcel?.times}</strong> de{" "}
+                <strong>{parcel?.price}</strong>
               </span>
             )}
           </div>

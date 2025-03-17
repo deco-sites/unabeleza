@@ -24,12 +24,12 @@
       "href": "#",
       "items": [
         {
-          "title": "Como Comprar",
-          "href": "#"
+          "title": "<p>Dúvidas Frequentes</p>",
+          "href": "/duvidas-frequentes"
         },
         {
-          "title": "Meus pedidos",
-          "href": "#"
+          "title": "<p>Meus pedidos</p>",
+          "href": "/login"
         },
         {
           "title": "<p>Política de Privacidade</p>",
@@ -46,11 +46,7 @@
           "href": "#"
         },
         {
-          "title": "<p><img src=\"https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/9ed02d11-e6a7-4646-bd3d-d03619778993/phone-(2).png\"> (11) 5511-0677</p>",
-          "href": "#"
-        },
-        {
-          "title": "<p><strong>SAC/Site:</strong> unabeleza@unikagroup.com.br</p>",
+          "title": "<p><strong>Email:</strong> unabeleza@unikagroup.com.br</p>",
           "href": "#"
         },
         {
@@ -104,6 +100,11 @@
         "alt": "Visa",
         "href": "#",
         "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/72e312ee-9133-4f15-9af4-d8f0de1522fa/Visa.svg"
+      },
+      {
+        "image": "https://data.decoassets.com/unabeleza/ae933c48-1e89-45d4-bf93-84e239acd0c7/pix.png",
+        "alt": "Pix",
+        "href": "#"
       }
     ]
   },
@@ -148,16 +149,6 @@
       "text": "<p>Entrega em todo o<strong> Brasil</strong></p>",
       "icon": "benefitBarMap",
       "title": "map"
-    },
-    {
-      "text": "<p><strong>Frete Grátis </strong>- acima de R$ 200 (Sul e Sudeste)</p>",
-      "icon": "benefitBarTruck",
-      "title": "truck"
-    },
-    {
-      "text": "<p>Pague com Pix e ganhe <strong>5%OFF</strong></p>",
-      "icon": "benefitBarQrCode",
-      "title": "qrCode"
     }
   ],
   "newsletter": {

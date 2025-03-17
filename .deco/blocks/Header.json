@@ -93,12 +93,6 @@
       "name": "Cabelos"
     },
     {
-      "url": "/maquiagem",
-      "name": "Maquiagem",
-      "children": [],
-      "image": null
-    },
-    {
       "url": "/kits-e-combos",
       "name": "Kits e Combos",
       "children": [],
@@ -106,6 +100,8 @@
       "@type": "SiteNavigationElement"
     },
     {
+      "url": "/marcas",
+      "name": "Marcas",
       "children": [
         {
           "children": [],
@@ -162,15 +158,13 @@
           "name": "Ykas"
         }
       ],
-      "image": [],
-      "name": "Marcas",
-      "url": "/marcas"
+      "image": []
     },
     {
       "children": [],
       "image": [],
-      "url": "/outlet",
-      "name": "Outlet"
+      "name": "Outlet",
+      "url": "/outlet"
     }
   ],
   "loading": "eager"

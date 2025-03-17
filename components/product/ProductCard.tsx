@@ -168,7 +168,7 @@ function ProductCard({
           </span>
           {installments && (
             <span class="text-sm texy-black">
-              Ou {installments}
+              Ou {installments.replace(".", ",")}
             </span>
           )}
         </div>

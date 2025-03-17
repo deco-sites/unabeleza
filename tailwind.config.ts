@@ -37,7 +37,7 @@ export default {
       mobile: { max: "1025px" },
       desktop: { min: "1026px" },
       "desktop-lg": { min: "1340px" },
-      "desktop-sm": { min: "1026px", max: "1200px" },
+      "desktop-sm": { min: "1026px", max: "1300px" },
       "mobile-lg": { min: "768px", max: "1025px" },
     },
   },
