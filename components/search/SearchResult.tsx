@@ -134,13 +134,14 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
   return url;
 };
 function PageResult(props: SectionProps<typeof loader>) {
-  const { layout, startingPage = 0, url, partial } = props;
+  const { layout, startingPage = 1, url, partial } = props;
   const page = props.page!;
   const { products, pageInfo } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
   const zeroIndexedOffsetPage = pageInfo.currentPage - startingPage;
   const offset = zeroIndexedOffsetPage * perPage;
-  const nextPageUrl = useUrlRebased(pageInfo.nextPage, url);
+  const nextPage = `?page=${pageInfo.currentPage + 1}`
+  const nextPageUrl = useUrlRebased(nextPage, url);
   const prevPageUrl = useUrlRebased(pageInfo.previousPage, url);
   const partialNext = useSection({
     href: nextPageUrl,
@@ -246,7 +247,7 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 0, url, partial } = props;
+  const { startingPage = 1, url, partial } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;

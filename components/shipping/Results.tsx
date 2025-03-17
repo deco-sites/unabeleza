@@ -19,18 +19,29 @@ export default function Results({ result }: Props) {
 
   return (
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
+      <li class="grid grid-cols-3 justify-items-center items-center gap-2 border-b border-base-400 pb-2">
+          <span class="text-button text-center font-semibold">
+            Entrega
+          </span>
+          <span class="text-button text-center font-semibold">
+            Prazo
+          </span>
+          <span class="text-base font-semibold text-right">
+            Valor
+          </span>
+      </li>
       {result?.map((method) => (
         <li
           key={method?.id}
           class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t"
         >
-          <span class="text-button text-center">
-            Entrega {method?.name}
+          <span class="text-button text-center whitespace-nowrap">
+            {method?.name}
           </span>
-          <span class="text-button text-center">
+          <span class="text-button text-center whitespace-nowrap">
             até {formatShippingEstimate(method!.deadline)}
           </span>
-          <span class="text-base font-semibold text-right">
+          <span class="text-base font-semibold text-right whitespace-nowrap">
             {method?.value === 0
               ? "Grátis"
               : method?.value.toLocaleString("pt-br", {

@@ -95,6 +95,42 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "title": "Conheça nossos Kits",
+        "cta": "/kits-e-combos",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "sortKey": "SALES",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [
+              14893
+            ],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          }
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
         "__resolveType": "site/sections/Images/Banner.tsx",
         "title": "Register and Save Big!",
         "cta": {
@@ -718,8 +754,9 @@
     {
       "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
       "title": "Destaques",
-      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
       "subtitle": "Ultra hidratantes",
+      "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟",
+      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
       "products": {
         "__resolveType": "wake/loaders/productList.ts",
         "first": 12,
@@ -748,8 +785,7 @@
           "prices": {}
         }
       },
-      "linkImage": "#",
-      "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟"
+      "linkImage": "#"
     },
     {
       "__resolveType": "site/sections/Home/AboutUs.tsx",
