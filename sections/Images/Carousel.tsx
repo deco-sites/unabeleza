@@ -22,6 +22,14 @@ export interface Banner {
 
   /** @description when user clicks on the image, go to this link */
   linkImage?: string;
+
+  copyBanner?: {
+    /** @description if true the banner will be a button that when clicked will copy the field text */
+    isCopyBanner?: boolean;
+
+    /** @description text to be copied when it is a copy banner */
+    copyMessage?: string;
+  };
 }
 
 export interface Props {
@@ -39,15 +47,8 @@ export interface Props {
   interval?: number;
 }
 
-function BannerItem(
-  { image, lcp }: { image: Banner; lcp?: boolean },
-) {
-  const {
-    alt,
-    mobile,
-    desktop,
-    linkImage,
-  } = image;
+function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
+  const { alt, mobile, desktop, linkImage } = image;
   const params = { promotion_name: image.alt };
 
   const selectPromotionEvent = useSendEvent({
@@ -103,7 +104,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px] h-fit max-w-full",
         "mobile:grid-cols-[112px_1fr_112px] mobile:min-h-min",
-        "w-screen mobile:mt-[96px]",
+        "w-screen mobile:mt-[96px]"
       )}
     >
       <div class="col-span-full row-span-full">
@@ -120,7 +121,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         <Slider.PrevButton
           class={clx(
             "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
-            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
+            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info"
           )}
           disabled={false}
         >
@@ -138,7 +139,7 @@ function Carousel({ images = [], preload, interval }: Props) {
         <Slider.NextButton
           class={clx(
             "flex justify-center items-center w-[50px] h-[50px] bg-white btn btn-sm btn-circle no-animation shadow-custom",
-            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info",
+            "disabled:invisible mobile:w-8 mobile:h-8 hover:bg-info"
           )}
           disabled={false}
         >
@@ -154,7 +155,7 @@ function Carousel({ images = [], preload, interval }: Props) {
       <ul
         class={clx(
           "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-[10px] items-end mb-8",
+          "carousel justify-center gap-[10px] items-end mb-8"
         )}
       >
         {images.map((_, index) => (
@@ -163,10 +164,9 @@ function Carousel({ images = [], preload, interval }: Props) {
               index={index}
               class={clx(
                 "bg-white h-1 w-8 no-animation rounded-[1px]",
-                "disabled:bg-secondary disabled:opacity-100 transition-[width]",
+                "disabled:bg-secondary disabled:opacity-100 transition-[width]"
               )}
-            >
-            </Slider.Dot>
+            ></Slider.Dot>
           </li>
         ))}
       </ul>

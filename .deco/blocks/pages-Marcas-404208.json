@@ -1,0 +1,121 @@
+{
+  "name": "Marcas",
+  "path": "/marcas",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+        "jsonLD": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "SALES:DESC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [
+              5851
+            ],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {}
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        },
+        "searchbar": {
+          "loader": {
+            "data": {
+              "searches": [],
+              "products": null
+            }
+          }
+        },
+        "searchParams": null
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
