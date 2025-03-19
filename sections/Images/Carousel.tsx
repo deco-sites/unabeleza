@@ -5,7 +5,7 @@ import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import { useDevice } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
 
 /**
  * @titleBy alt
@@ -48,7 +48,7 @@ export interface Props {
 }
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
-  const { alt, mobile, desktop, linkImage } = image;
+  const { alt, mobile, desktop, linkImage, copyBanner } = image;
   const params = { promotion_name: image.alt };
 
   const selectPromotionEvent = useSendEvent({
@@ -61,7 +61,40 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     event: { name: "view_promotion", params },
   });
 
-  return (
+  const copyContent = (copyMessage: string) => {
+    navigator.clipboard.writeText(copyMessage);
+  };
+
+  return copyBanner?.isCopyBanner && copyBanner.copyMessage ? (
+    <button
+      aria-label={alt}
+      class="relative block overflow-y-hidden w-full"
+      hx-on:click={useScript((a) => {
+        copyContent(a);
+      }, copyBanner.copyMessage)}
+    >
+      <Picture preload={lcp} {...viewPromotionEvent}>
+        <Source
+          media="(max-width: 767px)"
+          fetchPriority={lcp ? "high" : "auto"}
+          src={mobile}
+          width={412}
+        />
+        <Source
+          media="(min-width: 768px)"
+          fetchPriority={lcp ? "high" : "auto"}
+          src={desktop}
+          width={1440}
+        />
+        <img
+          class="object-fill w-full h-full"
+          loading={lcp ? "eager" : "lazy"}
+          src={desktop}
+          alt={alt}
+        />
+      </Picture>
+    </button>
+  ) : (
     <a
       {...selectPromotionEvent}
       href={linkImage ?? "#"}

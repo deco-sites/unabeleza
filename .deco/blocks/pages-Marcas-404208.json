@@ -29,9 +29,13 @@
           "filters": {
             "attributes": {
               "id": [],
-              "name": [],
+              "name": [
+                "Marcas"
+              ],
               "type": [],
-              "value": []
+              "value": [
+                "Braé"
+              ]
             },
             "brandId": [
               5851
@@ -48,7 +52,8 @@
             },
             "prices": {}
           },
-          "pageOffset": 0
+          "pageOffset": 0,
+          "query": "/"
         },
         "layout": {
           "columns": {
