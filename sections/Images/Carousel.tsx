@@ -5,7 +5,30 @@ import Slider from "../../components/ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
-import { useDevice } from "@deco/deco/hooks";
+import { useDevice, useScript } from "@deco/deco/hooks";
+
+const copyToClipboard = (copyMessage: string) => {
+  navigator.clipboard.writeText(copyMessage)
+  .then(() => {
+    const popup = document.createElement("li");
+    popup.className =
+      "z-50 fixed top-[80%] left-1/2 transform -translate-x-1/2 bg-[#2E2E2E] text-white font-medium text-sm px-4 py-2 rounded-lg shadow-lg opacity-0 transition-opacity duration-300 text-center";
+    popup.innerText = "🎉 Cupom copiado!";
+    
+    const carousel = document.querySelector("div.relative div.col-span-full .carousel");
+    if (carousel) {
+      carousel.appendChild(popup);
+      
+      setTimeout(() => popup.classList.add("opacity-100"), 100);
+
+      setTimeout(() => {
+        popup.classList.remove("opacity-100");
+        setTimeout(() => popup.remove(), 300);
+      }, 2000);
+    }
+  })
+    .catch((err) => console.error("Erro ao copiar:", err));
+};
 
 /**
  * @titleBy alt
@@ -48,7 +71,7 @@ export interface Props {
 }
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
-  const { alt, mobile, desktop, linkImage } = image;
+  const { alt, mobile, desktop, linkImage, copyBanner } = image;
   const params = { promotion_name: image.alt };
 
   const selectPromotionEvent = useSendEvent({
@@ -61,7 +84,36 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     event: { name: "view_promotion", params },
   });
 
-  return (
+  return copyBanner?.isCopyBanner && copyBanner.copyMessage ? (
+    <>
+      <button
+        aria-label={alt}
+        class="relative block overflow-y-hidden w-full"
+        hx-on:click={useScript(copyToClipboard, copyBanner.copyMessage)}
+      >
+        <Picture preload={lcp} {...viewPromotionEvent}>
+          <Source
+            media="(max-width: 767px)"
+            fetchPriority={lcp ? "high" : "auto"}
+            src={mobile}
+            width={412}
+          />
+          <Source
+            media="(min-width: 768px)"
+            fetchPriority={lcp ? "high" : "auto"}
+            src={desktop}
+            width={1440}
+          />
+          <img
+            class="object-fill w-full h-full"
+            loading={lcp ? "eager" : "lazy"}
+            src={desktop}
+            alt={alt}
+          />
+        </Picture>
+      </button>
+  </>
+  ) : (
     <a
       {...selectPromotionEvent}
       href={linkImage ?? "#"}
