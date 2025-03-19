@@ -7764,6 +7764,24 @@ details.collapse summary::-webkit-details-marker {
   }
 }
 
+.\[\&\>h1\]\:mb-3>h1 {
+  margin-bottom: 0.75rem;
+}
+
+.\[\&\>h1\]\:font-\[PP-Hatton\]>h1 {
+  font-family: PP-Hatton;
+}
+
+.\[\&\>h1\]\:text-2xl>h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.\[\&\>p\]\:text-xs>p {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .\[\&_section\]\:contents section {
   display: contents;
 }

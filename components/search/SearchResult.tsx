@@ -17,6 +17,10 @@ import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
+import { RichText } from "apps/admin/widgets.ts";
+import { COMMON_HTML_TAGS_TO_ALLOW } from "../../constants.ts";
+import { sanitizeHTMLCode } from "../../sdk/htmlSanitizer.ts";
+import Carousel, {Props as CarouselProps} from '../../sections/Images/Carousel.tsx'
 export interface Layout {
   /**
    * @title Pagination
@@ -38,7 +42,13 @@ export interface Props {
   productShelf: SectionType<ProductShelfComponent>;
 
   searchParams?: string | null;
+
+  content?: {
+    carousel?: CarouselProps
+    description?: RichText;
+  };
 }
+
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
   return (
     <>
@@ -247,7 +257,7 @@ function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 1, url, partial } = props;
+  const { startingPage = 1, url, partial, content } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -353,6 +363,29 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
 
                 <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
+                  {content?.carousel?.images?.length && (
+                    <Carousel images={content?.carousel?.images} />
+                  )}
+                  {content?.description && (
+                    <div
+                      class="[&>h1]:font-[PP-Hatton] [&>h1]:text-2xl [&>h1]:mb-3 [&>p]:text-xs"
+                      dangerouslySetInnerHTML={{
+                        __html: sanitizeHTMLCode(
+                          content.description,
+                          {
+                            removeEmptyTags: false,
+                            allowedTags: [
+                              ...COMMON_HTML_TAGS_TO_ALLOW,
+                              "br",
+                              "h1",
+                            ],
+                            removeWrapperTag: false,
+                          },
+                        ),
+                      }}
+                    >
+                    </div>
+                  )}
                   {device === "desktop" && (
                     <div class="flex justify-end items-center gap-[10px]">
                       <span class="font-bold">ORDENAR POR</span>
