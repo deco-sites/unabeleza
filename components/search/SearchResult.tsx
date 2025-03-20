@@ -272,7 +272,7 @@ function Content({ carousel, description }: ContentProps) {
       textContainer.classList.add('before:content-none')
 
       buttonIcon.classList.remove('rotate-90')
-      buttonIcon.classList.add('custom-rotate-270')
+      buttonIcon.classList.add('rotate-[270deg]')
 
       buttonToggle.textContent = 'Mostrar Menos'
 
@@ -283,7 +283,7 @@ function Content({ carousel, description }: ContentProps) {
     textContainer.classList.remove('before:content-none')
 
     buttonIcon.classList.add('rotate-90')
-    buttonIcon.classList.remove('custom-rotate-270')
+    buttonIcon.classList.remove('rotate-[270deg]')
 
     buttonToggle.textContent = 'Mais sobre a marca'
   }

@@ -4721,6 +4721,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-\[270deg\] {
+  --tw-rotate: 270deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -6326,10 +6330,6 @@ details.collapse summary::-webkit-details-marker {
 
 .custom-force-svg-primary-color {
   filter: brightness(0) saturate(100%) invert(70%) sepia(17%) saturate(7245%) hue-rotate(218deg) brightness(99%) contrast(88%);
-}
-
-.custom-rotate-270 {
-  transform: rotate(270deg);
 }
 
 .invalid\:input-error:invalid {
