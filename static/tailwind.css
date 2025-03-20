@@ -3825,6 +3825,9 @@ details.collapse summary::-webkit-details-marker {
 .top-\[70px\] {
   top: 70px;
 }
+.top-\[80\%\] {
+  top: 80%;
+}
 .top-\[9\.79px\] {
   top: 9.79px;
 }
@@ -5281,6 +5284,10 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 1;
   background-color: rgb(38 127 70 / var(--tw-bg-opacity));
 }
+.bg-\[\#2E2E2E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(46 46 46 / var(--tw-bg-opacity));
+}
 .bg-\[\#A3E3FF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(163 227 255 / var(--tw-bg-opacity));
@@ -6077,6 +6084,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .opacity-10 {
   opacity: 0.1;
+}
+.opacity-100 {
+  opacity: 1;
 }
 .opacity-70 {
   opacity: 0.7;
