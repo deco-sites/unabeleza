@@ -258,6 +258,36 @@ const setPageQuerystring = (page: string, id: string) => {
 };
 
 function Content({ carousel, description }: ContentProps) {
+  function toggleContent() {
+    const textContainer = document.querySelector('div[data-content-text]')
+    const buttonToggle = document.querySelector('span[data-content-button]')
+    const buttonIcon = document.querySelector('svg[data-content-icon]')
+
+    if (!textContainer || !buttonToggle || !buttonIcon) return
+
+    const isPartialHidden = textContainer.classList.contains('mobile:max-h-36')
+
+    if (isPartialHidden) {
+      textContainer.classList.remove('mobile:max-h-36')
+      textContainer.classList.add('before:content-none')
+
+      buttonIcon.classList.remove('rotate-90')
+      buttonIcon.classList.add('custom-rotate-270')
+
+      buttonToggle.textContent = 'Mostrar Menos'
+
+      return
+    }
+
+    textContainer.classList.add('mobile:max-h-36')
+    textContainer.classList.remove('before:content-none')
+
+    buttonIcon.classList.add('rotate-90')
+    buttonIcon.classList.remove('custom-rotate-270')
+
+    buttonToggle.textContent = 'Mais sobre a marca'
+  }
+
   return (
     <div>
       {carousel?.images?.length && (
@@ -269,7 +299,7 @@ function Content({ carousel, description }: ContentProps) {
         <>
           <div
             class="relative mt-6 [&>h1]:font-[PP-Hatton] [&>h1]:text-2xl [&>h1]:mb-3 [&>p]:text-xs mobile:max-h-36 mobile:overflow-hidden before:content-[''] desktop:before:content-none before:absolute before:bottom-0 before:left-0 before:w-full before:h-10 custom-linear-gradient"
-            data-is-all-content-visible={false}
+            data-content-text
             dangerouslySetInnerHTML={{
               __html: sanitizeHTMLCode(description, {
                 removeEmptyTags: false,
@@ -280,10 +310,22 @@ function Content({ carousel, description }: ContentProps) {
           ></div>
           <button
             type="button"
-            class="desktop:hidden flex items-center gap-2 text-[#BD87ED] text-xs underline ml-auto mt-2 mr-2"
+            hx-on:click={useScript(toggleContent)}
+            class="desktop:hidden flex items-center gap-2 ml-auto mt-2 mr-2"
           >
-            Mais sobre a marca
-            <Icon id="drawerArrowRight" width={8} height={16} class="rotate-90 custom-force-svg-primary-color"/>
+            <span
+              class="text-[#BD87ED] text-xs underline font-bold"
+              data-content-button
+            >
+              Mais sobre a marca
+            </span>
+            <Icon
+              id="drawerArrowRight"
+              width={8}
+              height={16}
+              class="rotate-90 custom-force-svg-primary-color"
+              data-content-icon
+            />
           </button>
         </>
       )}

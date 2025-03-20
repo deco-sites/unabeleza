@@ -185,3 +185,7 @@
 .custom-force-svg-primary-color {
   filter: brightness(0) saturate(100%) invert(70%) sepia(17%) saturate(7245%) hue-rotate(218deg) brightness(99%) contrast(88%);
 }
+
+.custom-rotate-270 {
+  transform: rotate(270deg);
+}

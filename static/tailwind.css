@@ -6328,6 +6328,10 @@ details.collapse summary::-webkit-details-marker {
   filter: brightness(0) saturate(100%) invert(70%) sepia(17%) saturate(7245%) hue-rotate(218deg) brightness(99%) contrast(88%);
 }
 
+.custom-rotate-270 {
+  transform: rotate(270deg);
+}
+
 .invalid\:input-error:invalid {
   --tw-border-opacity: 1;
   border-color: var(--fallback-er,oklch(var(--er)/var(--tw-border-opacity)));
@@ -6564,6 +6568,11 @@ details.collapse summary::-webkit-details-marker {
 
 .before\:content-\[\'R\$\'\]::before {
   --tw-content: 'R$';
+  content: var(--tw-content);
+}
+
+.before\:content-none::before {
+  --tw-content: none;
   content: var(--tw-content);
 }
 
