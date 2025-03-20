@@ -28,6 +28,12 @@ export interface Layout {
    */
   pagination?: "show-more" | "pagination";
 }
+
+interface ContentProps {
+  carousel?: CarouselProps
+  description?: RichText
+}
+
 export interface Props {
   /** @title Integration */
   page?: ProductListingPage | null;
@@ -43,10 +49,7 @@ export interface Props {
 
   searchParams?: string | null;
 
-  content?: {
-    carousel?: CarouselProps
-    description?: RichText;
-  };
+  content?: ContentProps
 }
 
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
@@ -143,6 +146,7 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
   }
   return url;
 };
+
 function PageResult(props: SectionProps<typeof loader>) {
   const { layout, startingPage = 1, url, partial } = props;
   const page = props.page!;
@@ -253,6 +257,40 @@ const setPageQuerystring = (page: string, id: string) => {
   }).observe(element);
 };
 
+function Content({ carousel, description }: ContentProps) {
+  return (
+    <div>
+      {carousel?.images?.length && (
+        <div class="[&>div]:!mt-0">
+          <Carousel images={carousel?.images} />
+        </div>
+      )}
+      {description && (
+        <>
+          <div
+            class="relative mt-6 [&>h1]:font-[PP-Hatton] [&>h1]:text-2xl [&>h1]:mb-3 [&>p]:text-xs mobile:max-h-36 mobile:overflow-hidden before:content-[''] desktop:before:content-none before:absolute before:bottom-0 before:left-0 before:w-full before:h-10 custom-linear-gradient"
+            data-is-all-content-visible={false}
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHTMLCode(description, {
+                removeEmptyTags: false,
+                allowedTags: [...COMMON_HTML_TAGS_TO_ALLOW, 'br', 'h1'],
+                removeWrapperTag: false,
+              }),
+            }}
+          ></div>
+          <button
+            type="button"
+            class="desktop:hidden flex items-center gap-2 text-[#BD87ED] text-xs underline ml-auto mt-2 mr-2"
+          >
+            Mais sobre a marca
+            <Icon id="drawerArrowRight" width={8} height={16} class="rotate-90 custom-force-svg-primary-color"/>
+          </button>
+        </>
+      )}
+    </div>
+  )
+}
+
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
@@ -304,6 +342,13 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="pl-[60px] mobile:pl-0">
                 <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
               </div>
+
+              {device === 'mobile' && (
+                <Content
+                  carousel={content?.carousel}
+                  description={content?.description}
+                />
+              )}
 
               {device === "mobile" && (
                 <Drawer
@@ -363,29 +408,13 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
 
                 <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
-                  {content?.carousel?.images?.length && (
-                    <Carousel images={content?.carousel?.images} />
+                  {device === 'desktop' && (
+                    <Content
+                      carousel={content?.carousel}
+                      description={content?.description}
+                    />
                   )}
-                  {content?.description && (
-                    <div
-                      class="[&>h1]:font-[PP-Hatton] [&>h1]:text-2xl [&>h1]:mb-3 [&>p]:text-xs"
-                      dangerouslySetInnerHTML={{
-                        __html: sanitizeHTMLCode(
-                          content.description,
-                          {
-                            removeEmptyTags: false,
-                            allowedTags: [
-                              ...COMMON_HTML_TAGS_TO_ALLOW,
-                              "br",
-                              "h1",
-                            ],
-                            removeWrapperTag: false,
-                          },
-                        ),
-                      }}
-                    >
-                    </div>
-                  )}
+
                   {device === "desktop" && (
                     <div class="flex justify-end items-center gap-[10px]">
                       <span class="font-bold">ORDENAR POR</span>
