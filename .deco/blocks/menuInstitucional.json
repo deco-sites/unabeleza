@@ -1,0 +1,33 @@
+{
+  "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
+  "institutionalTitle": "Institucionais",
+  "supportTitle": "Ajuda e Suporte",
+  "institutionalLinks": [
+    {
+      "route": "/quem-somos",
+      "label": "Quem Somos"
+    },
+    {
+      "route": "/politicas-de-privacidade",
+      "label": "Políticas de Privacidade"
+    },
+    {
+      "route": "/politica-de-envio-e-entrega",
+      "label": "Política de Envio e Entrega"
+    }
+  ],
+  "helpLinks": [
+    {
+      "route": "/duvidas-frequentes",
+      "label": "Dúvidas"
+    },
+    {
+      "route": "/fale-conosco",
+      "label": "Fale Conosco"
+    },
+    {
+      "route": "/trocas-e-devolucoes",
+      "label": "Trocas e Devoluções"
+    }
+  ]
+}

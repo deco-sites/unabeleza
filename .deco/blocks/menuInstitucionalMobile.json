@@ -1,0 +1,29 @@
+{
+  "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
+  "links": [
+    {
+      "route": "/quem-somos",
+      "label": "Quem Somos"
+    },
+    {
+      "route": "/politicas-de-privacidade",
+      "label": "Políticas de Privacidade"
+    },
+    {
+      "route": "/politica-de-envio-e-entrega",
+      "label": "Política de Envio e Entrega"
+    },
+    {
+      "route": "/duvidas-frequentes",
+      "label": "Dúvidas "
+    },
+    {
+      "route": "/fale-conosco",
+      "label": "Fale Conosco"
+    },
+    {
+      "route": "/trocas-e-devolucoes",
+      "label": "Trocas e Devoluções"
+    }
+  ]
+}

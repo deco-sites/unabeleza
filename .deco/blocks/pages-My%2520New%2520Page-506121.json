@@ -6,113 +6,21 @@
       "__resolveType": "Header"
     },
     {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "menuInstitucional"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "menuInstitucionalMobile"
+      }
+    },
+    {
       "__resolveType": "site/sections/BreadCrumb/Breadcrumb.tsx",
       "nome_da_pagina": "Fale Conosco",
       "pageTitle": "Fale Conosco"
-    },
-    {
-      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucional.tsx",
-      "links_institucionais": [
-        {
-          "rota": "/quem-somos",
-          "etiqueta": "Quem Somos"
-        },
-        {
-          "etiqueta": "Políticas de Privacidade",
-          "rota": "/politicas-de-privacidade"
-        },
-        {
-          "rota": "/politica-de-frete",
-          "etiqueta": "Política de Frete"
-        }
-      ],
-      "titulo_institucional": "Institucionais",
-      "titulo_suporte": "Ajuda e Suporte",
-      "links_ajudas": [
-        {
-          "rota": "/duvidas-frequentes",
-          "etiqueta": "Dúvidas"
-        },
-        {
-          "rota": "/fale-conosco",
-          "etiqueta": "Fale Conosco"
-        },
-        {
-          "rota": "/troca-e-devolucao",
-          "etiqueta": "Troca e Devolução"
-        }
-      ],
-      "institutionalTitle": "Institucionais",
-      "supportTitle": "Ajuda e Suporte",
-      "institutionalLinks": [
-        {
-          "route": "/quem-somos",
-          "label": "Quem Somos"
-        },
-        {
-          "route": "/politicas-de-privacidade",
-          "label": "Políticas de Privacidade"
-        },
-        {
-          "route": "/politica-de-frete",
-          "label": "Política de Frete"
-        }
-      ],
-      "helpLinks": [
-        {
-          "route": "/duvidas-frequentes",
-          "label": "Dúvidas"
-        },
-        {
-          "route": "/fale-conosco",
-          "label": "Fale Conosco"
-        },
-        {
-          "route": "/troca-e-devolucao",
-          "label": "Troca e Devolução"
-        }
-      ]
-    },
-    {
-      "__resolveType": "site/sections/MenuInstitucional/MenuInstitucionalMobile.tsx",
-      "links": [
-        {
-          "rota": "/quem-somos",
-          "etiqueta": "Quem Somos",
-          "route": "/quem-somos",
-          "label": "Quem Somos"
-        },
-        {
-          "rota": "/politicas-de-privacidade",
-          "etiqueta": "Políticas de Privacidade",
-          "route": "/politicas-de-privacidade",
-          "label": "Políticas de Privacidade"
-        },
-        {
-          "rota": "/política-de-frete",
-          "etiqueta": "Política de Frete",
-          "route": "/politica-de-frete",
-          "label": "Política de Frete"
-        },
-        {
-          "rota": "/duvidas-frequentes",
-          "etiqueta": "Dúvidas",
-          "route": "/duvidas-frequentes",
-          "label": "Dúvidas"
-        },
-        {
-          "rota": "/fale-conosco",
-          "etiqueta": "Fale Conosco",
-          "route": "/fale-conosco",
-          "label": "Fale Conosco"
-        },
-        {
-          "rota": "/troca-e-devolucao",
-          "etiqueta": "Troca e Devolução",
-          "route": "/troca-e-devolucao",
-          "label": "Troca e Devolução"
-        }
-      ]
     },
     {
       "__resolveType": "site/sections/FaleConosco/FaleConosco.tsx",
