@@ -17,6 +17,10 @@ import Drawer from "../ui/Drawer.tsx";
 import Sort from "./Sort.tsx";
 import { useDevice, useScript, useSection } from "@deco/deco/hooks";
 import { type SectionProps } from "@deco/deco";
+import { RichText } from "apps/admin/widgets.ts";
+import { COMMON_HTML_TAGS_TO_ALLOW } from "../../constants.ts";
+import { sanitizeHTMLCode } from "../../sdk/htmlSanitizer.ts";
+import Carousel, {Props as CarouselProps} from '../../sections/Images/Carousel.tsx'
 export interface Layout {
   /**
    * @title Pagination
@@ -24,6 +28,12 @@ export interface Layout {
    */
   pagination?: "show-more" | "pagination";
 }
+
+interface ContentProps {
+  carousel?: CarouselProps
+  description?: RichText
+}
+
 export interface Props {
   /** @title Integration */
   page?: ProductListingPage | null;
@@ -38,7 +48,10 @@ export interface Props {
   productShelf: SectionType<ProductShelfComponent>;
 
   searchParams?: string | null;
+
+  content?: ContentProps
 }
+
 function NotFound({ searchbar, productShelf, searchParams }: Props) {
   return (
     <>
@@ -133,6 +146,7 @@ const useUrlRebased = (overrides: string | undefined, base: string) => {
   }
   return url;
 };
+
 function PageResult(props: SectionProps<typeof loader>) {
   const { layout, startingPage = 1, url, partial } = props;
   const page = props.page!;
@@ -243,11 +257,87 @@ const setPageQuerystring = (page: string, id: string) => {
   }).observe(element);
 };
 
+function Content({ carousel, description }: ContentProps) {
+  function toggleContent() {
+    const textContainer = document.querySelector('div[data-content-text]')
+    const buttonToggle = document.querySelector('span[data-content-button]')
+    const buttonIcon = document.querySelector('svg[data-content-icon]')
+
+    if (!textContainer || !buttonToggle || !buttonIcon) return
+
+    const isPartialHidden = textContainer.classList.contains('mobile:max-h-36')
+
+    if (isPartialHidden) {
+      textContainer.classList.remove('mobile:max-h-36')
+      textContainer.classList.add('before:content-none')
+
+      buttonIcon.classList.remove('rotate-90')
+      buttonIcon.classList.add('rotate-[270deg]')
+
+      buttonToggle.textContent = 'Mostrar Menos'
+
+      return
+    }
+
+    textContainer.classList.add('mobile:max-h-36')
+    textContainer.classList.remove('before:content-none')
+
+    buttonIcon.classList.add('rotate-90')
+    buttonIcon.classList.remove('rotate-[270deg]')
+
+    buttonToggle.textContent = 'Mais sobre a marca'
+  }
+
+  return (
+    <div>
+      {carousel?.images?.length && (
+        <div class="[&>div]:!mt-0">
+          <Carousel images={carousel?.images} />
+        </div>
+      )}
+      {description && (
+        <>
+          <div
+            class="relative mt-6 [&>h1]:font-[PP-Hatton] [&>h1]:text-2xl [&>h1]:mb-3 [&>p]:text-xs mobile:max-h-36 mobile:overflow-hidden before:content-[''] desktop:before:content-none before:absolute before:bottom-0 before:left-0 before:w-full before:h-10 custom-linear-gradient"
+            data-content-text
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHTMLCode(description, {
+                removeEmptyTags: false,
+                allowedTags: [...COMMON_HTML_TAGS_TO_ALLOW, 'br', 'h1'],
+                removeWrapperTag: false,
+              }),
+            }}
+          ></div>
+          <button
+            type="button"
+            hx-on:click={useScript(toggleContent)}
+            class="desktop:hidden flex items-center gap-2 ml-auto mt-2 mr-2"
+          >
+            <span
+              class="text-[#BD87ED] text-xs underline font-bold"
+              data-content-button
+            >
+              Mais sobre a marca
+            </span>
+            <Icon
+              id="drawerArrowRight"
+              width={8}
+              height={16}
+              class="rotate-90 custom-force-svg-primary-color"
+              data-content-icon
+            />
+          </button>
+        </>
+      )}
+    </div>
+  )
+}
+
 function Result(props: SectionProps<typeof loader>) {
   const container = useId();
   const controls = useId();
   const device = useDevice();
-  const { startingPage = 1, url, partial } = props;
+  const { startingPage = 1, url, partial, content } = props;
   const page = props.page!;
   const { products, filters, breadcrumb, pageInfo, sortOptions } = page;
   const perPage = pageInfo?.recordPerPage || products.length;
@@ -294,6 +384,13 @@ function Result(props: SectionProps<typeof loader>) {
               <div class="pl-[60px] mobile:pl-0">
                 <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
               </div>
+
+              {device === 'mobile' && (
+                <Content
+                  carousel={content?.carousel}
+                  description={content?.description}
+                />
+              )}
 
               {device === "mobile" && (
                 <Drawer
@@ -353,6 +450,13 @@ function Result(props: SectionProps<typeof loader>) {
                 )}
 
                 <div class="flex flex-col gap-9 w-full desktop:max-w-[calc((100%_+_60px)_*_0.69027)]">
+                  {device === 'desktop' && (
+                    <Content
+                      carousel={content?.carousel}
+                      description={content?.description}
+                    />
+                  )}
+
                   {device === "desktop" && (
                     <div class="flex justify-end items-center gap-[10px]">
                       <span class="font-bold">ORDENAR POR</span>

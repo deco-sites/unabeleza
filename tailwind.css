@@ -177,3 +177,11 @@
   color: #bf8eec;
   text-decoration: underline;
 }
+
+.custom-linear-gradient::before {
+  background: linear-gradient(0deg, #ffffff, transparent);
+}
+
+.custom-force-svg-primary-color {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(17%) saturate(7245%) hue-rotate(218deg) brightness(99%) contrast(88%);
+}

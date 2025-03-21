@@ -4720,6 +4720,14 @@ details.collapse summary::-webkit-details-marker {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[270deg\] {
+  --tw-rotate: 270deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -6326,6 +6334,14 @@ details.collapse summary::-webkit-details-marker {
   text-decoration: underline;
 }
 
+.custom-linear-gradient::before {
+  background: linear-gradient(0deg, #ffffff, transparent);
+}
+
+.custom-force-svg-primary-color {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(17%) saturate(7245%) hue-rotate(218deg) brightness(99%) contrast(88%);
+}
+
 .invalid\:input-error:invalid {
   --tw-border-opacity: 1;
   border-color: var(--fallback-er,oklch(var(--er)/var(--tw-border-opacity)));
@@ -6530,8 +6546,43 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
+.before\:absolute::before {
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:bottom-0::before {
+  content: var(--tw-content);
+  bottom: 0px;
+}
+
+.before\:left-0::before {
+  content: var(--tw-content);
+  left: 0px;
+}
+
+.before\:h-10::before {
+  content: var(--tw-content);
+  height: 2.5rem;
+}
+
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.before\:content-\[\'\'\]::before {
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
 .before\:content-\[\'R\$\'\]::before {
   --tw-content: 'R$';
+  content: var(--tw-content);
+}
+
+.before\:content-none::before {
+  --tw-content: none;
   content: var(--tw-content);
 }
 
@@ -7111,6 +7162,10 @@ details.collapse summary::-webkit-details-marker {
     height: 100%;
   }
 
+  .mobile\:max-h-36 {
+    max-height: 9rem;
+  }
+
   .mobile\:max-h-\[27px\] {
     max-height: 27px;
   }
@@ -7311,6 +7366,10 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:gap-\[6px\] {
     gap: 6px;
+  }
+
+  .mobile\:overflow-hidden {
+    overflow: hidden;
   }
 
   .mobile\:overflow-y-auto {
@@ -7743,6 +7802,11 @@ details.collapse summary::-webkit-details-marker {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .desktop\:before\:content-none::before {
+    --tw-content: none;
+    content: var(--tw-content);
+  }
 }
 
 @media (min-width: 1340px) {
@@ -7772,6 +7836,28 @@ details.collapse summary::-webkit-details-marker {
   .mobile-lg\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+}
+
+.\[\&\>div\]\:\!mt-0>div {
+  margin-top: 0px !important;
+}
+
+.\[\&\>h1\]\:mb-3>h1 {
+  margin-bottom: 0.75rem;
+}
+
+.\[\&\>h1\]\:font-\[PP-Hatton\]>h1 {
+  font-family: PP-Hatton;
+}
+
+.\[\&\>h1\]\:text-2xl>h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.\[\&\>p\]\:text-xs>p {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .\[\&_section\]\:contents section {

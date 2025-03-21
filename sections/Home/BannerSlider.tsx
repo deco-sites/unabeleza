@@ -14,7 +14,7 @@ interface ItemProps {
   btn?: boolean;
 }
 
-interface FavoritesSliderProps {
+export interface FavoritesSliderProps {
   items: ItemProps[];
   title?: string;
 }
