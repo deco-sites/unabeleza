@@ -1,6 +1,6 @@
 {
-  "name": "Category Page",
-  "path": "/*",
+  "name": "Marcas - Moroccanoil",
+  "path": "/fabricante/Moroccanoil",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -125,7 +125,18 @@
           }
         },
         "searchParams": null,
-        "content": {}
+        "content": {
+          "carousel": {
+            "images": [
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/965b2b36-9e47-4bdb-a447-358250db07c8/image.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/c2f2cb6b-59fc-494d-b770-c0365ec3f7e0/image-(1).jpg",
+                "alt": "Morocanoil"
+              }
+            ]
+          },
+          "description": "<h1>Moroccanoil </h1><p>Na Moroccanoil®, sua paixão é empoderar belas transformações. Tudo começou com o Tratamento Moroccanoil original, que revolucionou a indústria de cuidados com os cabelos. Construiu sua reputação com base no boca a boca positivo, das passarelas aos salões e aos editoriais. Suas fórmulas inovadoras, ricas em nutrientes e com infusão de antioxidantes são inigualáveis ​​e oferecem resultados dramáticos. É por isso que o Moroccanoil exclusivo para salões é preferido por profissionais e consumidores — porque seus produtos simplesmente funcionam.<br><br>O Moroccanoil se tornou uma sensação na indústria de cuidados com os cabelos, abraçado por celebridades, estilistas de passarelas e mulheres do mundo todo. No cerne de seu sucesso está a qualidade. Aperfeiçoou o Tratamento Moroccanoil e ampliou a linha para incluir soluções para todas as necessidades capilares. Suas fórmulas não apenas deixam o cabelo naturalmente liso e brilhante, mas também melhoram sua condição real para torná-lo mais forte a cada uso.</p>"
+        }
       }
     },
     {
