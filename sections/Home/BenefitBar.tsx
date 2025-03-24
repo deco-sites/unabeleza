@@ -24,7 +24,7 @@ export default function BenefitBar({ items, class: _class }: BenefitBarProps) {
         _class,
       )}
     >
-      <Slider class="carousel carousel-center w-full gap-[1.11vw] h-full mx-auto mobile mobile:gap-6 max-w-[96rem] flex desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar px-[min(4.16vw,63.89px)] py-[10px] mobile:p-0">
+      <Slider class="carousel carousel-center w-full gap-[1.11vw] h-full mx-auto mobile mobile:gap-6 max-w-[96rem] flex desktop:gap-[6.59vw] items-center overflow-auto no-scrollbar px-[min(4.16vw,63.89px)] py-[10px] mobile:p-0 desktop:justify-center">
         {items &&
           items.map((item, index) => (
             <Slider.Item
