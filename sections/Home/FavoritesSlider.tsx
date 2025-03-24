@@ -2,6 +2,8 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import Slider from "../../components/ui/Slider.tsx";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
+import { clx } from "../../sdk/clx.ts";
+import { useId } from "../../sdk/useId.ts";
 
 /** @title {{title}} */
 interface ItemProps {
@@ -58,8 +60,10 @@ function SliderItem(props: ItemProps) {
 export default function FavoritesSlider(
   { items, title }: FavoritesSliderProps,
 ) {
+  const id = useId();
+
   return (
-    <div class="px-[min(4.16vw,63.89px)] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
+    <div id={id} class="relative px-[min(4.16vw,63.89px)] py-16 w-full mobile:px-5 mobile:py-6 max-w-[96rem] mx-auto">
       <h2 class="font-[PP-Hatton] font-bold text-[30px] text-black mb-[34px] text-center mobile:hidden">
         {title}
       </h2>
@@ -70,6 +74,28 @@ export default function FavoritesSlider(
           </Slider.Item>
         ))}
       </Slider>
+
+      <ul
+        class={clx(
+          "col-span-full row-start-4 z-10 desktop:hidden",
+          "carousel justify-center gap-[10px] items-end mb-8 absolute bottom-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+        )}
+      >
+        {items.map((_, index) => (
+          <li class="carousel-item">
+            <Slider.Dot
+              index={index}
+              class={clx(
+                "bg-white h-1 w-8 no-animation rounded-[1px]",
+                "disabled:bg-secondary disabled:opacity-100 transition-[width]",
+              )}
+            >
+            </Slider.Dot>
+          </li>
+        ))}
+      </ul>
+
+      <Slider.JS rootId={id} infinite scroll="smooth"/>
     </div>
   );
 }

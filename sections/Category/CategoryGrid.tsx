@@ -74,12 +74,12 @@ function CategoryGrid({ title, items }: Props) {
           </div>
         )
         : (
-          <Slider class="carousel carousel-center mobile:carousel-end gap-[4.26vw] w-full items-start">
+          <Slider class="carousel carousel-center mobile:carousel-end gap-[4.26vw] w-full items-start overflow-scroll">
             {items.map((i, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item last:pr-3",
+                  "carousel-item w-[38%]"
                 )}
               >
                 <Card {...i} />

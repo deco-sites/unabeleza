@@ -110,7 +110,7 @@ const Mobile = ({ logo, searchbar, navItems, loading }: Props) => (
                 <span class="loading loading-spinner" />
               </div>
             )
-            : <MenuMobile navItems={navItems} />}
+            : <MenuMobile navItems={navItems!} />}
         </Drawer.Aside>
       }
     />

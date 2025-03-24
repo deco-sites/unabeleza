@@ -3717,6 +3717,9 @@ details.collapse summary::-webkit-details-marker {
 .bottom-10 {
   bottom: 2.5rem;
 }
+.bottom-3 {
+  bottom: 0.75rem;
+}
 .bottom-6 {
   bottom: 1.5rem;
 }
@@ -4427,6 +4430,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[375px\] {
   width: 375px;
 }
+.w-\[38\%\] {
+  width: 38%;
+}
 .w-\[38\.19vw\] {
   width: 38.19vw;
 }
@@ -5031,6 +5037,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-scroll {
+  overflow: scroll;
 }
 .overflow-x-auto {
   overflow-x: auto;
@@ -6611,10 +6620,6 @@ details.collapse summary::-webkit-details-marker {
 .last\:py-1:last-child {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.last\:pr-3:last-child {
-  padding-right: 0.75rem;
 }
 
 .last\:pr-5:last-child {

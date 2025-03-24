@@ -1,3 +1,4 @@
+import { LoadingFallbackProps } from "@deco/deco";
 import ButtonMenuInstitucionalMobile from "../../islands/ButtonMenuInstitucionalMobile.tsx";
 
 interface Menu {
@@ -28,3 +29,8 @@ export default function MenuInstitucionalMobile(
 ) {
   return <ButtonMenuInstitucionalMobile links={links} label={label} />;
 }
+
+export const LoadingFallback = (props: LoadingFallbackProps<Menu>) => (
+  // deno-lint-ignore no-explicit-any
+  <MenuInstitucionalMobile {...props as any} loading="lazy" />
+);  
