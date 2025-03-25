@@ -5064,6 +5064,9 @@ details.collapse summary::-webkit-details-marker {
 .whitespace-nowrap {
   white-space: nowrap;
 }
+.text-wrap {
+  text-wrap: wrap;
+}
 .break-words {
   overflow-wrap: break-word;
 }
@@ -7071,6 +7074,16 @@ details.collapse summary::-webkit-details-marker {
     z-index: 40;
   }
 
+  .mobile\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .mobile\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .mobile\:ml-0 {
     margin-left: 0px;
   }
@@ -7444,6 +7457,11 @@ details.collapse summary::-webkit-details-marker {
   .mobile\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .mobile\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .mobile\:py-3 {

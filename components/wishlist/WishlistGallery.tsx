@@ -29,12 +29,12 @@ export const loader = async ({ page }: Props,  _, ctx: AppContext) => {
 function WishlistGallery(props: SectionProps<typeof loader>) {
     const isEmpty = !props.products || props.products.length === 0;
     if (isEmpty) {
-        return (<div class="container mx-4 sm:mx-auto">
-        <div class="mx-10 my-20 flex flex-col gap-4 justify-center items-center">
+        return (<div class="container mx-4 mobile:mx-auto">
+        <div class="mx-10 my-20 flex flex-col gap-4 justify-center items-center mobile:mx-2 mobile:py-10">
           <span class="font-medium text-2xl">
             Sua lista de favoritos esta vazia
           </span>
-          <span>
+          <span class="text-center">
             Faça login e adicione produtos na sua lista de favoritos para que
             eles apareçam aqui.
           </span>
