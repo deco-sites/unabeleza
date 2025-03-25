@@ -3717,6 +3717,9 @@ details.collapse summary::-webkit-details-marker {
 .bottom-10 {
   bottom: 2.5rem;
 }
+.bottom-3 {
+  bottom: 0.75rem;
+}
 .bottom-6 {
   bottom: 1.5rem;
 }
@@ -4427,6 +4430,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[375px\] {
   width: 375px;
 }
+.w-\[38\%\] {
+  width: 38%;
+}
 .w-\[38\.19vw\] {
   width: 38.19vw;
 }
@@ -5032,6 +5038,9 @@ details.collapse summary::-webkit-details-marker {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-scroll {
+  overflow: scroll;
+}
 .overflow-x-auto {
   overflow-x: auto;
 }
@@ -5054,6 +5063,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .whitespace-nowrap {
   white-space: nowrap;
+}
+.text-wrap {
+  text-wrap: wrap;
 }
 .break-words {
   overflow-wrap: break-word;
@@ -6613,10 +6625,6 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 0.25rem;
 }
 
-.last\:pr-3:last-child {
-  padding-right: 0.75rem;
-}
-
 .last\:pr-5:last-child {
   padding-right: 1.25rem;
 }
@@ -7066,6 +7074,16 @@ details.collapse summary::-webkit-details-marker {
     z-index: 40;
   }
 
+  .mobile\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .mobile\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .mobile\:ml-0 {
     margin-left: 0px;
   }
@@ -7439,6 +7457,11 @@ details.collapse summary::-webkit-details-marker {
   .mobile\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .mobile\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
   .mobile\:py-3 {

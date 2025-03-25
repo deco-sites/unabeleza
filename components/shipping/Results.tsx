@@ -20,13 +20,13 @@ export default function Results({ result }: Props) {
   return (
     <ul class="flex flex-col gap-4 p-4 border border-base-400 rounded">
       <li class="grid grid-cols-3 justify-items-center items-center gap-2 border-b border-base-400 pb-2">
-          <span class="text-button text-center font-semibold">
+          <span class="text-button text-wrap text-center font-semibold mobile:text-sm">
             Entrega
           </span>
-          <span class="text-button text-center font-semibold">
+          <span class="text-button text-wrap text-center font-semibold mobile:text-sm">
             Prazo
           </span>
-          <span class="text-base font-semibold text-right">
+          <span class="text-base text-wrap font-semibold text-right mobile:text-sm">
             Valor
           </span>
       </li>
@@ -35,13 +35,13 @@ export default function Results({ result }: Props) {
           key={method?.id}
           class="grid grid-cols-3 justify-items-center items-center gap-2 border-base-200 not-first-child:border-t"
         >
-          <span class="text-button text-center whitespace-nowrap">
+          <span class="text-button text-wrap text-center whitespace-nowrap mobile:text-sm">
             {method?.name}
           </span>
-          <span class="text-button text-center whitespace-nowrap">
+          <span class="text-button text-wrap text-center whitespace-nowrap mobile:text-sm">
             até {formatShippingEstimate(method!.deadline)}
           </span>
-          <span class="text-base font-semibold text-right whitespace-nowrap">
+          <span class="text-base text-wrap font-semibold text-right whitespace-nowrap mobile:text-sm">
             {method?.value === 0
               ? "Grátis"
               : method?.value.toLocaleString("pt-br", {

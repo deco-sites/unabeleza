@@ -50,6 +50,6 @@ export const LoadingFallback = (
 ) => (
   <Section.Container>
     <Section.Header title={title} cta={cta} />
-    <Section.Placeholder height="471px" />;
+    <Section.Placeholder height="471px" class="w-full max-w-sm" />;
   </Section.Container>
 );

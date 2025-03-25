@@ -15,11 +15,10 @@ interface Link {
   label?: string;
 }
 
-export default function ButtonMenuInstitucionalMobile({
-  links,
-  label,
-}: Menu) {
+export default function ButtonMenuInstitucionalMobile({ links, label }: Menu) {
   const [navigation, setNavigation] = useState(false);
+
+  links = links?.filter((link) => link.label !== label);
 
   return (
     <div className="hidden mobile:block absolute top-[280px] left-[20px] bg-[#F5F5F5] w-[90%] rounded-[5px]">
@@ -43,17 +42,19 @@ export default function ButtonMenuInstitucionalMobile({
       {navigation && (
         <div className="flex flex-col items-center justify-start text-left w-[100%] bg-[#F5F5F5] py-0 px-[10px] rounded-b-[5px] border-b border-r border-l border-[#E7E7E7]">
           {links &&
-            links.map((link, index) => (
-              <a
-                className={`text-left font-[Montserrat] text-[12px] w-full h-[38px] ${
-                  index === 0 ? "first:mt-[10px]" : ""
-                }`}
-                key={index}
-                href={link.route}
-              >
-                {link.label}
-              </a>
-            ))}
+            links.map(
+              (link, index) => (
+                  <a
+                    className={`text-left font-[Montserrat] text-[12px] w-full h-[38px] ${
+                      index === 0 ? "first:mt-[10px]" : ""
+                    }`}
+                    key={index}
+                    href={link.route}
+                  >
+                    {link.label}
+                  </a>
+                )
+            )}
         </div>
       )}
     </div>

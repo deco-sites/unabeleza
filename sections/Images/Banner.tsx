@@ -30,13 +30,13 @@ function Banner({ images }: Props) {
               media="(max-width: 1025px)"
               src={image.mobile.img}
               width={image.mobile.w ?? 375}
-              height={image.mobile.h ?? 469}
+              height={image.mobile.h}
             />
             <Source
               media="(min-width: 1026px)"
               src={image.desktop.img}
               width={image.desktop.w ?? 712}
-              height={image.desktop.h ?? 405}
+              height={image.desktop.h}
             />
             <img
               src={image.desktop.img}

@@ -1,3 +1,5 @@
+import { LoadingFallbackProps } from "https://jsr.io/@deco/deco/1.110.4/types.ts";
+
 interface Menu {
   institutionalTitle?: string;
   supportTitle?: string;
@@ -75,3 +77,8 @@ export default function MenuInstitucional(
     </div>
   );
 }
+
+export const LoadingFallback = (props: LoadingFallbackProps<Menu>) => (
+  // deno-lint-ignore no-explicit-any
+  <MenuInstitucional {...props as any} loading="lazy" />
+);
