@@ -1,0 +1,159 @@
+{
+  "name": "Marcas - Dark Oil",
+  "path": "/fabricante/dark-oil",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+        "jsonLD": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "SALES:DESC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {}
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        },
+        "searchbar": {
+          "loader": {
+            "data": {
+              "products": {
+                "__resolveType": "wake/loaders/productList.ts",
+                "first": 12,
+                "sortDirection": "ASC",
+                "sortKey": "DISCOUNT",
+                "filters": {
+                  "attributes": {
+                    "id": [],
+                    "name": [],
+                    "type": [],
+                    "value": []
+                  },
+                  "brandId": [],
+                  "categoryId": [],
+                  "ean": [],
+                  "productId": [],
+                  "productVariantId": [],
+                  "sameParentAs": [],
+                  "sku": [],
+                  "stocks": {
+                    "dcId": [],
+                    "dcName": []
+                  },
+                  "prices": {}
+                }
+              }
+            }
+          }
+        },
+        "searchParams": null,
+        "content": {
+          "carousel": {
+            "images": [
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/965b2b36-9e47-4bdb-a447-358250db07c8/image.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/c2f2cb6b-59fc-494d-b770-c0365ec3f7e0/image-(1).jpg",
+                "alt": "Morocanoil"
+              }
+            ]
+          },
+          "description": "<h1>Dark Oil</h1><p>Na Moroccanoil®, sua paixão é empoderar belas transformações. Tudo começou com o Tratamento Moroccanoil original, que revolucionou a indústria de cuidados com os cabelos. Construiu sua reputação com base no boca a boca positivo, das passarelas aos salões e aos editoriais. Suas fórmulas inovadoras, ricas em nutrientes e com infusão de antioxidantes são inigualáveis ​​e oferecem resultados dramáticos. É por isso que o Moroccanoil exclusivo para salões é preferido por profissionais e consumidores — porque seus produtos simplesmente funcionam.<br><br>O Moroccanoil se tornou uma sensação na indústria de cuidados com os cabelos, abraçado por celebridades, estilistas de passarelas e mulheres do mundo todo. No cerne de seu sucesso está a qualidade. Aperfeiçoou o Tratamento Moroccanoil e ampliou a linha para incluir soluções para todas as necessidades capilares. Suas fórmulas não apenas deixam o cabelo naturalmente liso e brilhante, mas também melhoram sua condição real para torná-lo mais forte a cada uso.</p>"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

@@ -400,8 +400,7 @@
               "h": 405
             },
             "description": "<p></p>",
-            "cta": {},
-            "link": "/shinefinity"
+            "cta": {}
           },
           {
             "desktop": {
@@ -663,7 +662,8 @@
             },
             "cta": {},
             "description": "<p></p>",
-            "contentPosition": "end"
+            "contentPosition": "end",
+            "link": "/fabricante/dark-oil"
           }
         ]
       }
