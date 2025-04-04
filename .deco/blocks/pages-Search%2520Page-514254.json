@@ -115,7 +115,8 @@
         "loader": {
           "data": null
         }
-      }
+      },
+      "content": {}
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
