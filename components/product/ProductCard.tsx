@@ -50,7 +50,7 @@ function ProductCard({
 
   const item = mapProductToAnalyticsItem({ product, price, listPrice, index });
 
-  {/* Add click event to dataLayer */}
+  {/* Add click event to dataLayer */ }
   const event = useSendEvent({
     on: "click",
     event: {
@@ -162,9 +162,15 @@ function ProductCard({
           {title}
         </span>
 
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-[6px]">
+          <span class="text-sm text-gray-600 line-through">
+            {price !== listPrice && (
+              <p>De: {formatPrice(listPrice, offers?.priceCurrency)}</p>
+            )}
+          </span>
+
           <span class="font-bold text-base text-black">
-            {formatPrice(price, offers?.priceCurrency)}
+            Por: {formatPrice(price, offers?.priceCurrency)}
           </span>
           {installments && (
             <span class="text-sm texy-black">

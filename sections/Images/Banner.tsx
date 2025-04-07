@@ -22,8 +22,6 @@ export interface Props {
 }
 
 function Banner({ images }: Props) {
-  console.log(images);
-
   return (
     <div class="flex desktop:gap-4 mobile:flex-col">
       {images.map((image) => (
