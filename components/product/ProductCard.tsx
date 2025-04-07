@@ -72,9 +72,6 @@ function ProductCard({
         "mobile:px-2 mobile:py-[8.94px] mobile:w-[42.66vw]",
         _class,
       )}
-      style={{
-        "--productCard-width": `min(22.0833vw, calc(96rem * 0.220833))`,
-      }}
     >
       <figure
         class={clx(
