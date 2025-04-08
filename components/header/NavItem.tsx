@@ -7,21 +7,8 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
   const { url, name, children } = item;
   const image = item?.image?.[0];
   const uniqueIdentifiers = [
-    ...new Set(children.map((node) => node.identifier)),
+    ...new Set(children?.map((node) => node.identifier)),
   ];
-
-  if (children && children.length > 0) {
-    const seeAll = {
-      name: "ver todos",
-      url: url,
-    };
-
-    const exists = children.some((leaf) => leaf.name === seeAll.name);
-
-    if (!exists) {
-      children.push(seeAll);
-    }
-  }
 
   return (
     <li class="group flex items-center hover:border-b-2 last:hover:border-b-0 border-black mb-[1px] justify-center last:bg-[#DBB9F9] h-[29px] last:rounded-[5px] last:py-1 last:px-3">
@@ -52,7 +39,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                   .map((node) => (
                     <li class="flex flex-col gap-3 group">
                       <a class="cursor-pointer" href={node.url}>
-                        <span class="font-bold text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                        <span class="font-bold text-xs">
                           {node.name}
                         </span>
                       </a>
@@ -64,7 +51,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                                 class="hover:underline cursor-pointer"
                                 href={leaf.url}
                               >
-                                <span class="text-xs group-last:text-primary group-last:font-bold group-last:underline">
+                                <span class="text-xs">
                                   {leaf.name}
                                 </span>
                               </a>

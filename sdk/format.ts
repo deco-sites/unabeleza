@@ -9,6 +9,7 @@ const formatter = (currency: string, locale: string) => {
       new Intl.NumberFormat(locale, {
         style: "currency",
         currency,
+        minimumFractionDigits: 2, 
       }),
     );
   }
@@ -28,9 +29,17 @@ export function formatInstallments(installments: string) {
 
   if (match) {
     let [_, times, price] = match;
+    
+    const priceValue = price.replace(/[^\d,.]/g, '').replace(',', '.');
+    const numericPrice = parseFloat(priceValue);
+    const formattedPrice = numericPrice.toFixed(2).replace('.', ',');
+    
+    const fullMessage = match.input?.replace(price, `R$ ${formattedPrice}`).replace(/\./g, ',') || installments;
+    
     return {
       times,
-      price: price.replace(".", ","),
+      price: `R$ ${formattedPrice}`,
+      fullMessage,
     };
   }
   return installments;

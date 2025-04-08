@@ -166,13 +166,9 @@ function PageResult(props: SectionProps<typeof loader>) {
     <div class="grid grid-flow-row grid-cols-1 place-items-stretch ">
       <div
         data-product-list
-        class={clx(
-          "grid grid-cols-3",
-          "gap-5 justify-items-center",
-          "mobile:grid-cols-2 mobile:gap-4",
-          "w-full",
-        )}
-      >
+        class={
+          "grid grid-cols-4 gap-6 justify-items-center  mobile:grid-cols-2 mobile:gap-4 w-full"
+        }>
         {products?.map((product, index) => (
           <ProductCard
             key={`product-card-${product.productID}`}

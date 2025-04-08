@@ -4176,6 +4176,9 @@ details.collapse summary::-webkit-details-marker {
 .h-5 {
   height: 1.25rem;
 }
+.h-7 {
+  height: 1.75rem;
+}
 .h-9 {
   height: 2.25rem;
 }
@@ -4247,9 +4250,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .h-\[89px\] {
   height: 89px;
-}
-.h-\[min\(3\.402vw\2c 52\.25px\)\] {
-  height: min(3.402vw,52.25px);
 }
 .h-\[var\(--categoryCardCircle-size\)\] {
   height: var(--categoryCardCircle-size);
@@ -4382,6 +4382,9 @@ details.collapse summary::-webkit-details-marker {
 .w-48 {
   width: 12rem;
 }
+.w-7 {
+  width: 1.75rem;
+}
 .w-8 {
   width: 2rem;
 }
@@ -4480,9 +4483,6 @@ details.collapse summary::-webkit-details-marker {
 }
 .w-\[calc\(100\%_\/_3\)\] {
   width: calc(100% / 3);
-}
-.w-\[min\(3\.402vw\2c 52\.25px\)\] {
-  width: min(3.402vw,52.25px);
 }
 .w-\[min\(54\.30vw\2c 834px\)\] {
   width: min(54.30vw,834px);
@@ -4781,6 +4781,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -7156,6 +7159,10 @@ details.collapse summary::-webkit-details-marker {
     height: 1.5rem;
   }
 
+  .mobile\:h-7 {
+    height: 1.75rem;
+  }
+
   .mobile\:h-8 {
     height: 2rem;
   }
@@ -7170,10 +7177,6 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:h-\[72\.33vh\] {
     height: 72.33vh;
-  }
-
-  .mobile\:h-\[8\.533vw\] {
-    height: 8.533vw;
   }
 
   .mobile\:h-\[87px\] {
@@ -7225,6 +7228,10 @@ details.collapse summary::-webkit-details-marker {
     width: 1.5rem;
   }
 
+  .mobile\:w-7 {
+    width: 1.75rem;
+  }
+
   .mobile\:w-8 {
     width: 2rem;
   }
@@ -7247,10 +7254,6 @@ details.collapse summary::-webkit-details-marker {
 
   .mobile\:w-\[79\.73vw\] {
     width: 79.73vw;
-  }
-
-  .mobile\:w-\[8\.533vw\] {
-    width: 8.533vw;
   }
 
   .mobile\:w-\[89\.4\%\] {

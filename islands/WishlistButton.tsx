@@ -83,7 +83,7 @@ function WishlistButton(
       aria-label="Add to wishlist"
       onClick={handleResults}
       class={clx(
-        "btn btn-circle no-animation w-[min(3.402vw,52.25px)] h-[min(3.402vw,52.25px)] mobile:w-[8.533vw] mobile:h-[8.533vw]",
+        "btn btn-circle no-animation w-7 h-7 min-h-0 mobile:w-7 mobile:h-7",
         `btn-ghost btn-sm hover:bg-info`,
         fill ? `text-[${fill}]` : "text-transparent",
         typeTwo ? "shadow-custom-2" : "border border-[#E3EBED]",
@@ -94,8 +94,8 @@ function WishlistButton(
           <Icon
             id="favorite"
             class="[.htmx-request_&]:hidden"
-            width="min(1.805vw,27.72px)"
-            height="min(1.597vw,24.52px)"
+            width="16px"
+            height="14px"
             stroke={stroke}
           />
         )
@@ -103,8 +103,8 @@ function WishlistButton(
           <Icon
             id="favorite"
             class="[.htmx-request_&]:hidden"
-            width="4.528vw"
-            height="4.005vw"
+            width="16px"
+            height="14px"
             stroke={stroke}
           />
         )}
