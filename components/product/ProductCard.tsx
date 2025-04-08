@@ -2,7 +2,7 @@ import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import Image from "apps/website/components/Image.tsx";
 import { clx } from "../../sdk/clx.ts";
-import { formatPrice } from "../../sdk/format.ts";
+import { formatInstallments, formatPrice } from "../../sdk/format.ts";
 import { relative } from "../../sdk/url.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
 import { useSendEvent } from "../../sdk/useSendEvent.ts";
@@ -61,6 +61,8 @@ function ProductCard({
       },
     },
   });
+
+  const installmentsFormatted = formatInstallments(installments!);
 
   const device = useDevice();
 
@@ -174,7 +176,9 @@ function ProductCard({
           </span>
           {installments && (
             <span class="text-sm texy-black">
-              Ou {installments.replace(".", ",")}
+              {typeof installmentsFormatted === 'string' 
+                ? installmentsFormatted
+                : installmentsFormatted.fullMessage}
             </span>
           )}
         </div>
