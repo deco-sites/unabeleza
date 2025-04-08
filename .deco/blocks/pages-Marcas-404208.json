@@ -103,7 +103,8 @@
             }
           }
         },
-        "searchParams": null
+        "searchParams": null,
+        "content": {}
       }
     },
     {

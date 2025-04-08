@@ -7,7 +7,7 @@
         "__resolveType": "wake/loaders/suggestion.ts"
       }
     },
-    "placeholder": "Faça sua busca aqui"
+    "placeholder": "O que você deseja?"
   },
   "alerts": [
     "<p>Consiga 5% OFF com o cupom: <strong>PRIMEIRACOMPRA</strong></p>"
@@ -113,19 +113,7 @@
           "children": [],
           "image": null,
           "url": "/fabricante/brae",
-          "name": "Brae"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/bruna-tavares",
-          "name": "Bruna Tavares"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/doha",
-          "name": "Doha"
+          "name": "Braé"
         },
         {
           "children": [],
@@ -136,8 +124,26 @@
         {
           "children": [],
           "image": null,
+          "url": "/fabricante/gama",
+          "name": "Gama"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "/fabricante/joico",
+          "name": "Joico"
+        },
+        {
+          "children": [],
+          "image": null,
           "url": "/fabricante/knut",
           "name": "Knut"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "/fabricante/moroccanoil",
+          "name": "Moroccanoil"
         },
         {
           "children": [],
@@ -150,19 +156,13 @@
           "image": null,
           "url": "/fabricante/wella-professionals",
           "name": "Wella Professionals"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/ykas",
-          "name": "Ykas"
         }
       ],
       "image": []
     },
     {
       "children": [],
-      "image": [],
+      "image": null,
       "name": "Outlet",
       "url": "/outlet"
     }
