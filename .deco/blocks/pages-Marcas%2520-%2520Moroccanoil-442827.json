@@ -1,6 +1,6 @@
 {
   "name": "Marcas - Moroccanoil",
-  "path": "/fabricante/Moroccanoil",
+  "path": "/fabricante/moroccanoil",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",

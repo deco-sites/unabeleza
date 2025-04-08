@@ -4,7 +4,8 @@
     "loader": {
       "__resolveType": "resolved",
       "data": {
-        "__resolveType": "wake/loaders/suggestion.ts"
+        "__resolveType": "wake/loaders/suggestion.ts",
+        "data": null
       }
     },
     "placeholder": "O que você deseja?"
