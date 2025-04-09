@@ -11,9 +11,10 @@ interface Props {
   itemListName?: string;
   class?: string;
   sliderClass?: string;
+  cardClass?: string;
 }
 
-function ProductSlider({ products, itemListName, class: _class, sliderClass }: Props) {
+function ProductSlider({ products, itemListName, class: _class, sliderClass, cardClass }: Props) {
   const id = useId();
   const device = useDevice();
 
@@ -42,6 +43,7 @@ function ProductSlider({ products, itemListName, class: _class, sliderClass }: P
                     index={index}
                     product={product}
                     itemListName={itemListName}
+                    class={cardClass}
                   />
                 </Slider.Item>
               ))}

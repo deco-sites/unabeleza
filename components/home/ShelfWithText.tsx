@@ -37,6 +37,7 @@ export default function ShelfWithText(
           itemListName={title}
           class="desktop:hidden"
           sliderClass="!justify-center"
+          cardClass="!w-[240px]"
         />
       </div>
     </div>

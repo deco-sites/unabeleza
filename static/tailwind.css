@@ -4355,6 +4355,9 @@ details.collapse summary::-webkit-details-marker {
 .\!w-\[--quantity-tabs\] {
   width: var(--quantity-tabs) !important;
 }
+.\!w-\[240px\] {
+  width: 240px !important;
+}
 .\!w-\[calc\(\(38\.19vw_-_40px\)_\/_3\)\] {
   width: calc((38.19vw - 40px) / 3) !important;
 }
