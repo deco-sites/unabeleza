@@ -271,7 +271,7 @@
               "123": "p",
               "124": "n",
               "125": "g",
-              "img": "https://data.decoassets.com/unabeleza/46b86d40-cee0-4413-93ad-6cda51637948/Banner-Duplo-02---Mobile-(1).png",
+              "img": "https://assets.decocache.com/unabeleza/add9fda0-3b3f-4dee-a5bc-effb82bb3e57/CTA-SENSCIENCE---Mob-720x900px-.jpg",
               "w": 375,
               "h": 469
             },
@@ -395,12 +395,15 @@
               "116": "p",
               "117": "n",
               "118": "g",
-              "img": "https://data.decoassets.com/unabeleza/c95edd01-62b1-454a-a034-6f5066e045af/Banner-Duplo-02---Desktop-(1).png",
+              "img": "https://assets.decocache.com/unabeleza/942523e4-cd0f-46eb-94a6-77b5d2be0240/CTA-SENSCIENCE---Desk-950x540px-.jpg",
               "w": 712,
               "h": 405
             },
             "description": "<p></p>",
-            "cta": {}
+            "cta": {
+              "href": "/fabricante/senscience"
+            },
+            "link": "/fabricante/senscience"
           },
           {
             "desktop": {
@@ -699,11 +702,12 @@
           "__resolveType": "wake/loaders/productList.ts",
           "first": 12,
           "sortDirection": "ASC",
-          "sortKey": "DISCOUNT",
           "filters": {
             "attributes": {
               "id": [],
-              "name": [],
+              "name": [
+                "wella"
+              ],
               "type": [],
               "value": []
             },
@@ -720,39 +724,50 @@
             },
             "prices": {}
           },
-          "getVariations": true
+          "getVariations": true,
+          "sortKey": "RANDOM"
         },
         "title": "Veja nossas ofertas",
         "cta": "outlet"
       }
     },
     {
-      "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-      "title": "Navegue por categorias",
-      "items": [
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
         {
-          "label": "COMPRE & GANHE",
-          "href": "/compre-e-ganhe",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryPayToWin"
-        },
-        {
-          "label": "MARCAS PARA LOJA",
-          "href": "/marcas-para-loja",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryBrandForStore"
-        },
-        {
-          "label": "MARCAS PARA SALÃO",
-          "href": "/marcas-para-salao",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categorySalonBrands"
-        },
-        {
-          "label": "CABELO",
-          "href": "/cabelos",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
-          "icon": "categoryHair"
+          "value": {
+            "__resolveType": "site/sections/Category/CategoryGrid.tsx",
+            "title": "Navegue por categorias",
+            "items": [
+              {
+                "label": "COMPRE & GANHE",
+                "href": "/compre-e-ganhe",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+                "icon": "categoryPayToWin"
+              },
+              {
+                "label": "MARCAS PARA LOJA",
+                "href": "/marcas-para-loja",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+                "icon": "categoryBrandForStore"
+              },
+              {
+                "label": "MARCAS PARA SALÃO",
+                "href": "/marcas-para-salao",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+                "icon": "categorySalonBrands"
+              },
+              {
+                "label": "CABELO",
+                "href": "/cabelos",
+                "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa",
+                "icon": "categoryHair"
+              }
+            ]
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
         }
       ]
     },
