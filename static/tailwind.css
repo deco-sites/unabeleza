@@ -4493,9 +4493,6 @@ details.collapse summary::-webkit-details-marker {
 .w-\[var\(--categoryCardCircle-size\)\] {
   width: var(--categoryCardCircle-size);
 }
-.w-\[var\(--productCard-width\)\] {
-  width: var(--productCard-width);
-}
 .w-auto {
   width: auto;
 }
