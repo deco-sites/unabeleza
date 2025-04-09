@@ -10,9 +10,10 @@ interface Props {
   products: Product[];
   itemListName?: string;
   class?: string;
+  sliderClass?: string;
 }
 
-function ProductSlider({ products, itemListName, class: _class }: Props) {
+function ProductSlider({ products, itemListName, class: _class, sliderClass }: Props) {
   const id = useId();
   const device = useDevice();
 
@@ -26,7 +27,7 @@ function ProductSlider({ products, itemListName, class: _class }: Props) {
         }}
       >
         <div class="col-start-1 col-span-3 row-start-1 row-span-1 w-full">
-          <Slider class="carousel justify-between gap-[1.11vw] mobile:gap-[4.26vw] flex w-full">
+          <Slider class={clx(sliderClass, "carousel justify-between gap-[1.11vw] mobile:gap-[4.26vw] flex w-full")}>
             {products?.filter((product) =>
               product.offers!.highPrice > 0 || product.offers!.lowPrice > 0
             )

@@ -70,7 +70,7 @@ function ProductCard({
     <div
       {...event}
       class={clx(
-        "card card-compact group text-sm px-[15px] py-4 w-full h-fit",
+        "card card-compact group text-sm px-[15px] py-4 h-fit w-[318px]",
         "mobile:px-2 mobile:py-[8.94px] mobile:w-[42.66vw]",
         _class,
       )}

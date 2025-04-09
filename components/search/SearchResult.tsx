@@ -175,7 +175,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full "
+            class="h-full !w-full"
           />
         ))}
       </div>

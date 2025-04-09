@@ -4415,6 +4415,9 @@ details.collapse summary::-webkit-details-marker {
 .w-\[316px\] {
   width: 316px;
 }
+.w-\[318px\] {
+  width: 318px;
+}
 .w-\[330px\] {
   width: 330px;
 }
@@ -4844,6 +4847,9 @@ details.collapse summary::-webkit-details-marker {
 }
 .justify-end {
   justify-content: flex-end;
+}
+.\!justify-center {
+  justify-content: center !important;
 }
 .justify-center {
   justify-content: center;
