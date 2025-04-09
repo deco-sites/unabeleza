@@ -132,8 +132,16 @@
                 "desktop": "https://assets.decocache.com/unabeleza/10050380-c4c2-414f-be58-0697644b9323/DARK-OIL---Desk-ALTA.jpg",
                 "mobile": "https://assets.decocache.com/unabeleza/a357c370-9a34-4323-9679-2d9c7f489457/DARK-OIL---Mob-ALTA.jpg",
                 "alt": "Dark Oil"
+              },
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/97a645b2-02a8-44a9-860c-4e3f62731c44/DARK-OIL---Desk-ALTA-PAG-2.jpg",
+                "alt": "Dark Oil 2",
+                "linkImage": "/fabricante/dark-oil",
+                "mobile": "https://assets.decocache.com/unabeleza/a924edf8-d350-441e-9a4c-77dd04998936/DARK-OIL---Mob-ALTA-PAG-2.jpg"
               }
-            ]
+            ],
+            "preload": true,
+            "interval": 3
           },
           "description": "<h1>Dark Oil</h1><p>A linha <strong>Dark Oil</strong> de Wella Professionals é a fusão perfeita entre ciência de ponta e luxo sensorial. Criada para revelar a beleza natural dos fios com sofisticação, Dark Oil entrega uma experiência única de cuidado capilar — onde a nutrição profunda encontra a leveza absoluta.</p><p></p><p>Inspirada na elegância do brilho discreto e no mistério do toque invisível, a linha foi desenvolvida com uma combinação exclusiva de óleos preciosos, como argan, jojoba e amêndoas doces. Esses ingredientes, aliados à tecnologia de difusão invisível da Wella, penetram nas camadas mais internas da fibra capilar, nutrindo de dentro para fora e proporcionando um cabelo visivelmente mais saudável, suave ao toque e com um perfume marcante que dura o dia inteiro.</p>"
         }
