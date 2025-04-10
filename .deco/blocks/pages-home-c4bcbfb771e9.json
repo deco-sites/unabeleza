@@ -19,6 +19,18 @@
             "isCopyBanner": true,
             "copyMessage": "PRIMEIRACOMPRA"
           }
+        },
+        {
+          "desktop": "https://assets.decocache.com/unabeleza/def166e3-2bae-4f79-9b0c-a2778669a275/CROWNUS----DESK-1920x520px.jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/864745b1-825c-495b-831f-046e6b4b68e4/CROWNUS---MOBILE-661x919px.jpg",
+          "alt": "Crown'us",
+          "linkImage": "/fabricante/crown'us"
+        },
+        {
+          "desktop": "https://assets.decocache.com/unabeleza/ce215fd4-0947-4e51-a18a-0115056480c8/WELLA---DESK-1920x520px.jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/64ba6b73-85a5-464f-8c2b-32518c171a21/WELLA-MOBILE---661x919px.jpg",
+          "alt": "Luxe Oil",
+          "linkImage": "/fabricante/luxe-oil"
         }
       ],
       "preload": true
