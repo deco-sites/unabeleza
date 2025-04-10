@@ -39,50 +39,58 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Home/FavoritesSlider.tsx",
-      "items": [
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
         {
-          "image": "https://data.decoassets.com/unabeleza/cac701c6-4773-43a5-a410-cfd7fead2402/Desktop---Compre-e-Ganhe.png",
-          "title": "Compre e ganhe",
-          "alt": "Compre e ganhe",
-          "href": "#",
-          "text": "Produtos que vão ajudar você e seu bolso!"
-        },
-        {
-          "image": "https://data.decoassets.com/unabeleza/2c62b5e8-e178-4ef1-abe7-21c9dc1dd1df/Desktop---Cabelo.png",
-          "title": "Cabelo",
-          "alt": "Cabelo",
-          "text": "Cuide dos fios com produtos que transformam e revitalizam!",
-          "href": "/cabelos"
-        },
-        {
-          "title": "Maquiagem",
-          "alt": "Maquiagem",
-          "href": "#",
-          "text": "Realce sua beleza com maquiagem de alta performance!",
-          "image": "https://data.decoassets.com/unabeleza/f7d71ce1-e621-48df-9886-1d048c00944b/Desktop---Maquiagem.png"
-        },
-        {
-          "title": "Corpo & banho",
-          "alt": "Corpo & banho",
-          "href": "#",
-          "image": "https://data.decoassets.com/unabeleza/0b11d91a-9865-4af0-9e18-f2e72a5ec276/Desktop---Corpo-e-Banho.png",
-          "text": "Cuidado completo para pele macia e hidratada!"
+          "value": {
+            "__resolveType": "site/sections/Home/FavoritesSlider.tsx",
+            "items": [
+              {
+                "image": "https://data.decoassets.com/unabeleza/cac701c6-4773-43a5-a410-cfd7fead2402/Desktop---Compre-e-Ganhe.png",
+                "title": "Compre e ganhe",
+                "alt": "Compre e ganhe",
+                "href": "#",
+                "text": "Produtos que vão ajudar você e seu bolso!"
+              },
+              {
+                "image": "https://data.decoassets.com/unabeleza/2c62b5e8-e178-4ef1-abe7-21c9dc1dd1df/Desktop---Cabelo.png",
+                "title": "Cabelo",
+                "alt": "Cabelo",
+                "text": "Cuide dos fios com produtos que transformam e revitalizam!",
+                "href": "/cabelos"
+              },
+              {
+                "title": "Maquiagem",
+                "alt": "Maquiagem",
+                "href": "#",
+                "text": "Realce sua beleza com maquiagem de alta performance!",
+                "image": "https://data.decoassets.com/unabeleza/f7d71ce1-e621-48df-9886-1d048c00944b/Desktop---Maquiagem.png"
+              },
+              {
+                "title": "Corpo & banho",
+                "alt": "Corpo & banho",
+                "href": "#",
+                "image": "https://data.decoassets.com/unabeleza/0b11d91a-9865-4af0-9e18-f2e72a5ec276/Desktop---Corpo-e-Banho.png",
+                "text": "Cuidado completo para pele macia e hidratada!"
+              }
+            ],
+            "title": "Veja os favoritos"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
         }
-      ],
-      "title": "Veja os favoritos"
+      ]
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Conheça nossos Kits",
-        "cta": "/kits-e-combos",
+        "title": "Conheça nossos produtos",
         "products": {
           "__resolveType": "wake/loaders/productList.ts",
           "first": 12,
-          "sortDirection": "ASC",
-          "sortKey": "SALES",
+          "sortKey": "RELEASE_DATE",
           "filters": {
             "attributes": {
               "id": [],
@@ -90,10 +98,10 @@
               "type": [],
               "value": []
             },
-            "brandId": [],
-            "categoryId": [
-              14893
+            "brandId": [
+              5862
             ],
+            "categoryId": [],
             "ean": [],
             "productId": [],
             "productVariantId": [],
@@ -103,8 +111,12 @@
               "dcId": [],
               "dcName": []
             },
-            "prices": {}
-          }
+            "prices": {},
+            "available": true,
+            "hasImages": true,
+            "mainVariant": true
+          },
+          "sortDirection": "DESC"
         }
       }
     },
@@ -655,7 +667,8 @@
           {
             "image": "https://data.decoassets.com/unabeleza/4e5e5f85-fd8a-45ec-bc89-927068ace1c5/Banner-Categoria-2---Desktop-03.png",
             "title": "Equipamentos",
-            "btn": true
+            "btn": true,
+            "href": "Cabelos/equipamento"
           },
           {
             "image": "https://data.decoassets.com/unabeleza/2cda1039-2a95-4efb-b05e-cb5a8b86b05e/Banner-Categoria-2---Desktop-01.png",
