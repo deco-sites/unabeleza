@@ -11,7 +11,7 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://data.decoassets.com/unabeleza/1196cc49-b097-41a9-b2b2-c46f48aa14ef/Banner-Principal---Una-Me-Ajuda---Desktop-(1).png",
+          "desktop": "https://assets.decocache.com/unabeleza/08513257-1ea0-47c9-973f-55aa49eb1212/BANNER-PRINCIPAL---DESK-1920x520px-(3).jpg",
           "mobile": "https://data.decoassets.com/unabeleza/5d2a423d-8e22-4f63-b6b8-d1bcdc2567a0/Banner-Principal---Una-Me-Ajuda---Mobile-(1).png",
           "action": {},
           "alt": "Una me ajuda",
@@ -19,30 +19,6 @@
             "isCopyBanner": true,
             "copyMessage": "PRIMEIRACOMPRA"
           }
-        },
-        {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/39d20d1b-82b9-4999-be25-6f299ce0699b/Produtos-Wella-(1).png",
-          "mobile": "https://data.decoassets.com/unabeleza/9556e768-a0a5-4d14-b956-34bab7c4d91e/Produtos-Wella.png",
-          "action": {
-            "title": "Discover Fresh Looks",
-            "subTitle": "Modern men's clothing and accessories.",
-            "href": "/men",
-            "label": "Shop the Collection"
-          },
-          "alt": "produto wella",
-          "linkImage": "/fabricante/wella"
-        },
-        {
-          "desktop": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/3088f639-a204-4960-a574-5b52c18417a4/Produtos-Verao-(1).png",
-          "mobile": "https://data.decoassets.com/unabeleza/2a4734d6-c502-434f-8816-b610936bf454/Produtos-Verao.jpg",
-          "action": {
-            "label": "Shop Now!",
-            "href": "/women",
-            "title": "Embrace New Trends",
-            "subTitle": "Stylish clothes and accessories."
-          },
-          "alt": "salvar cabelo",
-          "linkImage": "/fabricante/wella-professionals"
         }
       ],
       "preload": true
@@ -271,7 +247,7 @@
               "123": "p",
               "124": "n",
               "125": "g",
-              "img": "https://assets.decocache.com/unabeleza/add9fda0-3b3f-4dee-a5bc-effb82bb3e57/CTA-SENSCIENCE---Mob-720x900px-.jpg",
+              "img": "https://assets.decocache.com/unabeleza/6e9b8c20-0b36-4d39-b493-9d4a339dd9ff/CTA-SENSCIENCE---Mob-720x900px--(1).jpg",
               "w": 375,
               "h": 469
             },
@@ -395,7 +371,7 @@
               "116": "p",
               "117": "n",
               "118": "g",
-              "img": "https://assets.decocache.com/unabeleza/942523e4-cd0f-46eb-94a6-77b5d2be0240/CTA-SENSCIENCE---Desk-950x540px-.jpg",
+              "img": "https://assets.decocache.com/unabeleza/f5dfefe7-1f55-4f52-a429-4b37b6b3591f/CTA-SENSCIENCE---Desk-950x540px--(1).jpg",
               "w": 712,
               "h": 405
             },
@@ -527,7 +503,7 @@
               "117": "p",
               "118": "n",
               "119": "g",
-              "img": "https://assets.decocache.com/unabeleza/50483edb-332f-4733-a3f3-2272e48fcb9c/CTA-DARK-OIL---Desk-950x540px.jpg",
+              "img": "https://assets.decocache.com/unabeleza/0e36c6c1-cfca-416d-a547-05f1c65d549a/CTA-DARK-OIL---Desk-950x540px-(2).jpg",
               "w": 712,
               "h": 405
             },
@@ -659,7 +635,7 @@
               "124": "p",
               "125": "n",
               "126": "g",
-              "img": "https://assets.decocache.com/unabeleza/75f582b6-2514-4c69-ac6b-9882c6c02c50/CTA-DARK-OIL---Mob-720x900px.jpg",
+              "img": "https://assets.decocache.com/unabeleza/a5ff92f0-e664-4345-b037-8b31aa0f0823/CTA-DARK-OIL---Mob-720x900px-(2).jpg",
               "w": 375,
               "h": 469
             },
