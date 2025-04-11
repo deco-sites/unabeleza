@@ -98,10 +98,9 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "title": "Conheça nossos produtos",
         "products": {
           "__resolveType": "wake/loaders/productList.ts",
-          "first": 12,
+          "first": 10,
           "filters": {
             "attributes": {
               "id": [],
@@ -109,15 +108,24 @@
               "type": [],
               "value": []
             },
-            "brandId": [
-              5851
-            ],
+            "brandId": [],
             "categoryId": [],
             "ean": [],
             "productId": [],
             "productVariantId": [],
             "sameParentAs": [],
-            "sku": [],
+            "sku": [
+              "BRADIVSHA250",
+              "BRADIVMASLIQ",
+              "BRADIVAMP",
+              "BRADIVMAS500",
+              "BRADIVCON",
+              "BRADIVSER",
+              "BRADIVSHA1L",
+              "BRAESSLEA260",
+              "BRAESSCON1",
+              "BRAESSMAS"
+            ],
             "stocks": {
               "dcId": [],
               "dcName": []
@@ -129,7 +137,8 @@
           },
           "sortDirection": "DESC",
           "sortKey": "STOCK"
-        }
+        },
+        "title": "Conheça nossos produtos Braé"
       }
     },
     {
@@ -709,6 +718,89 @@
       }
     },
     {
+      "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
+      "title": "Destaques",
+      "subtitle": "Ultra hidratantes",
+      "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟",
+      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
+      "products": {
+        "__resolveType": "wake/loaders/productList.ts",
+        "first": 12,
+        "sortDirection": "ASC",
+        "sortKey": "DISCOUNT",
+        "filters": {
+          "attributes": {
+            "id": [],
+            "name": [],
+            "type": [],
+            "value": []
+          },
+          "brandId": [
+            5870
+          ],
+          "categoryId": [],
+          "ean": [],
+          "productId": [],
+          "productVariantId": [],
+          "sameParentAs": [],
+          "sku": [],
+          "stocks": {
+            "dcId": [],
+            "dcName": []
+          },
+          "prices": {}
+        }
+      },
+      "linkImage": "/fabricante/moroccanoil"
+    },
+    {
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "website/sections/Rendering/Lazy.tsx",
+            "section": {
+              "__resolveType": "site/sections/Product/ProductShelf.tsx",
+              "products": {
+                "__resolveType": "wake/loaders/productList.ts",
+                "first": 12,
+                "sortDirection": "ASC",
+                "filters": {
+                  "attributes": {
+                    "id": [],
+                    "name": [],
+                    "type": [],
+                    "value": []
+                  },
+                  "brandId": [
+                    5857
+                  ],
+                  "categoryId": [],
+                  "ean": [],
+                  "productId": [],
+                  "productVariantId": [],
+                  "sameParentAs": [],
+                  "sku": [],
+                  "stocks": {
+                    "dcId": [],
+                    "dcName": []
+                  },
+                  "prices": {}
+                },
+                "getVariations": true,
+                "sortKey": "RELEASE_DATE"
+              },
+              "title": "Veja nossas ofertas",
+              "cta": "outlet"
+            }
+          },
+          "rule": {
+            "__resolveType": "website/matchers/never.ts"
+          }
+        }
+      ]
+    },
+    {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/Home/BannerSlider.tsx",
@@ -730,43 +822,6 @@
             "btn": true
           }
         ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Product/ProductShelf.tsx",
-        "products": {
-          "__resolveType": "wake/loaders/productList.ts",
-          "first": 12,
-          "sortDirection": "ASC",
-          "filters": {
-            "attributes": {
-              "id": [],
-              "name": [
-                "wella"
-              ],
-              "type": [],
-              "value": []
-            },
-            "brandId": [],
-            "categoryId": [],
-            "ean": [],
-            "productId": [],
-            "productVariantId": [],
-            "sameParentAs": [],
-            "sku": [],
-            "stocks": {
-              "dcId": [],
-              "dcName": []
-            },
-            "prices": {}
-          },
-          "getVariations": true,
-          "sortKey": "RANDOM"
-        },
-        "title": "Veja nossas ofertas",
-        "cta": "outlet"
       }
     },
     {
@@ -808,42 +863,6 @@
           }
         }
       ]
-    },
-    {
-      "__resolveType": "site/sections/Home/ShelfWithBanner.tsx",
-      "title": "Destaques",
-      "subtitle": "Ultra hidratantes",
-      "text": "Moroccanoil revolucionou o cuidado capilar com o poder do óleo de argan, um ingrediente rico em antioxidantes e nutrientes essenciais. Seus produtos oferecem hidratação intensa, controle do frizz e brilho incomparável, tudo com uma fórmula leve que não pesa nos fios. Ideal para todos os tipos de cabelo, Moroccanoil entrega resultados visíveis desde a primeira aplicação. Experimente o Óleo de Tratamento e descubra o segredo para cabelos saudáveis, macios e radiantes. 🌟",
-      "img": "https://data.decoassets.com/unabeleza/833531ef-8665-4036-aaba-9793a96b0d32/Vitrine-com-Imagem---Desktop-01.png",
-      "products": {
-        "__resolveType": "wake/loaders/productList.ts",
-        "first": 12,
-        "sortDirection": "ASC",
-        "sortKey": "DISCOUNT",
-        "filters": {
-          "attributes": {
-            "id": [],
-            "name": [],
-            "type": [],
-            "value": []
-          },
-          "brandId": [
-            5870
-          ],
-          "categoryId": [],
-          "ean": [],
-          "productId": [],
-          "productVariantId": [],
-          "sameParentAs": [],
-          "sku": [],
-          "stocks": {
-            "dcId": [],
-            "dcName": []
-          },
-          "prices": {}
-        }
-      },
-      "linkImage": "/fabricante/moroccanoil?page=1"
     },
     {
       "__resolveType": "site/sections/Home/AboutUs.tsx",
