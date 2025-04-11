@@ -102,7 +102,6 @@
         "products": {
           "__resolveType": "wake/loaders/productList.ts",
           "first": 12,
-          "sortKey": "RELEASE_DATE",
           "filters": {
             "attributes": {
               "id": [],
@@ -111,7 +110,7 @@
               "value": []
             },
             "brandId": [
-              5862
+              5851
             ],
             "categoryId": [],
             "ean": [],
@@ -128,7 +127,8 @@
             "hasImages": true,
             "mainVariant": true
           },
-          "sortDirection": "DESC"
+          "sortDirection": "DESC",
+          "sortKey": "STOCK"
         }
       }
     },
