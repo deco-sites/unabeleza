@@ -12,13 +12,13 @@
       "images": [
         {
           "desktop": "https://assets.decocache.com/unabeleza/08513257-1ea0-47c9-973f-55aa49eb1212/BANNER-PRINCIPAL---DESK-1920x520px-(3).jpg",
-          "mobile": "https://assets.decocache.com/unabeleza/eb536cae-f59c-4390-a7dd-8a1da89f20a3/BANNER-PRINCIPAL---MOB-661x919px.jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/89cf3957-e3ce-4a5f-97a1-d5c52196bea7/BANNER-PRINCIPAL---MOB-661x919px-(1).jpg",
           "action": {},
-          "alt": "Una me ajuda",
           "copyBanner": {
             "isCopyBanner": true,
             "copyMessage": "PRIMEIRACOMPRA"
-          }
+          },
+          "alt": "Bem vindo ao Una"
         },
         {
           "desktop": "https://assets.decocache.com/unabeleza/def166e3-2bae-4f79-9b0c-a2778669a275/CROWNUS----DESK-1920x520px.jpg",
@@ -803,19 +803,21 @@
         "items": [
           {
             "image": "https://data.decoassets.com/unabeleza/4e5e5f85-fd8a-45ec-bc89-927068ace1c5/Banner-Categoria-2---Desktop-03.png",
-            "title": "Equipamentos",
+            "title": "Tratamentos",
             "btn": true,
             "href": "Cabelos/tratamento"
           },
           {
             "image": "https://data.decoassets.com/unabeleza/2cda1039-2a95-4efb-b05e-cb5a8b86b05e/Banner-Categoria-2---Desktop-01.png",
-            "title": "Marcas para salão",
-            "btn": true
+            "title": "Acessórios",
+            "btn": true,
+            "href": "/Cabelos/acessórios"
           },
           {
             "image": "https://data.decoassets.com/unabeleza/05a25edd-fac6-4156-872a-e3c5aaf01f78/Banner-Categoria-2---Desktop-02.png",
-            "title": "Marcas para loja",
-            "btn": true
+            "title": "Equipamentos",
+            "btn": true,
+            "href": "/Cabelos/equipamento"
           }
         ]
       }
