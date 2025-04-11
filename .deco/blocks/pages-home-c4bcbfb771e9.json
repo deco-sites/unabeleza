@@ -754,51 +754,41 @@
       "linkImage": "/fabricante/moroccanoil"
     },
     {
-      "__resolveType": "website/flags/multivariate/section.ts",
-      "variants": [
-        {
-          "value": {
-            "__resolveType": "website/sections/Rendering/Lazy.tsx",
-            "section": {
-              "__resolveType": "site/sections/Product/ProductShelf.tsx",
-              "products": {
-                "__resolveType": "wake/loaders/productList.ts",
-                "first": 12,
-                "sortDirection": "ASC",
-                "filters": {
-                  "attributes": {
-                    "id": [],
-                    "name": [],
-                    "type": [],
-                    "value": []
-                  },
-                  "brandId": [
-                    5857
-                  ],
-                  "categoryId": [],
-                  "ean": [],
-                  "productId": [],
-                  "productVariantId": [],
-                  "sameParentAs": [],
-                  "sku": [],
-                  "stocks": {
-                    "dcId": [],
-                    "dcName": []
-                  },
-                  "prices": {}
-                },
-                "getVariations": true,
-                "sortKey": "RELEASE_DATE"
-              },
-              "title": "Veja nossas ofertas",
-              "cta": "outlet"
-            }
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "sortDirection": "ASC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [
+              5857
+            ],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
           },
-          "rule": {
-            "__resolveType": "website/matchers/never.ts"
-          }
-        }
-      ]
+          "getVariations": true,
+          "sortKey": "RELEASE_DATE"
+        },
+        "title": "Veja nossas ofertas",
+        "cta": "/fabricante/forever-liss"
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
