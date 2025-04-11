@@ -31,6 +31,12 @@
           "mobile": "https://assets.decocache.com/unabeleza/64ba6b73-85a5-464f-8c2b-32518c171a21/WELLA-MOBILE---661x919px.jpg",
           "alt": "Luxe Oil",
           "linkImage": "/fabricante/luxe-oil"
+        },
+        {
+          "alt": "Moroccanoil",
+          "desktop": "https://assets.decocache.com/unabeleza/e1ef2308-15d7-4c57-9a90-97e3459bbc00/MOROCCANOIL---DESK---1920x520px.jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/c834118c-20c2-43db-8d79-e663d82fac19/MOROCCANOIL---MOBILE---661x919px-.jpg",
+          "linkImage": "/moroccanoil?page=1"
         }
       ],
       "preload": true
@@ -799,7 +805,7 @@
             "image": "https://data.decoassets.com/unabeleza/4e5e5f85-fd8a-45ec-bc89-927068ace1c5/Banner-Categoria-2---Desktop-03.png",
             "title": "Equipamentos",
             "btn": true,
-            "href": "Cabelos/equipamento"
+            "href": "Cabelos/tratamento"
           },
           {
             "image": "https://data.decoassets.com/unabeleza/2cda1039-2a95-4efb-b05e-cb5a8b86b05e/Banner-Categoria-2---Desktop-01.png",
