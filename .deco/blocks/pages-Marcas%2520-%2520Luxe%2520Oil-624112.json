@@ -1,6 +1,6 @@
 {
-  "name": "Marcas - Senscience",
-  "path": "/fabricante/senscience",
+  "name": "Marcas - Luxe Oil",
+  "path": "/fabricante/luxe-oil",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -129,19 +129,16 @@
           "carousel": {
             "images": [
               {
-                "desktop": "https://assets.decocache.com/unabeleza/c8ece174-c1b3-49d5-97b4-e74d1a11f731/SENSCIENCE---Desk-994x298px.jpg",
-                "mobile": "https://assets.decocache.com/unabeleza/0ec1df6f-580c-4ab6-ba46-23f1fb6ddf1e/SENSCIENCE---Mobile-375x298px-.jpg",
-                "alt": "Senscience 1"
-              },
-              {
-                "desktop": "https://assets.decocache.com/unabeleza/7361a23e-ab67-4a41-8af9-61ceede85ade/SENSCIENCE---Desk-994x298px-(1).jpg",
-                "mobile": "https://assets.decocache.com/unabeleza/4e76a20b-4155-4fa7-99d4-d6caea296ac1/SENSCIENCE---Mobile-375x298px--(1).jpg",
-                "alt": "Senscience 2"
+                "desktop": "https://assets.decocache.com/unabeleza/d0bf0b55-b450-418f-a635-4261966cbd03/ULTIMATE---Desk-994x298px-.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/d6db0cb1-3627-46c3-be12-8dc5516090b7/ULTIMATE---Mob-375x298px.jpg",
+                "alt": "Luxe Oil",
+                "linkImage": "/fabricante/luxe-oil"
               }
             ],
-            "preload": true
+            "preload": true,
+            "interval": 3
           },
-          "description": "<h1>Senscience</h1><p>Bem vindo ao universo Senscience... a mais perfeita combinação entre ciência e sensualidade. Nossa marca apresenta um conceito luxuoso para cuidados com o cabelo. Luxo no detalhe de nossas fórmulas únicas e avançadas. Luxo no cuidado de como levamos essas fórmulas até você. Luxo de termos os tratamentos que são verdadeiros aliados para os mais renomados cabeleireiros do mundo.</p><p style=\"text-align: center\"></p><p style=\"text-align: justify\">Senscience possui produtos com fórmulas concentradas e suaves fragrâncias, desenvolvidas com a mais avançada tecnologia disponível em cuidados com os cabelos. O exclusivo e patenteado complexo Vitalock-6 presente em nossas fórmulas reúne antioxidantes, vitaminas, minerais, açúcares, lipídios e proteínas que trabalham em conjunto para promover a reparação, nutrição, hidratação e fortalecimento do cabelo de dentro para fora, revitalizando e protegendo os fios dos efeitos nocivos do stress do dia-a-dia. </p>"
+          "description": "<h1>Luxe Oil</h1><p>A linha <strong>Luxe Oil</strong> de Wella Professionals é a fusão perfeita entre ciência de ponta e luxo sensorial. Criada para revelar a beleza natural dos fios com sofisticação, Dark Oil entrega uma experiência única de cuidado capilar — onde a nutrição profunda encontra a leveza absoluta.</p><p></p><p>Inspirada na elegância do brilho discreto e no mistério do toque invisível, a linha foi desenvolvida com uma combinação exclusiva de óleos preciosos, como argan, jojoba e amêndoas doces. Esses ingredientes, aliados à tecnologia de difusão invisível da Wella, penetram nas camadas mais internas da fibra capilar, nutrindo de dentro para fora e proporcionando um cabelo visivelmente mais saudável, suave ao toque e com um perfume marcante que dura o dia inteiro.</p>"
         }
       }
     },
