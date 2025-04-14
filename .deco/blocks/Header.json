@@ -94,6 +94,37 @@
       "name": "Cabelos"
     },
     {
+      "url": "/maquiagem",
+      "children": [
+        {
+          "children": [],
+          "image": null,
+          "url": "/maquiagem/rosto",
+          "name": "Rosto"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "/maquiagem/olhos",
+          "name": "Olhos"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Sombracelha",
+          "url": "/maquiagem/sombracelha"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Boca",
+          "url": "/maquiagem/boca"
+        }
+      ],
+      "image": null,
+      "name": "maquiagem"
+    },
+    {
       "url": "/kits-e-combos",
       "name": "Kits e Combos",
       "children": [],
@@ -101,8 +132,6 @@
       "@type": "SiteNavigationElement"
     },
     {
-      "url": "/marcas",
-      "name": "Marcas",
       "children": [
         {
           "children": [],
@@ -159,7 +188,9 @@
           "name": "Wella Professionals"
         }
       ],
-      "image": []
+      "image": [],
+      "name": "Marcas",
+      "url": "/marcas"
     },
     {
       "children": [],

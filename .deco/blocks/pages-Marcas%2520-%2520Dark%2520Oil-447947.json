@@ -86,7 +86,8 @@
                 "dcId": [],
                 "dcName": []
               },
-              "prices": {}
+              "prices": {},
+              "available": true
             }
           },
           "title": "Veja por Lançamentos",
