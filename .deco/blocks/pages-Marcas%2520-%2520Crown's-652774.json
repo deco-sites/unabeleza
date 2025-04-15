@@ -1,0 +1,162 @@
+{
+  "name": "Marcas - Crown'us",
+  "path": "/fabricante/crownus",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+        "jsonLD": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "SALES:DESC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {},
+              "available": true
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        },
+        "searchbar": {
+          "loader": {
+            "data": {
+              "products": {
+                "__resolveType": "wake/loaders/productList.ts",
+                "first": 12,
+                "sortDirection": "ASC",
+                "sortKey": "DISCOUNT",
+                "filters": {
+                  "attributes": {
+                    "id": [],
+                    "name": [],
+                    "type": [],
+                    "value": []
+                  },
+                  "brandId": [],
+                  "categoryId": [],
+                  "ean": [],
+                  "productId": [],
+                  "productVariantId": [],
+                  "sameParentAs": [],
+                  "sku": [],
+                  "stocks": {
+                    "dcId": [],
+                    "dcName": []
+                  },
+                  "prices": {}
+                }
+              }
+            }
+          }
+        },
+        "searchParams": null,
+        "content": {
+          "carousel": {
+            "images": [
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/a7db2e94-bf8e-4dbe-a94c-9ec614288d5f/1.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/543bacee-33ca-46a0-9f94-8e2292099673/1.jpg",
+                "alt": "Crown'us"
+              }
+            ],
+            "preload": true,
+            "interval": 3
+          },
+          "description": "<h1>Crown'us</h1><p></p><p>A Crown'us eleva o cuidado com os cabelos a um novo patamar de excelência. Com fórmulas inteligentes e resultados visíveis, seus produtos tratam profundamente os fios, restaurando saúde, força e beleza desde o primeiro uso.<br>ㅤ<br>Combinando tecnologia avançada e ativos preciosos, a Crown'us nutre, repara e protege os cabelos sem comprometer a leveza. O resultado são fios radiantes, com brilho espelhado, toque macio, balanço natural e uma fragrância envolvente que dura o dia inteiro.</p>"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
