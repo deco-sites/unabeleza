@@ -1,6 +1,10 @@
 {
-  "name": "Marcas - Braé",
-  "path": "/fabricante/brae",
+  "__resolveType": "website/pages/Page.tsx",
+  "name": "Marcas - Gama",
+  "path": "/fabricante/gama",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -130,15 +134,20 @@
           "carousel": {
             "images": [
               {
-                "desktop": "https://assets.decocache.com/unabeleza/d149f311-5349-4e85-9d03-1c93141f97f9/BRAE---Desk-994x298px.jpg",
-                "mobile": "https://assets.decocache.com/unabeleza/d4bf1671-6046-44da-ba22-249b26fa90c0/BRAE---Mob-375x298px-.jpg",
-                "alt": "Braé"
+                "desktop": "https://assets.decocache.com/unabeleza/bb07fa3e-a205-417a-bcfd-ff1ad32bfa58/2.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/1d32d295-1291-4d17-9e06-71e13a97defa/2.jpg",
+                "alt": "Gama"
+              },
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/8f85236c-db1d-4fd1-85b9-050421afe0f3/1.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/02658763-1634-4bd6-888f-c433067f5aea/1.jpg",
+                "alt": "Gama"
               }
             ],
             "preload": true,
             "interval": 3
           },
-          "description": "<h1>Braé</h1><p></p><p>A Braé transforma o cuidado capilar em uma experiência de autocuidado e sofisticação. Com fórmulas potentes e de alto desempenho, seus produtos tratam os fios de dentro para fora, devolvendo força, vitalidade e beleza desde o primeiro uso.<br>ㅤ<br>Unindo tecnologia de ponta e ingredientes nobres, a Braé nutre, reconstrói e protege sem pesar. O resultado? Cabelos incrivelmente saudáveis, com brilho intenso, toque sedoso, movimento leve e um perfume marcante que permanece ao longo do dia.</p>"
+          "description": "<h1>Gama</h1><p></p><p>A Gama eleva o cuidado com os cabelos ao unir inovação, performance e praticidade. Reconhecida por seus equipamentos profissionais de alta tecnologia, a marca oferece soluções eficazes para transformar os fios com rapidez, segurança e resultados de salão em casa.<br>ㅤ<br>Com design funcional e tecnologia de ponta, a Gama protege os fios enquanto alisa, modela ou seca. O resultado? Cabelos alinhados, com brilho intenso, controle de frizz e acabamento impecável, sem abrir mão da saúde capilar.</p>"
         }
       }
     },
@@ -154,9 +163,5 @@
         "__resolveType": "WhastApp"
       }
     }
-  ],
-  "seo": {
-    "__resolveType": "website/sections/Seo/SeoV2.tsx"
-  },
-  "__resolveType": "website/pages/Page.tsx"
+  ]
 }
