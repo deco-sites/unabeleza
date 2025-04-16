@@ -1,6 +1,5 @@
 {
   "name": "Marcas - Crown'us",
-  "path": "/fabricante/crownus",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -132,7 +131,8 @@
               {
                 "desktop": "https://assets.decocache.com/unabeleza/a7db2e94-bf8e-4dbe-a94c-9ec614288d5f/1.jpg",
                 "mobile": "https://assets.decocache.com/unabeleza/543bacee-33ca-46a0-9f94-8e2292099673/1.jpg",
-                "alt": "Crown'us"
+                "alt": "Crownus",
+                "linkImage": "/fabricante/crownus"
               }
             ],
             "preload": true,
@@ -158,5 +158,6 @@
   "seo": {
     "__resolveType": "website/sections/Seo/SeoV2.tsx"
   },
-  "__resolveType": "website/pages/Page.tsx"
+  "__resolveType": "website/pages/Page.tsx",
+  "path": "/fabricante/crownus"
 }
