@@ -75,6 +75,18 @@
           "image": null,
           "url": "/fabricante/wella-professionals",
           "name": "Wella Professionals"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Crown'us",
+          "url": "/fabricante/crownus"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Wet'n Wild",
+          "url": "/fabricante/wetn-wild"
         }
       ],
       "url": "/cabelos?page=1",
