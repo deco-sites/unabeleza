@@ -133,6 +133,10 @@
                 "mobile": "https://assets.decocache.com/unabeleza/543bacee-33ca-46a0-9f94-8e2292099673/1.jpg",
                 "alt": "Crownus",
                 "linkImage": "/fabricante/crownus"
+              },
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/41d88ffa-d7e2-4452-9a77-fdef55341389/2.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/e368ed41-fc03-4173-99a3-05d308f12e28/2.jpg"
               }
             ],
             "preload": true,
