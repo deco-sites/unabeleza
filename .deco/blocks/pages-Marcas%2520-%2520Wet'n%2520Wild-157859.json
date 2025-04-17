@@ -65,7 +65,7 @@
           "__resolveType": "site/sections/Product/ProductShelf.tsx",
           "products": {
             "__resolveType": "wake/loaders/productList.ts",
-            "first": 12,
+            "first": 20,
             "sortDirection": "ASC",
             "sortKey": "DISCOUNT",
             "filters": {
