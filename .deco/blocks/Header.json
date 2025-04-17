@@ -25,6 +25,67 @@
         {
           "children": [],
           "image": null,
+          "name": "Barrominas",
+          "url": "/fabricante/barrominas"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Braé",
+          "url": "/fabricante/brae"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Forever Liss",
+          "url": "/fabricante/forever-liss"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Gama",
+          "url": "/fabricante/gama"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Joico",
+          "url": "/fabricante/joico"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Knut",
+          "url": "/fabricante/knut"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "/fabricante/moroccanoil",
+          "name": "Moroccanoil"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Senscience",
+          "url": "/fabricante/senscience"
+        },
+        {
+          "children": [],
+          "image": null,
+          "url": "/fabricante/wella-professionals",
+          "name": "Wella Professionals"
+        }
+      ],
+      "url": "/cabelos?page=1",
+      "image": null,
+      "name": "Marcas"
+    },
+    {
+      "children": [
+        {
+          "children": [],
+          "image": null,
           "name": "Acessórios",
           "url": "/cabelos/acessorios"
         },
@@ -55,117 +116,81 @@
         {
           "children": [],
           "image": null,
-          "name": "Kits para Cabelo",
-          "url": "/cabelos/kits-para-cabelo"
+          "name": "Leave in e Creme de Pentear",
+          "url": "/cabelos/leave-in-e-creme-de-pentear"
         },
         {
           "children": [],
           "image": null,
-          "url": "/cabelos/leave-in-e-creme-de-pentear",
-          "name": "Leave in e Creme de Pentear"
+          "url": "/cabelos/mascara-capilar",
+          "name": "Máscara Capilar"
         },
         {
           "children": [],
           "image": null,
-          "name": "Máscara Capilar",
-          "url": "/cabelos/mascara-capilar"
+          "name": "Progressiva",
+          "url": "/cabelos/progressiva"
         },
         {
           "children": [],
           "image": null,
-          "url": "/cabelos/progressiva",
-          "name": "Progressiva"
+          "url": "/cabelos/shampoo",
+          "name": "Shampoo"
         },
         {
           "children": [],
           "image": null,
-          "name": "Shampoo",
-          "url": "/cabelos/shampoo"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/cabelos/tratamento",
-          "name": "Tratamento"
+          "name": "Tratamento",
+          "url": "/cabelos/tratamento"
         }
       ],
-      "url": "/cabelos",
       "image": null,
+      "url": "/cabelos",
       "name": "Cabelos"
     },
     {
-      "children": [],
-      "image": null,
-      "url": "/kits-e-combos",
-      "name": "Kits e Combos",
-      "@type": "SiteNavigationElement"
-    },
-    {
-      "url": "/cabelos?page=1",
-      "name": "Marcas",
+      "url": "/maquiagem?page=1",
+      "name": "Maquiagem",
       "children": [
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/barrominas",
-          "name": "Barrominas"
+          "name": "Boca",
+          "url": "/maquiagem/boca"
         },
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/brae",
-          "name": "Braé"
+          "name": "Olhos",
+          "url": "/maquiagem/olhos"
         },
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/forever-liss",
-          "name": "Forever Liss"
+          "name": "Rosto",
+          "url": "/maquiagem/rosto"
         },
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/gama",
-          "name": "Gama"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/joico",
-          "name": "Joico"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/knut",
-          "name": "Knut"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/moroccanoil",
-          "name": "Moroccanoil"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/senscience",
-          "name": "Senscience"
-        },
-        {
-          "children": [],
-          "image": null,
-          "url": "/fabricante/wella-professionals",
-          "name": "Wella Professionals"
+          "name": "Sobrancelha",
+          "url": "/maquiagem/sobrancelha"
         }
       ],
       "image": null
     },
     {
       "children": [],
-      "name": "Outlet",
+      "name": "Kits e Combos",
       "image": null,
-      "url": "/outlet"
+      "url": "/kits-e-combos",
+      "@type": "SiteNavigationElement"
+    },
+    {
+      "children": [],
+      "image": null,
+      "url": "/outlet",
+      "name": "Outlet"
     }
   ],
   "loading": "eager"
