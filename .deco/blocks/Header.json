@@ -149,14 +149,14 @@
       "name": "Cabelos"
     },
     {
-      "url": "/fabricante/wetn-wild",
+      "url": "/maquiagem",
       "name": "Maquiagem",
       "children": [
         {
           "children": [],
-          "image": null,
-          "name": "Boca",
-          "url": "/maquiagem/boca"
+          "url": "/maquiagem/labios",
+          "name": "Lábios",
+          "image": null
         },
         {
           "children": [],
