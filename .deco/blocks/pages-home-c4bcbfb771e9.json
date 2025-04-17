@@ -690,7 +690,7 @@
         "__resolveType": "site/sections/Product/ProductShelf.tsx",
         "products": {
           "__resolveType": "wake/loaders/productList.ts",
-          "first": 12,
+          "first": 6,
           "filters": {
             "attributes": {
               "id": [],
@@ -699,7 +699,7 @@
               "value": []
             },
             "brandId": [
-              5872
+              5875
             ],
             "categoryId": [],
             "ean": [],
@@ -716,9 +716,11 @@
             "hasImages": true,
             "mainVariant": true
           },
-          "sortDirection": "ASC",
-          "sortKey": "STOCK"
-        }
+          "sortDirection": "DESC",
+          "sortKey": "RANDOM"
+        },
+        "cta": "/fabricante/dark-oil",
+        "title": "Conheça a linha Dark Oil de Wella Professionals"
       }
     },
     {
@@ -756,6 +758,44 @@
       },
       "linkImage": "/fabricante/moroccanoil",
       "subtitle": "Moroccanoil"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/ProductShelf.tsx",
+        "products": {
+          "__resolveType": "wake/loaders/productList.ts",
+          "first": 12,
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [
+              5870
+            ],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {},
+            "available": true,
+            "hasImages": true,
+            "mainVariant": true
+          },
+          "sortDirection": "ASC",
+          "sortKey": "STOCK"
+        },
+        "cta": "/fabricante/moroccanoil"
+      }
     },
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
