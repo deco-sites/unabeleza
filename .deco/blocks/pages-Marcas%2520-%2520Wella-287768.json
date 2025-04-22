@@ -133,6 +133,11 @@
           "carousel": {
             "images": [
               {
+                "desktop": "https://assets.decocache.com/unabeleza/21260906-0c0e-4e11-8587-06b26d80e005/WELLA-INVIGO---Desk-994x298px-.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/b119b552-7623-46b9-a0fd-f3e87f6dd8f8/WELLA-INVIGO---Mob-375x298px.jpg",
+                "alt": "Wella Enrich"
+              },
+              {
                 "desktop": "https://assets.decocache.com/unabeleza/7cb7846f-3127-4445-bf03-913c8f38f371/WELLA---DESK-994x298px.jpg",
                 "mobile": "https://assets.decocache.com/unabeleza/c18bd4a2-008f-4514-b1a1-1f9abcef9564/WELLA---Mob-375x298px-(1).jpg",
                 "alt": "Wella Professionals"
