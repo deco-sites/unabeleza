@@ -37,6 +37,12 @@
           "desktop": "https://assets.decocache.com/unabeleza/59f4e468-56a8-4f44-864a-dbc2a50aeeb3/MOROCCANOIL---DESK---1920x520px-(1).jpg",
           "mobile": "https://assets.decocache.com/unabeleza/db262282-20fa-40f8-9ee9-578aaac0e05d/MOROCCANOIL---MOBILE---661x919px--(1).jpg",
           "linkImage": "/moroccanoil?page=1"
+        },
+        {
+          "desktop": "https://assets.decocache.com/unabeleza/e133f328-4369-480d-97a4-83804cabe621/WET-N-WILD---DESK---1920x520px-(1).jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/cc2890c1-b0fa-41e4-98e4-0e75a2e102be/WET-N-WILD-MOB---661x919px-(1).jpg",
+          "alt": "Wet'n Wild",
+          "linkImage": "/fabricante/wetn-wild"
         }
       ],
       "preload": true
