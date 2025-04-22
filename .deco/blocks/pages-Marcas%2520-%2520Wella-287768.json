@@ -44,7 +44,10 @@
               "dcId": [],
               "dcName": []
             },
-            "prices": {}
+            "prices": {},
+            "hasImages": true,
+            "mainVariant": true,
+            "available": true
           },
           "pageOffset": 0,
           "slug": {
@@ -65,9 +68,9 @@
           "__resolveType": "site/sections/Product/ProductShelf.tsx",
           "products": {
             "__resolveType": "wake/loaders/productList.ts",
-            "first": 12,
-            "sortDirection": "ASC",
-            "sortKey": "DISCOUNT",
+            "first": 20,
+            "sortDirection": "DESC",
+            "sortKey": "STOCK",
             "filters": {
               "attributes": {
                 "id": [],
@@ -97,7 +100,7 @@
             "data": {
               "products": {
                 "__resolveType": "wake/loaders/productList.ts",
-                "first": 12,
+                "first": 20,
                 "sortDirection": "ASC",
                 "sortKey": "DISCOUNT",
                 "filters": {
@@ -118,7 +121,8 @@
                     "dcId": [],
                     "dcName": []
                   },
-                  "prices": {}
+                  "prices": {},
+                  "available": true
                 }
               }
             }
