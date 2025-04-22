@@ -1,6 +1,6 @@
 {
-  "name": "Marcas - Wet'n Wild",
-  "path": "/fabricante/wetn-wild",
+  "name": "Marcas - Barrominas",
+  "path": "/fabricante/barrominas",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
@@ -23,7 +23,7 @@
         "__resolveType": "site/sections/Product/SearchResult.tsx",
         "page": {
           "__resolveType": "wake/loaders/productListingPage.ts",
-          "limit": 20,
+          "limit": 12,
           "operation": "AND",
           "sort": "SALES:DESC",
           "filters": {
@@ -65,7 +65,7 @@
           "__resolveType": "site/sections/Product/ProductShelf.tsx",
           "products": {
             "__resolveType": "wake/loaders/productList.ts",
-            "first": 20,
+            "first": 12,
             "sortDirection": "ASC",
             "sortKey": "DISCOUNT",
             "filters": {
@@ -130,15 +130,15 @@
           "carousel": {
             "images": [
               {
-                "desktop": "https://assets.decocache.com/unabeleza/81ff2057-2ca8-4270-a9b7-1d7c55e2d082/WET---Desk-994x298px.jpg",
-                "mobile": "https://assets.decocache.com/unabeleza/3463fb14-27b4-4d66-8b16-7d9f224d8204/WET---Mob-375x298px.jpg",
-                "alt": "Wet'n Wild"
+                "desktop": "https://assets.decocache.com/unabeleza/67c34940-9041-4bef-bd04-df6d83a204f8/BARROMINAS---Desk-994x298px-.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/ff495ad7-1d4e-4d35-9f06-2fa0a58a5f0e/BARROMINAS---Mob-375x298px-.jpg",
+                "alt": "Braé"
               }
             ],
             "preload": true,
             "interval": 3
           },
-          "description": "<h1>Wet'n Wild </h1><p></p><p>A Wet’n Wild transforma a maquiagem em um gesto de liberdade, cor e expressão. Com fórmulas inovadoras, texturas leves e alta performance, seus produtos revelam a beleza única de cada pessoa, do jeito mais autêntico e divertido.<br>ㅤ<br>Da preparação da pele ao toque final de brilho, a marca une qualidade, acessibilidade e tendências globais para entregar resultados incríveis em cada aplicação. O resultado? Uma make radiante, com acabamento profissional, conforto duradouro e personalidade em cada traço.</p>"
+          "description": "<h1>Barrominas</h1><p></p><p>A Barrominas une tradição e inovação para transformar o cuidado com os cabelos em um verdadeiro ritual de beleza. Com fórmulas eficazes e acessíveis, seus produtos tratam profundamente os fios, promovendo saúde, força e brilho desde o primeiro uso.<br>ㅤ<br>Com ativos de alta performance e ingredientes cuidadosamente selecionados, a Barrominas atende às necessidades reais dos cabelos brasileiros. Hidrata, nutre, reconstrói e protege sem pesar, revelando fios leves, macios e radiantes — com aquele perfume irresistível que marca presença.</p>"
         }
       }
     },
