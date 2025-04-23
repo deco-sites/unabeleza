@@ -137,18 +137,6 @@ function ProductCard({
             device={device}
           />
         </div>
-        <div class="absolute top-[10.29px] left-[8.81px] mobile:top-[7.72px] mobile:right-[3.88px]">
-          <span
-            class={clx(
-              "font-bold text-xs text-black mobile:text-[10px] mobile:leading-[15px]",
-              "bg-info max-w-[98px] max-h-[30px] px-[14px] py-[6px] rounded-full",
-              "mobile:max-w-[86px] mobile:max-h-[27px] mobile:px-[14px] mobile:py-[6px]",
-              inStock && "opacity-0",
-            )}
-          >
-            NOVIDADE
-          </span>
-        </div>
       </figure>
 
       <a href={relativeUrl} class="flex flex-col pt-5 gap-[9px]">
