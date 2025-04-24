@@ -87,6 +87,12 @@
           "image": null,
           "name": "Wet'n Wild",
           "url": "/fabricante/wetn-wild"
+        },
+        {
+          "children": [],
+          "image": null,
+          "name": "Papel para Mechas",
+          "url": "fabricante/papel-para-mechas"
         }
       ],
       "url": "/cabelos?page=1",
