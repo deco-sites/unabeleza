@@ -1,6 +1,6 @@
 {
   "name": "Marcas - Papel para Mechas",
-  "path": "/fabricante-papel-para-mechas",
+  "path": "/fabricante/papel-para-mechas",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
