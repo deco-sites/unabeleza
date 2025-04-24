@@ -130,15 +130,20 @@
           "carousel": {
             "images": [
               {
-                "desktop": "https://assets.decocache.com/unabeleza/7acb2425-9e0e-463e-b9de-b46221c22afe/1.jpg",
+                "desktop": "https://assets.decocache.com/unabeleza/f0f4260a-ec8a-496c-b3cd-b8a7514d39cf/PAPEL-PARA-MECHAS---Desk-994x298px.jpg",
                 "mobile": "https://assets.decocache.com/unabeleza/63087071-f4a2-4846-b6ac-d9b8029ffa6b/1.jpg",
                 "alt": "Papel para Mechas"
+              },
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/d73a1228-5915-4167-b186-bcf7ca0f82e9/2.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/b74f778d-d9dc-4195-84ea-29c2c84d4be9/2.jpg",
+                "alt": "Papel para Mechas 2"
               }
             ],
             "preload": true,
             "interval": 3
           },
-          "description": "<p>Papel para Mechas</p><p></p><p>A <strong>Papel Para Mechas</strong> desenvolve soluções inteligentes e sustentáveis para o dia a dia dos cabeleireiros. Com tecnologia exclusiva, seus papéis substituem o alumínio com performance superior, oferecendo isolamento térmico ideal para processos de coloração e descoloração, sem agredir os fios ou o meio ambiente.</p><p>ㅤ</p><p>Os produtos são fabricados com matéria-prima de fonte renovável, como papel certificado FSC, tintas atóxicas à base d’água e cola vegetal à base de goma de mandioca. Essa composição ecológica reduz o impacto ambiental e evita o descarte de toneladas de alumínio nos salões, sem abrir mão da eficiência profissional.</p><p>ㅤ</p><p>A textura e gramatura ideais garantem firmeza, aderência e praticidade durante a aplicação, otimizando o tempo de trabalho e potencializando os resultados. Mais de 200 milhões de papéis já foram produzidos e utilizados em mais de 50 mil salões no Brasil e no exterior — um reflexo da confiança conquistada pela marca ao unir inovação e responsabilidade ambiental.</p>"
+          "description": "<h1><strong><span style=\"font-size: 18pt\">Papel para Mechas</span></strong></h1><p></p><p>A Papel Para Mechas desenvolve soluções inteligentes e sustentáveis para o dia a dia dos cabeleireiros. Com tecnologia exclusiva, seus papéis substituem o alumínio com performance superior, oferecendo isolamento térmico ideal para processos de coloração e descoloração, sem agredir os fios ou o meio ambiente.</p><p>ㅤ</p><p>Os produtos são fabricados com matéria-prima de fonte renovável, como papel certificado FSC, tintas atóxicas à base d’água e cola vegetal à base de goma de mandioca. Essa composição ecológica reduz o impacto ambiental e evita o descarte de toneladas de alumínio nos salões, sem abrir mão da eficiência profissional.</p><p>ㅤ</p><p>A textura e gramatura ideais garantem firmeza, aderência e praticidade durante a aplicação, otimizando o tempo de trabalho e potencializando os resultados. Mais de 200 milhões de papéis já foram produzidos e utilizados em mais de 50 mil salões no Brasil e no exterior — um reflexo da confiança conquistada pela marca ao unir inovação e responsabilidade ambiental.</p>"
         }
       }
     },
