@@ -1,0 +1,162 @@
+{
+  "name": "Marcas - Tigi Bed Head",
+  "path": "/fabricante/tigi-bed-head",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+        "jsonLD": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "SALES:DESC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {},
+              "available": true
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        },
+        "searchbar": {
+          "loader": {
+            "data": {
+              "products": {
+                "__resolveType": "wake/loaders/productList.ts",
+                "first": 12,
+                "sortDirection": "ASC",
+                "sortKey": "DISCOUNT",
+                "filters": {
+                  "attributes": {
+                    "id": [],
+                    "name": [],
+                    "type": [],
+                    "value": []
+                  },
+                  "brandId": [],
+                  "categoryId": [],
+                  "ean": [],
+                  "productId": [],
+                  "productVariantId": [],
+                  "sameParentAs": [],
+                  "sku": [],
+                  "stocks": {
+                    "dcId": [],
+                    "dcName": []
+                  },
+                  "prices": {}
+                }
+              }
+            }
+          }
+        },
+        "searchParams": null,
+        "content": {
+          "carousel": {
+            "images": [
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/d82b68db-67c0-4a90-861a-4a2366eabf94/FOREVER---Desk-994x298px.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/12324d6f-eb40-4ea8-b4fc-246085005fe2/FOREVER---Mob-375x298px.jpg",
+                "alt": "Tigi Bed Head"
+              }
+            ],
+            "preload": true,
+            "interval": 3
+          },
+          "description": "<h1>Tigi Bed Head</h1><p></p><p>A TIGI Bed Head é sinônimo de atitude, criatividade e performance para transformar o cuidado capilar em uma experiência única e cheia de personalidade. Com fórmulas profissionais e resultados impactantes, seus produtos tratam intensamente os fios, devolvendo saúde, brilho e força desde a primeira aplicação.</p><p>ㅤ</p><p>Unindo tecnologia de ponta a ingredientes poderosos, a TIGI Bed Head entrega nutrição, hidratação e reconstrução sob medida para todos os estilos e tipos de cabelo. O resultado são fios vibrantes, macios, com movimento e aquele visual descolado de salão que se mantém por dias.</p>"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
