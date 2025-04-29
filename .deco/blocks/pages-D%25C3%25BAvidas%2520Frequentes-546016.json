@@ -31,28 +31,27 @@
       "item": [
         {
           "question": "Como eu acompanho meu pedido?",
-          "anwser": "<p>Resposta da primeira pergunta</p>",
+          "anwser": "<p>Você pode acompanhar seu pedido acessando a área “Meus Pedidos” em sua conta no site. Lá, você verá o status atualizado da sua compra e o código de rastreamento após a postagem.</p>",
           "questionNumber": 1
         },
         {
           "question": "Meu pedido foi cancelado e eu paguei o boleto ou realizei o depósito. E agora?",
-          "anwser": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat eros eget enim vulputate egestas. Mauris lobortis ullamcorper nunc a ultricies. Quisque sit amet quam ac arcu mattis suscipit non sit amet velit. Nam ac massa ullamcorper, congue tellus nec, volutpat erat. Vivamus id malesuada est. Nam sed lacus a purus venenatis laoreet non a lectus.</p><p></p><p></p>",
-          "questionNumber": 2,
-          "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/unabeleza/66879a6d-19a0-430d-a804-0db2add539c9/lorem_duvidas.png"
+          "anwser": "<p>Se o pagamento foi efetuado e o pedido foi cancelado por engano, entre em contato com nosso atendimento (19) 99707-2021 enviando o comprovante. Vamos verificar e resolver a situação rapidamente para você.</p><p></p><p></p>",
+          "questionNumber": 2
         },
         {
           "question": "Não Recebi o e-mail de confirmação de meu pedido. E agora?",
-          "anwser": "<p>Resposta da terceira pergunta.</p>",
+          "anwser": "<p>Verifique sua caixa de spam ou lixo eletrônico. Se não encontrar o e-mail, confirme se o endereço cadastrado está correto e entre em contato com nosso suporte para confirmar o status do pedido. Contato:(19) 99707-2021</p>",
           "questionNumber": 3
         },
         {
           "question": "Comprei um produto, mas recebi outro. E agora?",
-          "anwser": "<p>Resposta da quarta pergunta.</p>",
+          "anwser": "<p>Pedimos desculpas pelo transtorno! Entre em contato com nosso atendimento com uma foto do produto recebido e o número do pedido. Faremos a troca o quanto antes, sem custos adicionais.</p>",
           "questionNumber": 4
         },
         {
           "question": "Quais os métodos de pagamento aceitos pelo site?",
-          "anwser": "<p>Resposta da quinta pergunta.</p>",
+          "anwser": "<p>Aceitamos cartão de crédito, Pix, boleto bancário. Você escolhe a forma que for mais conveniente e segura para você!</p>",
           "questionNumber": 5
         }
       ],
