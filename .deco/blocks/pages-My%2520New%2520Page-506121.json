@@ -28,7 +28,7 @@
       "subTitulo": "Ainda em dúvida sobre algo? Mande uma mensagem! Responderemos o quanto antes.",
       "contato": {
         "titulo": "Canais de atendimento",
-        "descricao": "<p>Queremos receber seu contato! Nos escreva sempre que quiser, estaremos prontos para responder! :- )</p>",
+        "descricao": "<p style=\"text-align: justify\">Queremos receber seu contato! Nos escreva sempre que quiser, estaremos prontos para responder! </p>",
         "itens": [
           {
             "nome": "Telefone",
@@ -36,7 +36,7 @@
           },
           {
             "nome": "Email",
-            "valor": "unabeleza@unikagroup.com.br "
+            "valor": "lojaunabeleza@gmail.com"
           }
         ]
       }
