@@ -37,6 +37,12 @@
           "desktop": "https://assets.decocache.com/unabeleza/e133f328-4369-480d-97a4-83804cabe621/WET-N-WILD---DESK---1920x520px-(1).jpg",
           "mobile": "https://assets.decocache.com/unabeleza/cc2890c1-b0fa-41e4-98e4-0e75a2e102be/WET-N-WILD-MOB---661x919px-(1).jpg",
           "linkImage": "/fabricante/wetn-wild"
+        },
+        {
+          "desktop": "https://assets.decocache.com/unabeleza/cab783ce-40d7-4aef-990a-857555effabc/WELLA-PROFESSIONALS---DESK---1920x520px.jpg",
+          "mobile": "https://assets.decocache.com/unabeleza/a8ea3b3f-20cf-4ae8-9328-146e8a92896d/WELLA-PROFESSIONALS---MOBI-661x919px.jpg",
+          "alt": "Oil Refelctions",
+          "linkImage": "/busca?busca=Oil+reflection&page=1"
         }
       ],
       "preload": true
