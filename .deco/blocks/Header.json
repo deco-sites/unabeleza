@@ -43,6 +43,12 @@
         {
           "children": [],
           "image": null,
+          "url": "/fabricante/Revlon",
+          "name": "Revlon"
+        },
+        {
+          "children": [],
+          "image": null,
           "name": "Gama",
           "url": "/fabricante/gama"
         },
@@ -55,26 +61,26 @@
         {
           "children": [],
           "image": null,
-          "name": "Knut",
-          "url": "/fabricante/knut"
+          "url": "/fabricante/knut",
+          "name": "Knut"
         },
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/moroccanoil",
-          "name": "Moroccanoil"
+          "name": "Moroccanoil",
+          "url": "/fabricante/moroccanoil"
         },
         {
           "children": [],
           "image": null,
-          "name": "Senscience",
-          "url": "/fabricante/senscience"
+          "url": "/fabricante/senscience",
+          "name": "Senscience"
         },
         {
           "children": [],
           "image": null,
-          "url": "/fabricante/wella-professionals",
-          "name": "Wella Professionals"
+          "name": "Wella Professionals",
+          "url": "/fabricante/wella-professionals"
         },
         {
           "children": [],
