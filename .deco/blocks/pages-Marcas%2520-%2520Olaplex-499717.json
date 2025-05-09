@@ -1,0 +1,156 @@
+{
+  "name": "Marcas - Olaplex",
+  "path": "/fabricante/olaplex",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
+        "jsonLD": {
+          "__resolveType": "PLP Loader"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Header"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Product/SearchResult.tsx",
+        "page": {
+          "__resolveType": "wake/loaders/productListingPage.ts",
+          "limit": 12,
+          "operation": "AND",
+          "sort": "SALES:DESC",
+          "filters": {
+            "attributes": {
+              "id": [],
+              "name": [],
+              "type": [],
+              "value": []
+            },
+            "brandId": [],
+            "categoryId": [],
+            "ean": [],
+            "productId": [],
+            "productVariantId": [],
+            "sameParentAs": [],
+            "sku": [],
+            "stocks": {
+              "dcId": [],
+              "dcName": []
+            },
+            "prices": {}
+          },
+          "pageOffset": 0,
+          "slug": {
+            "__resolveType": "website/functions/requestToParam.ts",
+            "param": "slug"
+          }
+        },
+        "layout": {
+          "columns": {
+            "mobile": 2,
+            "desktop": 4
+          },
+          "variant": "aside",
+          "pagination": "show-more"
+        },
+        "startingPage": 1,
+        "productShelf": {
+          "__resolveType": "site/sections/Product/ProductShelf.tsx",
+          "products": {
+            "__resolveType": "wake/loaders/productList.ts",
+            "first": 12,
+            "sortDirection": "ASC",
+            "sortKey": "DISCOUNT",
+            "filters": {
+              "attributes": {
+                "id": [],
+                "name": [],
+                "type": [],
+                "value": []
+              },
+              "brandId": [],
+              "categoryId": [],
+              "ean": [],
+              "productId": [],
+              "productVariantId": [],
+              "sameParentAs": [],
+              "sku": [],
+              "stocks": {
+                "dcId": [],
+                "dcName": []
+              },
+              "prices": {},
+              "available": true
+            }
+          },
+          "title": "Veja por Lançamentos",
+          "cta": "VER TODOS"
+        },
+        "searchbar": {
+          "loader": {
+            "data": {
+              "products": {
+                "__resolveType": "wake/loaders/productList.ts",
+                "first": 12,
+                "sortDirection": "ASC",
+                "sortKey": "DISCOUNT",
+                "filters": {
+                  "attributes": {
+                    "id": [],
+                    "name": [],
+                    "type": [],
+                    "value": []
+                  },
+                  "brandId": [],
+                  "categoryId": [],
+                  "ean": [],
+                  "productId": [],
+                  "productVariantId": [],
+                  "sameParentAs": [],
+                  "sku": [],
+                  "stocks": {
+                    "dcId": [],
+                    "dcName": []
+                  },
+                  "prices": {}
+                }
+              }
+            }
+          }
+        },
+        "searchParams": null,
+        "content": {
+          "carousel": {
+            "images": [],
+            "preload": true,
+            "interval": 3
+          },
+          "description": "<h1>Olaplex</h1><p></p><p>A Olaplex revolucionou o cuidado capilar com uma tecnologia patenteada que repara os danos mais profundos da fibra capilar. Sua abordagem científica transforma o tratamento dos fios em uma experiência de reconstrução intensa, com resultados visíveis desde a primeira aplicação.<br>ㅤㅤ<br>Com fórmulas veganas e altamente concentradas, Olaplex atua de dentro para fora, reconstruindo as pontes quebradas do cabelo e devolvendo força, elasticidade e brilho. Ideal para todos os tipos de cabelo, protege contra agressões químicas, térmicas e ambientais — e deixa os fios saudáveis, sedosos e cheios de vida.<br></p>"
+        }
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "WhastApp"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
