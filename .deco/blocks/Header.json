@@ -93,6 +93,13 @@
           "image": null,
           "name": "Papel para Mechas",
           "url": "fabricante/papel-para-mechas"
+        },
+        {
+          "children": [],
+          "image": null,
+          "additionalType": "Olaplex",
+          "name": "Olaplex",
+          "url": "/fabricante/olaplex"
         }
       ],
       "url": "/cabelos?page=1",
