@@ -128,7 +128,13 @@
         "searchParams": null,
         "content": {
           "carousel": {
-            "images": [],
+            "images": [
+              {
+                "desktop": "https://assets.decocache.com/unabeleza/223e8fdd-f9b5-4245-b720-98eed59a65c8/Olaplex-PC.jpg",
+                "mobile": "https://assets.decocache.com/unabeleza/bdb01add-0c9b-4086-b24e-f552b193588d/Olaplex-MOBILE.jpg",
+                "alt": "Olaplex"
+              }
+            ],
             "preload": true,
             "interval": 3
           },
