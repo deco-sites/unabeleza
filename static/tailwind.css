@@ -7319,8 +7319,8 @@ details.collapse summary::-webkit-details-marker {
     grid-template-rows: 1fr 32px 1fr 64px;
   }
 
-  .mobile\:grid-rows-\[auto\] {
-    grid-template-rows: auto;
+  .mobile\:grid-rows-\[88px_auto\] {
+    grid-template-rows: 88px auto;
   }
 
   .mobile\:flex-col {

@@ -138,8 +138,8 @@ function Carousel({ images = [], preload, interval, enableDots = undefined }: Pr
       class={clx(
         "relative grid",
         "grid-cols-[32px_1fr_32px] grid-rows-[32px_auto]",
-        "mobile:grid-cols-[112px_1fr_112px] mobile:grid-rows-[auto]",
-        "w-full mobile:mt-[96px] overflow-hidden"
+        "mobile:grid-cols-[112px_1fr_112px] mobile:grid-rows-[88px_auto]",
+        "w-full overflow-hidden"
       )}
     >
       <div class="col-span-full custom-span">
