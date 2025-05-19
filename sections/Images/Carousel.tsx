@@ -191,7 +191,7 @@ function Carousel({ images = [], preload, interval, enableDots = undefined }: Pr
         class={clx(
           "col-span-full",
           "absolute bottom-0 left-1/2 transform -translate-x-1/2",
-          "carousel justify-center gap-[10px] items-end mb-8 mt-4"
+          "carousel justify-center gap-[10px] items-end mb-4 mt-4"
         )}
       >
         {images.map((_, index) => (
