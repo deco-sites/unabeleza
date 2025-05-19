@@ -36,7 +36,7 @@ function ProductCard({
   index,
   class: _class,
 }: Props) {
-  const { url, image: images, offers, isVariantOf, aggregateRating } = product;
+  const { url, image: images, offers, isVariantOf, aggregateRating, brand } = product;
   const title = isVariantOf?.name ?? product.name;
   const [front, back] = images ?? [];
 
@@ -144,6 +144,10 @@ function ProductCard({
           ratingValue={aggregateRating?.ratingValue ?? 0}
           reviewCount={0}
         />
+
+        <span class="text-xs texy-black font-bold line-clamp-1">
+          {brand?.name}
+        </span>
 
         <span class="text-sm texy-black h-[41px] line-clamp-2">
           {title}
