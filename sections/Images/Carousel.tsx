@@ -132,8 +132,6 @@ function Carousel({ images = [], preload, interval, enableDots = undefined }: Pr
   const device = useDevice();
   const useDots = device === enableDots || enableDots === 'both'
 
-  console.log({ enableDots, device, useDots });
-
   return (
     <div
       id={id}
