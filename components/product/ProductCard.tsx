@@ -145,7 +145,7 @@ function ProductCard({
           reviewCount={0}
         />
 
-        <span class="text-xs texy-black font-bold line-clamp-1">
+        <span class="text-sm texy-black font-bold line-clamp-1">
           {brand?.name}
         </span>
 
