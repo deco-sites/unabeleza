@@ -45,7 +45,8 @@
           "linkImage": "/fabricante/oil-reflections"
         }
       ],
-      "preload": true
+      "preload": true,
+      "enableDots": "both"
     },
     {
       "__resolveType": "site/sections/Home/BenefitBar.tsx",

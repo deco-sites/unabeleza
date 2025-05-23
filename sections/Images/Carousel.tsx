@@ -48,6 +48,11 @@ export interface Props {
   images?: Banner[];
   preload?: boolean;
   interval?: number;
+   /**
+   * @description Controls on which devices the slider navigation dots are visible.
+   * Options: 'mobile', 'desktop', or 'both'.
+   */
+  enableDots?: 'mobile' | 'desktop' | 'both';
 }
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
@@ -122,9 +127,10 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   );
 }
 
-function Carousel({ images = [], preload, interval }: Props) {
+function Carousel({ images = [], preload, interval, enableDots = undefined }: Props) {
   const id = useId();
   const device = useDevice();
+  const useDots = device === enableDots || enableDots === 'both'
 
   return (
     <div
@@ -132,8 +138,8 @@ function Carousel({ images = [], preload, interval }: Props) {
       class={clx(
         "relative grid",
         "grid-cols-[32px_1fr_32px] grid-rows-[32px_auto]",
-        "mobile:grid-cols-[112px_1fr_112px]",
-        "w-full mobile:mt-[96px] overflow-hidden"
+        "mobile:grid-cols-[112px_1fr_112px] mobile:grid-rows-[88px_auto]",
+        "w-full overflow-hidden"
       )}
     >
       <div class="col-span-full custom-span">
@@ -181,10 +187,11 @@ function Carousel({ images = [], preload, interval }: Props) {
         </Slider.NextButton>
       </div>
 
-      <ul
+      {useDots && <ul
         class={clx(
           "col-span-full",
-          "carousel justify-center gap-[10px] items-end mb-8 mt-4"
+          "absolute bottom-0 left-1/2 transform -translate-x-1/2",
+          "carousel justify-center gap-[10px] items-end mb-4 mt-4"
         )}
       >
         {images.map((_, index) => (
@@ -198,7 +205,7 @@ function Carousel({ images = [], preload, interval }: Props) {
             ></Slider.Dot>
           </li>
         ))}
-      </ul>
+      </ul>}
 
       <Slider.JS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>
